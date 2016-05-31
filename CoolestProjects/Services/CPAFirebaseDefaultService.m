@@ -35,7 +35,7 @@ NSString *const CPADatabaseChildVenue = @"venue";
 
 - (void)setup {
     [FIRDatabase database].persistenceEnabled = YES;
-    self.firebaseDatabase = [[FIRDatabase database] reference];    
+    self.firebaseDatabase = [[FIRDatabase database] reference];
 }
 
 - (void)getSpeakersWithCompletionBlock:(void(^)(NSArray<CPASpeaker *> *speakers, NSError *error))completionBlock {
