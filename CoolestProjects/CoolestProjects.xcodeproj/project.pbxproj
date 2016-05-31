@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25318B131CFD755F00691791 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25318B121CFD755F00691791 /* GoogleService-Info.plist */; };
+		25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */; };
+		25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1B1CFD7EA700691791 /* CPAObject.m */; };
+		25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1E1CFD7EBC00691791 /* CPASpeaker.m */; };
+		25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B211CFD93D800691791 /* CPASponsorTier.m */; };
 		4453ED181CF9EA2C0028C8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED171CF9EA2C0028C8E0 /* main.m */; };
 		4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED1A1CF9EA2C0028C8E0 /* AppDelegate.m */; };
 		4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED1D1CF9EA2C0028C8E0 /* ViewController.m */; };
@@ -16,6 +21,8 @@
 		4453ED311CF9EA2D0028C8E0 /* CoolestProjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED301CF9EA2D0028C8E0 /* CoolestProjectsTests.m */; };
 		834289E78520480CD9E522AE /* libPods-CoolestProjects.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B1ADF8063980F28D0B8ED5 /* libPods-CoolestProjects.a */; };
 		9A4B8A255354C87A8B989087 /* libPods-CoolestProjectsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 262E0A463D91EA92AF3DA2DA /* libPods-CoolestProjectsTests.a */; };
+		AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA519C673E3A958BF8F77 /* CPASponsor.m */; };
+		AF3EAF4DEB8B5762CBBAAE06 /* CPASummit.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA7858BAAAD7D82F40A79 /* CPASummit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25318B121CFD755F00691791 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Users/colinp/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25318B151CFD792300691791 /* CPAFirebaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseService.h; sourceTree = "<group>"; };
+		25318B161CFD794000691791 /* CPAFirebaseDefaultService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseDefaultService.h; sourceTree = "<group>"; };
+		25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAFirebaseDefaultService.m; sourceTree = "<group>"; };
+		25318B1A1CFD7EA700691791 /* CPAObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAObject.h; sourceTree = "<group>"; };
+		25318B1B1CFD7EA700691791 /* CPAObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAObject.m; sourceTree = "<group>"; };
+		25318B1D1CFD7EBC00691791 /* CPASpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPASpeaker.h; sourceTree = "<group>"; };
+		25318B1E1CFD7EBC00691791 /* CPASpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPASpeaker.m; sourceTree = "<group>"; };
+		25318B201CFD93D800691791 /* CPASponsorTier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPASponsorTier.h; sourceTree = "<group>"; };
+		25318B211CFD93D800691791 /* CPASponsorTier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPASponsorTier.m; sourceTree = "<group>"; };
 		262E0A463D91EA92AF3DA2DA /* libPods-CoolestProjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoolestProjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4453ED131CF9EA2C0028C8E0 /* CoolestProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolestProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4453ED171CF9EA2C0028C8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,6 +63,10 @@
 		4597A15428DCEA5BAE8EAE8B /* Pods-CoolestProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.release.xcconfig"; sourceTree = "<group>"; };
 		49BF7892A648D3451D22C052 /* Pods-CoolestProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.debug.xcconfig"; sourceTree = "<group>"; };
 		7A77BE0BE8745848AD692EC7 /* Pods-CoolestProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF3EA0E8EA5C1F40CE3BC099 /* CPASponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPASponsor.h; sourceTree = "<group>"; };
+		AF3EA3259F06D552FF5EBBCD /* CPASummit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPASummit.h; sourceTree = "<group>"; };
+		AF3EA519C673E3A958BF8F77 /* CPASponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPASponsor.m; sourceTree = "<group>"; };
+		AF3EA7858BAAAD7D82F40A79 /* CPASummit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPASummit.m; sourceTree = "<group>"; };
 		B7B1ADF8063980F28D0B8ED5 /* libPods-CoolestProjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoolestProjects.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C963232B4882A7A78E90F5 /* Pods-CoolestProjectsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +91,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25318B111CFD755A00691791 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25318B121CFD755F00691791 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		25318B141CFD761600691791 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				25318B191CFD7E8700691791 /* Models */,
+				25318B151CFD792300691791 /* CPAFirebaseService.h */,
+				25318B161CFD794000691791 /* CPAFirebaseDefaultService.h */,
+				25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */,
+			);
+			path = Services;
+			sourceTree = SOURCE_ROOT;
+		};
+		25318B191CFD7E8700691791 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25318B1A1CFD7EA700691791 /* CPAObject.h */,
+				25318B1B1CFD7EA700691791 /* CPAObject.m */,
+				25318B1D1CFD7EBC00691791 /* CPASpeaker.h */,
+				25318B1E1CFD7EBC00691791 /* CPASpeaker.m */,
+				AF3EA7858BAAAD7D82F40A79 /* CPASummit.m */,
+				AF3EA3259F06D552FF5EBBCD /* CPASummit.h */,
+				AF3EA519C673E3A958BF8F77 /* CPASponsor.m */,
+				AF3EA0E8EA5C1F40CE3BC099 /* CPASponsor.h */,
+				25318B201CFD93D800691791 /* CPASponsorTier.h */,
+				25318B211CFD93D800691791 /* CPASponsorTier.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3AD7F2D99627191D90A5E791 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +161,8 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				25318B141CFD761600691791 /* Services */,
+				25318B111CFD755A00691791 /* Resources */,
 				4453ED191CF9EA2C0028C8E0 /* AppDelegate.h */,
 				4453ED1A1CF9EA2C0028C8E0 /* AppDelegate.m */,
 				4453ED1C1CF9EA2C0028C8E0 /* ViewController.h */,
@@ -150,12 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4453ED351CF9EA2D0028C8E0 /* Build configuration list for PBXNativeTarget "CoolestProjects" */;
 			buildPhases = (
-				FF1B55BBDE0630C837D75013 /* 📦 Check Pods Manifest.lock */,
+				FF1B55BBDE0630C837D75013 /* uD83DuDCE6 Check Pods Manifest.lock */,
 				4453ED0F1CF9EA2C0028C8E0 /* Sources */,
 				4453ED101CF9EA2C0028C8E0 /* Frameworks */,
 				4453ED111CF9EA2C0028C8E0 /* Resources */,
-				4E000C73FE64193BDD325C56 /* 📦 Embed Pods Frameworks */,
-				F488E319355F3AF99DE9A70E /* 📦 Copy Pods Resources */,
+				4E000C73FE64193BDD325C56 /* uD83DuDCE6 Embed Pods Frameworks */,
+				F488E319355F3AF99DE9A70E /* uD83DuDCE6 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,12 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4453ED381CF9EA2D0028C8E0 /* Build configuration list for PBXNativeTarget "CoolestProjectsTests" */;
 			buildPhases = (
-				80E06D4ACCAB69A3AD318794 /* 📦 Check Pods Manifest.lock */,
+				80E06D4ACCAB69A3AD318794 /* uD83DuDCE6 Check Pods Manifest.lock */,
 				4453ED281CF9EA2D0028C8E0 /* Sources */,
 				4453ED291CF9EA2D0028C8E0 /* Frameworks */,
 				4453ED2A1CF9EA2D0028C8E0 /* Resources */,
-				66FA332F4A062CCC57519A04 /* 📦 Embed Pods Frameworks */,
-				AFF598F50A5026CD065570B5 /* 📦 Copy Pods Resources */,
+				66FA332F4A062CCC57519A04 /* uD83DuDCE6 Embed Pods Frameworks */,
+				AFF598F50A5026CD065570B5 /* uD83DuDCE6 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +252,7 @@
 		4453ED0B1CF9EA2C0028C8E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CPA;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = coderdojo;
 				TargetAttributes = {
@@ -230,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */,
+				25318B131CFD755F00691791 /* GoogleService-Info.plist in Resources */,
 				4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */,
 				4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */,
 			);
@@ -245,14 +306,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E000C73FE64193BDD325C56 /* 📦 Embed Pods Frameworks */ = {
+		4E000C73FE64193BDD325C56 /* uD83DuDCE6 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "uD83DuDCE6 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,14 +321,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66FA332F4A062CCC57519A04 /* 📦 Embed Pods Frameworks */ = {
+		66FA332F4A062CCC57519A04 /* uD83DuDCE6 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "uD83DuDCE6 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,14 +336,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		80E06D4ACCAB69A3AD318794 /* 📦 Check Pods Manifest.lock */ = {
+		80E06D4ACCAB69A3AD318794 /* uD83DuDCE6 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,14 +351,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AFF598F50A5026CD065570B5 /* 📦 Copy Pods Resources */ = {
+		AFF598F50A5026CD065570B5 /* uD83DuDCE6 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "uD83DuDCE6 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,14 +366,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F488E319355F3AF99DE9A70E /* 📦 Copy Pods Resources */ = {
+		F488E319355F3AF99DE9A70E /* uD83DuDCE6 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "uD83DuDCE6 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,14 +381,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF1B55BBDE0630C837D75013 /* 📦 Check Pods Manifest.lock */ = {
+		FF1B55BBDE0630C837D75013 /* uD83DuDCE6 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,9 +403,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */,
+				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
 				4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */,
+				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,
+				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
 				4453ED181CF9EA2C0028C8E0 /* main.m in Sources */,
+				AF3EAF4DEB8B5762CBBAAE06 /* CPASummit.m in Sources */,
+				AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

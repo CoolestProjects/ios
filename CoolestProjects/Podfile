@@ -6,6 +6,11 @@ target 'CoolestProjects' do
   # use_frameworks!
 
   # Pods for CoolestProjects
+  pod 'Firebase'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+
+  pod 'JSONModel'
 
   target 'CoolestProjectsTests' do
     inherit! :search_paths

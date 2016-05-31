@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CPAFirebaseDefaultService.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    id<CPAFirebaseService> firebaseService = [CPAFirebaseDefaultService new];
+    
+    [firebaseService getSpeakersWithCompletionBlock:^(NSArray *speakers, NSError *error) {
+        NSLog(@"speakers %@", speakers);
+    }];
+
+    [firebaseService getSummitsWithCompletionBlock:^(NSArray *summits, NSError *error) {
+        NSLog(@"summits %@", summits);
+    }];
+    
+    [firebaseService getSponsorsWithCompletionBlock:^(NSArray *sponsors, NSError *error) {
+        NSLog(@"sponsors %@", sponsors);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
