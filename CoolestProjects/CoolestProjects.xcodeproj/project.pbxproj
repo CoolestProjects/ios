@@ -20,6 +20,11 @@
 		4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED221CF9EA2C0028C8E0 /* Assets.xcassets */; };
 		4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED241CF9EA2C0028C8E0 /* LaunchScreen.storyboard */; };
 		4453ED311CF9EA2D0028C8E0 /* CoolestProjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED301CF9EA2D0028C8E0 /* CoolestProjectsTests.m */; };
+		4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498BFDD1D04BCB80085A15C /* SpeakersViewController.swift */; };
+		4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4498BFDE1D04BCB80085A15C /* SpeakersViewController.xib */; };
+		4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498BFE21D04BCD60085A15C /* SpeakersViewModel.swift */; };
+		44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E46FED1D04CA91003F779A /* SpeakerTableViewCell.swift */; };
+		44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E46FEE1D04CA91003F779A /* SpeakerTableViewCell.xib */; };
 		A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90364931CFF9CD60089B351 /* HomeViewModel.swift */; };
 		A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C078D1D00E3DC005271FE /* Boxes.swift */; };
 		A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79C051731B8A634DF461065 /* OpenSans-Light.ttf */; };
@@ -89,6 +94,11 @@
 		4453ED2C1CF9EA2D0028C8E0 /* CoolestProjectsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolestProjectsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4453ED301CF9EA2D0028C8E0 /* CoolestProjectsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolestProjectsTests.m; sourceTree = "<group>"; };
 		4453ED321CF9EA2D0028C8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4498BFDD1D04BCB80085A15C /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		4498BFDE1D04BCB80085A15C /* SpeakersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakersViewController.xib; sourceTree = "<group>"; };
+		4498BFE21D04BCD60085A15C /* SpeakersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewModel.swift; sourceTree = "<group>"; };
+		44E46FED1D04CA91003F779A /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		44E46FEE1D04CA91003F779A /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
 		4597A15428DCEA5BAE8EAE8B /* Pods-CoolestProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.release.xcconfig"; sourceTree = "<group>"; };
 		49BF7892A648D3451D22C052 /* Pods-CoolestProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.debug.xcconfig"; sourceTree = "<group>"; };
 		7A77BE0BE8745848AD692EC7 /* Pods-CoolestProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +199,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4427A7EC1D04BA48009DA978 /* Speakers */ = {
+			isa = PBXGroup;
+			children = (
+				4498BFDB1D04BCB80085A15C /* View */,
+				4498BFDF1D04BCB80085A15C /* ViewModel */,
+			);
+			path = Speakers;
+			sourceTree = "<group>";
+		};
 		4453ED0A1CF9EA2C0028C8E0 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +243,7 @@
 				4453ED271CF9EA2C0028C8E0 /* Info.plist */,
 				4453ED161CF9EA2C0028C8E0 /* Supporting Files */,
 				B79C03B5FE2A16B6A9CE193E /* Home */,
+				4427A7EC1D04BA48009DA978 /* Speakers */,
 				B79C00AFD0642BD176EED0D2 /* CoolestProjects-Bridging-Header.h */,
 				B79C06CAAF8371590D2837AC /* Resources */,
 				A91C07A71D0104D4005271FE /* Constants.swift */,
@@ -249,6 +269,41 @@
 				4453ED321CF9EA2D0028C8E0 /* Info.plist */,
 			);
 			path = CoolestProjectsTests;
+			sourceTree = "<group>";
+		};
+		4498BFDB1D04BCB80085A15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44E46FE81D04CA54003F779A /* SpeakerTableViewCell */,
+				4498BFDC1D04BCB80085A15C /* SpekersViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4498BFDC1D04BCB80085A15C /* SpekersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4498BFDD1D04BCB80085A15C /* SpeakersViewController.swift */,
+				4498BFDE1D04BCB80085A15C /* SpeakersViewController.xib */,
+			);
+			path = SpekersViewController;
+			sourceTree = "<group>";
+		};
+		4498BFDF1D04BCB80085A15C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4498BFE21D04BCD60085A15C /* SpeakersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44E46FE81D04CA54003F779A /* SpeakerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				44E46FED1D04CA91003F779A /* SpeakerTableViewCell.swift */,
+				44E46FEE1D04CA91003F779A /* SpeakerTableViewCell.xib */,
+			);
+			path = SpeakerTableViewCell;
 			sourceTree = "<group>";
 		};
 		A8B1DA2B3A2CA95451BA172C /* Frameworks */ = {
@@ -509,6 +564,7 @@
 				A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
+				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
 				A91C07A31D00ECC0005271FE /* InfoBoxTableViewCell.xib in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
@@ -517,6 +573,7 @@
 				A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */,
 				A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */,
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
+				44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,10 +828,13 @@
 				A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
+				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
 				4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,
+				4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */,
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
+				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
 				A9F8DB5C1D03389800ECE1F3 /* HomeTableHeaderView.swift in Sources */,
 				A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */,
 				4453ED181CF9EA2C0028C8E0 /* main.m in Sources */,
@@ -913,6 +973,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderdojo.coolestprojects;
@@ -928,6 +989,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderdojo.coolestprojects;
