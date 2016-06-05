@@ -8,6 +8,8 @@
 
 #import "CPAObject.h"
 
+@class CPASummitTime;
+
 @protocol CPASpeaker  <NSObject>
 
 @end
@@ -17,7 +19,9 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *photoUrl;
 @property (nonatomic, copy) NSString<Optional> *summit;
-@property (nonatomic, copy) NSString *summitTimes;
+@property (nonatomic, strong) CPASummitTime *summitTimes;
 @property (nonatomic, copy) NSString *speakerDescription;
 
 @end
+
+

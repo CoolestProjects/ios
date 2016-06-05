@@ -44,7 +44,9 @@ NSString *const CPADatabaseChildVenue = @"venue";
         NSMutableArray *speakers = [NSMutableArray array];
         for (NSDictionary *dict in results) {
             CPASpeaker *speaker = [[CPASpeaker alloc] initWithDictionary:dict error:nil];
+
             [speakers addObject:speaker];
+            
         }
         
         completionBlock(speakers, error);

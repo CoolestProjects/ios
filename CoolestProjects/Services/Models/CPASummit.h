@@ -13,3 +13,10 @@
 @property (nonatomic, copy) NSString *name;
 
 @end
+
+@interface CPASummitTime : CPAObject
+
+@property (nonatomic, copy) NSString<Optional> *time;
+@property (nonatomic, strong) NSNumber<Optional> *timestamp;
+
+@end

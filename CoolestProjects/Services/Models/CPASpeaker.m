@@ -16,4 +16,15 @@
     }];
 }
 
+- (void)setSummitTimesWithNSString:(NSString *)string {
+    self.summitTimes = nil;
+    
+}
+
+//TODO: remove when model is more stable. 
++ (BOOL)propertyIsOptional:(NSString*)propertyName {
+    return YES;
+}
+
+
 @end

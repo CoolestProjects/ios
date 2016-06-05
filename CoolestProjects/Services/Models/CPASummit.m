@@ -15,3 +15,14 @@
 }
 
 @end
+
+
+@implementation CPASummitTime
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+                                                       @"string": @"time"
+                                                       }];
+}
+
+
+@end
