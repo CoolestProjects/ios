@@ -13,7 +13,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="243"/>
+            <point key="canvasLocation" x="1221" y="-433"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Cv7-CV-Us3">
@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-777" y="-433"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="xbK-F9-12R">
             <objects>
-                <tableViewController id="1Ht-nh-ULH" sceneMemberID="viewController">
+                <tableViewController id="1Ht-nh-ULH" customClass="MenuTableViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QbL-q4-dd8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4zc-wR-m8H">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2aI-wf-vR8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeController" automaticallyAdjustsScrollViewInsets="NO" id="2aI-wf-vR8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Vv-SX-KCF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -72,7 +72,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hil-YG-oCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409" y="-433"/>
+            <point key="canvasLocation" x="417" y="-433"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="gob-Ke-T7B">
+            <objects>
+                <viewController id="ZTT-aa-3EK" customClass="BaseViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9aE-YQ-9cK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqh-Ik-bGT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="703"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Cc-OP-nhr">
+            <objects>
+                <navigationController storyboardIdentifier="stagesController" automaticallyAdjustsScrollViewInsets="NO" id="Qiu-tX-jru" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cBa-2f-kIX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rEm-z3-0Wh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZTT-aa-3EK" kind="relationship" relationship="rootViewController" id="KJV-rn-cpS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpm-a2-Caf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="695"/>
         </scene>
     </scenes>
 </document>

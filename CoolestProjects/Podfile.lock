@@ -37,7 +37,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - JSONModel
-  - SWRevealViewController (~> 2.3.0)
+  - SWRevealViewController
 
 SPEC CHECKSUMS:
   Firebase: 6c80ac28d59d06bfd9152a7b6ea17625ca93183d
@@ -52,6 +52,6 @@ SPEC CHECKSUMS:
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 9359b3afcc6fec8bcbb023c4fac0bcc91a229da8
+PODFILE CHECKSUM: 83ed3b664c4aee0fcb9e3dc7295e30ffbe3e6caf
 
 COCOAPODS: 1.0.0

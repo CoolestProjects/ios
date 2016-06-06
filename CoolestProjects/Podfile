@@ -11,7 +11,7 @@ target 'CoolestProjects' do
   pod 'Firebase/Storage'
 
   pod 'JSONModel'
-  pod 'SWRevealViewController', '~> 2.3.0' 
+  pod 'SWRevealViewController' 
   
   target 'CoolestProjectsTests' do
     inherit! :search_paths

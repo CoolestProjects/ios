@@ -24,6 +24,4 @@ class BaseViewController: UIViewController {
     func reveal() {
         self.revealViewController().revealToggle(nil)
     }
-    
-    
 }
