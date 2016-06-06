@@ -22,15 +22,18 @@ class SpeakerTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
- 
     
     func displayViewModel(speakerViewModel : SpeakerViewModel) {
         
         nameLabel.text = speakerViewModel.name
+        nameLabel.textColor = speakerViewModel.nameTextColor
+    
         speakerDescriptionLabel.text = speakerViewModel.speakerDescription
+        speakerDescriptionLabel.textColor = speakerViewModel.speakerDescriptionTextColor
+        
         divider.backgroundColor = speakerViewModel.dividerColor
         
-        speakerImageView.sd_setImageWithURL(NSURL(string: speakerViewModel.imageUrl!), placeholderImage:speakerViewModel.placeholderImage )
-        
+        speakerImageView.sd_setImageWithURL(NSURL(string: speakerViewModel.imageUrl!), placeholderImage: speakerViewModel.placeholderImage)
     }
+
 }

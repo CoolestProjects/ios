@@ -14,6 +14,7 @@
 		25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B211CFD93D800691791 /* CPASponsorTier.m */; };
 		3A02C858EBAB3C0EB32DEEC3 /* Pods_CoolestProjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */; };
 		440C94741D0599A700846321 /* Speakers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 440C94731D0599A700846321 /* Speakers.xcassets */; };
+		440C94761D05A6B200846321 /* Speakers.strings in Resources */ = {isa = PBXBuildFile; fileRef = 440C94751D05A6B200846321 /* Speakers.strings */; };
 		4453ED181CF9EA2C0028C8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED171CF9EA2C0028C8E0 /* main.m */; };
 		4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED1A1CF9EA2C0028C8E0 /* AppDelegate.m */; };
 		4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED1D1CF9EA2C0028C8E0 /* ViewController.m */; };
@@ -83,6 +84,7 @@
 		25318B211CFD93D800691791 /* CPASponsorTier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPASponsorTier.m; sourceTree = "<group>"; };
 		25318B241CFDE51800691791 /* CPAFirebaseStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseStorage.h; sourceTree = "<group>"; };
 		440C94731D0599A700846321 /* Speakers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Speakers.xcassets; sourceTree = "<group>"; };
+		440C94751D05A6B200846321 /* Speakers.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Speakers.strings; sourceTree = "<group>"; };
 		4453ED131CF9EA2C0028C8E0 /* CoolestProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolestProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4453ED171CF9EA2C0028C8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4453ED191CF9EA2C0028C8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				A91C07A51D0101C5005271FE /* Localizable.strings */,
 				A9F8DB4D1D0331C100ECE1F3 /* Home.strings */,
 				A98010C91D0524A300AABC90 /* Stages.strings */,
+				440C94751D05A6B200846321 /* Speakers.strings */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */,
 				A98010D41D05259F00AABC90 /* StagesViewController.xib in Resources */,
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
+				440C94761D05A6B200846321 /* Speakers.strings in Resources */,
 				A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,

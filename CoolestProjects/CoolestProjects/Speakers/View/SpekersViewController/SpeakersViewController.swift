@@ -18,9 +18,9 @@ class SpeakersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         getSpeakers()
         setupTableView()
+        setupNavigationBar()
     }
     
     func getSpeakers() {
@@ -38,10 +38,22 @@ class SpeakersViewController: UIViewController {
     
     
     func setupTableView() {
-        tableView.estimatedRowHeight = 382.0;
+        tableView.estimatedRowHeight = 400.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
         tableView.registerNib(UINib.init(nibName: "SpeakerTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "speakerCell")
         
+    }
+    
+    func setupNavigationBar() {
+        //TODO: Viewmodel
+        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        navigationController?.navigationBar.translucent = false
+        navigationItem.title = NSLocalizedString("navbar.title",tableName: "Speakers", comment: "")
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName: AppColors.yellowColor
+        ]
+        
+    
     }
 
 }

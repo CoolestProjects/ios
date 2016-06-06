@@ -3,41 +3,46 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="OpenSans-Regular.ttf">
-            <string>OpenSans</string>
-            <string>OpenSans</string>
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+            <string>OpenSans-Semibold</string>
         </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="speakerCell" rowHeight="603" id="KGk-i7-Jjw" customClass="SpeakerTableViewCell" customModule="CoolestProjects" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="speakerCell" rowHeight="641" id="KGk-i7-Jjw" customClass="SpeakerTableViewCell" customModule="CoolestProjects" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="408"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="369.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="407.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-1g-xlT">
-                        <rect key="frame" x="20" y="20" width="280" height="235.5"/>
+                        <rect key="frame" x="20" y="20" width="280" height="280.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OBn-1g-xlT" secondAttribute="height" multiplier="1:1" id="NZ4-mb-xVg"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="280" id="WRm-zI-e1e"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-Nx-Aan">
-                        <rect key="frame" x="28" y="295.5" width="264" height="22"/>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                        <rect key="frame" x="28" y="320.5" width="264" height="32.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrJ-jf-L85">
-                        <rect key="frame" x="28" y="325.5" width="264" height="22"/>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                        <rect key="frame" x="28" y="353" width="264" height="32.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eh3-IN-XVE">
-                        <rect key="frame" x="0.0" y="367.5" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="405.5" width="320" height="1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="ETo-x9-FeM"/>
@@ -52,12 +57,13 @@
                     <constraint firstItem="tUm-Nx-Aan" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="5qf-Cu-7YV"/>
                     <constraint firstAttribute="trailing" secondItem="OBn-1g-xlT" secondAttribute="trailing" constant="20" id="H8g-Ev-FBO"/>
                     <constraint firstItem="OBn-1g-xlT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ios-US-vWB"/>
+                    <constraint firstItem="RrJ-jf-L85" firstAttribute="height" secondItem="tUm-Nx-Aan" secondAttribute="height" id="KD9-JD-6WZ"/>
                     <constraint firstItem="Eh3-IN-XVE" firstAttribute="top" secondItem="RrJ-jf-L85" secondAttribute="bottom" constant="20" id="Rws-zl-lAa"/>
-                    <constraint firstItem="tUm-Nx-Aan" firstAttribute="top" secondItem="OBn-1g-xlT" secondAttribute="bottom" constant="40" id="XS9-fO-kTg"/>
+                    <constraint firstItem="tUm-Nx-Aan" firstAttribute="top" secondItem="OBn-1g-xlT" secondAttribute="bottom" constant="20" id="XS9-fO-kTg"/>
                     <constraint firstAttribute="trailing" secondItem="Eh3-IN-XVE" secondAttribute="trailing" id="aA4-Ej-rha"/>
                     <constraint firstItem="Eh3-IN-XVE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eEL-VG-gBC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="tUm-Nx-Aan" secondAttribute="trailing" constant="20" id="hrE-zL-bee"/>
-                    <constraint firstItem="RrJ-jf-L85" firstAttribute="top" secondItem="tUm-Nx-Aan" secondAttribute="bottom" constant="8" id="nhT-N1-k7A"/>
+                    <constraint firstItem="RrJ-jf-L85" firstAttribute="top" secondItem="tUm-Nx-Aan" secondAttribute="bottom" id="nhT-N1-k7A"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -66,7 +72,7 @@
                 <outlet property="speakerDescriptionLabel" destination="RrJ-jf-L85" id="T4Q-ob-VtW"/>
                 <outlet property="speakerImageView" destination="OBn-1g-xlT" id="hBS-U9-o8o"/>
             </connections>
-            <point key="canvasLocation" x="87" y="313"/>
+            <point key="canvasLocation" x="87" y="332"/>
         </tableViewCell>
     </objects>
 </document>
