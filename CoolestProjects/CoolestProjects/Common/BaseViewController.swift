@@ -12,16 +12,18 @@ import SWRevealViewController
 
 class BaseViewController: UIViewController {
     override func viewDidLoad() {
-        self.addLeftButtonItem();
         super.viewDidLoad()
+        self.addLeftButtonItem()
+        self.addGestureRecognizers()
     }
     
     func addLeftButtonItem() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .Plain, target:self, action: #selector(BaseViewController.reveal))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .Plain, target:self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
     }
     
-    func reveal() {
-        self.revealViewController().revealToggle(nil)
+    func addGestureRecognizers() {
+        self.revealViewController().panGestureRecognizer()
+        self.revealViewController().tapGestureRecognizer()
     }
 }
