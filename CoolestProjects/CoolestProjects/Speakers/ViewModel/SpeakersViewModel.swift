@@ -42,7 +42,7 @@ class SpeakerViewModel : Component  {
     var imageUrl :String?
     var componentIdentifier: String = "speakerCell"
     
-    var placeholderImage: UIImage = UIImage(named: "speaker_placeholder")!
+    var placeholderImage: UIImage = UIImage(named: "null-avatar")!
     var dividerColor : UIColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1.0)
     var nameTextColor : UIColor = UIColor(red:0.20, green:0.21, blue:0.20, alpha:1.00)
     var speakerDescriptionTextColor : UIColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.00)

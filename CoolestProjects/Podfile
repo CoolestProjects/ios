@@ -10,7 +10,6 @@ target 'CoolestProjects' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   
-  pod 'SDWebImage'
   pod 'JSONModel'
   
   pod 'SDWebImage', '~> 3.7.6'
