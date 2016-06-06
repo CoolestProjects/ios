@@ -51,7 +51,7 @@ class HomeViewController : BaseViewController {
         wrapperView.layer.mask = createViewMask(wrapperView.frame.size, startGradientAt:68.0, endGradientAt:72.0)
     }
     
-    func setupNavigationBar() {
+    override func setupNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.titleView = UIImageView(image: UIImage(named: "coolest-project-logo"))
