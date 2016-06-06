@@ -15,6 +15,16 @@
             </objects>
             <point key="canvasLocation" x="1221" y="-433"/>
         </scene>
+        <!--Projects-->
+        <scene sceneID="ycw-V3-Po3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Projects" id="4Zm-ap-ngO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Kcr-To-nvX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8VM-ZX-L5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128.5" y="-1336"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Cv7-CV-Us3">
             <objects>
@@ -154,6 +164,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpm-a2-Caf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="433" y="695"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZVU-mf-sKK">
+            <objects>
+                <navigationController storyboardIdentifier="projectsNavViewController" automaticallyAdjustsScrollViewInsets="NO" id="Dz0-Dl-20b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wk2-UH-gJf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Zm-ap-ngO" kind="relationship" relationship="rootViewController" id="9n3-Z9-jft"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sn1-LM-AKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-941" y="-1336"/>
         </scene>
     </scenes>
 </document>

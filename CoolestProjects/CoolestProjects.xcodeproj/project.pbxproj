@@ -48,6 +48,11 @@
 		A98010D41D05259F00AABC90 /* StagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98010D21D05259F00AABC90 /* StagesViewController.xib */; };
 		A98010D71D0525A800AABC90 /* StagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010D51D0525A800AABC90 /* StagesTableViewCell.swift */; };
 		A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98010D61D0525A800AABC90 /* StagesTableViewCell.xib */; };
+		A98010E91D05EFFA00AABC90 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98010E71D05EFFA00AABC90 /* Projects.storyboard */; };
+		A98010ED1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010EC1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift */; };
+		A98010EF1D05F2CB00AABC90 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010EE1D05F2CB00AABC90 /* ProjectsViewController.swift */; };
+		A98010F11D05F72200AABC90 /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010F01D05F72200AABC90 /* FilterOptions.swift */; };
+		A98010F31D060B7100AABC90 /* Projects.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98010F21D060B7100AABC90 /* Projects.strings */; };
 		A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB4D1D0331C100ECE1F3 /* Home.strings */; };
 		A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB501D03332700ECE1F3 /* Home.xcassets */; };
 		A9F8DB5A1D03387700ECE1F3 /* HomeTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB591D03387700ECE1F3 /* HomeTableHeaderView.xib */; };
@@ -126,6 +131,11 @@
 		A98010D21D05259F00AABC90 /* StagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StagesViewController.xib; path = Stages/StagesViewController/StagesViewController.xib; sourceTree = "<group>"; };
 		A98010D51D0525A800AABC90 /* StagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesTableViewCell.swift; path = Stages/StagesTableViewCell/StagesTableViewCell.swift; sourceTree = "<group>"; };
 		A98010D61D0525A800AABC90 /* StagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StagesTableViewCell.xib; path = Stages/StagesTableViewCell/StagesTableViewCell.xib; sourceTree = "<group>"; };
+		A98010E81D05EFFA00AABC90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Projects.storyboard; sourceTree = "<group>"; };
+		A98010EC1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsFilterOptionsViewController.swift; path = Projects/ProjectsFilterOptionsViewController.swift; sourceTree = "<group>"; };
+		A98010EE1D05F2CB00AABC90 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = Projects/ProjectsViewController.swift; sourceTree = "<group>"; };
+		A98010F01D05F72200AABC90 /* FilterOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
+		A98010F21D060B7100AABC90 /* Projects.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Projects.strings; path = strings/Projects.strings; sourceTree = "<group>"; };
 		A9F8DB4D1D0331C100ECE1F3 /* Home.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Home.strings; path = strings/Home.strings; sourceTree = "<group>"; };
 		A9F8DB501D03332700ECE1F3 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Home.xcassets; path = images/Home.xcassets; sourceTree = "<group>"; };
 		A9F8DB591D03387700ECE1F3 /* HomeTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeTableHeaderView.xib; path = HomeTableHeaderView/HomeTableHeaderView.xib; sourceTree = "<group>"; };
@@ -239,6 +249,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				A98010EA1D05F26200AABC90 /* Projects */,
 				9B0DB3E31D05BAC300F41956 /* Menu */,
 				9B0DB3E01D05B70D00F41956 /* Common */,
 				A99EEACC1D04385100114584 /* Stages */,
@@ -260,6 +271,7 @@
 				A946C7961D0316E500E19639 /* Configurable.swift */,
 				A9F8DB681D0373B300ECE1F3 /* NibLoadable.swift */,
 				A98010C31D04D4ED00AABC90 /* GenericDataSource.swift */,
+				A98010E71D05EFFA00AABC90 /* Projects.storyboard */,
 			);
 			path = CoolestProjects;
 			sourceTree = "<group>";
@@ -366,6 +378,7 @@
 				A9F8DB4D1D0331C100ECE1F3 /* Home.strings */,
 				A98010C91D0524A300AABC90 /* Stages.strings */,
 				440C94751D05A6B200846321 /* Speakers.strings */,
+				A98010F21D060B7100AABC90 /* Projects.strings */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -386,6 +399,16 @@
 				A98010D21D05259F00AABC90 /* StagesViewController.xib */,
 			);
 			name = StagesViewController;
+			sourceTree = "<group>";
+		};
+		A98010EA1D05F26200AABC90 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				A98010EE1D05F2CB00AABC90 /* ProjectsViewController.swift */,
+				A98010EC1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift */,
+				A98010F01D05F72200AABC90 /* FilterOptions.swift */,
+			);
+			name = Projects;
 			sourceTree = "<group>";
 		};
 		A99EEACC1D04385100114584 /* Stages */ = {
@@ -589,6 +612,7 @@
 				44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */,
 				A98010CA1D0524A300AABC90 /* Stages.strings in Resources */,
 				A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */,
+				A98010E91D05EFFA00AABC90 /* Projects.storyboard in Resources */,
 				4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */,
 				A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */,
 				4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */,
@@ -607,6 +631,7 @@
 				A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */,
 				A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */,
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
+				A98010F31D060B7100AABC90 /* Projects.strings in Resources */,
 				44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -928,13 +953,16 @@
 				4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,
 				4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */,
+				A98010ED1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift in Sources */,
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
 				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
 				A9F8DB5C1D03389800ECE1F3 /* HomeTableHeaderView.swift in Sources */,
+				A98010EF1D05F2CB00AABC90 /* ProjectsViewController.swift in Sources */,
 				A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */,
 				4453ED181CF9EA2C0028C8E0 /* main.m in Sources */,
 				AF3EAF4DEB8B5762CBBAAE06 /* CPASummit.m in Sources */,
+				A98010F11D05F72200AABC90 /* FilterOptions.swift in Sources */,
 				AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */,
 				A91C07A81D0104D4005271FE /* Constants.swift in Sources */,
 				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
@@ -976,6 +1004,14 @@
 				4453ED251CF9EA2C0028C8E0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A98010E71D05EFFA00AABC90 /* Projects.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98010E81D05EFFA00AABC90 /* Base */,
+			);
+			name = Projects.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

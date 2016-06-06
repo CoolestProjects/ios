@@ -1,0 +1,19 @@
+/* 
+  Projects.strings
+  CoolestProjects
+
+  Created by Valentino Gattuso on 06/06/2016.
+  Copyright © 2016 coderdojo. All rights reserved.
+*/
+
+"title" = "PROJECTS";
+"searchBar.placeholder" = "Search projects";
+"resetFiltersButton" = "Reset";
+"applyFiltersButton" = "Apply";
+"project-categories" = "Project categories";
+"scratch-red" = "Scratch Red";
+"scratch-green" = "Scratch Green";
+"websites" = "Websites";
+"games" = "Games";
+"hardware" = "Hardware";
+"evolution" = "Evolution";
