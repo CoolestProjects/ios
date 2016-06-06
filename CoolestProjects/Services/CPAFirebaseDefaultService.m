@@ -34,7 +34,6 @@ NSString *const CPADatabaseChildVenue = @"venue";
 }
 
 - (void)setup {
-    [FIRDatabase database].persistenceEnabled = YES;
     self.firebaseDatabase = [[FIRDatabase database] reference];
 }
 

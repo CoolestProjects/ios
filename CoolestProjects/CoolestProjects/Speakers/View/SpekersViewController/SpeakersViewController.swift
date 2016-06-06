@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SpeakersViewController: UIViewController {
+class SpeakersViewController: BaseViewController {
     var viewModel : SpeakersViewModel? { didSet {
             self.tableView.reloadData()
         }}

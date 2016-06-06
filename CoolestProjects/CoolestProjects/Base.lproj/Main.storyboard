@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F31a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JYl-ja-URS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JYl-ja-URS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vLf-id-tyu" id="WQA-H0-Q0E">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -59,12 +59,28 @@
         <!--Speakers View Controller-->
         <scene sceneID="C5N-gd-DfH">
             <objects>
-                <viewController storyboardIdentifier="speakerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1LF-Jy-UBq" customClass="SpeakersViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="speakersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1LF-Jy-UBq" customClass="SpeakersViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hqA-Qo-Klg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsq-Vo-3t9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873" y="470"/>
+            <point key="canvasLocation" x="-777" y="800"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="28O-QG-QVg">
+            <objects>
+                <navigationController storyboardIdentifier="speakersNavViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ady-i3-FeU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YWv-YN-gHH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1LF-Jy-UBq" kind="relationship" relationship="rootViewController" id="CFd-wa-I2q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nF4-Zz-fAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1630" y="813"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4zc-wR-m8H">
