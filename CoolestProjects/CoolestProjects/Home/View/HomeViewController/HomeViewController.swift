@@ -11,7 +11,7 @@ import UIKit
 
 let SponsorBoxHeight: CGFloat = 300.0
 
-class HomeViewController : UIViewController {
+class HomeViewController : BaseViewController {
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var overlayView: UIView!
