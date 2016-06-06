@@ -11,6 +11,8 @@ target 'CoolestProjects' do
   pod 'Firebase/Storage'
 
   pod 'JSONModel'
+  
+  pod 'SDWebImage', '~> 3.7.6'
 
   target 'CoolestProjectsTests' do
     inherit! :search_paths

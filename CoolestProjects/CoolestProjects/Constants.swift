@@ -18,3 +18,8 @@ struct AppColors {
     static let darkTextColor = UIColor(red:51.0/255.0, green:51.0/255.0, blue:51.0/255.0, alpha:1.0)
     static let lightTextColor = UIColor.whiteColor()    
 }
+
+struct AppFonts {
+    static let tabBarFontNormal = UIFont(name: "OpenSans-Light", size: 10.0)!
+    static let tabBarFontSelected = UIFont(name: "OpenSans-Semibold", size: 10.0)!
+}
