@@ -56,6 +56,16 @@
             </objects>
             <point key="canvasLocation" x="409" y="-1182"/>
         </scene>
+        <!--Speakers View Controller-->
+        <scene sceneID="C5N-gd-DfH">
+            <objects>
+                <viewController storyboardIdentifier="speakerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1LF-Jy-UBq" customClass="SpeakersViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hqA-Qo-Klg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsq-Vo-3t9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="470"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4zc-wR-m8H">
             <objects>
@@ -67,7 +77,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="I9P-35-Zou"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="R1F-DS-uys"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hil-YG-oCh" userLabel="First Responder" sceneMemberID="firstResponder"/>

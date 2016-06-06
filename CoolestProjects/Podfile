@@ -9,10 +9,11 @@ target 'CoolestProjects' do
   pod 'Firebase'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-
+  
   pod 'JSONModel'
   pod 'SWRevealViewController' 
-  
+  pod 'SDWebImage', '~> 3.7.6'
+
   target 'CoolestProjectsTests' do
     inherit! :search_paths
     # Pods for testing
