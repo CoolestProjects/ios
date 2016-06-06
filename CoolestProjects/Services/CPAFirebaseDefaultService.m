@@ -81,7 +81,7 @@ NSString *const CPADatabaseChildVenue = @"venue";
     }];
 }
 
-- (void)getVenueInfoWithCompletionBlock:(void(^)(id *venue, NSError *error))completionBlock {
+- (void)getVenueInfoWithCompletionBlock:(void(^)(id venue, NSError *error))completionBlock {
 
 }
 
