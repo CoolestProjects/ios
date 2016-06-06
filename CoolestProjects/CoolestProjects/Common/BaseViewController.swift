@@ -13,8 +13,9 @@ import SWRevealViewController
 class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addLeftButtonItem()
-        self.addGestureRecognizers()
+        addLeftButtonItem()
+        addGestureRecognizers()
+        setupNavigationBar()
     }
     
     func addLeftButtonItem() {
@@ -25,5 +26,17 @@ class BaseViewController: UIViewController {
     func addGestureRecognizers() {
         self.revealViewController().panGestureRecognizer()
         self.revealViewController().tapGestureRecognizer()
+    }
+    
+    func setupNavigationBar() {
+        //TODO: Viewmodel
+        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        navigationController?.navigationBar.translucent = false
+        navigationItem.title = NSLocalizedString("navbar.title",tableName: "Speakers", comment: "")
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName: AppColors.yellowColor
+        ]
+        
+        
     }
 }
