@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StagesViewController : UIViewController {
+class StagesViewController : BaseViewController {
     
     @IBOutlet weak var speakersTableView: UITableView!
     @IBOutlet weak var summitCategoriesContainerView: UIView!

@@ -21,7 +21,7 @@ class MenuTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.itemTitles = ["Home", "Speakers", "Stages"]
-        self.itemIdentifiers = ["homeController", "speakersNavViewController", "stagesController"]
+        self.itemIdentifiers = ["homeController", "speakersNavViewController", "stagesNavViewController"]
         
         assert(self.itemIdentifiers.count == self.itemTitles.count, "You need to have the same number of titles as identifiers")
         
