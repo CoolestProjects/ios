@@ -5,3 +5,5 @@
 #import "CPAFirebaseDefaultService.h"
 #import "CPASummit.h"
 #import "CPASpeaker.h"
+#import "CPASponsorTier.h"
+#import "CPASponsor.h"
