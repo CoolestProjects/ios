@@ -30,7 +30,7 @@ class SpeakerTableViewCell: UITableViewCell {
         speakerDescriptionLabel.text = speakerViewModel.speakerDescription
         divider.backgroundColor = speakerViewModel.dividerColor
         
-        speakerImageView?.sd_setImageWithURL(NSURL(string: speakerViewModel.imageUrl!))
+        speakerImageView.sd_setImageWithURL(NSURL(string: speakerViewModel.imageUrl!), placeholderImage:speakerViewModel.placeholderImage )
         
     }
 }

@@ -28,10 +28,9 @@ class SpeakersViewController: UIViewController {
         
         firbaseService.getSpeakersWithCompletionBlock { (speakers, error) in
             
-            print("speaker \(speakers)");
-            
-            let speakersViewModel = SpeakersViewModel(speakers:speakers)
+            let speakersViewModel = SpeakersViewModel(speakers:speakers!)
             self.viewModel = speakersViewModel
+            
         
         };
         
@@ -65,7 +64,6 @@ extension SpeakersViewController : UITableViewDataSource {
        
         let speakerCell = cell as! SpeakerTableViewCell
         speakerCell.displayViewModel(component)
-        
     
         
         return cell

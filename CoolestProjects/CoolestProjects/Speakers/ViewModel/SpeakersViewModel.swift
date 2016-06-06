@@ -40,14 +40,15 @@ class SpeakerViewModel : Component  {
     var name : String?
     var speakerDescription: String?
     var imageUrl :String?
+    var placeholderImage: UIImage
     var componentIdentifier: String
     
-    var dividerColor : UIColor = UIColor.init(colorLiteralRed: 200, green: 200, blue: 200, alpha: 1.0)
+    var dividerColor : UIColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1.0)
 
     init(speaker : CPASpeaker) {
        componentIdentifier = "speakerCell"
-
-        name = speaker.name
+        placeholderImage = UIImage(named: "speaker_placeholder")!
+        name = speaker.name.uppercaseString
         speakerDescription = speaker.speakerDescription
         imageUrl = speaker.photoUrl
         
