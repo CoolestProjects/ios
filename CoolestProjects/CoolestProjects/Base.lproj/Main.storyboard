@@ -102,6 +102,32 @@
             </objects>
             <point key="canvasLocation" x="-1610" y="1585"/>
         </scene>
+        <!--Sponsors View Controller-->
+        <scene sceneID="byB-LI-Nsl">
+            <objects>
+                <viewController id="Ia4-9I-8Ae" customClass="SponsorsViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KeX-ry-mGJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojv-W3-cxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1262" y="2293"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jmj-od-v7M">
+            <objects>
+                <navigationController storyboardIdentifier="sponsorsNavViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bJr-3A-I2U" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sr8-43-cYV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ia4-9I-8Ae" kind="relationship" relationship="rootViewController" id="P9Q-hr-IDW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVR-9h-LWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2122" y="2273"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="28O-QG-QVg">
             <objects>

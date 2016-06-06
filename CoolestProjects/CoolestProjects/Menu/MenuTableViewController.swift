@@ -20,8 +20,8 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.itemTitles = ["Home", "Speakers", "Stages", "Projects"]
-        self.itemIdentifiers = ["homeController", "speakersNavViewController", "stagesNavViewController", "projectsNavViewController"]
+        self.itemTitles = ["Home", "Speakers", "Stages", "Sponsors", "Projects"]
+        self.itemIdentifiers = ["homeController", "speakersNavViewController", "stagesNavViewController", "sponsorsNavViewController", "projectsNavViewController"]
         
         assert(self.itemIdentifiers.count == self.itemTitles.count, "You need to have the same number of titles as identifiers")
         

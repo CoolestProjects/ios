@@ -21,14 +21,19 @@
 		4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED221CF9EA2C0028C8E0 /* Assets.xcassets */; };
 		4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED241CF9EA2C0028C8E0 /* LaunchScreen.storyboard */; };
 		4453ED311CF9EA2D0028C8E0 /* CoolestProjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED301CF9EA2D0028C8E0 /* CoolestProjectsTests.m */; };
-		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
-		9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */; };
 		44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44980DAC1D05CE7000C26765 /* Speakers.xcassets */; };
+		44980DB41D05DBF300C26765 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44980DB21D05DBF300C26765 /* SponsorsViewController.swift */; };
+		44980DB51D05DBF300C26765 /* SponsorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44980DB31D05DBF300C26765 /* SponsorsViewController.xib */; };
+		44980DB91D05DD3D00C26765 /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44980DB71D05DD3D00C26765 /* SponsorTableViewCell.swift */; };
+		44980DBA1D05DD3D00C26765 /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44980DB81D05DD3D00C26765 /* SponsorTableViewCell.xib */; };
+		44980DBC1D05DDDB00C26765 /* SponsorTrierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44980DBB1D05DDDB00C26765 /* SponsorTrierViewModel.swift */; };
 		4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498BFDD1D04BCB80085A15C /* SpeakersViewController.swift */; };
 		4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4498BFDE1D04BCB80085A15C /* SpeakersViewController.xib */; };
 		4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498BFE21D04BCD60085A15C /* SpeakersViewModel.swift */; };
 		44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E46FED1D04CA91003F779A /* SpeakerTableViewCell.swift */; };
 		44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E46FEE1D04CA91003F779A /* SpeakerTableViewCell.xib */; };
+		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
+		9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */; };
 		A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90364931CFF9CD60089B351 /* HomeViewModel.swift */; };
 		A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C078D1D00E3DC005271FE /* Boxes.swift */; };
 		A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79C051731B8A634DF461065 /* OpenSans-Light.ttf */; };
@@ -105,6 +110,11 @@
 		4453ED301CF9EA2D0028C8E0 /* CoolestProjectsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolestProjectsTests.m; sourceTree = "<group>"; };
 		4453ED321CF9EA2D0028C8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44980DAC1D05CE7000C26765 /* Speakers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Speakers.xcassets; path = images/Speakers.xcassets; sourceTree = "<group>"; };
+		44980DB21D05DBF300C26765 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		44980DB31D05DBF300C26765 /* SponsorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorsViewController.xib; sourceTree = "<group>"; };
+		44980DB71D05DD3D00C26765 /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
+		44980DB81D05DD3D00C26765 /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
+		44980DBB1D05DDDB00C26765 /* SponsorTrierViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTrierViewModel.swift; sourceTree = "<group>"; };
 		4498BFDD1D04BCB80085A15C /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		4498BFDE1D04BCB80085A15C /* SpeakersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakersViewController.xib; sourceTree = "<group>"; };
 		4498BFE21D04BCD60085A15C /* SpeakersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewModel.swift; sourceTree = "<group>"; };
@@ -254,6 +264,9 @@
 				9B0DB3E01D05B70D00F41956 /* Common */,
 				A99EEACC1D04385100114584 /* Stages */,
 				25318B141CFD761600691791 /* Services */,
+				B79C03B5FE2A16B6A9CE193E /* Home */,
+				4427A7EC1D04BA48009DA978 /* Speakers */,
+				44980DAE1D05DB9000C26765 /* Sponsors */,
 				4453ED191CF9EA2C0028C8E0 /* AppDelegate.h */,
 				4453ED1A1CF9EA2C0028C8E0 /* AppDelegate.m */,
 				4453ED1C1CF9EA2C0028C8E0 /* ViewController.h */,
@@ -263,8 +276,6 @@
 				4453ED241CF9EA2C0028C8E0 /* LaunchScreen.storyboard */,
 				4453ED271CF9EA2C0028C8E0 /* Info.plist */,
 				4453ED161CF9EA2C0028C8E0 /* Supporting Files */,
-				B79C03B5FE2A16B6A9CE193E /* Home */,
-				4427A7EC1D04BA48009DA978 /* Speakers */,
 				B79C00AFD0642BD176EED0D2 /* CoolestProjects-Bridging-Header.h */,
 				B79C06CAAF8371590D2837AC /* Resources */,
 				A91C07A71D0104D4005271FE /* Constants.swift */,
@@ -293,22 +304,50 @@
 			path = CoolestProjectsTests;
 			sourceTree = "<group>";
 		};
-		9B0DB3E01D05B70D00F41956 /* Common */ = {
+		44980DAE1D05DB9000C26765 /* Sponsors */ = {
 			isa = PBXGroup;
 			children = (
-				9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */,
+				44980DAF1D05DBA400C26765 /* View */,
+				44980DB01D05DBA400C26765 /* ViewModel */,
 			);
-			path = Common;
+			path = Sponsors;
 			sourceTree = "<group>";
 		};
-		9B0DB3E31D05BAC300F41956 /* Menu */ = {
+		44980DAF1D05DBA400C26765 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */,
+				44980DB61D05DCE700C26765 /* SponsorTableViewCell */,
+				44980DB11D05DBC200C26765 /* SponsorViewController */,
 			);
-			path = Menu;
-            sourceTree = "<group>";
-        };
+			path = View;
+			sourceTree = "<group>";
+		};
+		44980DB01D05DBA400C26765 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44980DBB1D05DDDB00C26765 /* SponsorTrierViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44980DB11D05DBC200C26765 /* SponsorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44980DB21D05DBF300C26765 /* SponsorsViewController.swift */,
+				44980DB31D05DBF300C26765 /* SponsorsViewController.xib */,
+			);
+			path = SponsorViewController;
+			sourceTree = "<group>";
+		};
+		44980DB61D05DCE700C26765 /* SponsorTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				44980DB71D05DD3D00C26765 /* SponsorTableViewCell.swift */,
+				44980DB81D05DD3D00C26765 /* SponsorTableViewCell.xib */,
+			);
+			path = SponsorTableViewCell;
+			sourceTree = "<group>";
+		};
 		4498BFDB1D04BCB80085A15C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +381,22 @@
 				44E46FEE1D04CA91003F779A /* SpeakerTableViewCell.xib */,
 			);
 			path = SpeakerTableViewCell;
+			sourceTree = "<group>";
+		};
+		9B0DB3E01D05B70D00F41956 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9B0DB3E31D05BAC300F41956 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		A8B1DA2B3A2CA95451BA172C /* Frameworks */ = {
@@ -626,7 +681,9 @@
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
 				A91C07A31D00ECC0005271FE /* InfoBoxTableViewCell.xib in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
+				44980DB51D05DBF300C26765 /* SponsorsViewController.xib in Resources */,
 				B79C042D35B744F825F85941 /* GoogleService-Info.plist in Resources */,
+				44980DBA1D05DD3D00C26765 /* SponsorTableViewCell.xib in Resources */,
 				A9F8DB5A1D03387700ECE1F3 /* HomeTableHeaderView.xib in Resources */,
 				A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */,
 				A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */,
@@ -948,9 +1005,11 @@
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
+				44980DBC1D05DDDB00C26765 /* SponsorTrierViewModel.swift in Sources */,
 				9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */,
 				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
 				4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */,
+				44980DB41D05DBF300C26765 /* SponsorsViewController.swift in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,
 				4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */,
 				A98010ED1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift in Sources */,
@@ -964,6 +1023,7 @@
 				AF3EAF4DEB8B5762CBBAAE06 /* CPASummit.m in Sources */,
 				A98010F11D05F72200AABC90 /* FilterOptions.swift in Sources */,
 				AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */,
+				44980DB91D05DD3D00C26765 /* SponsorTableViewCell.swift in Sources */,
 				A91C07A81D0104D4005271FE /* Constants.swift in Sources */,
 				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
 				A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */,
