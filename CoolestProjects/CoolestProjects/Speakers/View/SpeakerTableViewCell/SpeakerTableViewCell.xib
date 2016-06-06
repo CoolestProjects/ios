@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="OpenSans-Semibold.ttf">
@@ -22,47 +21,49 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="407.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-1g-xlT">
-                        <rect key="frame" x="20" y="20" width="280" height="280.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="OBn-1g-xlT" secondAttribute="height" multiplier="1:1" id="NZ4-mb-xVg"/>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="280" id="WRm-zI-e1e"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-Nx-Aan">
-                        <rect key="frame" x="28" y="320.5" width="264" height="32.5"/>
+                        <rect key="frame" x="20" y="320" width="280" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="PTv-ST-KPO"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrJ-jf-L85">
-                        <rect key="frame" x="28" y="353" width="264" height="32.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrJ-jf-L85">
+                        <rect key="frame" x="20" y="344.5" width="280" height="41"/>
                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eh3-IN-XVE">
-                        <rect key="frame" x="0.0" y="405.5" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="405" width="320" height="1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="ETo-x9-FeM"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-1g-xlT">
+                        <rect key="frame" x="20" y="20" width="280" height="280.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OBn-1g-xlT" secondAttribute="height" multiplier="1:1" id="NZ4-mb-xVg"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="WRm-zI-e1e"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Eh3-IN-XVE" secondAttribute="bottom" constant="1" id="0eA-Tl-csv"/>
                     <constraint firstItem="RrJ-jf-L85" firstAttribute="leading" secondItem="tUm-Nx-Aan" secondAttribute="leading" id="1LF-MA-Bdh"/>
                     <constraint firstItem="RrJ-jf-L85" firstAttribute="trailing" secondItem="tUm-Nx-Aan" secondAttribute="trailing" id="3Ot-C9-DOJ"/>
                     <constraint firstItem="OBn-1g-xlT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="3Z1-0u-8S4"/>
-                    <constraint firstItem="tUm-Nx-Aan" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="5qf-Cu-7YV"/>
                     <constraint firstAttribute="trailing" secondItem="OBn-1g-xlT" secondAttribute="trailing" constant="20" id="H8g-Ev-FBO"/>
                     <constraint firstItem="OBn-1g-xlT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ios-US-vWB"/>
-                    <constraint firstItem="RrJ-jf-L85" firstAttribute="height" secondItem="tUm-Nx-Aan" secondAttribute="height" id="KD9-JD-6WZ"/>
                     <constraint firstItem="Eh3-IN-XVE" firstAttribute="top" secondItem="RrJ-jf-L85" secondAttribute="bottom" constant="20" id="Rws-zl-lAa"/>
                     <constraint firstItem="tUm-Nx-Aan" firstAttribute="top" secondItem="OBn-1g-xlT" secondAttribute="bottom" constant="20" id="XS9-fO-kTg"/>
                     <constraint firstAttribute="trailing" secondItem="Eh3-IN-XVE" secondAttribute="trailing" id="aA4-Ej-rha"/>
                     <constraint firstItem="Eh3-IN-XVE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eEL-VG-gBC"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="tUm-Nx-Aan" secondAttribute="trailing" constant="20" id="hrE-zL-bee"/>
+                    <constraint firstAttribute="trailing" secondItem="tUm-Nx-Aan" secondAttribute="trailing" constant="20" id="gPQ-oQ-MLV"/>
+                    <constraint firstItem="tUm-Nx-Aan" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="kJ7-X3-arx"/>
                     <constraint firstItem="RrJ-jf-L85" firstAttribute="top" secondItem="tUm-Nx-Aan" secondAttribute="bottom" id="nhT-N1-k7A"/>
                 </constraints>
             </tableViewCellContentView>
