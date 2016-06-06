@@ -20,6 +20,7 @@
 		4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED221CF9EA2C0028C8E0 /* Assets.xcassets */; };
 		4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED241CF9EA2C0028C8E0 /* LaunchScreen.storyboard */; };
 		4453ED311CF9EA2D0028C8E0 /* CoolestProjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED301CF9EA2D0028C8E0 /* CoolestProjectsTests.m */; };
+		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
 		A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90364931CFF9CD60089B351 /* HomeViewModel.swift */; };
 		A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C078D1D00E3DC005271FE /* Boxes.swift */; };
 		A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79C051731B8A634DF461065 /* OpenSans-Light.ttf */; };
@@ -85,6 +86,7 @@
 		4597A15428DCEA5BAE8EAE8B /* Pods-CoolestProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.release.xcconfig"; sourceTree = "<group>"; };
 		49BF7892A648D3451D22C052 /* Pods-CoolestProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.debug.xcconfig"; sourceTree = "<group>"; };
 		7A77BE0BE8745848AD692EC7 /* Pods-CoolestProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A90364931CFF9CD60089B351 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A91C078D1D00E3DC005271FE /* Boxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boxes.swift; sourceTree = "<group>"; };
 		A91C079A1D00EC3F005271FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeViewController/HomeViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				9B0DB3E01D05B70D00F41956 /* Common */,
 				25318B141CFD761600691791 /* Services */,
 				4453ED191CF9EA2C0028C8E0 /* AppDelegate.h */,
 				4453ED1A1CF9EA2C0028C8E0 /* AppDelegate.m */,
@@ -233,6 +236,14 @@
 				4453ED321CF9EA2D0028C8E0 /* Info.plist */,
 			);
 			path = CoolestProjectsTests;
+			sourceTree = "<group>";
+		};
+		9B0DB3E01D05B70D00F41956 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A8B1DA2B3A2CA95451BA172C /* Frameworks */ = {
@@ -718,6 +729,7 @@
 				25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */,
 				A9F8DB691D0373B300ECE1F3 /* NibLoadable.swift in Sources */,
 				A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */,
+				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
 				4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */,
