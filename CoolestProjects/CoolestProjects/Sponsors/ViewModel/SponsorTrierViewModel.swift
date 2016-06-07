@@ -8,12 +8,21 @@
 
 import UIKit
 
+class SponsorsViewModel {
+    
+}
+
 class SponsorTrierViewModel {
 
-    var tableViewData : [SponsorViewModel]?
-
-    static func buildSponsorTierViewModels(sponsorTier: NSArray ) {
+    static func buildSponsorTierViewModels(sponsorTiers: NSArray ) -> [SponsorTrierViewModel] {
+        var sponsorTierViewModels : [SponsorTrierViewModel] = []
         
+        for sponsorTier in sponsorTiers {
+            let sponsorViewmodel = SponsorTrierViewModel(sponsorTier: sponsorTier as! CPASponsorTier)
+            sponsorTierViewModels.append(sponsorViewmodel)
+        }
+        
+        return sponsorTierViewModels
     }
     
     var tierName : String?
@@ -28,7 +37,7 @@ class SponsorTrierViewModel {
 }
 
 
-class SponsorViewModel {
+class SponsorViewModel: Component {
     
     static func buildSponsorViewModels(sponsors: NSArray ) -> [SponsorViewModel] {
         var sponsorViewModels : [SponsorViewModel] = []
@@ -41,13 +50,10 @@ class SponsorViewModel {
         return sponsorViewModels
     }
     
-    var nameText : String
     var logoUrl : String
-    var descriptionText : String
-    
+    var componentIdentifier: String = "sponsorCell"
+
     init(sponsor: CPASponsor) {
-        nameText = sponsor.name
         logoUrl = sponsor.logoUrl
-        descriptionText = sponsor.sponsorDescription
     }
 }
