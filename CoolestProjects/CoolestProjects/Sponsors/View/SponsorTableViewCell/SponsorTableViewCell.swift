@@ -10,7 +10,7 @@ import UIKit
 
 class SponsorTableViewCell: UITableViewCell {
 
-    func displayViewModel(speakerViewModel : SpeakerViewModel) {
+    func displayViewModel(speakerViewModel : SponsorViewModel) {
         
     
     }

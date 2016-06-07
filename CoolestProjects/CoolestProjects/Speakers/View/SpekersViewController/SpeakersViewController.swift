@@ -33,7 +33,6 @@ class SpeakersViewController: BaseViewController {
             
         
         };
-        
     }
     
     
