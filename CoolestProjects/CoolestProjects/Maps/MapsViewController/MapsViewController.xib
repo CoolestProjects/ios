@@ -7,7 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapsViewController" customModule="CoolestProjects" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="YaH-dy-p7b" id="TCq-Ph-SpO"/>
+                <outlet property="collectionView" destination="YaH-dy-p7b" id="3tY-0P-LMe"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Fep-PH-OmX"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,11 +19,15 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YaH-dy-p7b">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4vp-gD-9Ty">
-                        <size key="itemSize" width="50" height="50"/>
+                        <size key="itemSize" width="320" height="500"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1hw-SL-9Ek"/>
+                        <outlet property="delegate" destination="-1" id="mGo-R1-mAE"/>
+                    </connections>
                 </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
