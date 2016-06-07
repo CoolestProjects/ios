@@ -31,18 +31,18 @@ class StagesViewController : BaseViewController {
     
     func setupUI() {
         setupEdges()
-        setupTitle()
+        setupNavigationBar()
         setupTableView()
     }
     
     func loadContent() {
         firebaseService = CPAFirebaseDefaultService()
-        firebaseService?.getSummitsWithCompletionBlock { [unowned self] (summitList, error) in
+        firebaseService?.getSummitsWithCompletionBlock { [weak self] (summitList, error) in
             if let summitList = summitList {
-                self.allSummits = summitList
-                self.setupTabBarButtons()
-                self.selectSummit(atIndex: 0)
-                self.updateUI()
+                self?.allSummits = summitList
+                self?.setupTabBarButtons()
+                self?.selectSummit(atIndex: 0)
+                self?.updateUI()
             }
         }
     }
@@ -113,8 +113,15 @@ class StagesViewController : BaseViewController {
         edgesForExtendedLayout = .None
     }
     
-    func setupTitle() {
+    func setupNavigationBar() {
         title = NSLocalizedString("title", tableName: "Stages", comment: "")
+        
+        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSFontAttributeName: AppFonts.navigationBarTitle,
+            NSForegroundColorAttributeName: AppColors.yellowColor
+        ]
     }
     
     func setupTableView() {

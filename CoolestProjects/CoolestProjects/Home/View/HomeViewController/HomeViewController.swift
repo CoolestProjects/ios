@@ -91,7 +91,7 @@ class HomeViewController : BaseViewController {
     }
     
     func updateTableFooterFrame() {
-        tableFooterView.frame = CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), CGRectGetHeight(tableFooterView.frame))
+        tableFooterView.frame = CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 100.0)
         tableView.tableFooterView = tableFooterView
     }
     
