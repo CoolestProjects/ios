@@ -9,11 +9,7 @@
 import Foundation
 
 struct FilterOption {
-    let name: String
-    var selected: Bool
-}
-
-struct FilterOptionGroup {
-    let category: String
-    var options: [FilterOption]
+    let key: String
+    let value: String
+    let selected: Bool
 }

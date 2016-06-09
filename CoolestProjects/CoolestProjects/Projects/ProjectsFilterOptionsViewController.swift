@@ -11,68 +11,64 @@ import UIKit
 
 class ProjectsFilterOptionsViewController : UITableViewController {
     
-    @IBOutlet weak var resetButton: UIBarButtonItem!
     @IBOutlet weak var applyButton: UIBarButtonItem!
     
-    var filterOptions = [FilterOptionGroup]()
+    var filterOptions = [FilterOption]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let attributes = [
+        let buttonAttributes = [
+            NSFontAttributeName: AppFonts.navigationBarButton,
+            NSForegroundColorAttributeName: AppColors.yellowColor
+        ]
+        
+        applyButton.setTitleTextAttributes(buttonAttributes, forState: .Normal)
+        
+        title = NSLocalizedString("title", tableName: "Projects", comment: "")
+        
+        navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName: AppFonts.navigationBarTitle,
-            NSForegroundColorAttributeName: AppColors.yellowColor]
-        
-        resetButton.setTitleTextAttributes(attributes, forState: .Normal)
-        applyButton.setTitleTextAttributes(attributes, forState: .Normal)
-        
+            NSForegroundColorAttributeName: AppColors.yellowColor
+        ]
+                
         tableView.tableFooterView = UIView()
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return filterOptions.count
-    }
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filterOptions[section].options.count
+        return filterOptions.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("filterOptionCell", forIndexPath: indexPath)
-        let option = filterOptions[indexPath.section].options[indexPath.row]
+        let option = filterOptions[indexPath.row]
         
-        cell.textLabel?.text = NSLocalizedString(option.name, tableName: "Projects", comment: "")
+        cell.textLabel?.text = NSLocalizedString(option.key, tableName: "Projects", comment: "")
         cell.accessoryType = option.selected ? .Checkmark : .None
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let currentValue = filterOptions[indexPath.section].options[indexPath.row].selected
-        filterOptions[indexPath.section].options[indexPath.row].selected = !currentValue
+        // TODO: does it make sense to have the struct immutable? any other more efficient way to handle this??
+        filterOptions = filterOptions.enumerate().map({ (index, filterOption) -> FilterOption in
+            if (index == indexPath.row) {
+                return FilterOption(key: filterOption.key, value: filterOption.value, selected: !filterOption.selected)
+            }
+            
+            return filterOption
+        })
+        
         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return NSLocalizedString(filterOptions[section].category, tableName: "Projects", comment: "")
+        return NSLocalizedString("project-categories", tableName: "Projects", comment: "")
     }
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = AppFonts.tableHeaderTitle
-    }
-    
-    @IBAction func reset(sender: AnyObject) {
-        // TODO: mutable??
-        filterOptions = filterOptions.map({ (filterOptionGroup) -> FilterOptionGroup in
-            FilterOptionGroup(category: filterOptionGroup.category, options: filterOptionGroup.options.map({ (filterOption) -> FilterOption in
-                FilterOption(name: filterOption.name, selected: true)
-            }))
-        })
-        
-        tableView.reloadData()
-        
-        performSegueWithIdentifier("dismissFilterOptions", sender: self)
     }
     
     @IBAction func apply(sender: AnyObject) {

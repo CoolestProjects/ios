@@ -8,12 +8,14 @@
 
 "title" = "PROJECTS";
 "searchBar.placeholder" = "Search projects";
-"resetFiltersButton" = "Reset";
 "applyFiltersButton" = "Apply";
 "project-categories" = "Project categories";
-"scratch-red" = "Scratch Red";
-"scratch-green" = "Scratch Green";
+"scratch" = "Scratch";
+"mobile" = "Mobile";
 "websites" = "Websites";
-"games" = "Games";
+"games" = "Games + Web Games";
 "hardware" = "Hardware";
 "evolution" = "Evolution";
+
+//"scratch-red" = "Scratch Red";
+//"scratch-green" = "Scratch Green";

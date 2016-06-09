@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 struct Project {
-    var name = ""
-    var category = ""
-    var projectDescription = ""
-    var photoUrl: String?
-    var projectUrl: String?
+    let name: String
+    let category: String
+    let projectDescription: String
+    let coderdojo: String
+    let deskNumber: String
 }
 
 class ProjectsViewController : BaseViewController {
@@ -22,30 +22,39 @@ class ProjectsViewController : BaseViewController {
     @IBOutlet weak var projectsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var projects = [Project]()
+    //var projects = [Project]()
+    var projects = [
+        Project(name: "Lightbulb", category: "null", projectDescription: "Get ideas, use ideas, show your ideas! We provide science orientated idea starters, which the user builds on to develop their own project. They can then share a video or picture of their project to the app, so that they can inspire more users.", coderdojo: "", deskNumber: ""),
+        Project(name: "ESC", category: "Scratch", projectDescription: "A story based superhero scroller.", coderdojo: "", deskNumber: ""),
+        Project(name: "Verbos en español - Spanish Verb Quiz", category: "Mobile", projectDescription: "Verbos en español is a simple quiz game that tests your knowledge of over 200 (and counting!) Spanish verbs. It picks a random question, and you simply tap on the correct answer out of four possible answers. You must answer 15 questions correctly to finish the quiz, and the number of questions that you have gotten wrong is displayed on the screen as well as the amount that you have gotten correct.", coderdojo: "", deskNumber: ""),
+        Project(name: "startups.coderdojo.xyz", category: "Websites", projectDescription: "Startups.coderdojo.xyz is a website which allows kids in coderdojo to get a website going for free. It lets them get a domain name ending in .coderdojo.xyz (It could be expanded to fit any domain). They can also write html with my online editor which makes it easy for beginners and they can have a  pre-programmed placeholder on their domain until they write a website.", coderdojo: "", deskNumber: ""),
+        Project(name: "Global Warming Quiz", category: "Games + Web Games", projectDescription: "The Global Warming Quiz is a game that explains children in the elementary school what global warming is, and what they can do to help the earth", coderdojo: "", deskNumber: ""),
+        Project(name: "Pi Connect", category: "Hardware", projectDescription: "this is a tabletop device with a 7@ touchscreen to teach kids to code with hardware and software in one package.", coderdojo: "", deskNumber: ""),
+        Project(name: "The Maze Game", category: "Evolution", projectDescription: "This is a game where you cannot touch the walls of the maze or else you will have to start the whole game again.", coderdojo: "", deskNumber: "")
+    ]
+    
+    var filteredProjectsByCategory = [Project]()
+    
     var filteredProjects = [Project]()
     
-    var filterOptions = [FilterOptionGroup(
-        category: "project-categories",
-        options: [
-            FilterOption(name: "scratch-red", selected: true),
-            FilterOption(name: "scratch-green", selected: true),
-            FilterOption(name: "websites", selected: true),
-            FilterOption(name: "games", selected: true),
-            FilterOption(name: "hardware", selected: true),
-            FilterOption(name: "evolution", selected: true)
-        ])
+    var filterOptions = [
+            FilterOption(key: "scratch", value: "Scratch", selected: true),
+            FilterOption(key: "mobile", value: "Mobile", selected: true),
+            FilterOption(key: "websites", value: "Websites", selected: true),
+            FilterOption(key: "games", value: "Games + Web Games", selected: true),
+            FilterOption(key: "hardware", value: "Hardware", selected: true),
+            FilterOption(key: "evolution", value: "Evolution", selected: true)
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        edgesForExtendedLayout = .None
-        
         setupNavigationBar()
+        setupProjectsTableView()
+        setupDismissKeyboardGestureRecognizer()
         
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProjectsViewController.dismissKeyboard))
-        view.addGestureRecognizer(gestureRecognizer)
+        filteredProjectsByCategory = projects
+        filteredProjects = filteredProjectsByCategory
     }
     
     func setupNavigationBar() {
@@ -61,6 +70,16 @@ class ProjectsViewController : BaseViewController {
         searchBar.placeholder = NSLocalizedString("searchBar.placeholder", tableName: "Projects", comment: "")
     }
     
+    func setupProjectsTableView() {
+        projectsTableView.estimatedRowHeight = 180.0;
+        projectsTableView.rowHeight = UITableViewAutomaticDimension;
+    }
+    
+    func setupDismissKeyboardGestureRecognizer () {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProjectsViewController.dismissKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
     @IBAction func showFilterOptions(sender: UIButton) {
         performSegueWithIdentifier("showFilterOptions", sender: self)
     }
@@ -69,7 +88,8 @@ class ProjectsViewController : BaseViewController {
         if segue.identifier == "dismissFilterOptions" {
             if let filterViewController = segue.sourceViewController as? ProjectsFilterOptionsViewController {
                 filterOptions = filterViewController.filterOptions
-                // TODO: filter and reload
+                filterProjectsBySelectedCategories()
+                filterContentForSearchText(searchBar.text)
             }
         }        
     }
@@ -83,17 +103,42 @@ class ProjectsViewController : BaseViewController {
             }
         }
     }
-        
-    func filterContentForSearchText(searchText: String?) {
-        if let searchText = searchText {
-            filteredProjects = projects.filter({( project : Project) -> Bool in
-                return project.name.lowercaseString.containsString(searchText.lowercaseString)
+    
+    func filterProjectsBySelectedCategories() {
+        let selectedCategories = filterOptions
+            .filter({ (filterOption) -> Bool in
+                filterOption.selected == true
             })
-        } else {
-            filteredProjects = projects
+            .map { (filterOption) -> String in
+                return filterOption.value
         }
         
+        filteredProjectsByCategory = projects.filter({ (project) -> Bool in
+            selectedCategories.contains(project.category)
+        })
+        
+    }
+        
+    func filterContentForSearchText(searchText: String?) {
+    
+        if let searchText = searchText {
+            if !searchText.isEmpty {
+                filteredProjects = filteredProjectsByCategory.filter({ matchesQuery($0, query: searchText)})
+            } else {
+                filteredProjects = filteredProjectsByCategory
+            }
+        } else {
+            filteredProjects = filteredProjectsByCategory
+        }
+        
+        
         projectsTableView.reloadData()
+    }
+    
+    func matchesQuery(project: Project, query: String) -> Bool {
+        return project.name.localizedCaseInsensitiveContainsString(query) ||
+            project.projectDescription.localizedCaseInsensitiveContainsString(query) ||
+            project.coderdojo.localizedCaseInsensitiveContainsString(query)
     }
     
     func dismissKeyboard() {
@@ -109,8 +154,8 @@ extension ProjectsViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell() //tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let project = filteredProjects[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("projectCell", forIndexPath: indexPath) as! ProjectTableViewCell
+        cell.configure(withItem: filteredProjects[indexPath.row])
         return cell
     }
     

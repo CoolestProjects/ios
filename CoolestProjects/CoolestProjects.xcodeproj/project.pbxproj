@@ -51,8 +51,9 @@
 		A98010E91D05EFFA00AABC90 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98010E71D05EFFA00AABC90 /* Projects.storyboard */; };
 		A98010ED1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010EC1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift */; };
 		A98010EF1D05F2CB00AABC90 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010EE1D05F2CB00AABC90 /* ProjectsViewController.swift */; };
-		A98010F11D05F72200AABC90 /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010F01D05F72200AABC90 /* FilterOptions.swift */; };
+		A98010F11D05F72200AABC90 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010F01D05F72200AABC90 /* FilterOption.swift */; };
 		A98010F31D060B7100AABC90 /* Projects.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98010F21D060B7100AABC90 /* Projects.strings */; };
+		A9D461A41D08C4350076316D /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D461A31D08C4350076316D /* ProjectTableViewCell.swift */; };
 		A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB4D1D0331C100ECE1F3 /* Home.strings */; };
 		A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB501D03332700ECE1F3 /* Home.xcassets */; };
 		A9F8DB5A1D03387700ECE1F3 /* HomeTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB591D03387700ECE1F3 /* HomeTableHeaderView.xib */; };
@@ -134,8 +135,9 @@
 		A98010E81D05EFFA00AABC90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Projects.storyboard; sourceTree = "<group>"; };
 		A98010EC1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsFilterOptionsViewController.swift; path = Projects/ProjectsFilterOptionsViewController.swift; sourceTree = "<group>"; };
 		A98010EE1D05F2CB00AABC90 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = Projects/ProjectsViewController.swift; sourceTree = "<group>"; };
-		A98010F01D05F72200AABC90 /* FilterOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
+		A98010F01D05F72200AABC90 /* FilterOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOption.swift; sourceTree = "<group>"; };
 		A98010F21D060B7100AABC90 /* Projects.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Projects.strings; path = strings/Projects.strings; sourceTree = "<group>"; };
+		A9D461A31D08C4350076316D /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTableViewCell.swift; path = Projects/ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		A9F8DB4D1D0331C100ECE1F3 /* Home.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Home.strings; path = strings/Home.strings; sourceTree = "<group>"; };
 		A9F8DB501D03332700ECE1F3 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Home.xcassets; path = images/Home.xcassets; sourceTree = "<group>"; };
 		A9F8DB591D03387700ECE1F3 /* HomeTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeTableHeaderView.xib; path = HomeTableHeaderView/HomeTableHeaderView.xib; sourceTree = "<group>"; };
@@ -406,7 +408,8 @@
 			children = (
 				A98010EE1D05F2CB00AABC90 /* ProjectsViewController.swift */,
 				A98010EC1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift */,
-				A98010F01D05F72200AABC90 /* FilterOptions.swift */,
+				A98010F01D05F72200AABC90 /* FilterOption.swift */,
+				A9D461A31D08C4350076316D /* ProjectTableViewCell.swift */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -957,12 +960,13 @@
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
 				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
+				A9D461A41D08C4350076316D /* ProjectTableViewCell.swift in Sources */,
 				A9F8DB5C1D03389800ECE1F3 /* HomeTableHeaderView.swift in Sources */,
 				A98010EF1D05F2CB00AABC90 /* ProjectsViewController.swift in Sources */,
 				A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */,
 				4453ED181CF9EA2C0028C8E0 /* main.m in Sources */,
 				AF3EAF4DEB8B5762CBBAAE06 /* CPASummit.m in Sources */,
-				A98010F11D05F72200AABC90 /* FilterOptions.swift in Sources */,
+				A98010F11D05F72200AABC90 /* FilterOption.swift in Sources */,
 				AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */,
 				A91C07A81D0104D4005271FE /* Constants.swift in Sources */,
 				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
