@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		134565DF1F7980FF191C5DD6 /* Pods_CoolestProjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */; };
+		250152271D09563100BA9033 /* SponsorTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250152261D09563100BA9033 /* SponsorTableViewHeader.swift */; };
+		250152291D0956D200BA9033 /* SponsorTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250152281D0956D200BA9033 /* SponsorTableViewHeader.xib */; };
 		25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */; };
 		25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1B1CFD7EA700691791 /* CPAObject.m */; };
 		25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1E1CFD7EBC00691791 /* CPASpeaker.m */; };
@@ -88,6 +90,8 @@
 /* Begin PBXFileReference section */
 		194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		250152261D09563100BA9033 /* SponsorTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewHeader.swift; sourceTree = "<group>"; };
+		250152281D0956D200BA9033 /* SponsorTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewHeader.xib; sourceTree = "<group>"; };
 		25318B151CFD792300691791 /* CPAFirebaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseService.h; sourceTree = "<group>"; };
 		25318B161CFD794000691791 /* CPAFirebaseDefaultService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseDefaultService.h; sourceTree = "<group>"; };
 		25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAFirebaseDefaultService.m; sourceTree = "<group>"; };
@@ -193,6 +197,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250152251D09560A00BA9033 /* SponsorTableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				250152261D09563100BA9033 /* SponsorTableViewHeader.swift */,
+				250152281D0956D200BA9033 /* SponsorTableViewHeader.xib */,
+			);
+			path = SponsorTableViewHeader;
+			sourceTree = "<group>";
+		};
 		25318B141CFD761600691791 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +334,7 @@
 		44980DAF1D05DBA400C26765 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				250152251D09560A00BA9033 /* SponsorTableViewHeader */,
 				44980DB61D05DCE700C26765 /* SponsorTableViewCell */,
 				44980DB11D05DBC200C26765 /* SponsorViewController */,
 			);
@@ -698,6 +712,7 @@
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
 				A98010F31D060B7100AABC90 /* Projects.strings in Resources */,
 				44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */,
+				250152291D0956D200BA9033 /* SponsorTableViewHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1042,7 @@
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
 				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
 				A9D461A41D08C4350076316D /* ProjectTableViewCell.swift in Sources */,
+				250152271D09563100BA9033 /* SponsorTableViewHeader.swift in Sources */,
 				A9F8DB5C1D03389800ECE1F3 /* HomeTableHeaderView.swift in Sources */,
 				A98010EF1D05F2CB00AABC90 /* ProjectsViewController.swift in Sources */,
 				A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */,
