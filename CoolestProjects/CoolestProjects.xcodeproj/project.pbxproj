@@ -19,7 +19,6 @@
 		4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED1D1CF9EA2C0028C8E0 /* ViewController.m */; };
 		4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED1F1CF9EA2C0028C8E0 /* Main.storyboard */; };
 		4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED221CF9EA2C0028C8E0 /* Assets.xcassets */; };
-		4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED241CF9EA2C0028C8E0 /* LaunchScreen.storyboard */; };
 		4453ED311CF9EA2D0028C8E0 /* CoolestProjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED301CF9EA2D0028C8E0 /* CoolestProjectsTests.m */; };
 		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
 		9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */; };
@@ -262,7 +261,6 @@
 				4453ED1D1CF9EA2C0028C8E0 /* ViewController.m */,
 				4453ED1F1CF9EA2C0028C8E0 /* Main.storyboard */,
 				4453ED221CF9EA2C0028C8E0 /* Assets.xcassets */,
-				4453ED241CF9EA2C0028C8E0 /* LaunchScreen.storyboard */,
 				4453ED271CF9EA2C0028C8E0 /* Info.plist */,
 				4453ED161CF9EA2C0028C8E0 /* Supporting Files */,
 				B79C03B5FE2A16B6A9CE193E /* Home */,
@@ -611,7 +609,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */,
 				44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */,
 				A98010CA1D0524A300AABC90 /* Stages.strings in Resources */,
 				A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */,
@@ -1002,14 +999,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4453ED241CF9EA2C0028C8E0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4453ED251CF9EA2C0028C8E0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		A98010E71D05EFFA00AABC90 /* Projects.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1058,7 +1047,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1096,7 +1085,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1108,6 +1097,7 @@
 			baseConfigurationReference = 49BF7892A648D3451D22C052 /* Pods-CoolestProjects.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
@@ -1124,6 +1114,7 @@
 			baseConfigurationReference = 4597A15428DCEA5BAE8EAE8B /* Pods-CoolestProjects.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
