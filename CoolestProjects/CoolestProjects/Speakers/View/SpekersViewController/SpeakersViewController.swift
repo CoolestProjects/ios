@@ -53,8 +53,6 @@ class SpeakersViewController: BaseViewController {
             NSFontAttributeName: AppFonts.navigationBarTitle
 
         ]
-        
-    
     }
 
 }

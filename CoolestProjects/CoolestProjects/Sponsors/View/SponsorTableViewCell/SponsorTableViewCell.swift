@@ -10,8 +10,10 @@ import UIKit
 
 class SponsorTableViewCell: UITableViewCell {
 
-    func displayViewModel(speakerViewModel : SponsorViewModel) {
-        
+    @IBOutlet weak var sponsorImageView: UIImageView!
     
+    func displayViewModel(sponsorViewModel : SponsorViewModel) {
+        
+          sponsorImageView.sd_setImageWithURL(NSURL(string: sponsorViewModel.logoUrl))
     }
 }

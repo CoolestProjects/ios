@@ -18,15 +18,11 @@ class SponsorsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        getSponsors()
+        setupTableView()
+        setupNavigationBar()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     func getSponsors() {
         let firbaseService = CPAFirebaseDefaultService()
         
@@ -38,6 +34,27 @@ class SponsorsViewController: BaseViewController {
             self.tableViewData = SponsorTrierViewModel.buildSponsorTierViewModels(tiers)
         });
         
+    }
+
+    func setupTableView() {
+        tableView.estimatedRowHeight = 80;
+        tableView.rowHeight = UITableViewAutomaticDimension;
+        tableView.registerNib(UINib.init(nibName: "SponsorTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "sponsorCell")
+        
+        tableView.registerNib(UINib.init(nibName: "SponsorTableViewHeader", bundle: NSBundle.mainBundle()), forHeaderFooterViewReuseIdentifier: "sponsorHeader")
+        
+    }
+    
+    func setupNavigationBar() {
+        //TODO: Viewmodel
+        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        navigationController?.navigationBar.translucent = false
+        navigationItem.title = NSLocalizedString("navbar.title",tableName: "Speakers", comment: "")
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName: AppColors.yellowColor,
+            NSFontAttributeName: AppFonts.navigationBarTitle
+            
+        ]
     }
 
 }
@@ -67,5 +84,19 @@ extension SponsorsViewController : UITableViewDataSource {
         
         return cell
     }
+
+}
+
+extension SponsorsViewController : UITableViewDelegate {
+
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier("sponsorHeader")
+        let header = cell as! SponsorTableViewHeader
+        header.displayViewModel(tableViewData[section])
+        return cell
+    }
     
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44;
+    }
 }
