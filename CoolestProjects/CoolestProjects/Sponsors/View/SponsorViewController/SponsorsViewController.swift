@@ -37,7 +37,7 @@ class SponsorsViewController: BaseViewController {
     }
 
     func setupTableView() {
-        tableView.estimatedRowHeight = 200;
+        tableView.estimatedRowHeight = 216;
         tableView.rowHeight = UITableViewAutomaticDimension;
         tableView.registerNib(UINib.init(nibName: "SponsorTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "sponsorCell")
         
