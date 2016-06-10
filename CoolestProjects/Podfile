@@ -13,6 +13,9 @@ target 'CoolestProjects' do
   pod 'JSONModel'
   pod 'SWRevealViewController' 
   pod 'SDWebImage', '~> 3.7.6'
+  
+  pod 'Alamofire', '~> 3.4.0'
+  pod 'Gloss', '~> 0.7'    
 
   target 'CoolestProjectsTests' do
     inherit! :search_paths

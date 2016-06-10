@@ -9,29 +9,22 @@
 import Foundation
 import UIKit
 
-struct Project {
-    let name: String
-    let category: String
-    let projectDescription: String
-    let coderdojo: String
-    let deskNumber: String
-}
-
 class ProjectsViewController : BaseViewController {
     
     @IBOutlet weak var projectsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    //var projects = [Project]()
-    var projects = [
-        Project(name: "Lightbulb", category: "null", projectDescription: "Get ideas, use ideas, show your ideas! We provide science orientated idea starters, which the user builds on to develop their own project. They can then share a video or picture of their project to the app, so that they can inspire more users.", coderdojo: "", deskNumber: ""),
-        Project(name: "ESC", category: "Scratch", projectDescription: "A story based superhero scroller.", coderdojo: "", deskNumber: ""),
-        Project(name: "Verbos en español - Spanish Verb Quiz", category: "Mobile", projectDescription: "Verbos en español is a simple quiz game that tests your knowledge of over 200 (and counting!) Spanish verbs. It picks a random question, and you simply tap on the correct answer out of four possible answers. You must answer 15 questions correctly to finish the quiz, and the number of questions that you have gotten wrong is displayed on the screen as well as the amount that you have gotten correct.", coderdojo: "", deskNumber: ""),
-        Project(name: "startups.coderdojo.xyz", category: "Websites", projectDescription: "Startups.coderdojo.xyz is a website which allows kids in coderdojo to get a website going for free. It lets them get a domain name ending in .coderdojo.xyz (It could be expanded to fit any domain). They can also write html with my online editor which makes it easy for beginners and they can have a  pre-programmed placeholder on their domain until they write a website.", coderdojo: "", deskNumber: ""),
-        Project(name: "Global Warming Quiz", category: "Games + Web Games", projectDescription: "The Global Warming Quiz is a game that explains children in the elementary school what global warming is, and what they can do to help the earth", coderdojo: "", deskNumber: ""),
-        Project(name: "Pi Connect", category: "Hardware", projectDescription: "this is a tabletop device with a 7@ touchscreen to teach kids to code with hardware and software in one package.", coderdojo: "", deskNumber: ""),
-        Project(name: "The Maze Game", category: "Evolution", projectDescription: "This is a game where you cannot touch the walls of the maze or else you will have to start the whole game again.", coderdojo: "", deskNumber: "")
-    ]
+    var projects = [Project]()
+    
+//    var projects = [
+//        Project(name: "Lightbulb", category: "null", projectDescription: "Get ideas, use ideas, show your ideas! We provide science orientated idea starters, which the user builds on to develop their own project. They can then share a video or picture of their project to the app, so that they can inspire more users.", coderdojo: "", deskNumber: ""),
+//        Project(name: "ESC", category: "Scratch", projectDescription: "A story based superhero scroller.", coderdojo: "", deskNumber: ""),
+//        Project(name: "Verbos en español - Spanish Verb Quiz", category: "Mobile", projectDescription: "Verbos en español is a simple quiz game that tests your knowledge of over 200 (and counting!) Spanish verbs. It picks a random question, and you simply tap on the correct answer out of four possible answers. You must answer 15 questions correctly to finish the quiz, and the number of questions that you have gotten wrong is displayed on the screen as well as the amount that you have gotten correct.", coderdojo: "", deskNumber: ""),
+//        Project(name: "startups.coderdojo.xyz", category: "Websites", projectDescription: "Startups.coderdojo.xyz is a website which allows kids in coderdojo to get a website going for free. It lets them get a domain name ending in .coderdojo.xyz (It could be expanded to fit any domain). They can also write html with my online editor which makes it easy for beginners and they can have a  pre-programmed placeholder on their domain until they write a website.", coderdojo: "", deskNumber: ""),
+//        Project(name: "Global Warming Quiz", category: "Games + Web Games", projectDescription: "The Global Warming Quiz is a game that explains children in the elementary school what global warming is, and what they can do to help the earth", coderdojo: "", deskNumber: ""),
+//        Project(name: "Pi Connect", category: "Hardware", projectDescription: "this is a tabletop device with a 7@ touchscreen to teach kids to code with hardware and software in one package.", coderdojo: "", deskNumber: ""),
+//        Project(name: "The Maze Game", category: "Evolution", projectDescription: "This is a game where you cannot touch the walls of the maze or else you will have to start the whole game again.", coderdojo: "", deskNumber: "")
+//    ]
     
     var filteredProjectsByCategory = [Project]()
     
@@ -46,8 +39,32 @@ class ProjectsViewController : BaseViewController {
             FilterOption(key: "evolution", value: "Evolution", selected: true)
     ]
     
+    let service = ProjectsService()
+    
+    let store = ProjectsStore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        projects = store.readProjects()
+        
+        service.fetchProjects { [weak self] (result) in
+            switch(result) {
+            case .Success:
+                // TODO: mhe
+                print("project fetch ok")
+                if let fetchedProjects = result.data() {
+                    self?.projects = fetchedProjects
+                    self?.filterProjectsBySelectedCategories()
+                    self?.filterContentForSearchText(self?.searchBar.text)
+                    self?.store.saveProjects(fetchedProjects)
+                }
+                                            
+            case .Failure:
+                print("project fetch failed: \(result.error())")
+            }
+
+        }
         
         setupNavigationBar()
         setupProjectsTableView()
