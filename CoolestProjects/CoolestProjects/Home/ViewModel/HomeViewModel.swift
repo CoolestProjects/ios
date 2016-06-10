@@ -24,7 +24,7 @@ class HomeViewModel {
             SponsorBox(
                 title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                 textColor: AppColors.darkTextColor,
-                images: [UIImage(named: "sponsor-aol")!, UIImage(named: "sponsor-microsoft")!, UIImage(named: "sponsor-intel")!]
+                images: [UIImage(named: "sponsor-intel")!, UIImage(named: "sponsor-microsoft")!, UIImage(named: "sponsor-aol")!]
             ),
             InfoBox(
                 title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
