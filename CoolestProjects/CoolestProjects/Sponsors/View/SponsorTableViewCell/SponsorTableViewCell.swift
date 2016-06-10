@@ -11,9 +11,13 @@ import UIKit
 class SponsorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sponsorImageView: UIImageView!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     func displayViewModel(sponsorViewModel : SponsorViewModel) {
-        
-          sponsorImageView.sd_setImageWithURL(NSURL(string: sponsorViewModel.logoUrl))
+      sponsorImageView.sd_setImageWithURL(NSURL(string: sponsorViewModel.logoUrl)) { (image, error, cacheType, url) in
+//            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            
+        }
+    
     }
 }

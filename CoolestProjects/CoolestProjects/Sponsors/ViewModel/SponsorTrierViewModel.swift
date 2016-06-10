@@ -27,7 +27,8 @@ class SponsorTrierViewModel {
     
     var tierName : String?
     var sponsors : Array<SponsorViewModel>?
-
+    let tierColor = AppColors.lightGreyColor
+    
     init(sponsorTier: CPASponsorTier) {
         
         tierName = sponsorTier.tier

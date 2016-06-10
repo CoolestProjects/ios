@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		134565DF1F7980FF191C5DD6 /* Pods_CoolestProjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */; };
 		250152271D09563100BA9033 /* SponsorTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250152261D09563100BA9033 /* SponsorTableViewHeader.swift */; };
-		250152291D0956D200BA9033 /* SponsorTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250152281D0956D200BA9033 /* SponsorTableViewHeader.xib */; };
 		25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */; };
 		25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1B1CFD7EA700691791 /* CPAObject.m */; };
 		25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1E1CFD7EBC00691791 /* CPASpeaker.m */; };
@@ -88,7 +87,6 @@
 		194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		250152261D09563100BA9033 /* SponsorTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewHeader.swift; sourceTree = "<group>"; };
-		250152281D0956D200BA9033 /* SponsorTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewHeader.xib; sourceTree = "<group>"; };
 		25318B151CFD792300691791 /* CPAFirebaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseService.h; sourceTree = "<group>"; };
 		25318B161CFD794000691791 /* CPAFirebaseDefaultService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseDefaultService.h; sourceTree = "<group>"; };
 		25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAFirebaseDefaultService.m; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				250152261D09563100BA9033 /* SponsorTableViewHeader.swift */,
-				250152281D0956D200BA9033 /* SponsorTableViewHeader.xib */,
 			);
 			path = SponsorTableViewHeader;
 			sourceTree = "<group>";
@@ -704,7 +701,6 @@
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
 				A98010F31D060B7100AABC90 /* Projects.strings in Resources */,
 				44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */,
-				250152291D0956D200BA9033 /* SponsorTableViewHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

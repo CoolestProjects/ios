@@ -37,12 +37,11 @@ class SponsorsViewController: BaseViewController {
     }
 
     func setupTableView() {
-        tableView.estimatedRowHeight = 80;
+        tableView.estimatedRowHeight = 200;
         tableView.rowHeight = UITableViewAutomaticDimension;
         tableView.registerNib(UINib.init(nibName: "SponsorTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "sponsorCell")
         
-        tableView.registerNib(UINib.init(nibName: "SponsorTableViewHeader", bundle: NSBundle.mainBundle()), forHeaderFooterViewReuseIdentifier: "sponsorHeader")
-        
+        tableView.registerClass(SponsorTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "sponsorHeader")
     }
     
     func setupNavigationBar() {
@@ -80,7 +79,7 @@ extension SponsorsViewController : UITableViewDataSource {
         
         let sponsorCell = cell as! SponsorTableViewCell
         sponsorCell.displayViewModel(component)
-        
+
         
         return cell
     }
