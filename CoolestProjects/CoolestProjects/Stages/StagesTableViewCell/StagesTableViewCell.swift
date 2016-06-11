@@ -22,15 +22,9 @@ class StagesTableViewCell : UITableViewCell, Configurable {
     func configure(withItem item: ItemType) {
         fullName.text = item.name
         role.text = item.speakerDescription
-        
-        if let time = item.summitTimes?.time {
-            stageTime.text = time
-        } else {
-            stageTime.text = ""
-        }
+        stageTime.text = item.summitTimesAsString
         
         photo.sd_setImageWithURL(NSURL(string: item.photoUrl), placeholderImage: UIImage(named: "null-avatar"))
-        
     }
     
     override func prepareForReuse() {
