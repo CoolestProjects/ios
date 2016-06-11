@@ -103,7 +103,7 @@
 		25318B241CFDE51800691791 /* CPAFirebaseStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseStorage.h; sourceTree = "<group>"; };
 		258B58D61D0AE81300A23306 /* Sponsors.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Sponsors.strings; sourceTree = "<group>"; };
 		440C94751D05A6B200846321 /* Speakers.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Speakers.strings; sourceTree = "<group>"; };
-		4453ED131CF9EA2C0028C8E0 /* CoolestProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolestProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4453ED131CF9EA2C0028C8E0 /* Coderdojo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coderdojo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4453ED171CF9EA2C0028C8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4453ED191CF9EA2C0028C8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4453ED1A1CF9EA2C0028C8E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		4453ED141CF9EA2C0028C8E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4453ED131CF9EA2C0028C8E0 /* CoolestProjects.app */,
+				4453ED131CF9EA2C0028C8E0 /* Coderdojo.app */,
 				4453ED2C1CF9EA2D0028C8E0 /* CoolestProjectsTests.xctest */,
 			);
 			name = Products;
@@ -609,7 +609,7 @@
 			);
 			name = CoolestProjects;
 			productName = CoolestProjects;
-			productReference = 4453ED131CF9EA2C0028C8E0 /* CoolestProjects.app */;
+			productReference = 4453ED131CF9EA2C0028C8E0 /* Coderdojo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4453ED2B1CF9EA2D0028C8E0 /* CoolestProjectsTests */ = {
@@ -1190,7 +1190,7 @@
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderdojo.coolestprojects;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Coderdojo;
 				SWIFT_OBJC_BRIDGING_HEADER = "CoolestProjects/CoolestProjects-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1207,7 +1207,7 @@
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderdojo.coolestprojects;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Coderdojo;
 				SWIFT_OBJC_BRIDGING_HEADER = "CoolestProjects/CoolestProjects-Bridging-Header.h";
 			};
 			name = Release;
