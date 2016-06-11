@@ -31,7 +31,9 @@ class ProjectsViewController : BaseViewController {
     var filteredProjects = [Project]()
     
     var filterOptions = [
-            FilterOption(key: "scratch", value: "Scratch", selected: true),
+            //FilterOption(key: "scratch", value: "Scratch", selected: true),
+            FilterOption(key: "scratch-red", value: "Scratch Red", selected: true),
+            FilterOption(key: "scratch-green", value: "Scratch Green", selected: true),
             FilterOption(key: "mobile", value: "Mobile", selected: true),
             FilterOption(key: "websites", value: "Websites", selected: true),
             FilterOption(key: "games", value: "Games + Web Games", selected: true),

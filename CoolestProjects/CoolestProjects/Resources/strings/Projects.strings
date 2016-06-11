@@ -10,12 +10,11 @@
 "searchBar.placeholder" = "Search projects";
 "applyFiltersButton" = "Apply";
 "project-categories" = "Project categories";
+"scratch-red" = "Scratch Red";
+"scratch-green" = "Scratch Green";
 "scratch" = "Scratch";
 "mobile" = "Mobile";
 "websites" = "Websites";
 "games" = "Games + Web Games";
 "hardware" = "Hardware";
 "evolution" = "Evolution";
-
-//"scratch-red" = "Scratch Red";
-//"scratch-green" = "Scratch Green";
