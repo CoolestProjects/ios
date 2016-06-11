@@ -49,6 +49,7 @@
 		A937ECF81D0A315800593D6B /* ProjectsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A937ECF71D0A315800593D6B /* ProjectsStore.swift */; };
 		A937ECFB1D0A4A6100593D6B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A937ECF91D0A4A6100593D6B /* Project.swift */; };
 		A937ECFC1D0A4A6100593D6B /* ProjectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A937ECFA1D0A4A6100593D6B /* ProjectsService.swift */; };
+		A93BCD091D0C733200005DB2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD081D0C733200005DB2 /* Settings.bundle */; };
 		A946C7971D0316E500E19639 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946C7961D0316E500E19639 /* Configurable.swift */; };
 		A98010C41D04D4ED00AABC90 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010C31D04D4ED00AABC90 /* GenericDataSource.swift */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
@@ -142,6 +143,7 @@
 		A937ECF71D0A315800593D6B /* ProjectsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsStore.swift; path = Projects/ProjectsStore.swift; sourceTree = "<group>"; };
 		A937ECF91D0A4A6100593D6B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = Projects/Project.swift; sourceTree = "<group>"; };
 		A937ECFA1D0A4A6100593D6B /* ProjectsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsService.swift; path = Projects/ProjectsService.swift; sourceTree = "<group>"; };
+		A93BCD081D0C733200005DB2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A946C7961D0316E500E19639 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		A98010C31D04D4ED00AABC90 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 				A91C07A41D01016C005271FE /* strings */,
 				B79C002122720CC5142255F4 /* fonts */,
 				B79C04472D5989530374B57A /* GoogleService-Info.plist */,
+				A93BCD081D0C733200005DB2 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
 				44980DB51D05DBF300C26765 /* SponsorsViewController.xib in Resources */,
 				B79C042D35B744F825F85941 /* GoogleService-Info.plist in Resources */,
+				A93BCD091D0C733200005DB2 /* Settings.bundle in Resources */,
 				44980DBA1D05DD3D00C26765 /* SponsorTableViewCell.xib in Resources */,
 				A9F8DB5A1D03387700ECE1F3 /* HomeTableHeaderView.xib in Resources */,
 				A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */,
