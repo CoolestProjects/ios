@@ -50,6 +50,16 @@
 		A937ECFB1D0A4A6100593D6B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A937ECF91D0A4A6100593D6B /* Project.swift */; };
 		A937ECFC1D0A4A6100593D6B /* ProjectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A937ECFA1D0A4A6100593D6B /* ProjectsService.swift */; };
 		A93BCD091D0C733200005DB2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD081D0C733200005DB2 /* Settings.bundle */; };
+		A93BCD0C1D0C802300005DB2 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD0B1D0C802300005DB2 /* About.storyboard */; };
+		A93BCD0E1D0C81A300005DB2 /* AboutContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD0D1D0C81A300005DB2 /* AboutContainerViewController.swift */; };
+		A93BCD131D0C863300005DB2 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD121D0C863300005DB2 /* about.html */; };
+		A93BCD151D0C893C00005DB2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD141D0C893C00005DB2 /* AboutViewController.swift */; };
+		A93BCD191D0C8CC700005DB2 /* Coderdojo2015-107.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD171D0C8CC700005DB2 /* Coderdojo2015-107.jpg */; };
+		A93BCD1A1D0C8CC700005DB2 /* Coderdojo2015-547.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD181D0C8CC700005DB2 /* Coderdojo2015-547.jpg */; };
+		A93BCD1E1D0C911D00005DB2 /* Coderdojo2015-569.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD1B1D0C911D00005DB2 /* Coderdojo2015-569.jpg */; };
+		A93BCD1F1D0C911D00005DB2 /* Coderdojo2015-813.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD1C1D0C911D00005DB2 /* Coderdojo2015-813.jpg */; };
+		A93BCD201D0C911D00005DB2 /* Coderdojo2015-6071.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD1D1D0C911D00005DB2 /* Coderdojo2015-6071.jpg */; };
+		A93BCD221D0C97C800005DB2 /* About.strings in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD211D0C97C800005DB2 /* About.strings */; };
 		A946C7971D0316E500E19639 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946C7961D0316E500E19639 /* Configurable.swift */; };
 		A98010C41D04D4ED00AABC90 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010C31D04D4ED00AABC90 /* GenericDataSource.swift */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
@@ -144,6 +154,16 @@
 		A937ECF91D0A4A6100593D6B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = Projects/Project.swift; sourceTree = "<group>"; };
 		A937ECFA1D0A4A6100593D6B /* ProjectsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsService.swift; path = Projects/ProjectsService.swift; sourceTree = "<group>"; };
 		A93BCD081D0C733200005DB2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		A93BCD0B1D0C802300005DB2 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = About.storyboard; path = About/About.storyboard; sourceTree = "<group>"; };
+		A93BCD0D1D0C81A300005DB2 /* AboutContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutContainerViewController.swift; path = About/AboutContainerViewController.swift; sourceTree = "<group>"; };
+		A93BCD121D0C863300005DB2 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = html/about.html; sourceTree = "<group>"; };
+		A93BCD141D0C893C00005DB2 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = About/AboutViewController.swift; sourceTree = "<group>"; };
+		A93BCD171D0C8CC700005DB2 /* Coderdojo2015-107.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-107.jpg"; path = "images/about/Coderdojo2015-107.jpg"; sourceTree = "<group>"; };
+		A93BCD181D0C8CC700005DB2 /* Coderdojo2015-547.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-547.jpg"; path = "images/about/Coderdojo2015-547.jpg"; sourceTree = "<group>"; };
+		A93BCD1B1D0C911D00005DB2 /* Coderdojo2015-569.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-569.jpg"; path = "images/about/Coderdojo2015-569.jpg"; sourceTree = "<group>"; };
+		A93BCD1C1D0C911D00005DB2 /* Coderdojo2015-813.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-813.jpg"; path = "images/about/Coderdojo2015-813.jpg"; sourceTree = "<group>"; };
+		A93BCD1D1D0C911D00005DB2 /* Coderdojo2015-6071.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-6071.jpg"; path = "images/about/Coderdojo2015-6071.jpg"; sourceTree = "<group>"; };
+		A93BCD211D0C97C800005DB2 /* About.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = About.strings; path = strings/About.strings; sourceTree = "<group>"; };
 		A946C7961D0316E500E19639 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		A98010C31D04D4ED00AABC90 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
@@ -279,6 +299,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				A93BCD0A1D0C7FFA00005DB2 /* About */,
 				A98010EA1D05F26200AABC90 /* Projects */,
 				9B0DB3E31D05BAC300F41956 /* Menu */,
 				9B0DB3E01D05B70D00F41956 /* Common */,
@@ -455,8 +476,39 @@
 				440C94751D05A6B200846321 /* Speakers.strings */,
 				A98010F21D060B7100AABC90 /* Projects.strings */,
 				258B58D61D0AE81300A23306 /* Sponsors.strings */,
+				A93BCD211D0C97C800005DB2 /* About.strings */,
 			);
 			name = strings;
+			sourceTree = "<group>";
+		};
+		A93BCD0A1D0C7FFA00005DB2 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				A93BCD0B1D0C802300005DB2 /* About.storyboard */,
+				A93BCD0D1D0C81A300005DB2 /* AboutContainerViewController.swift */,
+				A93BCD141D0C893C00005DB2 /* AboutViewController.swift */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		A93BCD111D0C861500005DB2 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				A93BCD121D0C863300005DB2 /* about.html */,
+			);
+			name = html;
+			sourceTree = "<group>";
+		};
+		A93BCD161D0C8BA000005DB2 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				A93BCD1B1D0C911D00005DB2 /* Coderdojo2015-569.jpg */,
+				A93BCD1C1D0C911D00005DB2 /* Coderdojo2015-813.jpg */,
+				A93BCD1D1D0C911D00005DB2 /* Coderdojo2015-6071.jpg */,
+				A93BCD171D0C8CC700005DB2 /* Coderdojo2015-107.jpg */,
+				A93BCD181D0C8CC700005DB2 /* Coderdojo2015-547.jpg */,
+			);
+			name = about;
 			sourceTree = "<group>";
 		};
 		A98010CF1D05258A00AABC90 /* StagesTableViewCell */ = {
@@ -503,6 +555,7 @@
 		A9F8DB4F1D03328B00ECE1F3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A93BCD161D0C8BA000005DB2 /* about */,
 				44980DAC1D05CE7000C26765 /* Speakers.xcassets */,
 				A9F8DB501D03332700ECE1F3 /* Home.xcassets */,
 				A98010C71D0522E800AABC90 /* Stages.xcassets */,
@@ -568,6 +621,7 @@
 		B79C06CAAF8371590D2837AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A93BCD111D0C861500005DB2 /* html */,
 				A9F8DB4F1D03328B00ECE1F3 /* images */,
 				A91C07A41D01016C005271FE /* strings */,
 				B79C002122720CC5142255F4 /* fonts */,
@@ -692,18 +746,24 @@
 				258B58D71D0AE81300A23306 /* Sponsors.strings in Resources */,
 				44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */,
 				A98010CA1D0524A300AABC90 /* Stages.strings in Resources */,
+				A93BCD191D0C8CC700005DB2 /* Coderdojo2015-107.jpg in Resources */,
+				A93BCD221D0C97C800005DB2 /* About.strings in Resources */,
 				A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */,
 				A98010E91D05EFFA00AABC90 /* Projects.storyboard in Resources */,
 				4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */,
 				A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */,
 				4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */,
 				A98010D41D05259F00AABC90 /* StagesViewController.xib in Resources */,
+				A93BCD131D0C863300005DB2 /* about.html in Resources */,
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
 				440C94761D05A6B200846321 /* Speakers.strings in Resources */,
 				A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
 				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
+				A93BCD0C1D0C802300005DB2 /* About.storyboard in Resources */,
+				A93BCD1F1D0C911D00005DB2 /* Coderdojo2015-813.jpg in Resources */,
+				A93BCD1A1D0C8CC700005DB2 /* Coderdojo2015-547.jpg in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
 				A91C07A31D00ECC0005271FE /* InfoBoxTableViewCell.xib in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
@@ -713,8 +773,10 @@
 				44980DBA1D05DD3D00C26765 /* SponsorTableViewCell.xib in Resources */,
 				A9F8DB5A1D03387700ECE1F3 /* HomeTableHeaderView.xib in Resources */,
 				A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */,
+				A93BCD201D0C911D00005DB2 /* Coderdojo2015-6071.jpg in Resources */,
 				A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */,
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
+				A93BCD1E1D0C911D00005DB2 /* Coderdojo2015-569.jpg in Resources */,
 				A98010F31D060B7100AABC90 /* Projects.strings in Resources */,
 				44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */,
 			);
@@ -1043,6 +1105,7 @@
 				4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */,
 				A98010ED1D05F2C400AABC90 /* ProjectsFilterOptionsViewController.swift in Sources */,
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
+				A93BCD0E1D0C81A300005DB2 /* AboutContainerViewController.swift in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
 				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
 				A9D461A41D08C4350076316D /* ProjectTableViewCell.swift in Sources */,
@@ -1059,6 +1122,7 @@
 				A937ECFB1D0A4A6100593D6B /* Project.swift in Sources */,
 				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
 				A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */,
+				A93BCD151D0C893C00005DB2 /* AboutViewController.swift in Sources */,
 				A91C079F1D00EC85005271FE /* InfoBoxTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
