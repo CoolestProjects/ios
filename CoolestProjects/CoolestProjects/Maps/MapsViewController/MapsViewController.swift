@@ -46,16 +46,16 @@ extension MapsViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         if let collectionView = self.collectionView {
             if let cell = collectionView.cellForItemAtIndexPath(indexPath) as? MapViewCollectionViewCell {
-//                let cell = collectionView.cellForItemAtIndexPath(indexPath) as! MapViewCollectionViewCell
+
                 if let cellImage = cell.mapImageView?.image {
                     let widthRatio = collectionView.frame.size.width / cellImage.size.width
                     return CGSizeMake((collectionView.frame.size.width), 38 + cellImage.size.height * widthRatio)
                 }
             }
-            return CGSizeMake(collectionView.frame.size.width, 100)
+            return CGSizeMake(collectionView.frame.size.width, 150)
         }
         
-        return CGSizeZero
+        return CGSizeZero 
     }
     
 }

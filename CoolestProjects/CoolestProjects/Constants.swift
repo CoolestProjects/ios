@@ -26,4 +26,5 @@ struct AppFonts {
     static let tableHeaderTitle = UIFont(name: "OpenSans-Semibold", size: 14.0)!
     static let tabBarFontNormal = UIFont(name: "OpenSans-Light", size: 10.0)!
     static let tabBarFontSelected = UIFont(name: "OpenSans-Semibold", size: 10.0)!
+    static let navbarTitleFont = UIFont(name: "Mail Ray Stuff", size: 22.0)!
 }

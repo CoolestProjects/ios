@@ -12,10 +12,13 @@ import SDWebImage
 class MapViewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var mapImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     func displayModel(model : (String, String), collectionView: UICollectionView) {
-        self.mapImageView.sd_setImageWithURL(NSURL(string: model.1), completed: { (image : UIImage!, error : NSError!, cache: SDImageCacheType, url: NSURL!) in
+        self.activityIndicatorView.startAnimating()
+        self.mapImageView.sd_setImageWithURL(NSURL(string: model.1), completed: { [unowned self] (image : UIImage!, error : NSError!, cache: SDImageCacheType, url: NSURL!) in
             collectionView.collectionViewLayout.invalidateLayout()
+            self.activityIndicatorView.stopAnimating()
         });
         self.titleLabel?.text = model.0
     }

@@ -21,7 +21,6 @@
     
     [FIRApp configure];
     [FIRDatabase database].persistenceEnabled = YES;
-
     return YES;
 }
 

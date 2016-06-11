@@ -34,9 +34,14 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.translucent = false
         navigationItem.title = NSLocalizedString("navbar.title",tableName: "Speakers", comment: "")
         navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: AppColors.yellowColor
+            NSForegroundColorAttributeName: AppColors.yellowColor,
+            NSFontAttributeName : AppFonts.navbarTitleFont
         ]
         
         
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 }
