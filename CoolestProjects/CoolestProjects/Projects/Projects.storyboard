@@ -23,44 +23,31 @@
                         <viewControllerLayoutGuide type="bottom" id="n04-iv-Mna"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="84a-JB-HdH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNi-0o-kwH" userLabel="SearchBarContainer">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" placeholder="Search projects" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C4-yH-WGe">
-                                        <rect key="frame" x="0.0" y="0.0" width="553" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="K2T-VE-N0l" id="fEY-Qa-Jyf"/>
                                         </connections>
                                     </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFf-6g-Qty">
-                                        <rect key="frame" x="563" y="11" width="22" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="22" id="8Er-tQ-eL4"/>
-                                            <constraint firstAttribute="height" constant="22" id="U2S-1R-4ls"/>
-                                        </constraints>
-                                        <state key="normal" image="filter"/>
-                                        <connections>
-                                            <action selector="showFilterOptions:" destination="K2T-VE-N0l" eventType="touchUpInside" id="L9s-Dd-gan"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="7C4-yH-WGe" firstAttribute="centerY" secondItem="TNi-0o-kwH" secondAttribute="centerY" id="2mq-CK-xbG"/>
                                     <constraint firstAttribute="height" constant="44" id="9TJ-jk-eLj"/>
-                                    <constraint firstAttribute="trailing" secondItem="LFf-6g-Qty" secondAttribute="trailing" constant="15" id="TF1-EP-PLG"/>
                                     <constraint firstItem="7C4-yH-WGe" firstAttribute="leading" secondItem="TNi-0o-kwH" secondAttribute="leading" id="YWX-pF-ePa"/>
-                                    <constraint firstItem="LFf-6g-Qty" firstAttribute="leading" secondItem="7C4-yH-WGe" secondAttribute="trailing" constant="10" id="a1C-i7-8QM"/>
-                                    <constraint firstItem="LFf-6g-Qty" firstAttribute="centerY" secondItem="TNi-0o-kwH" secondAttribute="centerY" id="dIJ-Dh-6BQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="7C4-yH-WGe" secondAttribute="trailing" id="mDH-HQ-8lv"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="279" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p2B-y6-KJo">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="psi-OE-QJl">
@@ -99,7 +86,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Desk: 12" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAc-tm-JQl">
-                                                            <rect key="frame" x="0.0" y="184.5" width="570" height="19.5"/>
+                                                            <rect key="frame" x="0.0" y="184" width="570" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -165,8 +152,16 @@
                             <constraint firstItem="TNi-0o-kwH" firstAttribute="top" secondItem="p2z-XE-Biq" secondAttribute="bottom" id="pZZ-qc-PQe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Xb-rX-n0w"/>
+                    <navigationItem key="navigationItem" id="9Xb-rX-n0w">
+                        <barButtonItem key="rightBarButtonItem" title="Categories" id="Ag0-6V-KBX">
+                            <connections>
+                                <action selector="showFilterOptions:" destination="K2T-VE-N0l" id="VaI-Wg-kuE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="categoriesButton" destination="Ag0-6V-KBX" id="oa8-1e-8Vw"/>
                         <outlet property="projectsTableView" destination="p2B-y6-KJo" id="rK9-ZD-4eL"/>
                         <outlet property="searchBar" destination="7C4-yH-WGe" id="Ppy-Td-8Wh"/>
                         <segue destination="UdW-V9-AdM" kind="presentation" identifier="showFilterOptions" id="VnD-hb-9lG"/>
@@ -246,7 +241,4 @@
             <point key="canvasLocation" x="1937" y="448"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="filter" width="22" height="22"/>
-    </resources>
 </document>

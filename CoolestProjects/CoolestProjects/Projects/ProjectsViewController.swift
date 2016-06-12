@@ -11,8 +11,10 @@ import UIKit
 
 class ProjectsViewController : BaseViewController {
     
-    @IBOutlet weak var projectsTableView: UITableView!
+    @IBOutlet weak var categoriesButton: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var projectsTableView: UITableView!
+    
     
     var projects = [Project]()
     
@@ -61,6 +63,13 @@ class ProjectsViewController : BaseViewController {
         
         searchBar.placeholder = NSLocalizedString("searchBar.placeholder", tableName: "Projects", comment: "")
         
+        let buttonAttributes = [
+            NSFontAttributeName: AppFonts.navigationBarButton,
+            NSForegroundColorAttributeName: AppColors.yellowColor
+        ]
+        
+        categoriesButton.setTitleTextAttributes(buttonAttributes, forState: .Normal)
+        
         super.setupNavigationBar()
     }
     
@@ -107,8 +116,8 @@ class ProjectsViewController : BaseViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProjectsViewController.dismissKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
     }
-    
-    @IBAction func showFilterOptions(sender: UIButton) {
+        
+    @IBAction func showFilterOptions(sender: AnyObject) {
         performSegueWithIdentifier("showFilterOptions", sender: self)
     }
     
