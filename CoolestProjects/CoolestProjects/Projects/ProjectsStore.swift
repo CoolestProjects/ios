@@ -9,7 +9,22 @@
 import Foundation
 import Gloss
 
+let projectsLastUpdateDateKey = "projectsLastUpdateDate"
+let cacheExpTimeInterval: NSTimeInterval = 600 // 10 min
+
 class ProjectsStore {
+    
+    func lastUpdateDate() -> NSDate {
+        if let date = NSUserDefaults.standardUserDefaults().objectForKey(projectsLastUpdateDateKey) as? NSDate {
+            return date
+        } else {
+            return NSDate.distantPast()
+        }        
+    }
+    
+    func cacheExpired() -> Bool {
+        return abs(lastUpdateDate().timeIntervalSinceNow) > cacheExpTimeInterval        
+    }
     
     func readProjects() -> [Project] {
         guard let storeUrl = projectsStoreUrl(), let data = NSData(contentsOfURL: storeUrl)
@@ -38,6 +53,8 @@ class ProjectsStore {
         do {
             let data = try NSJSONSerialization.dataWithJSONObject(jsonArray, options: .PrettyPrinted)
             data.writeToURL(storeUrl, atomically: true)
+            NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: projectsLastUpdateDateKey)
+            
         } catch let error {
             print(error)
         }

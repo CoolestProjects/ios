@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CPAFirebaseDefaultService.h"
 @import Firebase;
 
 @interface AppDelegate ()
@@ -21,6 +22,8 @@
     
     [FIRApp configure];
     [FIRDatabase database].persistenceEnabled = YES;
+    
+    [self preloadContent];
     
     [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     return YES;
@@ -57,6 +60,15 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 //    FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.Unknown)
     [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeUnknown];
+}
+
+- (void)preloadContent {
+    id<CPAFirebaseService> firebaseService = [CPAFirebaseDefaultService new];
+    
+    [firebaseService getSpeakersWithCompletionBlock:nil];
+    [firebaseService getSummitsWithCompletionBlock:nil];
+    [firebaseService getSponsorsWithCompletionBlock:nil];
+    [firebaseService getAboutInfoWithCompletionBlock:nil];
 }
 
 

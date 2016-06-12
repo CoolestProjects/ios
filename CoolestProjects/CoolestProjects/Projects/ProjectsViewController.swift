@@ -48,32 +48,12 @@ class ProjectsViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        projects = store.readProjects()
-        
-        service.fetchProjects { [weak self] (result) in
-            switch(result) {
-            case .Success:
-                // TODO: mhe
-                print("project fetch ok")
-                if let fetchedProjects = result.data() {
-                    self?.projects = fetchedProjects
-                    self?.filterProjectsBySelectedCategories()
-                    self?.filterContentForSearchText(self?.searchBar.text)
-                    self?.store.saveProjects(fetchedProjects)
-                }
-                                            
-            case .Failure:
-                print("project fetch failed: \(result.error())")
-            }
-
-        }
-        
         setupNavigationBar()
         setupProjectsTableView()
         setupDismissKeyboardGestureRecognizer()
         
-        filteredProjectsByCategory = projects
-        filteredProjects = filteredProjectsByCategory
+        loadProjectsFromStore()
+        updateProjectsIfNeeded()
     }
     
     override func setupNavigationBar() {
@@ -82,6 +62,40 @@ class ProjectsViewController : BaseViewController {
         searchBar.placeholder = NSLocalizedString("searchBar.placeholder", tableName: "Projects", comment: "")
         
         super.setupNavigationBar()
+    }
+    
+    func loadProjectsFromStore() {
+        projects = store.readProjects()
+        filteredProjectsByCategory = projects
+        filteredProjects = filteredProjectsByCategory
+    }
+    
+    func updateProjectsIfNeeded() {
+        
+        if store.cacheExpired() {
+            print("fetching projects...")
+            
+            service.fetchProjects { [weak self] (result) in
+                switch(result) {
+                case .Success:
+                    // TODO: mhe
+                    print("project fetch completed")
+                    if let fetchedProjects = result.data() {
+                        self?.projects = fetchedProjects
+                        self?.filterProjectsBySelectedCategories()
+                        self?.filterContentForSearchText(self?.searchBar.text)
+                        self?.store.saveProjects(fetchedProjects)
+                    }
+                    
+                case .Failure:
+                    print("project fetch failed: \(result.error())")
+                }
+                
+            }
+        } else {
+            print("Skip projects update, using cached data...")
+        }
+
     }
     
     func setupProjectsTableView() {
