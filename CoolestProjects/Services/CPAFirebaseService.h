@@ -11,6 +11,7 @@
 @class CPASpeaker;
 @class CPASummit;
 @class CPASponsorTier;
+@class CPAAbout;
 
 @protocol CPAFirebaseService <NSObject>
 
@@ -28,6 +29,9 @@
  *  Get a list of the tier and sponsors for that tier.
  */
 - (void)getSponsorsWithCompletionBlock:(nullable void(^)(NSArray<CPASponsorTier *> * _Nullable sponsorTiers, NSError * _Nullable error))completionBlock;
+
+
+- (void)getAboutInfoWithCompletionBlock:(nullable void(^)(CPAAbout * _Nullable aboutContent, NSError * _Nullable error))completionBlock;
 
 - (void)getVenueInfoWithCompletionBlock:(nullable void(^)(id _Nullable venue, NSError * _Nullable error))completionBlock;
 

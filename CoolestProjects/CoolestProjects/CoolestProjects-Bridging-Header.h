@@ -7,3 +7,4 @@
 #import "CPASpeaker.h"
 #import "CPASponsorTier.h"
 #import "CPASponsor.h"
+#import "CPAAbout.h"

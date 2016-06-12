@@ -10,12 +10,15 @@
 #import "CPASpeaker.h"
 #import "CPASummit.h"
 #import "CPASponsorTier.h"
+#import "CPAAbout.h"
+
 @import Firebase;
 
 NSString *const CPADatabaseChildSpeakers = @"speakers";
 NSString *const CPADatabaseChildSummits = @"summits";
 NSString *const CPADatabaseChildSponsors = @"sponsors";
 NSString *const CPADatabaseChildVenue = @"venue";
+NSString *const CPADatabaseChildAbout = @"about";
 
 @interface CPAFirebaseDefaultService ()
 
@@ -48,7 +51,9 @@ NSString *const CPADatabaseChildVenue = @"venue";
             
         }
         
-        completionBlock(speakers, error);
+        if (completionBlock) {
+            completionBlock(speakers, error);
+        }
     }];
 }
 
@@ -63,7 +68,9 @@ NSString *const CPADatabaseChildVenue = @"venue";
             [summits addObject:summit];
         }
 
-        completionBlock(summits, error);
+        if (completionBlock) {
+            completionBlock(summits, error);
+        }
     }];
 }
 
@@ -76,12 +83,35 @@ NSString *const CPADatabaseChildVenue = @"venue";
             [sponsorTiers addObject:sponsorsTier];
         }
 
-        completionBlock(sponsorTiers, error);
+        if (completionBlock) {
+            completionBlock(sponsorTiers, error);
+        }
     }];
 }
 
 - (void)getVenueInfoWithCompletionBlock:(void(^)(id venue, NSError *error))completionBlock {
+    
+    // TODO: do we need this endpoint?
+    if (completionBlock) {
+        completionBlock(nil, [NSError errorWithDomain:@"org.coolestprojects.coolestprojectsevent" code:1000 userInfo:nil]);
+    }
+}
 
+- (void)getAboutInfoWithCompletionBlock:(nullable void(^)(CPAAbout * _Nullable aboutContent, NSError * _Nullable error))completionBlock {
+    
+    [self getDataForChild:CPADatabaseChildAbout withCompletionBlock:^(id results, NSError *error) {
+        CPAAbout *about;
+        
+        if (!error) {
+            // TODO: handle parsing errors
+            about = [[CPAAbout alloc] initWithDictionary:results error:nil];
+        }
+        
+        if (completionBlock) {
+            completionBlock(about, error);
+        }
+        
+    }];
 }
 
 - (void)getDataForChild:(NSString *)child withCompletionBlock:(void(^)(id results, NSError *error))completionBlock {

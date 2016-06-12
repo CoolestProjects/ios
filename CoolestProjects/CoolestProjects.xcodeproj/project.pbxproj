@@ -50,6 +50,8 @@
 		A93BCD2D1D0DFA8000005DB2 /* Coderdojo2015-569.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD281D0DFA8000005DB2 /* Coderdojo2015-569.jpg */; };
 		A93BCD2E1D0DFA8000005DB2 /* Coderdojo2015-813.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD291D0DFA8000005DB2 /* Coderdojo2015-813.jpg */; };
 		A93BCD2F1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD2A1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg */; };
+		A93BCD321D0DFE4800005DB2 /* CPAAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD311D0DFE4800005DB2 /* CPAAbout.m */; };
+		A93BCD341D0E0E9200005DB2 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD331D0E0E9200005DB2 /* DisclaimerViewController.swift */; };
 		A946C7971D0316E500E19639 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946C7961D0316E500E19639 /* Configurable.swift */; };
 		A98010C41D04D4ED00AABC90 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010C31D04D4ED00AABC90 /* GenericDataSource.swift */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
@@ -164,6 +166,9 @@
 		A93BCD281D0DFA8000005DB2 /* Coderdojo2015-569.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-569.jpg"; path = "images/about/Coderdojo2015-569.jpg"; sourceTree = "<group>"; };
 		A93BCD291D0DFA8000005DB2 /* Coderdojo2015-813.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-813.jpg"; path = "images/about/Coderdojo2015-813.jpg"; sourceTree = "<group>"; };
 		A93BCD2A1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-6071.jpg"; path = "images/about/Coderdojo2015-6071.jpg"; sourceTree = "<group>"; };
+		A93BCD301D0DFE4800005DB2 /* CPAAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAAbout.h; sourceTree = "<group>"; };
+		A93BCD311D0DFE4800005DB2 /* CPAAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAAbout.m; sourceTree = "<group>"; };
+		A93BCD331D0E0E9200005DB2 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
 		A946C7961D0316E500E19639 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		A98010C31D04D4ED00AABC90 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
@@ -264,6 +269,8 @@
 				AF3EA0E8EA5C1F40CE3BC099 /* CPASponsor.h */,
 				25318B201CFD93D800691791 /* CPASponsorTier.h */,
 				25318B211CFD93D800691791 /* CPASponsorTier.m */,
+				A93BCD301D0DFE4800005DB2 /* CPAAbout.h */,
+				A93BCD311D0DFE4800005DB2 /* CPAAbout.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -688,6 +695,7 @@
 				E1C604051D0DD78800931C38 /* About.storyboard */,
 				E1C604061D0DD78800931C38 /* AboutContainerViewController.swift */,
 				E1C604071D0DD78800931C38 /* AboutViewController.swift */,
+				A93BCD331D0E0E9200005DB2 /* DisclaimerViewController.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -979,6 +987,7 @@
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
 				E1C604211D0DD86A00931C38 /* FilterOption.swift in Sources */,
 				9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */,
+				A93BCD321D0DFE4800005DB2 /* CPAAbout.m in Sources */,
 				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
 				E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */,
 				E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */,
@@ -999,6 +1008,7 @@
 				AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */,
 				9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */,
 				9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */,
+				A93BCD341D0E0E9200005DB2 /* DisclaimerViewController.swift in Sources */,
 				A91C07A81D0104D4005271FE /* Constants.swift in Sources */,
 				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
 				A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */,
