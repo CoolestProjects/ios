@@ -16,15 +16,10 @@ class AboutContainerViewController : BaseViewController {
         setupNavigationBar()
     }
     
-    func setupNavigationBar() {
+    override func setupNavigationBar() {
         title = NSLocalizedString("title", tableName: "About", comment: "")
         
-        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        navigationController?.navigationBar.translucent = false
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: AppFonts.navigationBarTitle,
-            NSForegroundColorAttributeName: AppColors.yellowColor
-        ]        
+        super.setupNavigationBar()
     }
     
 }

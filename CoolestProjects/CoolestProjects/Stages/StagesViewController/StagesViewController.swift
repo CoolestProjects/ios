@@ -113,15 +113,10 @@ class StagesViewController : BaseViewController {
         edgesForExtendedLayout = .None
     }
     
-    func setupNavigationBar() {
+    override func setupNavigationBar() {
         title = NSLocalizedString("title", tableName: "Stages", comment: "")
         
-        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        navigationController?.navigationBar.translucent = false
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: AppFonts.navigationBarTitle,
-            NSForegroundColorAttributeName: AppColors.yellowColor
-        ]
+        super.setupNavigationBar()
     }
     
     func setupTableView() {

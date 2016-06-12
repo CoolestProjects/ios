@@ -69,6 +69,29 @@
 		E1C603F21D0C717100931C38 /* mail ray stuff.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1C603F11D0C717100931C38 /* mail ray stuff.ttf */; };
 		E1C603F51D0C74F600931C38 /* MapZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603F41D0C74F600931C38 /* MapZoomViewController.swift */; };
 		E1C603F71D0C751400931C38 /* MapZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C603F61D0C751400931C38 /* MapZoomViewController.xib */; };
+		E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603FB1D0DD78800931C38 /* SponsorTableViewCell.swift */; };
+		E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C603FC1D0DD78800931C38 /* SponsorTableViewCell.xib */; };
+		E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603FE1D0DD78800931C38 /* SponsorTableViewHeader.swift */; };
+		E1C6040B1D0DD78800931C38 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604001D0DD78800931C38 /* SponsorsViewController.swift */; };
+		E1C6040C1D0DD78800931C38 /* SponsorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C604011D0DD78800931C38 /* SponsorsViewController.xib */; };
+		E1C6040D1D0DD78800931C38 /* SponsorTrierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604031D0DD78800931C38 /* SponsorTrierViewModel.swift */; };
+		E1C6040E1D0DD78800931C38 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C604051D0DD78800931C38 /* About.storyboard */; };
+		E1C6040F1D0DD78800931C38 /* AboutContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604061D0DD78800931C38 /* AboutContainerViewController.swift */; };
+		E1C604101D0DD78800931C38 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604071D0DD78800931C38 /* AboutViewController.swift */; };
+		E1C604181D0DD7E100931C38 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604121D0DD7E100931C38 /* Project.swift */; };
+		E1C604191D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604131D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift */; };
+		E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604141D0DD7E100931C38 /* ProjectsService.swift */; };
+		E1C6041B1D0DD7E100931C38 /* ProjectsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604151D0DD7E100931C38 /* ProjectsStore.swift */; };
+		E1C6041C1D0DD7E100931C38 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604161D0DD7E100931C38 /* ProjectsViewController.swift */; };
+		E1C6041D1D0DD7E100931C38 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604171D0DD7E100931C38 /* ProjectTableViewCell.swift */; };
+		E1C6041F1D0DD7EF00931C38 /* Sponsors.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1C6041E1D0DD7EF00931C38 /* Sponsors.strings */; };
+		E1C604211D0DD86A00931C38 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604201D0DD86A00931C38 /* FilterOption.swift */; };
+		E1C604241D0DD8C800931C38 /* About.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1C604221D0DD8C800931C38 /* About.strings */; };
+		E1C604271D0DD93400931C38 /* Projects.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1C604261D0DD93400931C38 /* Projects.strings */; };
+		E1C604291D0DD94A00931C38 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E1C604281D0DD94A00931C38 /* Settings.bundle */; };
+		E1C6042C1D0DDA9600931C38 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C6042A1D0DDA9600931C38 /* Projects.storyboard */; };
+		E1C6042F1D0DDC9D00931C38 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = E1C6042E1D0DDC9D00931C38 /* about.html */; };
+		E1C604311D0DDD0E00931C38 /* Maps.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1C604301D0DDD0E00931C38 /* Maps.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +185,29 @@
 		E1C603F11D0C717100931C38 /* mail ray stuff.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "mail ray stuff.ttf"; path = "../../../../../../../Downloads/mail_ray_stuff/mail ray stuff.ttf"; sourceTree = "<group>"; };
 		E1C603F41D0C74F600931C38 /* MapZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapZoomViewController.swift; sourceTree = "<group>"; };
 		E1C603F61D0C751400931C38 /* MapZoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapZoomViewController.xib; sourceTree = "<group>"; };
+		E1C603FB1D0DD78800931C38 /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
+		E1C603FC1D0DD78800931C38 /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
+		E1C603FE1D0DD78800931C38 /* SponsorTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewHeader.swift; sourceTree = "<group>"; };
+		E1C604001D0DD78800931C38 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		E1C604011D0DD78800931C38 /* SponsorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorsViewController.xib; sourceTree = "<group>"; };
+		E1C604031D0DD78800931C38 /* SponsorTrierViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTrierViewModel.swift; sourceTree = "<group>"; };
+		E1C604051D0DD78800931C38 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		E1C604061D0DD78800931C38 /* AboutContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutContainerViewController.swift; sourceTree = "<group>"; };
+		E1C604071D0DD78800931C38 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E1C604121D0DD7E100931C38 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		E1C604131D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsFilterOptionsViewController.swift; sourceTree = "<group>"; };
+		E1C604141D0DD7E100931C38 /* ProjectsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsService.swift; sourceTree = "<group>"; };
+		E1C604151D0DD7E100931C38 /* ProjectsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsStore.swift; sourceTree = "<group>"; };
+		E1C604161D0DD7E100931C38 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		E1C604171D0DD7E100931C38 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		E1C6041E1D0DD7EF00931C38 /* Sponsors.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Sponsors.strings; sourceTree = "<group>"; };
+		E1C604201D0DD86A00931C38 /* FilterOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOption.swift; sourceTree = "<group>"; };
+		E1C604221D0DD8C800931C38 /* About.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = About.strings; path = strings/About.strings; sourceTree = "<group>"; };
+		E1C604261D0DD93400931C38 /* Projects.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Projects.strings; path = strings/Projects.strings; sourceTree = "<group>"; };
+		E1C604281D0DD94A00931C38 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E1C6042B1D0DDA9600931C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Projects.storyboard; sourceTree = "<group>"; };
+		E1C6042E1D0DDC9D00931C38 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		E1C604301D0DDD0E00931C38 /* Maps.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Maps.strings; path = strings/Maps.strings; sourceTree = "<group>"; };
 		F4C963232B4882A7A78E90F5 /* Pods-CoolestProjectsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +303,11 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				E1C6042A1D0DDA9600931C38 /* Projects.storyboard */,
+				E1C604201D0DD86A00931C38 /* FilterOption.swift */,
+				E1C604111D0DD7E100931C38 /* Projects */,
+				E1C603F81D0DD78800931C38 /* Sponsors */,
+				E1C604041D0DD78800931C38 /* About */,
 				9B59077F1D05ECB000FCE40D /* Maps */,
 				9B0DB3E31D05BAC300F41956 /* Menu */,
 				9B0DB3E01D05B70D00F41956 /* Common */,
@@ -418,11 +469,15 @@
 		A91C07A41D01016C005271FE /* strings */ = {
 			isa = PBXGroup;
 			children = (
+				E1C604261D0DD93400931C38 /* Projects.strings */,
+				E1C6041E1D0DD7EF00931C38 /* Sponsors.strings */,
+				E1C604221D0DD8C800931C38 /* About.strings */,
 				A91C07A51D0101C5005271FE /* Localizable.strings */,
 				A9F8DB4D1D0331C100ECE1F3 /* Home.strings */,
 				A98010C91D0524A300AABC90 /* Stages.strings */,
 				440C94751D05A6B200846321 /* Speakers.strings */,
 				E10F18F81D06F8C500AE44AC /* Menu.strings */,
+				E1C604301D0DDD0E00931C38 /* Maps.strings */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -523,6 +578,8 @@
 		B79C06CAAF8371590D2837AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E1C6042D1D0DDC9D00931C38 /* html */,
+				E1C604281D0DD94A00931C38 /* Settings.bundle */,
 				A9F8DB4F1D03328B00ECE1F3 /* images */,
 				A91C07A41D01016C005271FE /* strings */,
 				B79C002122720CC5142255F4 /* fonts */,
@@ -550,6 +607,90 @@
 				E1C603F61D0C751400931C38 /* MapZoomViewController.xib */,
 			);
 			path = ZoomView;
+			sourceTree = "<group>";
+		};
+		E1C603F81D0DD78800931C38 /* Sponsors */ = {
+			isa = PBXGroup;
+			children = (
+				E1C603F91D0DD78800931C38 /* View */,
+				E1C604021D0DD78800931C38 /* ViewModel */,
+			);
+			path = Sponsors;
+			sourceTree = "<group>";
+		};
+		E1C603F91D0DD78800931C38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1C603FA1D0DD78800931C38 /* SponsorTableViewCell */,
+				E1C603FD1D0DD78800931C38 /* SponsorTableViewHeader */,
+				E1C603FF1D0DD78800931C38 /* SponsorViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1C603FA1D0DD78800931C38 /* SponsorTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1C603FB1D0DD78800931C38 /* SponsorTableViewCell.swift */,
+				E1C603FC1D0DD78800931C38 /* SponsorTableViewCell.xib */,
+			);
+			path = SponsorTableViewCell;
+			sourceTree = "<group>";
+		};
+		E1C603FD1D0DD78800931C38 /* SponsorTableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				E1C603FE1D0DD78800931C38 /* SponsorTableViewHeader.swift */,
+			);
+			path = SponsorTableViewHeader;
+			sourceTree = "<group>";
+		};
+		E1C603FF1D0DD78800931C38 /* SponsorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1C604001D0DD78800931C38 /* SponsorsViewController.swift */,
+				E1C604011D0DD78800931C38 /* SponsorsViewController.xib */,
+			);
+			path = SponsorViewController;
+			sourceTree = "<group>";
+		};
+		E1C604021D0DD78800931C38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1C604031D0DD78800931C38 /* SponsorTrierViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1C604041D0DD78800931C38 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E1C604051D0DD78800931C38 /* About.storyboard */,
+				E1C604061D0DD78800931C38 /* AboutContainerViewController.swift */,
+				E1C604071D0DD78800931C38 /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		E1C604111D0DD7E100931C38 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				E1C604121D0DD7E100931C38 /* Project.swift */,
+				E1C604131D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift */,
+				E1C604141D0DD7E100931C38 /* ProjectsService.swift */,
+				E1C604151D0DD7E100931C38 /* ProjectsStore.swift */,
+				E1C604161D0DD7E100931C38 /* ProjectsViewController.swift */,
+				E1C604171D0DD7E100931C38 /* ProjectTableViewCell.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		E1C6042D1D0DDC9D00931C38 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				E1C6042E1D0DDC9D00931C38 /* about.html */,
+			);
+			path = html;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -665,6 +806,7 @@
 				4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */,
 				44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */,
 				A98010CA1D0524A300AABC90 /* Stages.strings in Resources */,
+				E1C604241D0DD8C800931C38 /* About.strings in Resources */,
 				A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */,
 				4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */,
 				A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */,
@@ -675,20 +817,29 @@
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
 				440C94761D05A6B200846321 /* Speakers.strings in Resources */,
 				A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */,
+				E1C6040E1D0DD78800931C38 /* About.storyboard in Resources */,
+				E1C6042C1D0DDA9600931C38 /* Projects.storyboard in Resources */,
+				E1C6041F1D0DD7EF00931C38 /* Sponsors.strings in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
+				E1C6042F1D0DDC9D00931C38 /* about.html in Resources */,
 				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
+				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
 				9B59078F1D05F51A00FCE40D /* MapViewCollectionViewCell.xib in Resources */,
 				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
+				E1C604271D0DD93400931C38 /* Projects.strings in Resources */,
 				A91C07A31D00ECC0005271FE /* InfoBoxTableViewCell.xib in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
+				E1C604291D0DD94A00931C38 /* Settings.bundle in Resources */,
 				B79C042D35B744F825F85941 /* GoogleService-Info.plist in Resources */,
 				A9F8DB5A1D03387700ECE1F3 /* HomeTableHeaderView.xib in Resources */,
 				A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */,
+				E1C604311D0DDD0E00931C38 /* Maps.strings in Resources */,
 				A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */,
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
 				44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */,
+				E1C6040C1D0DD78800931C38 /* SponsorsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,27 +1145,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C6040D1D0DD78800931C38 /* SponsorTrierViewModel.swift in Sources */,
+				E1C6041B1D0DD7E100931C38 /* ProjectsStore.swift in Sources */,
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
 				A946C7971D0316E500E19639 /* Configurable.swift in Sources */,
+				E1C604191D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift in Sources */,
 				A98010C41D04D4ED00AABC90 /* GenericDataSource.swift in Sources */,
+				E1C6041C1D0DD7E100931C38 /* ProjectsViewController.swift in Sources */,
 				25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */,
 				A98010D71D0525A800AABC90 /* StagesTableViewCell.swift in Sources */,
+				E1C6040F1D0DD78800931C38 /* AboutContainerViewController.swift in Sources */,
 				A9F8DB691D0373B300ECE1F3 /* NibLoadable.swift in Sources */,
 				A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */,
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
+				E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
+				E1C604211D0DD86A00931C38 /* FilterOption.swift in Sources */,
 				9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */,
 				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
+				E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */,
+				E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */,
 				4453ED1E1CF9EA2C0028C8E0 /* ViewController.m in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,
 				4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */,
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
+				E1C6041D1D0DD7E100931C38 /* ProjectTableViewCell.swift in Sources */,
 				9B59078D1D05F50900FCE40D /* MapViewCollectionViewCell.swift in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
 				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
 				A9F8DB5C1D03389800ECE1F3 /* HomeTableHeaderView.swift in Sources */,
 				A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */,
+				E1C604181D0DD7E100931C38 /* Project.swift in Sources */,
+				E1C6040B1D0DD78800931C38 /* SponsorsViewController.swift in Sources */,
 				4453ED181CF9EA2C0028C8E0 /* main.m in Sources */,
 				AF3EAF4DEB8B5762CBBAAE06 /* CPASummit.m in Sources */,
 				AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */,
@@ -1023,6 +1186,7 @@
 				A91C07A81D0104D4005271FE /* Constants.swift in Sources */,
 				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
 				A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */,
+				E1C604101D0DD78800931C38 /* AboutViewController.swift in Sources */,
 				E1C603F51D0C74F600931C38 /* MapZoomViewController.swift in Sources */,
 				A91C079F1D00EC85005271FE /* InfoBoxTableViewCell.swift in Sources */,
 			);
@@ -1061,6 +1225,14 @@
 				4453ED251CF9EA2C0028C8E0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E1C6042A1D0DDA9600931C38 /* Projects.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1C6042B1D0DDA9600931C38 /* Base */,
+			);
+			name = Projects.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1157,7 +1329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noel King (LX4AMFVZ52)";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1176,7 +1348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noel King (LX4AMFVZ52)";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

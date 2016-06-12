@@ -76,17 +76,12 @@ class ProjectsViewController : BaseViewController {
         filteredProjects = filteredProjectsByCategory
     }
     
-    func setupNavigationBar() {
+    override func setupNavigationBar() {
         title = NSLocalizedString("title", tableName: "Projects", comment: "")
         
-        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        navigationController?.navigationBar.translucent = false
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: AppFonts.navigationBarTitle,
-            NSForegroundColorAttributeName: AppColors.yellowColor
-        ]
-        
         searchBar.placeholder = NSLocalizedString("searchBar.placeholder", tableName: "Projects", comment: "")
+        
+        super.setupNavigationBar()
     }
     
     func setupProjectsTableView() {

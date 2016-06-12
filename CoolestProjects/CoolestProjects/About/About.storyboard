@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="16C-4j-zPn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="16C-4j-zPn">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--About Container View Controller-->
         <scene sceneID="MQx-Mt-VAX">
             <objects>
-                <viewController id="16C-4j-zPn" customClass="AboutContainerViewController" customModule="Coderdojo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="16C-4j-zPn" customClass="AboutContainerViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mT0-Lu-UbK"/>
                         <viewControllerLayoutGuide type="bottom" id="kO4-Md-g00"/>
@@ -40,7 +41,11 @@
         <!--About View Controller-->
         <scene sceneID="uWp-Ss-oyf">
             <objects>
-                <viewController id="NbQ-RK-TWN" customClass="AboutViewController" customModule="Coderdojo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NbQ-RK-TWN" customClass="AboutViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k2g-sW-Mln"/>
+                        <viewControllerLayoutGuide type="bottom" id="22t-B1-Nig"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0d0-dT-QVZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
