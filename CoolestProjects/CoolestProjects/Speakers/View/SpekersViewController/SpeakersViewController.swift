@@ -43,16 +43,10 @@ class SpeakersViewController: BaseViewController {
         
     }
     
-    func setupNavigationBar() {
-        //TODO: Viewmodel
-        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        navigationController?.navigationBar.translucent = false
+    override func setupNavigationBar() {
         navigationItem.title = NSLocalizedString("navbar.title",tableName: "Speakers", comment: "")
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: AppColors.yellowColor,
-            NSFontAttributeName: AppFonts.navigationBarTitle
-
-        ]
+     
+        super.setupNavigationBar()
     }
 
 }
