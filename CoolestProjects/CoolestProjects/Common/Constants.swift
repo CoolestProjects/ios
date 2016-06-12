@@ -22,7 +22,7 @@ struct AppColors {
 
 struct AppFonts {
     static let navigationBarTitle = UIFont(name: "OpenSans", size: 18.0)!
-    static let navigationBarButton = UIFont(name: "OpenSans", size: 16.0)!
+    static let navigationBarButton = UIFont(name: "OpenSans", size: 14.0)!
     static let tableHeaderTitle = UIFont(name: "OpenSans-Semibold", size: 14.0)!
     static let tabBarFontNormal = UIFont(name: "OpenSans-Light", size: 10.0)!
     static let tabBarFontSelected = UIFont(name: "OpenSans-Semibold", size: 10.0)!

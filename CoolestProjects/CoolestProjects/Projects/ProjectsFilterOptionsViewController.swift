@@ -28,7 +28,7 @@ class ProjectsFilterOptionsViewController : UITableViewController {
         title = NSLocalizedString("title", tableName: "Projects", comment: "")
         
         navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: AppFonts.navigationBarTitle,
+            NSFontAttributeName: AppFonts.navbarTitleFont,
             NSForegroundColorAttributeName: AppColors.yellowColor
         ]
                 

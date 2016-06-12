@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K2T-VE-N0l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K2T-VE-N0l">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,7 +17,7 @@
         <!--Projects View Controller-->
         <scene sceneID="DqS-WX-piP">
             <objects>
-                <viewController storyboardIdentifier="projectsViewController" id="K2T-VE-N0l" customClass="ProjectsViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="projectsViewController" id="K2T-VE-N0l" customClass="ProjectsViewController" customModule="CoderDojo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p2z-XE-Biq"/>
                         <viewControllerLayoutGuide type="bottom" id="n04-iv-Mna"/>
@@ -70,7 +69,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectCell" rowHeight="279" id="vUT-CI-ruf" customClass="ProjectTableViewCell" customModule="CoolestProjects" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectCell" rowHeight="279" id="vUT-CI-ruf" customClass="ProjectTableViewCell" customModule="CoderDojo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vUT-CI-ruf" id="pym-dW-ubj">
@@ -180,7 +179,7 @@
         <!--Projects Filter Options View Controller-->
         <scene sceneID="7LT-Q6-3b8">
             <objects>
-                <tableViewController id="6m4-Sc-3xW" customClass="ProjectsFilterOptionsViewController" customModule="CoolestProjects" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6m4-Sc-3xW" customClass="ProjectsFilterOptionsViewController" customModule="CoderDojo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UkW-nZ-UkI">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
