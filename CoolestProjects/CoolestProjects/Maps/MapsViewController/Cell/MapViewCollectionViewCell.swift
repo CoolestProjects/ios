@@ -14,9 +14,9 @@ class MapViewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    func displayModel(model : (String, String), collectionView: UICollectionView) {
+    func displayModel(model : (title: String, mapUrl: String), collectionView: UICollectionView) {
         self.activityIndicatorView.startAnimating()
-        self.mapImageView.sd_setImageWithURL(NSURL(string: model.1), completed: { [unowned self] (image : UIImage!, error : NSError!, cache: SDImageCacheType, url: NSURL!) in
+        self.mapImageView.sd_setImageWithURL(NSURL(string: model.mapUrl), completed: { [unowned self] (image : UIImage!, error : NSError!, cache: SDImageCacheType, url: NSURL!) in
             collectionView.collectionViewLayout.invalidateLayout()
             self.activityIndicatorView.stopAnimating()
         });

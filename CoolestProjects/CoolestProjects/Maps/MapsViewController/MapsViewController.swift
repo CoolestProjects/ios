@@ -10,8 +10,8 @@ import UIKit
 
 class MapsViewController: BaseViewController {
     @IBOutlet weak var collectionView : UICollectionView?
-    
-    var mapModel = MapsModel(data: [("Car Park", "https://www.ucd.ie/students/assessment/images/Simmoncourt-venue-map.gif"), ("Other Place", "https://www.rds.ie/images/venue_map_2015.gif")])
+    var selectImage : UIImage?
+    var mapModel = MapsModel(data: [(title: "RDS Map", mapUrl: "https://firebasestorage.googleapis.com/v0/b/coolestprojectsapp.appspot.com/o/Maps%2Fcoolestprojectsmap.png?alt=media&token=cf6515dd-9947-4595-a203-422c6427a2ca")])
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Maps", comment: "Maps")
@@ -37,7 +37,17 @@ extension MapsViewController : UICollectionViewDataSource {
 
 extension MapsViewController : UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! MapViewCollectionViewCell
+        self.selectImage = cell.mapImageView.image
+        
+        
+        let viewController = MapZoomViewController()
+        viewController.image = self.selectImage
+        viewController.navigationTitle = self.mapModel.data[indexPath.row].title
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        self.presentViewController(navigationController, animated: true, completion: nil)
         
     }
 }

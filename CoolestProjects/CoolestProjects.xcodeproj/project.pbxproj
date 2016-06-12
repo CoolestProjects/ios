@@ -67,6 +67,8 @@
 		B79C042D35B744F825F85941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B79C04472D5989530374B57A /* GoogleService-Info.plist */; };
 		E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */ = {isa = PBXBuildFile; fileRef = E10F18F81D06F8C500AE44AC /* Menu.strings */; };
 		E1C603F21D0C717100931C38 /* mail ray stuff.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1C603F11D0C717100931C38 /* mail ray stuff.ttf */; };
+		E1C603F51D0C74F600931C38 /* MapZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603F41D0C74F600931C38 /* MapZoomViewController.swift */; };
+		E1C603F71D0C751400931C38 /* MapZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C603F61D0C751400931C38 /* MapZoomViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		B79C05458A577A69B366BA10 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		E10F18F81D06F8C500AE44AC /* Menu.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Menu.strings; path = strings/Menu.strings; sourceTree = "<group>"; };
 		E1C603F11D0C717100931C38 /* mail ray stuff.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "mail ray stuff.ttf"; path = "../../../../../../../Downloads/mail_ray_stuff/mail ray stuff.ttf"; sourceTree = "<group>"; };
+		E1C603F41D0C74F600931C38 /* MapZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapZoomViewController.swift; sourceTree = "<group>"; };
+		E1C603F61D0C751400931C38 /* MapZoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapZoomViewController.xib; sourceTree = "<group>"; };
 		F4C963232B4882A7A78E90F5 /* Pods-CoolestProjectsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -359,6 +363,7 @@
 		9B5907801D05ECC700FCE40D /* MapsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E1C603F31D0C74CF00931C38 /* ZoomView */,
 				9B59078B1D05F4F300FCE40D /* Cell */,
 				9B5907811D05ECE300FCE40D /* MapsViewController.swift */,
 				9B5907831D05ED0200FCE40D /* MapsViewController.xib */,
@@ -538,6 +543,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E1C603F31D0C74CF00931C38 /* ZoomView */ = {
+			isa = PBXGroup;
+			children = (
+				E1C603F41D0C74F600931C38 /* MapZoomViewController.swift */,
+				E1C603F61D0C751400931C38 /* MapZoomViewController.xib */,
+			);
+			path = ZoomView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -607,6 +621,15 @@
 				TargetAttributes = {
 					4453ED121CF9EA2C0028C8E0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 78XSL3W3V9;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					4453ED2B1CF9EA2D0028C8E0 = {
 						CreatedOnToolsVersion = 7.3;
@@ -638,6 +661,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C603F71D0C751400931C38 /* MapZoomViewController.xib in Resources */,
 				4453ED261CF9EA2C0028C8E0 /* LaunchScreen.storyboard in Resources */,
 				44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */,
 				A98010CA1D0524A300AABC90 /* Stages.strings in Resources */,
@@ -999,6 +1023,7 @@
 				A91C07A81D0104D4005271FE /* Constants.swift in Sources */,
 				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
 				A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */,
+				E1C603F51D0C74F600931C38 /* MapZoomViewController.swift in Sources */,
 				A91C079F1D00EC85005271FE /* InfoBoxTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1059,6 +1084,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1103,6 +1129,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1129,11 +1156,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderdojo.coolestprojects;
+				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoolestProjects/CoolestProjects-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1145,11 +1175,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderdojo.coolestprojects;
+				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoolestProjects/CoolestProjects-Bridging-Header.h";
 			};
 			name = Release;

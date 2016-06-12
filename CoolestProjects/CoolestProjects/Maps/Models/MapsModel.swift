@@ -9,9 +9,9 @@
 import Foundation
 
 struct MapsModel: DataContaining {
-    var data = [(String, String)]()
+    var data = [(title: String, mapUrl: String)]()
     
-    init(data: [(String, String)]) {
+    init(data: [(title: String, mapUrl: String)]) {
         self.data = data
     }
 }
