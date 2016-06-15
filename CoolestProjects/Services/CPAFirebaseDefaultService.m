@@ -45,10 +45,10 @@ NSString *const CPADatabaseChildAbout = @"about";
     [self getDataForChild:CPADatabaseChildSpeakers withCompletionBlock:^(id results, NSError *error) {
         NSMutableArray *speakers = [NSMutableArray array];
         for (NSDictionary *dict in results) {
-            CPASpeaker *speaker = [[CPASpeaker alloc] initWithDictionary:dict error:nil];
-
-            [speakers addObject:speaker];
-            
+            CPASpeaker *speaker = [[CPASpeaker alloc] initWithDictionary:dict error:NULL];
+            if (speaker) {
+                [speakers addObject:speaker];
+            }
         }
         
         if (completionBlock) {
@@ -62,10 +62,10 @@ NSString *const CPADatabaseChildAbout = @"about";
     [self getDataForChild:CPADatabaseChildSummits withCompletionBlock:^(id results, NSError *error) {
         NSMutableArray *summits = [NSMutableArray array];
         for (NSDictionary *dict in results) {
-            NSError *error;
-            CPASummit *summit = [[CPASummit alloc] initWithDictionary:dict error:&error];
-            
-            [summits addObject:summit];
+            CPASummit *summit = [[CPASummit alloc] initWithDictionary:dict error:NULL];
+            if (summit) {
+                [summits addObject:summit];
+            }
         }
 
         if (completionBlock) {
@@ -79,8 +79,10 @@ NSString *const CPADatabaseChildAbout = @"about";
     [self getDataForChild:CPADatabaseChildSponsors withCompletionBlock:^(id results, NSError *error) {
         NSMutableArray *sponsorTiers = [NSMutableArray array];
         for (NSDictionary *dict in results) {
-            CPASponsorTier *sponsorsTier = [[CPASponsorTier alloc] initWithDictionary:dict error:nil];
-            [sponsorTiers addObject:sponsorsTier];
+            CPASponsorTier *sponsorsTier = [[CPASponsorTier alloc] initWithDictionary:dict error:NULL];
+            if (sponsorsTier) {
+                [sponsorTiers addObject:sponsorsTier];
+            }            
         }
 
         if (completionBlock) {
