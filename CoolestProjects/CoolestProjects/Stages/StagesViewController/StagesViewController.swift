@@ -120,7 +120,7 @@ class StagesViewController : BaseViewController {
     }
     
     func setupTableView() {
-        speakersTableView.estimatedRowHeight = 180.0;
+        speakersTableView.estimatedRowHeight = 300.0;
         speakersTableView.rowHeight = UITableViewAutomaticDimension;
         speakersTableView.registerNib(UINib.init(nibName: "StagesTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "speaker")
     }
@@ -135,6 +135,8 @@ extension StagesViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let item = selectedSpeakes[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("speaker", forIndexPath: indexPath) as! StagesTableViewCell
+        // TODO: better layout process
+        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, CGRectGetWidth(view.frame), CGRectGetHeight(cell.frame))
         cell.configure(withItem: item)
         return cell        
     }

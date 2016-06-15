@@ -17,10 +17,12 @@ struct AppColors {
     static let darkOverlayColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.70)
     static let lightOverlayColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.40)
     static let darkTextColor = UIColor(red:51.0/255.0, green:51.0/255.0, blue:51.0/255.0, alpha:1.0)
+    static let lightGreyTextColor = UIColor(red:155.0/255.0, green:155.0/255.0, blue:155.0/255.0, alpha:1.0)
     static let lightTextColor = UIColor.whiteColor()    
 }
 
 struct AppFonts {
+    static let speakerTextFont = UIFont(name: "OpenSans", size: 16.0)!
     static let navigationBarTitle = UIFont(name: "OpenSans", size: 18.0)!
     static let navigationBarButton = UIFont(name: "OpenSans", size: 14.0)!
     static let tableHeaderTitle = UIFont(name: "OpenSans-Semibold", size: 14.0)!
