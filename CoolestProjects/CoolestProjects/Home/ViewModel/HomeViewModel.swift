@@ -29,7 +29,7 @@ class HomeViewModel {
             InfoBox(
                 title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("event-times.body", tableName: "Home", comment: ""),
-                textColor: AppColors.darkTextColor,
+                textColor: AppColors.lightTextColor,
                 overlayColor: AppColors.redColor),
             InfoBox(
                 title: NSLocalizedString("parking.title", tableName: "Home", comment: ""),
