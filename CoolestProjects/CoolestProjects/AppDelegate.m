@@ -26,6 +26,10 @@
     [self preloadContent];
     
     [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    
+    // a kitten dies every time we run this code
+    [NSThread sleepForTimeInterval:1.0];
+    
     return YES;
 }
 
