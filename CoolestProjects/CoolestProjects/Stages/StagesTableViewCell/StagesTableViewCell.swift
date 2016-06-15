@@ -42,11 +42,23 @@ class StagesTableViewCell : UITableViewCell, Configurable {
     
     func buildAttributedString(withSpeaker speaker:CPASpeaker) -> NSAttributedString {
         let finalString = NSMutableAttributedString(attributedString: speakerName(speaker))
-        finalString.appendAttributedString(NSAttributedString(string: "\n"))
+        
+        if (!speaker.name.isEmpty) {
+            finalString.appendAttributedString(NSAttributedString(string: "\n"))
+        }
+        
         finalString.appendAttributedString(talkTitle(speaker))
-        finalString.appendAttributedString(NSAttributedString(string: "\n"))
+        
+        if (!speaker.talkTitle.isEmpty) {
+            finalString.appendAttributedString(NSAttributedString(string: "\n"))
+        }
+        
         finalString.appendAttributedString(talkTime(speaker))
-        finalString.appendAttributedString(NSAttributedString(string: "\n"))
+        
+        if (!speaker.summitTimesAsString.isEmpty) {
+            finalString.appendAttributedString(NSAttributedString(string: "\n"))
+        }
+        
         finalString.appendAttributedString(speakerDescription(speaker))
         
         return finalString
