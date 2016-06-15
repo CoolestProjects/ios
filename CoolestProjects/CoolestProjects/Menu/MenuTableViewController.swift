@@ -37,12 +37,15 @@ class MenuTableViewController: UITableViewController {
             cell = UITableViewCell(style: .Default, reuseIdentifier: cellReuseIdentifier)
         }
         cell?.backgroundColor = UIColor.clearColor()
+        cell?.textLabel?.font = AppFonts.menuItemFont
         
         if self.previousIndexPath.row == indexPath.row {
             cell?.textLabel?.textColor = UIColor.yellowColor()
+            cell?.textLabel?.font = AppFonts.menuItemSelectedFont
         }
         else {
             cell?.textLabel?.textColor = UIColor.whiteColor()
+            cell?.textLabel?.font = AppFonts.menuItemFont
         }
         
         cell?.textLabel?.text = title
@@ -58,8 +61,8 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let identifier = self.itemIdentifiers[indexPath.row]
         
-        self.setTextColorOnCell(AppColors.yellowColor, indexPath: indexPath, tableView: tableView)
-        self.setTextColorOnCell(UIColor.whiteColor(), indexPath: self.previousIndexPath, tableView: tableView)
+        self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: AppColors.yellowColor, indexPath: indexPath, tableView: tableView)
+        self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.whiteColor(), indexPath: self.previousIndexPath, tableView: tableView)
 
         self.previousIndexPath = indexPath
         
@@ -67,8 +70,9 @@ class MenuTableViewController: UITableViewController {
         self.revealViewController().revealToggle(nil)
     }
     
-    func setTextColorOnCell(color: UIColor, indexPath: NSIndexPath, tableView: UITableView) {
+    func setTextColorOnCell(font: UIFont, color: UIColor, indexPath: NSIndexPath, tableView: UITableView) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.textLabel?.font = font
         cell?.textLabel?.textColor = color
     }
     
