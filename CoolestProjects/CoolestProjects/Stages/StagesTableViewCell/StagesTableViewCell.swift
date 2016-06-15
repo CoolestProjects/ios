@@ -19,7 +19,7 @@ class StagesTableViewCell : UITableViewCell, Configurable {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        photo = UIImageView(frame: CGRectMake(0, 0, 130, 130))
+        photo = UIImageView(frame: CGRectMake(0, 0, 100, 100))
         textView.addSubview(photo)
         
         textView.textContainer.lineFragmentPadding = 0
@@ -28,8 +28,8 @@ class StagesTableViewCell : UITableViewCell, Configurable {
     
     func configure(withItem item: ItemType) {
         // TODO: better layout logic and remove these magic numbers
-        photo.frame = CGRectMake(CGRectGetWidth(self.frame) - 170, 0, 130, 130)
-        let exclusionPath = UIBezierPath(rect: CGRectMake(CGRectGetWidth(self.frame) - 180, 0, 140, 140))
+        photo.frame = CGRectMake(0, 0, 100, 100)
+        let exclusionPath = UIBezierPath(rect: CGRectMake(0, 0, 110, 110))
         textView.textContainer.exclusionPaths = [exclusionPath]
         
         textView.attributedText = buildAttributedString(withSpeaker: item)
@@ -43,32 +43,32 @@ class StagesTableViewCell : UITableViewCell, Configurable {
     func buildAttributedString(withSpeaker speaker:CPASpeaker) -> NSAttributedString {
         let finalString = NSMutableAttributedString(attributedString: speakerName(speaker))
         finalString.appendAttributedString(NSAttributedString(string: "\n"))
-        finalString.appendAttributedString(speakerDescription(speaker))
-        finalString.appendAttributedString(NSAttributedString(string: "\n"))
         finalString.appendAttributedString(talkTitle(speaker))
         finalString.appendAttributedString(NSAttributedString(string: "\n"))
         finalString.appendAttributedString(talkTime(speaker))
+        finalString.appendAttributedString(NSAttributedString(string: "\n"))
+        finalString.appendAttributedString(speakerDescription(speaker))
         
         return finalString
     }
     
     func speakerName(speaker: CPASpeaker) -> NSAttributedString {
-        return attributedText(speaker.name, color: AppColors.darkTextColor)
+        return attributedText(speaker.name, font:AppFonts.speakerTextFont, color: AppColors.darkTextColor)
     }
     
     func speakerDescription(speaker: CPASpeaker) -> NSAttributedString {
-        return attributedText(speaker.speakerDescription, color: AppColors.lightGreyTextColor)
+        return attributedText(speaker.speakerDescription, font:AppFonts.speakerDescriptionFont, color: AppColors.lightGreyTextColor)
     }
     
     func talkTitle(speaker: CPASpeaker) -> NSAttributedString {
-        return attributedText(speaker.talkTitle, color: AppColors.darkTextColor)
+        return attributedText(speaker.talkTitle, font:AppFonts.speakerDescriptionFont, color: AppColors.darkTextColor)
     }
     
     func talkTime(speaker: CPASpeaker) -> NSAttributedString {
-        return attributedText(speaker.summitTimesAsString, color: AppColors.redColor)
+        return attributedText(speaker.summitTimesAsString, font:AppFonts.speakerDescriptionFont, color: AppColors.redColor)
     }
     
-    func attributedText(text: String, color: UIColor) -> NSAttributedString {
-        return NSAttributedString(string: text, attributes: [NSFontAttributeName:AppFonts.speakerTextFont, NSForegroundColorAttributeName: color])
+    func attributedText(text: String, font: UIFont, color: UIColor) -> NSAttributedString {
+        return NSAttributedString(string: text, attributes: [NSFontAttributeName:font, NSForegroundColorAttributeName: color])
     }
 }
