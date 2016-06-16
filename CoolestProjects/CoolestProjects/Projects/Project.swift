@@ -14,7 +14,7 @@ struct Project {
     let category: String
     let projectDescription: String
     let coderdojo: String
-    let deskNumber: String
+    let deskNumber: String?
 }
 
 extension Project: Decodable {
@@ -32,16 +32,12 @@ extension Project: Decodable {
         
         guard let coderdojo: String = "coderdojo" <~~ json
             else { return nil }
-        
-        guard let deskNumber: String = "deskNumber" <~~ json
-            else { return nil }
-        
-        
+                
         self.name = name
         self.category = category
         self.projectDescription = projectDescription
         self.coderdojo = coderdojo
-        self.deskNumber = deskNumber
+        self.deskNumber = "deskNumber" <~~ json
     }
 }
 

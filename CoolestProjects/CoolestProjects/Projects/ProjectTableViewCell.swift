@@ -23,7 +23,7 @@ class ProjectTableViewCell : UITableViewCell, Configurable {
         projectDescription.text = item.projectDescription
         category.text = sanitizeCategory(item.category)
         coderdojo.text = item.coderdojo
-        desk.text = formattedDeskText(item.deskNumber)
+        desk.text = formattedDeskText(item.deskNumber ?? "")
     }
     
     func sanitizeCategory(category: String) -> String {
