@@ -59,15 +59,19 @@ class MenuTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let identifier = self.itemIdentifiers[indexPath.row]
+        if self.previousIndexPath.row != indexPath.row {
+            let identifier = self.itemIdentifiers[indexPath.row]
+            
+            self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: AppColors.yellowColor, indexPath: indexPath, tableView: tableView)
+            self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.whiteColor(), indexPath: self.previousIndexPath, tableView: tableView)
+            
+            self.previousIndexPath = indexPath
+            
+            self.revealViewController().setFrontViewController( self.storyboard?.instantiateViewControllerWithIdentifier(identifier), animated: true)
+        }
         
-        self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: AppColors.yellowColor, indexPath: indexPath, tableView: tableView)
-        self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.whiteColor(), indexPath: self.previousIndexPath, tableView: tableView)
-
-        self.previousIndexPath = indexPath
-        
-        self.revealViewController().setFrontViewController( self.storyboard?.instantiateViewControllerWithIdentifier(identifier), animated: true)
         self.revealViewController().revealToggle(nil)
+        
     }
     
     func setTextColorOnCell(font: UIFont, color: UIColor, indexPath: NSIndexPath, tableView: UITableView) {

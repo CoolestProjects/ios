@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MapZoomViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
+class MapZoomViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     var image: UIImage?
@@ -24,6 +24,8 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate, UIGestureRe
             NSForegroundColorAttributeName: AppColors.yellowColor,
             NSFontAttributeName : AppFonts.navbarTitleFont
         ]
+        
+
 
     }
     
@@ -33,6 +35,13 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate, UIGestureRe
         self.title = self.navigationTitle
         
         self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(MapZoomViewController.donePressed)), animated: false)
+        
+        let buttonAttributes = [
+            NSFontAttributeName: AppFonts.navigationBarButton,
+            NSForegroundColorAttributeName: AppColors.yellowColor
+        ]
+        
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes(buttonAttributes, forState: .Normal)
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {

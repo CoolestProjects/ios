@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapZoomViewController" customModule="CoolestProjects" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapZoomViewController" customModule="Coolest_Projects" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="MWw-XM-6QO" id="xPf-OC-qZU"/>
                 <outlet property="scrollView" destination="m3H-t7-5QD" id="LLv-qx-o5Z"/>
@@ -46,19 +45,6 @@
                 <constraint firstAttribute="trailing" secondItem="m3H-t7-5QD" secondAttribute="trailing" id="f2K-01-BdM"/>
                 <constraint firstItem="m3H-t7-5QD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="faW-sf-AIE"/>
             </constraints>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="Mvm-ma-kvX" appends="YES" id="T0W-zT-SQV"/>
-            </connections>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="Mvm-ma-kvX">
-            <connections>
-                <outlet property="delegate" destination="-1" id="2bl-eP-qs5"/>
-            </connections>
-        </panGestureRecognizer>
-        <tapGestureRecognizer id="vmj-k0-55n">
-            <connections>
-                <outlet property="delegate" destination="-1" id="Kfi-AG-9mW"/>
-            </connections>
-        </tapGestureRecognizer>
     </objects>
 </document>
