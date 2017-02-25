@@ -10,5 +10,5 @@ import Foundation
 
 protocol Configurable {
     associatedtype ItemType
-    func configure(withItem item: ItemType)
+    func configure(with item: ItemType)
 }

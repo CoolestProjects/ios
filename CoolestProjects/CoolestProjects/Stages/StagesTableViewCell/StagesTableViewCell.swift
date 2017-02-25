@@ -26,7 +26,7 @@ class StagesTableViewCell : UITableViewCell, Configurable {
         textView.textContainerInset = UIEdgeInsets.zero
     }
     
-    func configure(withItem item: ItemType) {
+    func configure(with item: ItemType) {
         // TODO: better layout logic and remove these magic numbers
         photo.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         let exclusionPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 110, height: 110))

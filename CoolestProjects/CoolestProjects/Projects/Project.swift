@@ -20,19 +20,13 @@ struct Project {
 extension Project: Decodable {
     
     init?(json: JSON) {
-        // TODO: mhe
-        guard let name: String = "name" <~~ json
+        guard
+            let name: String = "name" <~~ json,
+            let category: String = "category" <~~ json,
+            let projectDescription: String = "description" <~~ json,
+            let coderdojo: String = "coderdojo" <~~ json
             else { return nil }
-        
-        guard let category: String = "category" <~~ json
-            else { return nil }
-        
-        guard let projectDescription: String = "description" <~~ json
-            else { return nil }
-        
-        guard let coderdojo: String = "coderdojo" <~~ json
-            else { return nil }
-                
+
         self.name = name
         self.category = category
         self.projectDescription = projectDescription

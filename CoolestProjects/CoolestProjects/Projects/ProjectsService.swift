@@ -44,7 +44,6 @@ class ProjectsService {
                 case .success:
                     
                     do {
-                        // TODO: pure swift parsing???
                         // TODO: duplicated code with store
                         let json = try JSONSerialization.jsonObject(with: response.data!) as! [JSON]
                         let projects = [Project].from(jsonArray: json)!

@@ -17,7 +17,7 @@ class InfoBoxTableViewCell : UITableViewCell, Configurable {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var body: UILabel!
     
-    func configure(withItem item: ItemType) {
+    func configure(with item: ItemType) {
         backgroundImage.image = item.backgroundImage
         overlayView.backgroundColor = item.overlayColor
         title.text = item.title

@@ -58,7 +58,7 @@ class HomeViewController : BaseViewController {
     }
     
     func setupTable() {
-        tableHeaderView.configure(withItem: (viewModel.headerTitle, viewModel.headerBody))
+        tableHeaderView.configure(with: (viewModel.headerTitle, viewModel.headerBody))
         tableView.tableHeaderView = tableHeaderView
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;
@@ -118,13 +118,13 @@ extension HomeViewController : UITableViewDataSource {
         if (component is InfoBox) {
             let infoBox = component as! InfoBox
             let infoBoxCell = cell as! InfoBoxTableViewCell
-            infoBoxCell.configure(withItem: infoBox)
+            infoBoxCell.configure(with: infoBox)
         }
         
         if (component is SponsorBox) {
             let sponsorBox = component as! SponsorBox
             let sponsorBoxCell = cell as! SponsorBoxTableViewCell
-            sponsorBoxCell.configure(withItem: sponsorBox)
+            sponsorBoxCell.configure(with: sponsorBox)
         }
         
         return cell

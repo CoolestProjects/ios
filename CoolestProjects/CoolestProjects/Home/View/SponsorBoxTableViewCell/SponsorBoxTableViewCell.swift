@@ -15,7 +15,7 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
-    func configure(withItem item: ItemType) {
+    func configure(with item: ItemType) {
         title.text = item.title
         title.textColor = item.textColor
             

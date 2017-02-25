@@ -19,7 +19,7 @@ class HomeTableHeaderView : UIView, Configurable {
         return Bundle.main.loadNibNamed("HomeTableHeaderView", owner: nil, options: nil)?.first as? HomeTableHeaderView
     }
     
-    func configure(withItem item: ItemType) {
+    func configure(with item: ItemType) {
         // TODO: struct or tuple with names???
         title.text = item.0
         body.text = item.1

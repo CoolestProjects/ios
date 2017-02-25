@@ -137,7 +137,7 @@ extension StagesViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "speaker", for: indexPath) as! StagesTableViewCell
         // TODO: better layout process
         cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: view.frame.width, height: cell.frame.height)
-        cell.configure(withItem: item)
+        cell.configure(with: item)
         return cell        
     }
     

@@ -192,7 +192,7 @@ extension ProjectsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectTableViewCell
-        cell.configure(withItem: filteredProjects[indexPath.row])
+        cell.configure(with: filteredProjects[indexPath.row])
         return cell
     }
     
