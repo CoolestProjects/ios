@@ -10,15 +10,15 @@ import Foundation
 import Gloss
 
 let projectsLastUpdateDateKey = "projectsLastUpdateDate"
-let cacheExpTimeInterval: NSTimeInterval = 600 // 10 min
+let cacheExpTimeInterval: TimeInterval = 600 // 10 min
 
 class ProjectsStore {
     
-    func lastUpdateDate() -> NSDate {
-        if let date = NSUserDefaults.standardUserDefaults().objectForKey(projectsLastUpdateDateKey) as? NSDate {
+    func lastUpdateDate() -> Date {
+        if let date = UserDefaults.standard.object(forKey: projectsLastUpdateDateKey) as? Date {
             return date
         } else {
-            return NSDate.distantPast()
+            return Date.distantPast
         }        
     }
     
@@ -27,12 +27,12 @@ class ProjectsStore {
     }
     
     func readProjects() -> [Project] {
-        guard let storeUrl = projectsStoreUrl(), let data = NSData(contentsOfURL: storeUrl)
+        guard let storeUrl = projectsStoreUrl(), let data = try? Data(contentsOf: storeUrl)
             else { return [] }
         
         do {
-            let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as! [JSON]
-            let projects = [Project].fromJSONArray(json)
+            let json = try JSONSerialization.jsonObject(with: data) as! [JSON]
+            let projects = [Project].from(jsonArray: json)!
             return projects
             
         } catch let error {
@@ -46,14 +46,14 @@ class ProjectsStore {
         createDataDirectoryIfNeeded()
     }
     
-    func saveProjects(projects: [Project]) {
+    func saveProjects(_ projects: [Project]) {
         guard let jsonArray = projects.toJSONArray(), let storeUrl = projectsStoreUrl()
             else { return }
         
         do {
-            let data = try NSJSONSerialization.dataWithJSONObject(jsonArray, options: .PrettyPrinted)
-            data.writeToURL(storeUrl, atomically: true)
-            NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: projectsLastUpdateDateKey)
+            let data = try JSONSerialization.data(withJSONObject: jsonArray, options: .prettyPrinted)
+            try data.write(to: storeUrl, options: NSData.WritingOptions.atomic)
+            UserDefaults.standard.set(Date(), forKey: projectsLastUpdateDateKey)
             
         } catch let error {
             print(error)
@@ -62,10 +62,10 @@ class ProjectsStore {
     
     func createDataDirectoryIfNeeded() {
         if let dataDirectoryUrl = dataDirectoryUrl() {
-            let dataDirectoryExists = NSFileManager.defaultManager().fileExistsAtPath(dataDirectoryUrl.path!)
+            let dataDirectoryExists = FileManager.default.fileExists(atPath: dataDirectoryUrl.path)
             if  !dataDirectoryExists {
                 do {
-                    try NSFileManager.defaultManager().createDirectoryAtURL(dataDirectoryUrl, withIntermediateDirectories: true, attributes: nil)
+                    try FileManager.default.createDirectory(at: dataDirectoryUrl, withIntermediateDirectories: true, attributes: nil)
                 } catch let error {
                     print(error)
                 }
@@ -75,20 +75,20 @@ class ProjectsStore {
         }
     }
     
-    func dataDirectoryUrl() -> NSURL? {
-        let directories = NSFileManager.defaultManager().URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
-        let bundleIdentifier = NSBundle.mainBundle().bundleIdentifier ?? "com.coderdojo.coolestprojects"
+    func dataDirectoryUrl() -> URL? {
+        let directories = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)
+        let bundleIdentifier = Bundle.main.bundleIdentifier ?? "com.coderdojo.coolestprojects"
         
         if let applicationSupportDirUrl = directories.first {
-            return applicationSupportDirUrl.URLByAppendingPathComponent(bundleIdentifier)
+            return applicationSupportDirUrl.appendingPathComponent(bundleIdentifier)
         }
         
         return nil
     }
     
-    func projectsStoreUrl() -> NSURL? {
+    func projectsStoreUrl() -> URL? {
         if let dataDirectoryUrl = dataDirectoryUrl() {
-            return dataDirectoryUrl.URLByAppendingPathComponent("projectsStore.json")
+            return dataDirectoryUrl.appendingPathComponent("projectsStore.json")
         }
         
         return nil

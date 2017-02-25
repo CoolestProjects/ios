@@ -19,7 +19,7 @@ class SpeakersViewModel {
     }
 
     
-    func buildSpeakerViewModels(speakers  : NSArray) -> [SpeakerViewModel] {
+    func buildSpeakerViewModels(_ speakers  : NSArray) -> [SpeakerViewModel] {
         
         
         var speakerViewModels : [SpeakerViewModel] = []
@@ -49,7 +49,7 @@ class SpeakerViewModel : Component  {
     
     
     init(speaker : CPASpeaker) {
-        name = speaker.name.uppercaseString
+        name = speaker.name.uppercased()
         speakerDescription = speaker.speakerDescription
         imageUrl = speaker.photoUrl
         

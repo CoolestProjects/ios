@@ -12,7 +12,7 @@ import UIKit
 class HomeTableFooterView : UIView {
     
     class func footerView() -> HomeTableFooterView? {
-        return NSBundle.mainBundle().loadNibNamed("HomeTableFooterView", owner: nil, options: nil).first as? HomeTableFooterView
+        return Bundle.main.loadNibNamed("HomeTableFooterView", owner: nil, options: nil)?.first as? HomeTableFooterView
     }
 
 }

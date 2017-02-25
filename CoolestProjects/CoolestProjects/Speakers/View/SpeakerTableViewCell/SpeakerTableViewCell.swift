@@ -23,7 +23,7 @@ class SpeakerTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func displayViewModel(speakerViewModel : SpeakerViewModel) {
+    func displayViewModel(_ speakerViewModel : SpeakerViewModel) {
         
         nameLabel.text = speakerViewModel.name
         nameLabel.textColor = speakerViewModel.nameTextColor
@@ -33,7 +33,7 @@ class SpeakerTableViewCell: UITableViewCell {
         
         divider.backgroundColor = speakerViewModel.dividerColor
         
-        speakerImageView.sd_setImageWithURL(NSURL(string: speakerViewModel.imageUrl!), placeholderImage: speakerViewModel.placeholderImage)
+        speakerImageView.sd_setImage(with: URL(string: speakerViewModel.imageUrl!), placeholderImage: speakerViewModel.placeholderImage)
     }
 
 }

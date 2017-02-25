@@ -68,7 +68,7 @@ class ProjectsViewController : BaseViewController {
             NSForegroundColorAttributeName: AppColors.yellowColor
         ]
         
-        categoriesButton.setTitleTextAttributes(buttonAttributes, forState: .Normal)
+        categoriesButton.setTitleTextAttributes(buttonAttributes, for: .normal)
         
         super.setupNavigationBar()
     }
@@ -86,7 +86,7 @@ class ProjectsViewController : BaseViewController {
             
             service.fetchProjects { [weak self] (result) in
                 switch(result) {
-                case .Success:
+                case .success:
                     // TODO: mhe
                     print("project fetch completed")
                     if let fetchedProjects = result.data() {
@@ -96,7 +96,7 @@ class ProjectsViewController : BaseViewController {
                         self?.store.saveProjects(fetchedProjects)
                     }
                     
-                case .Failure:
+                case .failure:
                     print("project fetch failed: \(result.error())")
                 }
                 
@@ -117,13 +117,13 @@ class ProjectsViewController : BaseViewController {
         view.addGestureRecognizer(gestureRecognizer)
     }
         
-    @IBAction func showFilterOptions(sender: AnyObject) {
-        performSegueWithIdentifier("showFilterOptions", sender: self)
+    @IBAction func showFilterOptions(_ sender: AnyObject) {
+        performSegue(withIdentifier: "showFilterOptions", sender: self)
     }
     
-    @IBAction func unwindFromFilterOptions(segue:UIStoryboardSegue) {
+    @IBAction func unwindFromFilterOptions(_ segue:UIStoryboardSegue) {
         if segue.identifier == "dismissFilterOptions" {
-            if let filterViewController = segue.sourceViewController as? ProjectsFilterOptionsViewController {
+            if let filterViewController = segue.source as? ProjectsFilterOptionsViewController {
                 filterOptions = filterViewController.filterOptions
                 filterProjectsBySelectedCategories()
                 filterContentForSearchText(searchBar.text)
@@ -131,9 +131,9 @@ class ProjectsViewController : BaseViewController {
         }        
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showFilterOptions" {
-            if let nc = segue.destinationViewController as? UINavigationController {
+            if let nc = segue.destination as? UINavigationController {
                 if let filterViewController = nc.viewControllers.first as? ProjectsFilterOptionsViewController {
                     filterViewController.filterOptions = filterOptions
                 }
@@ -156,7 +156,7 @@ class ProjectsViewController : BaseViewController {
         
     }
         
-    func filterContentForSearchText(searchText: String?) {
+    func filterContentForSearchText(_ searchText: String?) {
     
         if let searchText = searchText {
             if !searchText.isEmpty {
@@ -172,10 +172,10 @@ class ProjectsViewController : BaseViewController {
         projectsTableView.reloadData()
     }
     
-    func matchesQuery(project: Project, query: String) -> Bool {
-        return project.name.localizedCaseInsensitiveContainsString(query) ||
-            project.projectDescription.localizedCaseInsensitiveContainsString(query) ||
-            project.coderdojo.localizedCaseInsensitiveContainsString(query)
+    func matchesQuery(_ project: Project, query: String) -> Bool {
+        return project.name.localizedCaseInsensitiveContains(query) ||
+            project.projectDescription.localizedCaseInsensitiveContains(query) ||
+            project.coderdojo.localizedCaseInsensitiveContains(query)
     }
     
     func dismissKeyboard() {
@@ -186,12 +186,12 @@ class ProjectsViewController : BaseViewController {
 
 extension ProjectsViewController : UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredProjects.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("projectCell", forIndexPath: indexPath) as! ProjectTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectTableViewCell
         cell.configure(withItem: filteredProjects[indexPath.row])
         return cell
     }
@@ -200,7 +200,7 @@ extension ProjectsViewController : UITableViewDataSource {
 
 extension ProjectsViewController: UISearchBarDelegate {
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterContentForSearchText(searchBar.text)
     }
 }

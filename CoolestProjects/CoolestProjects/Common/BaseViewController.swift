@@ -19,8 +19,8 @@ class BaseViewController: UIViewController {
     }
     
     func addLeftButtonItem() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .Plain, target:self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target:self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
     }
     
     func addGestureRecognizers() {
@@ -30,8 +30,8 @@ class BaseViewController: UIViewController {
     
     func setupNavigationBar() {
         //TODO: Viewmodel
-        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName: AppColors.yellowColor,
             NSFontAttributeName : AppFonts.navbarTitleFont
@@ -40,7 +40,7 @@ class BaseViewController: UIViewController {
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 }

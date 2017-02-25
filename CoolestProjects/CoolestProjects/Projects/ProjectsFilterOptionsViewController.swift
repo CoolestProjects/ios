@@ -23,7 +23,7 @@ class ProjectsFilterOptionsViewController : UITableViewController {
             NSForegroundColorAttributeName: AppColors.yellowColor
         ]
         
-        applyButton.setTitleTextAttributes(buttonAttributes, forState: .Normal)
+        applyButton.setTitleTextAttributes(buttonAttributes, for: .normal)
         
         title = NSLocalizedString("title", tableName: "Projects", comment: "")
         
@@ -35,22 +35,22 @@ class ProjectsFilterOptionsViewController : UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filterOptions.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("filterOptionCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "filterOptionCell", for: indexPath)
         let option = filterOptions[indexPath.row]
         
         cell.textLabel?.text = NSLocalizedString(option.key, tableName: "Projects", comment: "")
-        cell.accessoryType = option.selected ? .Checkmark : .None
+        cell.accessoryType = option.selected ? .checkmark : .none
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: does it make sense to have the struct immutable? any other more efficient way to handle this??
-        filterOptions = filterOptions.enumerate().map({ (index, filterOption) -> FilterOption in
+        filterOptions = filterOptions.enumerated().map({ (index, filterOption) -> FilterOption in
             if (index == indexPath.row) {
                 return FilterOption(key: filterOption.key, value: filterOption.value, selected: !filterOption.selected)
             }
@@ -58,21 +58,21 @@ class ProjectsFilterOptionsViewController : UITableViewController {
             return filterOption
         })
         
-        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return NSLocalizedString("project-categories", tableName: "Projects", comment: "")
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = AppFonts.tableHeaderTitle
     }
     
-    @IBAction func apply(sender: AnyObject) {
-        performSegueWithIdentifier("dismissFilterOptions", sender: self)
+    @IBAction func apply(_ sender: AnyObject) {
+        performSegue(withIdentifier: "dismissFilterOptions", sender: self)
     }
     
 }

@@ -52,7 +52,7 @@ class HomeViewController : BaseViewController {
     }
     
     override func setupNavigationBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.titleView = UIImageView(image: UIImage(named: "coolest-project-logo"))
     }
@@ -63,18 +63,18 @@ class HomeViewController : BaseViewController {
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
-        tableView.registerNib(UINib.init(nibName: "InfoBoxTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "infoBox")
-        tableView.registerNib(UINib.init(nibName: "SponsorBoxTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "sponsorBox")
+        tableView.register(UINib.init(nibName: "InfoBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "infoBox")
+        tableView.register(UINib.init(nibName: "SponsorBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "sponsorBox")
     }
     
-    func createViewMask(size: CGSize, startGradientAt start: Float, endGradientAt end: Float) -> CALayer {
+    func createViewMask(_ size: CGSize, startGradientAt start: Float, endGradientAt end: Float) -> CALayer {
         let mask = CAGradientLayer()
-        mask.anchorPoint = CGPointZero
-        mask.startPoint = CGPointMake(0.5, 0.0)
-        mask.endPoint = CGPointMake(0.5, 1.0)
-        mask.colors = [UIColor.clearColor().CGColor, UIColor.clearColor().CGColor, UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor]
-        mask.locations = [NSNumber(float: 0.0), NSNumber(float: start/Float(size.height)), NSNumber(float: end/Float(size.height)), NSNumber(float: 1.0)]
-        mask.frame = CGRectMake(0, 0, size.width, size.height);
+        mask.anchorPoint = CGPoint.zero
+        mask.startPoint = CGPoint(x: 0.5, y: 0.0)
+        mask.endPoint = CGPoint(x: 0.5, y: 1.0)
+        mask.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.white.cgColor]
+        mask.locations = [NSNumber(value: 0.0 as Float), NSNumber(value: start/Float(size.height) as Float), NSNumber(value: end/Float(size.height) as Float), NSNumber(value: 1.0 as Float)]
+        mask.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height);
         return mask
     }
     
@@ -85,34 +85,34 @@ class HomeViewController : BaseViewController {
     
     func updateTableHeaderFrame() {
         let minTableHeaderViewHeight = calculateMinTableHeaderViewHeight()
-        let availableSpace = CGRectGetHeight(tableView.bounds) - SponsorBoxHeight
-        tableHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), max(minTableHeaderViewHeight, availableSpace))
+        let availableSpace = tableView.bounds.height - SponsorBoxHeight
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: max(minTableHeaderViewHeight, availableSpace))
         tableView.tableHeaderView = tableHeaderView
     }
     
     func updateTableFooterFrame() {
-        tableFooterView.frame = CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 100.0)
+        tableFooterView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
         tableView.tableFooterView = tableFooterView
     }
     
     func calculateMinTableHeaderViewHeight() -> CGFloat {
-        tableHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 2000.0)
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 2000.0)
         tableHeaderView.setNeedsLayout()
         tableHeaderView.layoutIfNeeded()
-        return tableHeaderView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+        return tableHeaderView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
     }
     
 }
 
 extension HomeViewController : UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.tableViewData.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let component = viewModel.tableViewData[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(component.componentIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
         
         // TODO: try to improve using better generics or protocol oriented data sources
         if (component is InfoBox) {

@@ -17,9 +17,9 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        navigationController?.navigationBar.translucent = false
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName: AppColors.yellowColor,
             NSFontAttributeName : AppFonts.navbarTitleFont
@@ -29,27 +29,27 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.imageView.image = self.image
         self.title = self.navigationTitle
         
-        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(MapZoomViewController.donePressed)), animated: false)
+        self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(MapZoomViewController.donePressed)), animated: false)
         
         let buttonAttributes = [
             NSFontAttributeName: AppFonts.navigationBarButton,
             NSForegroundColorAttributeName: AppColors.yellowColor
         ]
         
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes(buttonAttributes, forState: .Normal)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes(buttonAttributes, for: .normal)
     }
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView;
     }
     
     func donePressed() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

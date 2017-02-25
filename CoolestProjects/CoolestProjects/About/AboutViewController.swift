@@ -19,8 +19,8 @@ class AboutViewController : UIViewController {
     }
     
     func loadAboutContent() {
-        if let aboutURL = NSBundle.mainBundle().URLForResource("about", withExtension: "html") {
-            let request = NSURLRequest(URL: aboutURL)
+        if let aboutURL = Bundle.main.url(forResource: "about", withExtension: "html") {
+            let request = URLRequest(url: aboutURL)
             webView.loadRequest(request)
         }
     }

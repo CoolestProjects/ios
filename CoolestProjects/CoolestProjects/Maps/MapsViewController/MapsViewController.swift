@@ -18,18 +18,18 @@ class MapsViewController: BaseViewController {
         title = NSLocalizedString("title", tableName: "Maps", comment: "")
         let nibName = UINib(nibName: "MapViewCollectionViewCell", bundle:nil)
         
-        self.collectionView?.registerNib(nibName, forCellWithReuseIdentifier: "cell")
+        self.collectionView?.register(nibName, forCellWithReuseIdentifier: "cell")
     }
 }
 
 extension MapsViewController : UICollectionViewDataSource {
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return mapModel.numberOfItems;
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = mapModel.item(atIndex: indexPath.row)! as (String, String)
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! MapViewCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MapViewCollectionViewCell
         cell.displayModel(item, collectionView: self.collectionView!)
         
         return cell
@@ -37,8 +37,8 @@ extension MapsViewController : UICollectionViewDataSource {
 }
 
 extension MapsViewController : UICollectionViewDelegate {
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! MapViewCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! MapViewCollectionViewCell
         self.selectImage = cell.mapImageView.image
         
         
@@ -48,25 +48,25 @@ extension MapsViewController : UICollectionViewDelegate {
         
         let navigationController = UINavigationController(rootViewController: viewController)
         
-        self.presentViewController(navigationController, animated: true, completion: nil)
+        self.present(navigationController, animated: true, completion: nil)
         
     }
 }
 
 extension MapsViewController : UICollectionViewDelegateFlowLayout {
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let collectionView = self.collectionView {
-            if let cell = collectionView.cellForItemAtIndexPath(indexPath) as? MapViewCollectionViewCell {
+            if let cell = collectionView.cellForItem(at: indexPath) as? MapViewCollectionViewCell {
 
                 if let cellImage = cell.mapImageView?.image {
                     let widthRatio = collectionView.frame.size.width / cellImage.size.width
-                    return CGSizeMake((collectionView.frame.size.width), 38 + cellImage.size.height * widthRatio)
+                    return CGSize(width: (collectionView.frame.size.width), height: 38 + cellImage.size.height * widthRatio)
                 }
             }
-            return CGSizeMake(collectionView.frame.size.width, 150)
+            return CGSize(width: collectionView.frame.size.width, height: 150)
         }
         
-        return CGSizeZero 
+        return CGSize.zero 
     }
     
 }

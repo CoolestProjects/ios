@@ -20,7 +20,7 @@ class DisclaimerViewController : UIViewController {
     
     func loadDisclaimerContent() {
         let firebaseService = CPAFirebaseDefaultService()
-        firebaseService.getAboutInfoWithCompletionBlock { [weak self] (about, error) in
+        firebaseService.getAboutInfo { [weak self] (about, error) in
             if let about = about {
                 self?.disclaimerLabel.text = about.disclaimerText
             } else {

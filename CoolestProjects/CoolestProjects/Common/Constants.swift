@@ -18,7 +18,7 @@ struct AppColors {
     static let lightOverlayColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.40)
     static let darkTextColor = UIColor(red:51.0/255.0, green:51.0/255.0, blue:51.0/255.0, alpha:1.0)
     static let lightGreyTextColor = UIColor(red:155.0/255.0, green:155.0/255.0, blue:155.0/255.0, alpha:1.0)
-    static let lightTextColor = UIColor.whiteColor()    
+    static let lightTextColor = UIColor.white    
 }
 
 struct AppFonts {

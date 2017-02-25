@@ -62,8 +62,8 @@ class StagesViewController : BaseViewController {
         }
                 
         let style = NSMutableParagraphStyle()
-        style.lineBreakMode = .ByWordWrapping
-        style.alignment = .Center
+        style.lineBreakMode = .byWordWrapping
+        style.alignment = .center
         
         let normalStateAttributes = [
             NSFontAttributeName: AppFonts.tabBarFontSelected,
@@ -77,30 +77,30 @@ class StagesViewController : BaseViewController {
             NSParagraphStyleAttributeName: style
         ]
         
-        UILabel.appearanceWhenContainedInInstancesOfClasses([UISegmentedControl.self]).numberOfLines = 0
+        UILabel.appearance(whenContainedInInstancesOf: [UISegmentedControl.self]).numberOfLines = 0
         
         summitCategoriesSegmentedControl = UISegmentedControl(items: summitCategories)
         summitCategoriesSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
         
-        summitCategoriesSegmentedControl.addTarget(self, action: #selector(StagesViewController.changeSummitCategory(_:)), forControlEvents: .ValueChanged);
+        summitCategoriesSegmentedControl.addTarget(self, action: #selector(StagesViewController.changeSummitCategory(_:)), for: .valueChanged);
         
-        summitCategoriesSegmentedControl.setTitleTextAttributes(normalStateAttributes, forState: .Normal)
-        summitCategoriesSegmentedControl.setTitleTextAttributes(selectedStateAttributes, forState: .Selected)
+        summitCategoriesSegmentedControl.setTitleTextAttributes(normalStateAttributes, for: .normal)
+        summitCategoriesSegmentedControl.setTitleTextAttributes(selectedStateAttributes, for: .selected)
         
-        summitCategoriesSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .Normal, rightSegmentState: .Normal, barMetrics: .Default)
-        summitCategoriesSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .Selected, rightSegmentState: .Normal, barMetrics: .Default)
-        summitCategoriesSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .Normal, rightSegmentState: .Selected, barMetrics: .Default)
-        summitCategoriesSegmentedControl.setBackgroundImage(UIImage(), forState: .Normal, barMetrics: .Default)
-        summitCategoriesSegmentedControl.setBackgroundImage(UIImage(), forState: .Selected, barMetrics: .Default)
+        summitCategoriesSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+        summitCategoriesSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
+        summitCategoriesSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .selected, barMetrics: .default)
+        summitCategoriesSegmentedControl.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+        summitCategoriesSegmentedControl.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
         
         summitCategoriesContainerView.addSubview(summitCategoriesSegmentedControl)
-        summitCategoriesContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[control]|",
+        summitCategoriesContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[control]|",
             options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["control": summitCategoriesSegmentedControl]))
-        summitCategoriesContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[control]|",
+        summitCategoriesContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[control]|",
             options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["control": summitCategoriesSegmentedControl]))
     }
     
-    func changeSummitCategory(sender: UISegmentedControl) {
+    func changeSummitCategory(_ sender: UISegmentedControl) {
         selectSummit(atIndex: summitCategoriesSegmentedControl.selectedSegmentIndex)
         updateUI()
     }
@@ -110,7 +110,7 @@ class StagesViewController : BaseViewController {
     }
     
     func setupEdges() {
-        edgesForExtendedLayout = .None
+        edgesForExtendedLayout = []
     }
     
     override func setupNavigationBar() {
@@ -122,21 +122,21 @@ class StagesViewController : BaseViewController {
     func setupTableView() {
         speakersTableView.estimatedRowHeight = 300.0;
         speakersTableView.rowHeight = UITableViewAutomaticDimension;
-        speakersTableView.registerNib(UINib.init(nibName: "StagesTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "speaker")
+        speakersTableView.register(UINib.init(nibName: "StagesTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "speaker")
     }
 }
 
 extension StagesViewController : UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedSpeakes.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = selectedSpeakes[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("speaker", forIndexPath: indexPath) as! StagesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "speaker", for: indexPath) as! StagesTableViewCell
         // TODO: better layout process
-        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, CGRectGetWidth(view.frame), CGRectGetHeight(cell.frame))
+        cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: view.frame.width, height: cell.frame.height)
         cell.configure(withItem: item)
         return cell        
     }

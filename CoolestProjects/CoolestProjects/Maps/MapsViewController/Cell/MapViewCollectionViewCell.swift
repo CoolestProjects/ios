@@ -14,12 +14,14 @@ class MapViewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    func displayModel(model : (title: String, mapUrl: String), collectionView: UICollectionView) {
+    func displayModel(_ model : (title: String, mapUrl: String), collectionView: UICollectionView) {
         self.activityIndicatorView.startAnimating()
-        self.mapImageView.sd_setImageWithURL(NSURL(string: model.mapUrl), completed: { [unowned self] (image : UIImage!, error : NSError!, cache: SDImageCacheType, url: NSURL!) in
+
+        self.mapImageView.sd_setImage(with: URL(string: model.mapUrl)) { [weak self] (image, error, cache, url) in
             collectionView.collectionViewLayout.invalidateLayout()
-            self.activityIndicatorView.stopAnimating()
-        });
+            self?.activityIndicatorView.stopAnimating()
+        }
+
         self.titleLabel?.text = model.0
     }
 }

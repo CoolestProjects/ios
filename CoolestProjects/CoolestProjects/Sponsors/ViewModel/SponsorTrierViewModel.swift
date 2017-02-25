@@ -14,7 +14,7 @@ class SponsorsViewModel {
 
 class SponsorTrierViewModel {
 
-    static func buildSponsorTierViewModels(sponsorTiers: NSArray ) -> [SponsorTrierViewModel] {
+    static func buildSponsorTierViewModels(_ sponsorTiers: NSArray ) -> [SponsorTrierViewModel] {
         var sponsorTierViewModels : [SponsorTrierViewModel] = []
         
         for sponsorTier in sponsorTiers {
@@ -32,7 +32,7 @@ class SponsorTrierViewModel {
     init(sponsorTier: CPASponsorTier) {
         
         tierName = sponsorTier.tier
-        sponsors = SponsorViewModel.buildSponsorViewModels(sponsorTier.sponsors)
+        sponsors = SponsorViewModel.buildSponsorViewModels(sponsorTier.sponsors as NSArray)
     }
     
 }
@@ -40,7 +40,7 @@ class SponsorTrierViewModel {
 
 class SponsorViewModel: Component {
     
-    static func buildSponsorViewModels(sponsors: NSArray ) -> [SponsorViewModel] {
+    static func buildSponsorViewModels(_ sponsors: NSArray ) -> [SponsorViewModel] {
         var sponsorViewModels : [SponsorViewModel] = []
         
         for sponsor in sponsors {

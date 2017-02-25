@@ -31,7 +31,7 @@ class SponsorsViewController: BaseViewController {
                 return
             }
             
-            self.tableViewData = SponsorTrierViewModel.buildSponsorTierViewModels(tiers)
+            self.tableViewData = SponsorTrierViewModel.buildSponsorTierViewModels(tiers as NSArray)
         });
         
     }
@@ -39,9 +39,9 @@ class SponsorsViewController: BaseViewController {
     func setupTableView() {
         tableView.estimatedRowHeight = 216;
         tableView.rowHeight = UITableViewAutomaticDimension;
-        tableView.registerNib(UINib.init(nibName: "SponsorTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "sponsorCell")
+        tableView.register(UINib.init(nibName: "SponsorTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "sponsorCell")
         
-        tableView.registerClass(SponsorTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "sponsorHeader")
+        tableView.register(SponsorTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "sponsorHeader")
     }
     
     override func setupNavigationBar() {
@@ -54,11 +54,11 @@ class SponsorsViewController: BaseViewController {
 
 extension SponsorsViewController : UITableViewDataSource {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let sponsors = tableViewData[section].sponsors {
             return sponsors.count
@@ -67,9 +67,9 @@ extension SponsorsViewController : UITableViewDataSource {
         return 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let component = tableViewData[indexPath.section].sponsors![indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(component.componentIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
         
         let sponsorCell = cell as! SponsorTableViewCell
         sponsorCell.displayViewModel(component)
@@ -82,14 +82,14 @@ extension SponsorsViewController : UITableViewDataSource {
 
 extension SponsorsViewController : UITableViewDelegate {
 
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier("sponsorHeader")
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "sponsorHeader")
         let header = cell as! SponsorTableViewHeader
         header.displayViewModel(tableViewData[section])
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44;
     }
 }

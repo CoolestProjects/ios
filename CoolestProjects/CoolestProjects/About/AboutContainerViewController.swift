@@ -36,8 +36,8 @@ class AboutContainerViewController : BaseViewController {
     
     func setupAboutSectionsSegmentedControl() {
         
-        aboutSectionsSegmentedControl.setTitle(NSLocalizedString("section.about", tableName: "About", comment: ""), forSegmentAtIndex: aboutIndex)
-        aboutSectionsSegmentedControl.setTitle(NSLocalizedString("section.disclaimer", tableName: "About", comment: ""), forSegmentAtIndex: disclaimerIndex)
+        aboutSectionsSegmentedControl.setTitle(NSLocalizedString("section.about", tableName: "About", comment: ""), forSegmentAt: aboutIndex)
+        aboutSectionsSegmentedControl.setTitle(NSLocalizedString("section.disclaimer", tableName: "About", comment: ""), forSegmentAt: disclaimerIndex)
         
         let normalStateAttributes = [
             NSFontAttributeName: AppFonts.tabBarFontSelected,
@@ -49,18 +49,18 @@ class AboutContainerViewController : BaseViewController {
             NSForegroundColorAttributeName: AppColors.blueColor
         ]
                             
-        aboutSectionsSegmentedControl.setTitleTextAttributes(normalStateAttributes, forState: .Normal)
-        aboutSectionsSegmentedControl.setTitleTextAttributes(selectedStateAttributes, forState: .Selected)
+        aboutSectionsSegmentedControl.setTitleTextAttributes(normalStateAttributes, for: .normal)
+        aboutSectionsSegmentedControl.setTitleTextAttributes(selectedStateAttributes, for: .selected)
         
-        aboutSectionsSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .Normal, rightSegmentState: .Normal, barMetrics: .Default)
-        aboutSectionsSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .Selected, rightSegmentState: .Normal, barMetrics: .Default)
-        aboutSectionsSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .Normal, rightSegmentState: .Selected, barMetrics: .Default)
+        aboutSectionsSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+        aboutSectionsSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
+        aboutSectionsSegmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .selected, barMetrics: .default)
         
-        aboutSectionsSegmentedControl.setBackgroundImage(UIImage(), forState: .Normal, barMetrics: .Default)
-        aboutSectionsSegmentedControl.setBackgroundImage(UIImage(), forState: .Selected, barMetrics: .Default)                        
+        aboutSectionsSegmentedControl.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+        aboutSectionsSegmentedControl.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)                        
     }
     
-    @IBAction func changeAboutSection(sender: UISegmentedControl) {
+    @IBAction func changeAboutSection(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == aboutIndex {
             showAboutContainer()
         } else {
@@ -69,14 +69,14 @@ class AboutContainerViewController : BaseViewController {
     }
     
     func showAboutContainer() {
-        UIView.animateWithDuration(showContainerAnimationDuration, animations: {
+        UIView.animate(withDuration: showContainerAnimationDuration, animations: {
             self.aboutContainerView.alpha = 1
             self.disclaimerContainerView.alpha = 0
         })
     }
     
     func showDisclaimerContainer() {
-        UIView.animateWithDuration(showContainerAnimationDuration, animations: {
+        UIView.animate(withDuration: showContainerAnimationDuration, animations: {
             self.aboutContainerView.alpha = 0
             self.disclaimerContainerView.alpha = 1
         })

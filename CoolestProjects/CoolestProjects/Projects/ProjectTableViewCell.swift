@@ -19,14 +19,14 @@ class ProjectTableViewCell : UITableViewCell, Configurable {
     @IBOutlet weak var desk: UILabel!
     
     func configure(withItem item: ItemType) {
-        name.text = item.name.uppercaseString
+        name.text = item.name.uppercased()
         projectDescription.text = item.projectDescription
         category.text = sanitizeCategory(item.category)
         coderdojo.text = item.coderdojo
         desk.text = formattedDeskText(item.deskNumber ?? "")
     }
     
-    func sanitizeCategory(category: String) -> String {
+    func sanitizeCategory(_ category: String) -> String {
         if category == "null" {
             return "--"
         }
@@ -34,7 +34,7 @@ class ProjectTableViewCell : UITableViewCell, Configurable {
         return category
     }
     
-    func formattedDeskText(deskNumber: String) -> String {
+    func formattedDeskText(_ deskNumber: String) -> String {
         let desk = deskNumber.isEmpty ? "-" : deskNumber
         return "Desk: \(desk)"
     }

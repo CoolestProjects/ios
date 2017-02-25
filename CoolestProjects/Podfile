@@ -13,8 +13,8 @@ target 'CoolestProjects' do
   pod 'SWRevealViewController' 
   pod 'SDWebImage', '~> 3.7.6'
   
-  pod 'Alamofire', '~> 3.4.0'
-  pod 'Gloss', '~> 0.7'    
+  pod 'Alamofire', '~> 4.3'
+  pod 'Gloss', '~> 1.2'    
 
   target 'CoolestProjectsTests' do
     inherit! :search_paths

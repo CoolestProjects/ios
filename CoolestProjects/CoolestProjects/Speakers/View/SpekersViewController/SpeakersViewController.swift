@@ -28,7 +28,7 @@ class SpeakersViewController: BaseViewController {
         
         firbaseService.getSpeakersWithCompletionBlock { (speakers, error) in
             
-            let speakersViewModel = SpeakersViewModel(speakers:speakers!)
+            let speakersViewModel = SpeakersViewModel(speakers:speakers! as NSArray)
             self.viewModel = speakersViewModel
             
         
@@ -39,7 +39,7 @@ class SpeakersViewController: BaseViewController {
     func setupTableView() {
         tableView.estimatedRowHeight = 400.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
-        tableView.registerNib(UINib.init(nibName: "SpeakerTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "speakerCell")
+        tableView.register(UINib.init(nibName: "SpeakerTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "speakerCell")
         
     }
     
@@ -54,7 +54,7 @@ class SpeakersViewController: BaseViewController {
 
 extension SpeakersViewController : UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let viewModel = self.viewModel {
             return viewModel.tableViewData!.count
 
@@ -62,9 +62,9 @@ extension SpeakersViewController : UITableViewDataSource {
         return 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let component = viewModel!.tableViewData![indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(component.componentIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
         
        
         let speakerCell = cell as! SpeakerTableViewCell

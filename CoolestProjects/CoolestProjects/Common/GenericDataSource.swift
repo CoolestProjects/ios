@@ -63,7 +63,7 @@ extension SectionContaining {
         return sections[index]
     }
 
-    func item(atIndexPath indexPath: NSIndexPath) -> Section.ItemType? {
+    func item(atIndexPath indexPath: IndexPath) -> Section.ItemType? {
         return section(atIndex: indexPath.section)?.item(atIndex: indexPath.row)
     }
 }

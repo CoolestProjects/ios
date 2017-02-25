@@ -13,18 +13,18 @@ import Gloss
 let projectsEndpoint: String = "https://register.coolestprojects.org/api/project/summary"
 
 enum ProjectsServiceResult {
-    case Success([Project])
-    case Failure(ErrorType)
+    case success([Project])
+    case failure(Error)
     
-    func error() -> ErrorType? {
-        if case .Failure(let error) = self {
+    func error() -> Error? {
+        if case .failure(let error) = self {
             return error
         }
         return nil
     }
     
     func data() -> [Project]? {
-        if case .Success(let data) = self {
+        if case .success(let data) = self {
             return data
         }
         return nil
@@ -35,26 +35,26 @@ typealias ProjectsServiceCompletion = (ProjectsServiceResult) -> Void
 
 class ProjectsService {
     
-    func fetchProjects(completion: ProjectsServiceCompletion? = nil) {
+    func fetchProjects(_ completion: ProjectsServiceCompletion? = nil) {
         
-        Alamofire.request(.GET, projectsEndpoint)
+        Alamofire.request(projectsEndpoint)
             .validate()
             .responseJSON { response in
                 switch response.result {
-                case .Success:
+                case .success:
                     
                     do {
                         // TODO: pure swift parsing???
                         // TODO: duplicated code with store
-                        let json = try NSJSONSerialization.JSONObjectWithData(response.data!, options: NSJSONReadingOptions()) as! [JSON]
-                        let projects = [Project].fromJSONArray(json)
-                        completion?(.Success(projects))
+                        let json = try JSONSerialization.jsonObject(with: response.data!) as! [JSON]
+                        let projects = [Project].from(jsonArray: json)!
+                        completion?(.success(projects))
                     } catch let error {
-                        completion?(.Failure(error))
+                        completion?(.failure(error))
                     }
                     
-                case .Failure(let error):
-                    completion?(.Failure(error))
+                case .failure(let error):
+                    completion?(.failure(error))
                 }
         }
         

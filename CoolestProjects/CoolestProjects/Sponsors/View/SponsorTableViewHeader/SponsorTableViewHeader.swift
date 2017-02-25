@@ -26,19 +26,19 @@ class SponsorTableViewHeader: UITableViewHeaderFooterView {
         
         let label = UILabel()
         label.font = AppFonts.tableHeaderTitle
-        label.textAlignment = .Center
+        label.textAlignment = .center
         self.contentView.addSubview(label);
         
         self.titleLabel = label
     
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.topAnchor.constraintEqualToAnchor(self.contentView.topAnchor).active = true
-        label.bottomAnchor.constraintEqualToAnchor(self.contentView.bottomAnchor).active = true
-        label.leadingAnchor.constraintEqualToAnchor(self.contentView.leadingAnchor).active = true
-        label.trailingAnchor.constraintEqualToAnchor(self.contentView.trailingAnchor).active = true
+        label.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
     }
     
-    func displayViewModel(viewModel: SponsorTrierViewModel) {
+    func displayViewModel(_ viewModel: SponsorTrierViewModel) {
         self.titleLabel.text = viewModel.tierName
         self.contentView.backgroundColor = viewModel.tierColor
     }

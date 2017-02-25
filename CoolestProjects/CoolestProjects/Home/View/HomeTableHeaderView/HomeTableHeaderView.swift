@@ -16,7 +16,7 @@ class HomeTableHeaderView : UIView, Configurable {
     @IBOutlet weak var body: UILabel!
     
     class func headerView() -> HomeTableHeaderView? {
-        return NSBundle.mainBundle().loadNibNamed("HomeTableHeaderView", owner: nil, options: nil).first as? HomeTableHeaderView
+        return Bundle.main.loadNibNamed("HomeTableHeaderView", owner: nil, options: nil)?.first as? HomeTableHeaderView
     }
     
     func configure(withItem item: ItemType) {

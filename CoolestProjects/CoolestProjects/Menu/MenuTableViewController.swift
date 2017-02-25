@@ -13,7 +13,7 @@ import SWRevealViewController
 class MenuTableViewController: UITableViewController {
     var itemTitles = [String]()
     var itemIdentifiers = [String]()
-    var previousIndexPath = NSIndexPath.init(forRow: 0, inSection: 0)
+    var previousIndexPath = IndexPath.init(row: 0, section: 0)
     
     var cellReuseIdentifier = "menuItemCell"
     
@@ -28,60 +28,60 @@ class MenuTableViewController: UITableViewController {
         self.setupView()
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let title = self.itemTitles[indexPath.row]
         
-        var cell =  tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier)
+        var cell =  tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)
         
         if((cell == nil)) {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: cellReuseIdentifier)
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellReuseIdentifier)
         }
-        cell?.backgroundColor = UIColor.clearColor()
+        cell?.backgroundColor = UIColor.clear
         cell?.textLabel?.font = AppFonts.menuItemFont
         
         if self.previousIndexPath.row == indexPath.row {
-            cell?.textLabel?.textColor = UIColor.yellowColor()
+            cell?.textLabel?.textColor = UIColor.yellow
             cell?.textLabel?.font = AppFonts.menuItemSelectedFont
         }
         else {
-            cell?.textLabel?.textColor = UIColor.whiteColor()
+            cell?.textLabel?.textColor = UIColor.white
             cell?.textLabel?.font = AppFonts.menuItemFont
         }
         
         cell?.textLabel?.text = title
-        cell?.selectionStyle = UITableViewCellSelectionStyle.None
+        cell?.selectionStyle = UITableViewCellSelectionStyle.none
         return cell!
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.itemTitles.count
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if self.previousIndexPath.row != indexPath.row {
             let identifier = self.itemIdentifiers[indexPath.row]
             
             self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: AppColors.yellowColor, indexPath: indexPath, tableView: tableView)
-            self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.whiteColor(), indexPath: self.previousIndexPath, tableView: tableView)
+            self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.white, indexPath: self.previousIndexPath, tableView: tableView)
             
             self.previousIndexPath = indexPath
             
-            self.revealViewController().setFrontViewController( self.storyboard?.instantiateViewControllerWithIdentifier(identifier), animated: true)
+            self.revealViewController().setFront( self.storyboard?.instantiateViewController(withIdentifier: identifier), animated: true)
         }
         
         self.revealViewController().revealToggle(nil)
         
     }
     
-    func setTextColorOnCell(font: UIFont, color: UIColor, indexPath: NSIndexPath, tableView: UITableView) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+    func setTextColorOnCell(_ font: UIFont, color: UIColor, indexPath: IndexPath, tableView: UITableView) {
+        let cell = tableView.cellForRow(at: indexPath)
         cell?.textLabel?.font = font
         cell?.textLabel?.textColor = color
     }
     
     func setupView() {
-        self.tableView.backgroundColor = UIColor.blackColor()
-        self.tableView.separatorStyle = .None
+        self.tableView.backgroundColor = UIColor.black
+        self.tableView.separatorStyle = .none
     }
 }
