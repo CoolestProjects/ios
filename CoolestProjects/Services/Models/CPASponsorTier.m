@@ -11,8 +11,7 @@
 @implementation CPASponsorTier
 
 + (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
-        @"sponsorList": @"sponsors"
-    }];
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"sponsorList": @"sponsors"}];
 }
+
 @end

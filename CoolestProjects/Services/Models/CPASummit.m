@@ -5,24 +5,18 @@
 
 #import "CPASummit.h"
 
-
 @implementation CPASummit
 
 + (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
-         @"summit": @"name"
-    }];
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"summit": @"name"}];
 }
 
 @end
 
-
 @implementation CPASummitTime
-+ (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
-                                                       @"string": @"time"
-                                                       }];
-}
 
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"string": @"time"}];
+}
 
 @end

@@ -8,9 +8,7 @@
 @implementation CPASponsor
 
 + (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
-        @"description": @"sponsorDescription"
-   }];
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"description": @"sponsorDescription"}];
 }
 
 @end

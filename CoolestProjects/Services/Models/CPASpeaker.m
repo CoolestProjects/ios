@@ -11,9 +11,7 @@
 @implementation CPASpeaker
 
 + (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
-        @"description": @"speakerDescription"
-    }];
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"description": @"speakerDescription"}];
 }
 
 // TODO: remove when the format of the summitTimes properties is
