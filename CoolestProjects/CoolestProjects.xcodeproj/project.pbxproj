@@ -32,6 +32,8 @@
 		9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907891D05F07600FCE40D /* MapsModel.swift */; };
 		9B59078D1D05F50900FCE40D /* MapViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59078C1D05F50900FCE40D /* MapViewCollectionViewCell.swift */; };
 		9B59078F1D05F51A00FCE40D /* MapViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B59078E1D05F51A00FCE40D /* MapViewCollectionViewCell.xib */; };
+		9B74262B1EA3A46800945794 /* CPARegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262A1EA3A46800945794 /* CPARegion.m */; };
+		9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262D1EA3A4FA00945794 /* CPABeacon.m */; };
 		A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90364931CFF9CD60089B351 /* HomeViewModel.swift */; };
 		A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C078D1D00E3DC005271FE /* Boxes.swift */; };
 		A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79C051731B8A634DF461065 /* OpenSans-Light.ttf */; };
@@ -149,6 +151,10 @@
 		9B5907891D05F07600FCE40D /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
 		9B59078C1D05F50900FCE40D /* MapViewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B59078E1D05F51A00FCE40D /* MapViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		9B7426291EA3A46800945794 /* CPARegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPARegion.h; sourceTree = "<group>"; };
+		9B74262A1EA3A46800945794 /* CPARegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPARegion.m; sourceTree = "<group>"; };
+		9B74262C1EA3A4FA00945794 /* CPABeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPABeacon.h; sourceTree = "<group>"; };
+		9B74262D1EA3A4FA00945794 /* CPABeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPABeacon.m; sourceTree = "<group>"; };
 		A90364931CFF9CD60089B351 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A91C078D1D00E3DC005271FE /* Boxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boxes.swift; sourceTree = "<group>"; };
 		A91C079A1D00EC3F005271FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeViewController/HomeViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +274,10 @@
 				25318B211CFD93D800691791 /* CPASponsorTier.m */,
 				A93BCD301D0DFE4800005DB2 /* CPAAbout.h */,
 				A93BCD311D0DFE4800005DB2 /* CPAAbout.m */,
+				9B7426291EA3A46800945794 /* CPARegion.h */,
+				9B74262A1EA3A46800945794 /* CPARegion.m */,
+				9B74262C1EA3A4FA00945794 /* CPABeacon.h */,
+				9B74262D1EA3A4FA00945794 /* CPABeacon.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -881,7 +891,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A0F944E1308AE0E0EBD32A00 /* [CP] Copy Pods Resources */ = {
@@ -956,7 +966,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -968,6 +978,7 @@
 			files = (
 				E1C6040D1D0DD78800931C38 /* SponsorTrierViewModel.swift in Sources */,
 				E1C6041B1D0DD7E100931C38 /* ProjectsStore.swift in Sources */,
+				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
 				A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */,
 				A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */,
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
@@ -985,6 +996,7 @@
 				9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */,
 				A93BCD321D0DFE4800005DB2 /* CPAAbout.m in Sources */,
 				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
+				9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */,
 				E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */,
 				E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,

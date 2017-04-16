@@ -73,6 +73,7 @@
     [firebaseService getSummitsWithCompletionBlock:nil];
     [firebaseService getSponsorsWithCompletionBlock:nil];
     [firebaseService getAboutInfoWithCompletionBlock:nil];
+    [firebaseService getRegionsWithCompletionBlock:nil];
 }
 
 

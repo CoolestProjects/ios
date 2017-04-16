@@ -19,6 +19,7 @@ NSString *const CPADatabaseChildSummits = @"summits";
 NSString *const CPADatabaseChildSponsors = @"sponsors";
 NSString *const CPADatabaseChildVenue = @"venue";
 NSString *const CPADatabaseChildAbout = @"about";
+NSString *const CPADatabaseChildRegions = @"regions";
 
 @interface CPAFirebaseDefaultService ()
 
@@ -118,6 +119,14 @@ NSString *const CPADatabaseChildAbout = @"about";
 
 - (void)getDataForChild:(NSString *)child withCompletionBlock:(void(^)(id results, NSError *error))completionBlock {
     [[self.firebaseDatabase child:child] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        completionBlock(snapshot.value, nil);
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        completionBlock(@[], error);
+    }];
+}
+
+- (void)getRegionsWithCompletionBlock:(void (^)(NSArray<CPARegion *> * _Nullable, NSError * _Nullable))completionBlock {
+    [[self.firebaseDatabase child:CPADatabaseChildRegions] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         completionBlock(snapshot.value, nil);
     } withCancelBlock:^(NSError * _Nonnull error) {
         completionBlock(@[], error);

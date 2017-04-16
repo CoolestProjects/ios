@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 let SponsorBoxHeight: CGFloat = 300.0
 
-class HomeViewController : BaseViewController {
-    
+class HomeViewController : BaseViewController, CLLocationManagerDelegate {
+    let locMgr = CLLocationManager()
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var wrapperView: UIView!
@@ -26,6 +27,13 @@ class HomeViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        locMgr.desiredAccuracy = kCLLocationAccuracyBest
+        
+        locMgr.requestAlwaysAuthorization()
+        
+        locMgr.startUpdatingLocation()
+        
+        locMgr.delegate = self
     }
     
     override func viewDidLayoutSubviews() {

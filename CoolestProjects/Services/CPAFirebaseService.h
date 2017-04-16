@@ -12,6 +12,7 @@
 @class CPASummit;
 @class CPASponsorTier;
 @class CPAAbout;
+@class CPARegion;
 
 @protocol CPAFirebaseService <NSObject>
 
@@ -34,5 +35,10 @@
 - (void)getAboutInfoWithCompletionBlock:(nullable void(^)(CPAAbout * _Nullable aboutContent, NSError * _Nullable error))completionBlock;
 
 - (void)getVenueInfoWithCompletionBlock:(nullable void(^)(id _Nullable venue, NSError * _Nullable error))completionBlock;
+
+/**
+ *  Get a list of the tier and sponsors for that tier.
+ */
+- (void)getRegionsWithCompletionBlock:(nullable void(^)(NSArray<CPARegion *> * _Nullable regions, NSError * _Nullable error))completionBlock;
 
 @end
