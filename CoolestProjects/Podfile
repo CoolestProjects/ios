@@ -16,6 +16,8 @@ target 'CoolestProjects' do
   pod 'Alamofire', '~> 4.3'
   pod 'Gloss', '~> 1.2'    
 
+  pod 'EstimoteSDK', '~> 4.13'
+
   target 'CoolestProjectsTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - EstimoteSDK (4.13.2)
   - Firebase (3.14.0):
     - Firebase/Core (= 3.14.0)
   - Firebase/Core (3.14.0):
@@ -47,6 +48,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
+  - EstimoteSDK (~> 4.13)
   - Firebase
   - Firebase/Database
   - Firebase/Messaging
@@ -58,6 +60,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  EstimoteSDK: 207cc0d4fa7635023c75a490b2d6ee9a417377cb
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
@@ -73,6 +76,6 @@ SPEC CHECKSUMS:
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 160786a61d8e6861b4de4e4219fcafe6e132e39f
+PODFILE CHECKSUM: bf9e494a2388669b919a4037cfca83f8807a754d
 
 COCOAPODS: 1.2.1
