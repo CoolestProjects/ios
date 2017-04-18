@@ -11,6 +11,7 @@
 #import "CPASummit.h"
 #import "CPASponsorTier.h"
 #import "CPAAbout.h"
+#import "CPARegion.h"
 
 @import Firebase;
 
@@ -19,6 +20,7 @@ NSString *const CPADatabaseChildSummits = @"summits";
 NSString *const CPADatabaseChildSponsors = @"sponsors";
 NSString *const CPADatabaseChildVenue = @"venue";
 NSString *const CPADatabaseChildAbout = @"about";
+NSString *const CPADatabaseChildRegions = @"regions";
 
 @interface CPAFirebaseDefaultService ()
 
@@ -121,6 +123,22 @@ NSString *const CPADatabaseChildAbout = @"about";
         completionBlock(snapshot.value, nil);
     } withCancelBlock:^(NSError * _Nonnull error) {
         completionBlock(@[], error);
+    }];
+}
+
+- (void)getRegionsWithCompletionBlock:(void (^)(NSArray<CPARegion *> * _Nullable, NSError * _Nullable))completionBlock {
+    
+    [self getDataForChild:CPADatabaseChildRegions withCompletionBlock:^(id results, NSError *error) {
+        NSMutableArray *regions = [NSMutableArray array];
+        for (NSDictionary *dict in results) {
+            CPARegion *region = [[CPARegion alloc] initWithDictionary:dict error:NULL];
+            if (region) {
+                [regions addObject:region];
+            }
+        }
+        if (completionBlock) {
+            completionBlock(regions, error);
+        }
     }];
 }
 
