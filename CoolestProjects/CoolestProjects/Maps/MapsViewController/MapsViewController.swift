@@ -20,6 +20,11 @@ class MapsViewController: BaseViewController {
         
         self.collectionView?.register(nibName, forCellWithReuseIdentifier: "cell")
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        BeaconNotificationsManager.sharedInstance.requestAuthorization()
+    }
 }
 
 extension MapsViewController : UICollectionViewDataSource {

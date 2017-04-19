@@ -6,11 +6,15 @@
 //  Copyright © 2016 coderdojo. All rights reserved.
 //
 
+#import <Firebase/Firebase.h>
 #import "AppDelegate.h"
 #import "CPAFirebaseDefaultService.h"
-@import Firebase;
+#import "Coolest_Projects-Swift.h"
+
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) BeaconNotificationsManager *beaconNotificationManager;
 
 @end
 
@@ -19,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.beaconNotificationManager = BeaconNotificationsManager.sharedInstance;
     
     [FIRApp configure];
     [FIRDatabase database].persistenceEnabled = YES;
