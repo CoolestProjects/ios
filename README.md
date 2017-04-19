@@ -9,7 +9,7 @@ if you have ruby installed on your system skip to step 3
 
 step 1:
 
-insatll homebrew ny pasting "/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"" into terminal
+insatll homebrew by pasting "/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"" into terminal
 
 step 2:
 
