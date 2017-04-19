@@ -58,6 +58,7 @@
 		A93BCD3E1D0E24A500005DB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD3A1D0E24A500005DB2 /* Constants.swift */; };
 		A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */; };
 		A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */; };
+		A96EA6641EA6C7750021990F /* BeaconNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
 		A98010CA1D0524A300AABC90 /* Stages.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98010C91D0524A300AABC90 /* Stages.strings */; };
 		A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010D11D05259F00AABC90 /* StagesViewController.swift */; };
@@ -177,6 +178,7 @@
 		A93BCD3A1D0E24A500005DB2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconNotificationsManager.swift; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
 		A98010C91D0524A300AABC90 /* Stages.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Stages.strings; path = strings/Stages.strings; sourceTree = "<group>"; };
 		A98010D11D05259F00AABC90 /* StagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesViewController.swift; path = Stages/StagesViewController/StagesViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				A96EA6621EA6C7590021990F /* BeaconManager */,
 				E1C604111D0DD7E100931C38 /* Projects */,
 				E1C603F81D0DD78800931C38 /* Sponsors */,
 				E1C604041D0DD78800931C38 /* About */,
@@ -509,6 +512,14 @@
 				A93BCD2A1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg */,
 			);
 			name = about;
+			sourceTree = "<group>";
+		};
+		A96EA6621EA6C7590021990F /* BeaconManager */ = {
+			isa = PBXGroup;
+			children = (
+				A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */,
+			);
+			path = BeaconManager;
 			sourceTree = "<group>";
 		};
 		A98010CF1D05258A00AABC90 /* StagesTableViewCell */ = {
@@ -1009,6 +1020,7 @@
 				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
 				A9F8DB5C1D03389800ECE1F3 /* HomeTableHeaderView.swift in Sources */,
 				A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */,
+				A96EA6641EA6C7750021990F /* BeaconNotificationsManager.swift in Sources */,
 				E1C604181D0DD7E100931C38 /* Project.swift in Sources */,
 				E1C6040B1D0DD78800931C38 /* SponsorsViewController.swift in Sources */,
 				4453ED181CF9EA2C0028C8E0 /* main.m in Sources */,
