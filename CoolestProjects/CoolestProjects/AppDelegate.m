@@ -23,10 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.beaconNotificationManager = BeaconNotificationsManager.sharedInstance;
-    
     [FIRApp configure];
     [FIRDatabase database].persistenceEnabled = YES;
+
+    self.beaconNotificationManager = BeaconNotificationsManager.sharedInstance;
     
     [self preloadContent];
     

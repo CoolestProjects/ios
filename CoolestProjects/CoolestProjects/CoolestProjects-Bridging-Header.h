@@ -10,3 +10,5 @@
 #import "CPASponsorTier.h"
 #import "CPASponsor.h"
 #import "CPAAbout.h"
+#import "CPARegion.h"
+#import "CPABeacon.h"
