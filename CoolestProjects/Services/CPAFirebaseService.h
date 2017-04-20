@@ -39,6 +39,7 @@
 /**
  *  Get a list of the tier and sponsors for that tier.
  */
-- (void)getRegionsWithCompletionBlock:(nullable void(^)(NSArray<CPARegion *> * _Nullable regions, NSError * _Nullable error))completionBlock;
+- (void)getRegionsWithCompletionBlock:(nullable void(^)(NSArray<CPARegion *> * _Nullable regions, NSError * _Nullable error))completionBlock
+NS_SWIFT_NAME(getRegions(_:));
 
 @end
