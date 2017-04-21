@@ -12,17 +12,16 @@ import CoreLocation
 import UserNotifications
 
 let SponsorBoxHeight: CGFloat = 300.0
-
-class HomeViewController : BaseViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var overlayView: UIView!
+    @IBOutlet weak var wrapperView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+  class HomeViewController : BaseViewController, CLLocationManagerDelegate {
     
     var locationManager : CLLocationManager = CLLocationManager()
     
     let locMgr = CLLocationManager()
     
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var overlayView: UIView!
-    @IBOutlet weak var wrapperView: UIView!
-    @IBOutlet weak var tableView: UITableView!
     
     // TODO: better nib loading
     let tableHeaderView = HomeTableHeaderView.headerView()!
@@ -67,7 +66,6 @@ class HomeViewController : BaseViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
         locMgr.desiredAccuracy = kCLLocationAccuracyBest
         
         locMgr.requestAlwaysAuthorization()

@@ -8,9 +8,9 @@
 
 #import "CPAObject.h"
 
-@protocol CPABeacon <NSObject>
+@protocol CPABeacon;
 
-@end
+NS_ASSUME_NONNULL_BEGIN
 
 @interface CPABeacon : CPAObject
 
@@ -20,3 +20,5 @@
 @property(nonatomic, copy) NSString *uuid;
 
 @end
+
+NS_ASSUME_NONNULL_END
