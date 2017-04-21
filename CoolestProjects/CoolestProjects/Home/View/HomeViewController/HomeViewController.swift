@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 import CoreLocation
 import UserNotifications
-
+  class HomeViewController : BaseViewController, CLLocationManagerDelegate {
 let SponsorBoxHeight: CGFloat = 300.0
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var tableView: UITableView!
-  class HomeViewController : BaseViewController, CLLocationManagerDelegate {
+
     
     var locationManager : CLLocationManager = CLLocationManager()
     
