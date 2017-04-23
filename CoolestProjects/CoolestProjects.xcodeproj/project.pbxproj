@@ -59,6 +59,7 @@
 		A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */; };
 		A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */; };
 		A96EA6641EA6C7750021990F /* BeaconNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */; };
+		A97B8C1F1EAD4BA000B2A512 /* CPAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C1E1EAD4BA000B2A512 /* CPAMessage.m */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
 		A98010CA1D0524A300AABC90 /* Stages.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98010C91D0524A300AABC90 /* Stages.strings */; };
 		A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010D11D05259F00AABC90 /* StagesViewController.swift */; };
@@ -179,6 +180,8 @@
 		A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconNotificationsManager.swift; sourceTree = "<group>"; };
+		A97B8C1D1EAD4BA000B2A512 /* CPAMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAMessage.h; sourceTree = "<group>"; };
+		A97B8C1E1EAD4BA000B2A512 /* CPAMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAMessage.m; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
 		A98010C91D0524A300AABC90 /* Stages.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Stages.strings; path = strings/Stages.strings; sourceTree = "<group>"; };
 		A98010D11D05259F00AABC90 /* StagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesViewController.swift; path = Stages/StagesViewController/StagesViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				9B74262A1EA3A46800945794 /* CPARegion.m */,
 				9B74262C1EA3A4FA00945794 /* CPABeacon.h */,
 				9B74262D1EA3A4FA00945794 /* CPABeacon.m */,
+				A97B8C1D1EAD4BA000B2A512 /* CPAMessage.h */,
+				A97B8C1E1EAD4BA000B2A512 /* CPAMessage.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1033,6 +1038,7 @@
 				A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */,
 				E1C604101D0DD78800931C38 /* AboutViewController.swift in Sources */,
 				E1C603F51D0C74F600931C38 /* MapZoomViewController.swift in Sources */,
+				A97B8C1F1EAD4BA000B2A512 /* CPAMessage.m in Sources */,
 				A93BCD381D0E249B00005DB2 /* FilterOption.swift in Sources */,
 				A91C079F1D00EC85005271FE /* InfoBoxTableViewCell.swift in Sources */,
 			);

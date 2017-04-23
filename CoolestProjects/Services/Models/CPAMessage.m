@@ -1,20 +1,22 @@
 //
-//  CPARegion.m
+//  CPAMessage.m
 //  CoolestProjects
 //
-//  Created by Rich on 16/04/2017.
+//  Created by Valentino Gattuso on 23/04/2017.
 //  Copyright © 2017 coderdojo. All rights reserved.
 //
 
-#import "CPARegion.h"
+#import "CPAMessage.h"
 
-@implementation CPARegion
+@implementation CPAMessage
 
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.title = @"";
+        self.message = @"";
         self.regionId = @"";
-        self.beacons = (NSArray<CPABeacon *><CPABeacon> *)@[];
+        self.versionId = @"";
     }
     return self;
 }

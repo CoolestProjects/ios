@@ -12,6 +12,7 @@
 #import "CPASponsorTier.h"
 #import "CPAAbout.h"
 #import "CPARegion.h"
+#import "CPAMessage.h"
 
 @import Firebase;
 
@@ -21,6 +22,7 @@ NSString *const CPADatabaseChildSponsors = @"sponsors";
 NSString *const CPADatabaseChildVenue = @"venue";
 NSString *const CPADatabaseChildAbout = @"about";
 NSString *const CPADatabaseChildRegions = @"regions";
+NSString *const CPADatabaseChildBeaconMessages = @"messages";
 
 @interface CPAFirebaseDefaultService ()
 
@@ -138,6 +140,21 @@ NSString *const CPADatabaseChildRegions = @"regions";
         }
         if (completionBlock) {
             completionBlock(regions, error);
+        }
+    }];
+}
+
+- (void)getBeaconMessagesWithCompletionBlock:(nullable CPAServiceGetBeaconMessagesCompletion)completionBlock {
+    [self getDataForChild:CPADatabaseChildBeaconMessages withCompletionBlock:^(id results, NSError *error) {
+        NSMutableArray *messages = [NSMutableArray array];
+        for (NSDictionary *dict in results) {
+            CPAMessage *message = [[CPAMessage alloc] initWithDictionary:dict error:NULL];
+            if (message) {
+                [messages addObject:message];
+            }
+        }
+        if (completionBlock) {
+            completionBlock(messages, error);
         }
     }];
 }
