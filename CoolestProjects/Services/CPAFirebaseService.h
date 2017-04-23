@@ -14,6 +14,15 @@
 @class CPAAbout;
 @class CPARegion;
 
+
+/**
+ Callback used for the result of the /messages.json call
+
+ @param messages List of messages
+ @param error error object
+ */
+typedef void(^CPAServiceGetBeaconMessagesCompletion)(NSArray<CPARegion *> * _Nullable messages, NSError * _Nullable error);
+
 @protocol CPAFirebaseService <NSObject>
 
 /**
@@ -41,5 +50,15 @@
  */
 - (void)getRegionsWithCompletionBlock:(nullable void(^)(NSArray<CPARegion *> * _Nullable regions, NSError * _Nullable error))completionBlock
 NS_SWIFT_NAME(getRegions(_:));
+
+
+/**
+ Fetches all the messages defined for all the beacon regions
+ 
+ /messages.json
+
+ @param completionBlock List of messages or error object
+ */
+- (void)getBeaconMessagesWithCompletionBlock:(nullable CPAServiceGetBeaconMessagesCompletion)completionBlock NS_SWIFT_NAME(getBeaconMessages(_:));
 
 @end

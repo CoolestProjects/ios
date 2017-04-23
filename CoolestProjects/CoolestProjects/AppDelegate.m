@@ -79,6 +79,7 @@
     [firebaseService getSponsorsWithCompletionBlock:nil];
     [firebaseService getAboutInfoWithCompletionBlock:nil];
     [firebaseService getRegionsWithCompletionBlock:nil];
+    [firebaseService getBeaconMessagesWithCompletionBlock:nil];
 }
 
 
