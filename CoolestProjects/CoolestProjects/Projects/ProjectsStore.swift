@@ -59,33 +59,7 @@ class ProjectsStore {
             print(error)
         }
     }
-    
-    func createDataDirectoryIfNeeded() {
-        if let dataDirectoryUrl = dataDirectoryUrl() {
-            let dataDirectoryExists = FileManager.default.fileExists(atPath: dataDirectoryUrl.path)
-            if  !dataDirectoryExists {
-                do {
-                    try FileManager.default.createDirectory(at: dataDirectoryUrl, withIntermediateDirectories: true, attributes: nil)
-                } catch let error {
-                    print(error)
-                }
-            }
-        } else {
-            print("Cannot find data directory")
-        }
-    }
-    
-    func dataDirectoryUrl() -> URL? {
-        let directories = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)
-        let bundleIdentifier = Bundle.main.bundleIdentifier ?? "com.coderdojo.coolestprojects"
-        
-        if let applicationSupportDirUrl = directories.first {
-            return applicationSupportDirUrl.appendingPathComponent(bundleIdentifier)
-        }
-        
-        return nil
-    }
-    
+
     func projectsStoreUrl() -> URL? {
         if let dataDirectoryUrl = dataDirectoryUrl() {
             return dataDirectoryUrl.appendingPathComponent("projectsStore.json")
@@ -93,5 +67,9 @@ class ProjectsStore {
         
         return nil
     }
+
+}
+
+extension ProjectsStore: DataStore {
 
 }
