@@ -15,6 +15,8 @@ protocol RegionInteractionStore {
 
     func lastInteractionWithRegion(_ regionId: String) -> RegionInteraction?
 
+    func lastMessageVersionIdWithRegion(_ regionId: String) -> String?
+
     func setInteractionWithRegion(_ regionId: String, messageVersionId: String)
 
 }
@@ -76,6 +78,10 @@ extension RegionInteractionStoreImpl: RegionInteractionStore {
 
     func lastInteractionWithRegion(_ regionId: String) -> RegionInteraction? {
         return inMemoryRegionInteractions.filter { $0.regionId == regionId }.first
+    }
+
+    func lastMessageVersionIdWithRegion(_ regionId: String) -> String? {
+        return lastInteractionWithRegion(regionId)?.messageVersionId
     }
 
     func setInteractionWithRegion(_ regionId: String, messageVersionId: String) {

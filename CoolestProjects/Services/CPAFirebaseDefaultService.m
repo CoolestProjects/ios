@@ -12,7 +12,6 @@
 #import "CPASponsorTier.h"
 #import "CPAAbout.h"
 #import "CPARegion.h"
-#import "CPAMessage.h"
 
 @import Firebase;
 
@@ -22,11 +21,11 @@ NSString *const CPADatabaseChildSponsors = @"sponsors";
 NSString *const CPADatabaseChildVenue = @"venue";
 NSString *const CPADatabaseChildAbout = @"about";
 NSString *const CPADatabaseChildRegions = @"regions";
-NSString *const CPADatabaseChildBeaconMessages = @"messages";
 
 @interface CPAFirebaseDefaultService ()
 
 @property (nonatomic, strong) FIRDatabaseReference *firebaseDatabase;
+@property (nonatomic, strong) FIRDatabaseReference *regionsRef;
 
 @end
 
@@ -42,6 +41,9 @@ NSString *const CPADatabaseChildBeaconMessages = @"messages";
 
 - (void)setup {
     self.firebaseDatabase = [[FIRDatabase database] reference];
+
+    self.regionsRef = [self.firebaseDatabase child:CPADatabaseChildRegions];
+    [self.regionsRef keepSynced:YES];
 }
 
 - (void)getSpeakersWithCompletionBlock:(void(^)(NSArray<CPASpeaker *> *speakers, NSError *error))completionBlock {
@@ -129,32 +131,22 @@ NSString *const CPADatabaseChildBeaconMessages = @"messages";
 }
 
 - (void)getRegionsWithCompletionBlock:(void (^)(NSArray<CPARegion *> * _Nullable, NSError * _Nullable))completionBlock {
-    
-    [self getDataForChild:CPADatabaseChildRegions withCompletionBlock:^(id results, NSError *error) {
+    [self.regionsRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         NSMutableArray *regions = [NSMutableArray array];
-        for (NSDictionary *dict in results) {
+
+        for (NSDictionary *dict in snapshot.value) {
             CPARegion *region = [[CPARegion alloc] initWithDictionary:dict error:NULL];
             if (region) {
                 [regions addObject:region];
             }
         }
-        if (completionBlock) {
-            completionBlock(regions, error);
-        }
-    }];
-}
 
-- (void)getBeaconMessagesWithCompletionBlock:(nullable CPAServiceGetBeaconMessagesCompletion)completionBlock {
-    [self getDataForChild:CPADatabaseChildBeaconMessages withCompletionBlock:^(id results, NSError *error) {
-        NSMutableArray *messages = [NSMutableArray array];
-        for (NSDictionary *dict in results) {
-            CPAMessage *message = [[CPAMessage alloc] initWithDictionary:dict error:NULL];
-            if (message) {
-                [messages addObject:message];
-            }
-        }
         if (completionBlock) {
-            completionBlock(messages, error);
+            completionBlock(regions, nil);
+        }
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        if (completionBlock) {
+            completionBlock(nil, error);
         }
     }];
 }

@@ -7,6 +7,7 @@
 //
 
 #import <Firebase/Firebase.h>
+#import <UserNotifications/UserNotifications.h>
 #import "AppDelegate.h"
 #import "CPAFirebaseDefaultService.h"
 #import "Coolest_Projects-Swift.h"
@@ -23,18 +24,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [FIRApp configure];
-    [FIRDatabase database].persistenceEnabled = YES;
+    [self setupFirebase];
 
-    self.beaconNotificationManager = BeaconNotificationsManager.sharedInstance;
-    
+    [self createBeaconManager];
+
     [self preloadContent];
-    
-    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
-    
-    // a kitten dies every time we run this code
-    [NSThread sleepForTimeInterval:1.0];
-    
+
+    [self setupNotifications];
+
     return YES;
 }
 
@@ -60,15 +57,31 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-    if(notificationSettings.types) {
-        [application registerForRemoteNotifications];
-    }
-}
+//- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+//    if(notificationSettings.types) {
+//        [application registerForRemoteNotifications];
+//    }
+//}
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-//    FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.Unknown)
     [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeUnknown];
+}
+
+- (void)setupFirebase {
+    [FIRApp configure];
+    [[FIRDatabase database] setPersistenceEnabled:YES];
+}
+
+- (void)setupNotifications {
+    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+
+                          }];
+}
+
+- (void)createBeaconManager {
+    self.beaconNotificationManager = BeaconNotificationsManager.sharedInstance;
 }
 
 - (void)preloadContent {
@@ -77,9 +90,7 @@
     [firebaseService getSpeakersWithCompletionBlock:nil];
     [firebaseService getSummitsWithCompletionBlock:nil];
     [firebaseService getSponsorsWithCompletionBlock:nil];
-    [firebaseService getAboutInfoWithCompletionBlock:nil];
-    [firebaseService getRegionsWithCompletionBlock:nil];
-    [firebaseService getBeaconMessagesWithCompletionBlock:nil];
+    [firebaseService getAboutInfoWithCompletionBlock:nil];        
 }
 
 

@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import UserNotifications
 
 class BeaconNotificationsManager: NSObject {
 
@@ -54,8 +55,45 @@ class BeaconNotificationsManager: NSObject {
         }
     }
 
+    fileprivate func showMessageForRegion(_ regionId: String) {        
+        let lastMessageVersionId = regionInteractionsStore.lastMessageVersionIdWithRegion(regionId)
+
+        messagesService.messageForRegion(regionId) { (message) in
+            guard let message = message else {
+                print("No message with regionId \"\(regionId)\" found")
+                return
+            }
+
+            print("Message for regionId \"\(regionId)\" has versionId \(message.versionId)")
+
+            if let lastMessageVersionId = lastMessageVersionId {
+                if message.versionId == lastMessageVersionId {
+                    print("Message for regionId \"\(regionId)\" (versionId \(message.versionId)) has already been displayed")
+                    return
+                }
+            }
+
+            // store interaction
+            print("Storing interaction for message")
+            self.regionInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId)
+
+            // show user notification
+            print("Show local notification")
+            let content = UNNotificationContent.makeNotificationContentFrom(message: message)
+            let request = UNNotificationRequest(identifier: regionId, content: content, trigger: nil)
+            UNUserNotificationCenter.current().add(request) { (error : Error?) in
+                if let theError = error {
+                    print(theError.localizedDescription)
+                }
+            }
+
+        }
+    }
+
     fileprivate let beaconManager = ESTBeaconManager()
     fileprivate let coolestProjectsService = CPAFirebaseDefaultService()
+    fileprivate let regionInteractionsStore = RegionInteractionStoreImpl()
+    fileprivate let messagesService: MessagesService = MessagesServiceImpl()
 }
 
 extension BeaconNotificationsManager: ESTBeaconManagerDelegate {
@@ -70,6 +108,9 @@ extension BeaconNotificationsManager: ESTBeaconManagerDelegate {
 
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
         print("Did enter region \(region).")
+        if let regionId = region.regionId {
+            showMessageForRegion(regionId)
+        }
     }
 
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
@@ -90,23 +131,42 @@ extension CPARegion {
 
     func allCLBeaconRegions() -> [CLBeaconRegion] {
         return beacons
-            .map { $0.toCLBeaconRegion() }
+            .map { $0.toCLBeaconRegion(regionId: regionId) }
             .flatMap { $0 }
     }
 }
 
 extension CPABeacon {
 
-    func toCLBeaconRegion() -> CLBeaconRegion? {
+    func toCLBeaconRegion(regionId: String) -> CLBeaconRegion? {
         guard let proximityUUID = UUID(uuidString: uuid) else {
             return nil
         }
 
         return CLBeaconRegion(
             proximityUUID: proximityUUID,
-            major: CLBeaconMajorValue(major.int16Value),
-            minor: CLBeaconMajorValue(minor.int16Value),
-            identifier: name)
+            major: CLBeaconMajorValue(major.uint16Value),
+            minor: CLBeaconMinorValue(minor.uint16Value),
+            identifier: "\(regionId)#\(name)")
     }
 }
 
+extension CLBeaconRegion {
+
+    var regionId: String? {
+        get { return identifier.components(separatedBy: "#").first }
+    }
+
+}
+
+extension UNNotificationContent {
+
+    static func makeNotificationContentFrom(message: Message) -> UNNotificationContent {
+        let n = UNMutableNotificationContent()
+        n.title = message.title
+        n.body = message.message
+        n.sound = UNNotificationSound.default()
+        return n
+    }
+
+}
