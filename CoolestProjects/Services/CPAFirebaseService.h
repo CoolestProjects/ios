@@ -52,13 +52,4 @@ typedef void(^CPAServiceGetBeaconMessagesCompletion)(NSArray<CPARegion *> * _Nul
 NS_SWIFT_NAME(getRegions(_:));
 
 
-/**
- Fetches all the messages defined for all the beacon regions
- 
- /messages.json
-
- @param completionBlock List of messages or error object
- */
-- (void)getBeaconMessagesWithCompletionBlock:(nullable CPAServiceGetBeaconMessagesCompletion)completionBlock NS_SWIFT_NAME(getBeaconMessages(_:));
-
 @end
