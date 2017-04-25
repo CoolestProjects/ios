@@ -137,8 +137,8 @@ extension CPABeacon {
 
         return CLBeaconRegion(
             proximityUUID: proximityUUID,
-            major: CLBeaconMajorValue(major.int16Value),
-            minor: CLBeaconMajorValue(minor.int16Value),
+            major: CLBeaconMajorValue(major.uint16Value),
+            minor: CLBeaconMinorValue(minor.uint16Value),
             identifier: "\(regionId)#\(name)")
     }
 }

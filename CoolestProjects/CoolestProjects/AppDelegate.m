@@ -90,8 +90,7 @@
     [firebaseService getSpeakersWithCompletionBlock:nil];
     [firebaseService getSummitsWithCompletionBlock:nil];
     [firebaseService getSponsorsWithCompletionBlock:nil];
-    [firebaseService getAboutInfoWithCompletionBlock:nil];
-    [firebaseService getRegionsWithCompletionBlock:nil];    
+    [firebaseService getAboutInfoWithCompletionBlock:nil];        
 }
 
 
