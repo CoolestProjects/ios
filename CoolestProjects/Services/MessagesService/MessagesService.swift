@@ -57,9 +57,14 @@ extension MessagesServiceImpl: MessagesService {
         let query = ref.queryOrdered(byChild: "regionId").queryEqual(toValue: regionId)
         query.observeSingleEvent(of: .value, with: { (snapshot) in
             var message: Message? = nil
-            if let json = snapshot.value as? [[String:Any]] {
-                message = [Message].from(jsonArray: json)?.first
+
+            let enumerator = snapshot.children
+            while let childSnapshot = enumerator.nextObject() as? FIRDataSnapshot {
+                if let json = childSnapshot.value as? [String:Any] {
+                    message = Message(json: json)
+                }
             }
+
             callback(message)
         }, withCancel: { (error) in
             print("Error: \(error)")

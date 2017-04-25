@@ -59,18 +59,26 @@ class BeaconNotificationsManager: NSObject {
         let lastMessageVersionId = regionInteractionsStore.lastMessageVersionIdWithRegion(regionId)
 
         messagesService.messageForRegion(regionId) { (message) in
-            guard let message = message else { return }
+            guard let message = message else {
+                print("No message with regionId \"\(regionId)\" found")
+                return
+            }
+
+            print("Message for regionId \"\(regionId)\" has versionId \(message.versionId)")
 
             if let lastMessageVersionId = lastMessageVersionId {
                 if message.versionId == lastMessageVersionId {
+                    print("Message for regionId \"\(regionId)\" (versionId \(message.versionId)) has already been displayed")
                     return
                 }
             }
 
             // store interaction
+            print("Storing interaction for message")
             self.regionInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId)
 
             // show user notification
+            print("Show local notification")
             let content = UNNotificationContent.makeNotificationContentFrom(message: message)
             let request = UNNotificationRequest(identifier: regionId, content: content, trigger: nil)
             UNUserNotificationCenter.current().add(request) { (error : Error?) in
@@ -157,6 +165,7 @@ extension UNNotificationContent {
         let n = UNMutableNotificationContent()
         n.title = message.title
         n.body = message.message
+        n.sound = UNNotificationSound.default()
         return n
     }
 
