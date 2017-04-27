@@ -13,7 +13,7 @@
 #import "Coolest_Projects-Swift.h"
 
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) BeaconNotificationsManager *beaconNotificationManager;
 
@@ -74,6 +74,7 @@
 
 - (void)setupNotifications {
     UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
     [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)
                           completionHandler:^(BOOL granted, NSError * _Nullable error) {
 
@@ -93,5 +94,13 @@
     [firebaseService getAboutInfoWithCompletionBlock:nil];        
 }
 
+#pragma mark - UNUserNotificationCenterDelegate
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+    // nothing to do here, just tell iOS to display the notification
+    completionHandler(UNNotificationPresentationOptionAlert|UNNotificationPresentationOptionSound);
+}
 
 @end
