@@ -51,6 +51,12 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    BOOL isAuthorizedForMonitoring = self.beaconNotificationManager.isAuthorizedForMonitoring;
+    BOOL deviceSupportsBLE = self.beaconNotificationManager.deviceSupportsBLE;
+    BOOL isBLEPoweredOff = self.beaconNotificationManager.isBLEPoweredOff;
+    if (deviceSupportsBLE && isAuthorizedForMonitoring && isBLEPoweredOff) {
+        [BluetoothAlertManager.sharedInstance showBluetoothPowerOffAlert];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

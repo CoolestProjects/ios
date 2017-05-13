@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import UserNotifications
+import CoreBluetooth
 
 class BeaconNotificationsManager: NSObject {
 
@@ -17,10 +18,25 @@ class BeaconNotificationsManager: NSObject {
     private override init() {
         super.init()
         beaconManager.delegate = self
+        bluetoothCentralManager.delegate = self
     }
 
-    func requestAuthorization() {
-        beaconManager.requestAlwaysAuthorization()
+    var isAuthorizedForMonitoring: Bool {
+        get { return beaconManager.isAuthorizedForMonitoring() }
+    }
+
+    var deviceSupportsBLE: Bool {
+        get { return bluetoothCentralManager.state != .unsupported }
+    }
+
+    var isBLEPoweredOff: Bool {
+        get { return bluetoothCentralManager.state == .poweredOff }
+    }
+
+    func setupBeaconsIfNeeded() {
+        if deviceSupportsBLE {
+            beaconManager.requestAlwaysAuthorization()
+        }
     }
 
     fileprivate func registerBeaconsForMonitoring() {
@@ -91,9 +107,14 @@ class BeaconNotificationsManager: NSObject {
     }
 
     fileprivate let beaconManager = ESTBeaconManager()
+
+    fileprivate let bluetoothCentralManager = CBCentralManager(delegate: nil, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: NSNumber(value:false)])
+
     fileprivate let coolestProjectsService = CPAFirebaseDefaultService()
-    fileprivate let regionInteractionsStore = RegionInteractionStoreImpl()
     fileprivate let messagesService: MessagesService = MessagesServiceImpl()
+
+    fileprivate let regionInteractionsStore = RegionInteractionStoreImpl()
+
 }
 
 extension BeaconNotificationsManager: ESTBeaconManagerDelegate {
@@ -122,6 +143,23 @@ extension BeaconNotificationsManager: ESTBeaconManagerDelegate {
             print("Location Services are disabled for this app.")
         } else if status == .authorizedAlways {
             registerBeaconsForMonitoring()
+        }
+    }
+
+}
+
+extension BeaconNotificationsManager: CBCentralManagerDelegate {
+
+    public func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        switch central.state {
+        case .poweredOn:
+            print("Bluetooth state changed to: Power On")
+        case .poweredOff:
+            print("Bluetooth state changed to: Power Off")
+        case .unknown:
+            print("Bluetooth state changed to: Unknown")
+        default:
+            break
         }
     }
 

@@ -1,0 +1,12 @@
+/* 
+  Alerts.strings
+  CoolestProjects
+
+  Created by Valentino Gattuso on 13/05/2017.
+  Copyright © 2017 coderdojo. All rights reserved.
+*/
+
+"bluetoothPowerOff.title" = "Turn On Bluetooth";
+"bluetoothPowerOff.message" = "We use low-energy Bluetooth and iBeacon devices installed at the RDS Arena to find you inside the hall, and provide relevant information.";
+"settings" = "Settings";
+"ignore" = "Ignore";
