@@ -18,13 +18,16 @@
 NSString *const CPADatabaseChildSpeakers = @"speakers";
 NSString *const CPADatabaseChildSummits = @"summits";
 NSString *const CPADatabaseChildSponsors = @"sponsors";
-NSString *const CPADatabaseChildVenue = @"venue";
 NSString *const CPADatabaseChildAbout = @"about";
 NSString *const CPADatabaseChildRegions = @"regions";
 
 @interface CPAFirebaseDefaultService ()
 
 @property (nonatomic, strong) FIRDatabaseReference *firebaseDatabase;
+@property (nonatomic, strong) FIRDatabaseReference *speakersRef;
+@property (nonatomic, strong) FIRDatabaseReference *summitsRef;
+@property (nonatomic, strong) FIRDatabaseReference *sponsorsRef;
+@property (nonatomic, strong) FIRDatabaseReference *aboutRef;
 @property (nonatomic, strong) FIRDatabaseReference *regionsRef;
 
 @end
@@ -42,113 +45,128 @@ NSString *const CPADatabaseChildRegions = @"regions";
 - (void)setup {
     self.firebaseDatabase = [[FIRDatabase database] reference];
 
+    self.speakersRef = [self.firebaseDatabase child:CPADatabaseChildSpeakers];
+    [self.speakersRef keepSynced:YES];
+
+    self.summitsRef = [self.firebaseDatabase child:CPADatabaseChildSummits];
+    [self.summitsRef keepSynced:YES];
+
+    self.sponsorsRef = [self.firebaseDatabase child:CPADatabaseChildSponsors];
+    [self.sponsorsRef keepSynced:YES];
+
+    self.aboutRef = [self.firebaseDatabase child:CPADatabaseChildAbout];
+    [self.aboutRef keepSynced:YES];
+
     self.regionsRef = [self.firebaseDatabase child:CPADatabaseChildRegions];
     [self.regionsRef keepSynced:YES];
 }
 
 - (void)getSpeakersWithCompletionBlock:(void(^)(NSArray<CPASpeaker *> *speakers, NSError *error))completionBlock {
-
-    [self getDataForChild:CPADatabaseChildSpeakers withCompletionBlock:^(id results, NSError *error) {
+    [self getSnapshotFromDataRef:self.speakersRef withTransform:^id(FIRDataSnapshot * _Nonnull snapshot) {
         NSMutableArray *speakers = [NSMutableArray array];
-        for (NSDictionary *dict in results) {
-            CPASpeaker *speaker = [[CPASpeaker alloc] initWithDictionary:dict error:NULL];
+        for (NSDictionary *dict in snapshot.value) {
+            NSError *jsonError;
+            CPASpeaker *speaker = [[CPASpeaker alloc] initWithDictionary:dict error:&jsonError];
             if (speaker) {
                 [speakers addObject:speaker];
+            } else if (jsonError) {
+                NSLog(@"Cannot initialise CPASpeaker object with data: %@. Error: %@", dict, jsonError);
             }
         }
-        
+        return speakers;
+    } completionBlock:^(id _Nullable data, NSError * _Nullable error) {
         if (completionBlock) {
-            completionBlock(speakers, error);
+            completionBlock(data, error);
         }
     }];
 }
 
 - (void)getSummitsWithCompletionBlock:(void(^)(NSArray<CPASummit *> *summits, NSError *error))completionBlock {
-
-    [self getDataForChild:CPADatabaseChildSummits withCompletionBlock:^(id results, NSError *error) {
+    [self getSnapshotFromDataRef:self.summitsRef withTransform:^id(FIRDataSnapshot * _Nonnull snapshot) {
         NSMutableArray *summits = [NSMutableArray array];
-        for (NSDictionary *dict in results) {
-            CPASummit *summit = [[CPASummit alloc] initWithDictionary:dict error:NULL];
+        for (NSDictionary *dict in snapshot.value) {
+            NSError *jsonError;
+            CPASummit *summit = [[CPASummit alloc] initWithDictionary:dict error:&jsonError];
             if (summit) {
                 [summits addObject:summit];
+            } else if (jsonError) {
+                NSLog(@"Cannot initialise CPASummit object with data: %@. Error: %@", dict, jsonError);
             }
         }
-
+        return summits;
+    } completionBlock:^(id _Nullable data, NSError * _Nullable error) {
         if (completionBlock) {
-            completionBlock(summits, error);
+            completionBlock(data, error);
         }
     }];
 }
 
 - (void)getSponsorsWithCompletionBlock:(void(^)(NSArray<CPASponsorTier *> *sponsorTiers, NSError *error))completionBlock {
-
-    [self getDataForChild:CPADatabaseChildSponsors withCompletionBlock:^(id results, NSError *error) {
+    [self getSnapshotFromDataRef:self.sponsorsRef withTransform:^id(FIRDataSnapshot * _Nonnull snapshot) {
         NSMutableArray *sponsorTiers = [NSMutableArray array];
-        for (NSDictionary *dict in results) {
-            CPASponsorTier *sponsorsTier = [[CPASponsorTier alloc] initWithDictionary:dict error:NULL];
+        for (NSDictionary *dict in snapshot.value) {
+            NSError *jsonError;
+            CPASponsorTier *sponsorsTier = [[CPASponsorTier alloc] initWithDictionary:dict error:&jsonError];
             if (sponsorsTier) {
                 [sponsorTiers addObject:sponsorsTier];
-            }            
+            } else if (jsonError) {
+                NSLog(@"Cannot initialise CPASponsorTier object with data: %@. Error: %@", dict, jsonError);
+            }
         }
-
+        return sponsorTiers;
+    } completionBlock:^(id _Nullable data, NSError * _Nullable error) {
         if (completionBlock) {
-            completionBlock(sponsorTiers, error);
+            completionBlock(data, error);
         }
     }];
-}
-
-- (void)getVenueInfoWithCompletionBlock:(void(^)(id venue, NSError *error))completionBlock {
-    
-    // TODO: do we need this endpoint?
-    if (completionBlock) {
-        completionBlock(nil, [NSError errorWithDomain:@"org.coolestprojects.coolestprojectsevent" code:1000 userInfo:nil]);
-    }
 }
 
 - (void)getAboutInfoWithCompletionBlock:(nullable void(^)(CPAAbout * _Nullable aboutContent, NSError * _Nullable error))completionBlock {
-    
-    [self getDataForChild:CPADatabaseChildAbout withCompletionBlock:^(id results, NSError *error) {
-        CPAAbout *about;
-        
-        if (!error) {
-            // TODO: handle parsing errors
-            about = [[CPAAbout alloc] initWithDictionary:results error:nil];
+    [self getSnapshotFromDataRef:self.aboutRef withTransform:^id(FIRDataSnapshot * _Nonnull snapshot) {
+        NSDictionary *dict = snapshot.value;
+        NSError *jsonError;
+        CPAAbout *about = [[CPAAbout alloc] initWithDictionary:dict error:&jsonError];
+        if (jsonError) {
+            NSLog(@"Cannot initialise CPAAbout object with data: %@. Error: %@", dict, jsonError);
         }
-        
+        return about;
+    } completionBlock:^(id _Nullable data, NSError * _Nullable error) {
         if (completionBlock) {
-            completionBlock(about, error);
+            completionBlock(data, error);
         }
-        
-    }];
-}
-
-- (void)getDataForChild:(NSString *)child withCompletionBlock:(void(^)(id results, NSError *error))completionBlock {
-    [[self.firebaseDatabase child:child] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        completionBlock(snapshot.value, nil);
-    } withCancelBlock:^(NSError * _Nonnull error) {
-        completionBlock(@[], error);
     }];
 }
 
 - (void)getRegionsWithCompletionBlock:(void (^)(NSArray<CPARegion *> * _Nullable, NSError * _Nullable))completionBlock {
-    [self.regionsRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+    [self getSnapshotFromDataRef:self.regionsRef withTransform:^id(FIRDataSnapshot * _Nonnull snapshot) {
         NSMutableArray *regions = [NSMutableArray array];
-
         for (NSDictionary *dict in snapshot.value) {
-            CPARegion *region = [[CPARegion alloc] initWithDictionary:dict error:NULL];
+            NSError *jsonError;
+            CPARegion *region = [[CPARegion alloc] initWithDictionary:dict error:&jsonError];
             if (region) {
                 [regions addObject:region];
+            } else if (jsonError) {
+                NSLog(@"Cannot initialise CPARegion object with data: %@. Error: %@", dict, jsonError);
             }
         }
-
+        return regions;
+    } completionBlock:^(id _Nullable data, NSError * _Nullable error) {
         if (completionBlock) {
-            completionBlock(regions, nil);
-        }
-    } withCancelBlock:^(NSError * _Nonnull error) {
-        if (completionBlock) {
-            completionBlock(nil, error);
+            completionBlock(data, error);
         }
     }];
+}
+
+- (void)getSnapshotFromDataRef:(nonnull FIRDatabaseReference *)dataRef
+                 withTransform:(nonnull id(^)(FIRDataSnapshot * _Nonnull snapshot))tranform
+           completionBlock:(nonnull void(^)(id _Nullable data, NSError * _Nullable error))completionBlock {
+    [dataRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        id data = tranform(snapshot);
+        completionBlock(data, nil);
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        completionBlock(nil, error);
+    }];
+
 }
 
 @end

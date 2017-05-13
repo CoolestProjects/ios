@@ -7,11 +7,12 @@
 //
 
 #import "CPAObject.h"
-#import "CPASponsor.h"
+
+@protocol CPASponsor;
 
 @interface CPASponsorTier : CPAObject
 
 @property (nonatomic, strong) NSArray<CPASponsor> *sponsors;
-@property (nonatomic, copy) NSString *tier; //TODO: enum?
+@property (nonatomic, copy) NSString *tier;
 
 @end

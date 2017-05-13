@@ -8,15 +8,7 @@
 @implementation CPASummit
 
 + (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"summit": @"name"}];
-}
-
-@end
-
-@implementation CPASummitTime
-
-+ (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"string": @"time"}];
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"name": @"summit"}];
 }
 
 @end

@@ -15,41 +15,42 @@
 @class CPARegion;
 
 
-/**
- Callback used for the result of the /messages.json call
+typedef void(^CPAServiceGetSpeakersCompletion)(NSArray<CPASpeaker *> * _Nullable speakers, NSError * _Nullable error);
 
- @param messages List of messages
- @param error error object
- */
-typedef void(^CPAServiceGetBeaconMessagesCompletion)(NSArray<CPARegion *> * _Nullable messages, NSError * _Nullable error);
+typedef void(^CPAServiceGetSummitsCompletion)(NSArray<CPASummit *> * _Nullable summits, NSError * _Nullable error);
+
+typedef void(^CPAServiceGetSponsorsCompletion)(NSArray<CPASponsorTier *> * _Nullable sponsorTiers, NSError * _Nullable error);
+
+typedef void(^CPAServiceGetAboutInfoCompletion)(CPAAbout * _Nullable regions, NSError * _Nullable error);
+
+typedef void(^CPAServiceGetBeaconRegionsCompletion)(NSArray<CPARegion *> * _Nullable regions, NSError * _Nullable error);
+
 
 @protocol CPAFirebaseService <NSObject>
 
 /**
  *  Gets a list of the speakers.
  */
-- (void)getSpeakersWithCompletionBlock:(nullable void(^)(NSArray<CPASpeaker *> * _Nullable speakers, NSError * _Nullable error))completionBlock;
+- (void)getSpeakersWithCompletionBlock:(nullable CPAServiceGetSpeakersCompletion)completionBlock;
 
 /**
- *  Gets the stages that list of speakers speaking on that stag.
+ *  Gets the stages with the list of speakers
  */
-- (void)getSummitsWithCompletionBlock:(nullable void(^)(NSArray<CPASummit *> * _Nullable summits, NSError * _Nullable error))completionBlock;
+- (void)getSummitsWithCompletionBlock:(nullable CPAServiceGetSummitsCompletion)completionBlock;
 
 /**
- *  Get a list of the tier and sponsors for that tier.
+ *  Get a list of the tier and sponsors for that tier
  */
-- (void)getSponsorsWithCompletionBlock:(nullable void(^)(NSArray<CPASponsorTier *> * _Nullable sponsorTiers, NSError * _Nullable error))completionBlock;
-
-
-- (void)getAboutInfoWithCompletionBlock:(nullable void(^)(CPAAbout * _Nullable aboutContent, NSError * _Nullable error))completionBlock;
-
-- (void)getVenueInfoWithCompletionBlock:(nullable void(^)(id _Nullable venue, NSError * _Nullable error))completionBlock;
+- (void)getSponsorsWithCompletionBlock:(nullable CPAServiceGetSponsorsCompletion)completionBlock;
 
 /**
- *  Get a list of the tier and sponsors for that tier.
+ * Gets the "About" section (disclaimer/credits)
  */
-- (void)getRegionsWithCompletionBlock:(nullable void(^)(NSArray<CPARegion *> * _Nullable regions, NSError * _Nullable error))completionBlock
-NS_SWIFT_NAME(getRegions(_:));
+- (void)getAboutInfoWithCompletionBlock:(nullable CPAServiceGetAboutInfoCompletion)completionBlock;
 
+/**
+ *  Get a list of the "virtual regions" with the beacons associated with it
+ */
+- (void)getRegionsWithCompletionBlock:(nullable CPAServiceGetBeaconRegionsCompletion)completionBlock NS_SWIFT_NAME(getRegions(_:));
 
 @end
