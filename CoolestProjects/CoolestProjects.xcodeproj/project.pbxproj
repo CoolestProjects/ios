@@ -194,6 +194,7 @@
 		A97B8C2D1EAD724E00B2A512 /* RegionInteractionsInvalidData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RegionInteractionsInvalidData.json; sourceTree = "<group>"; };
 		A97B8C341EAEB02800B2A512 /* MessagesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesService.swift; sourceTree = "<group>"; };
 		A97B8C361EAEB7EF00B2A512 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A97B8C3B1EB29B1600B2A512 /* Coolest Projects.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Coolest Projects.entitlements"; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
 		A98010C91D0524A300AABC90 /* Stages.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Stages.strings; path = strings/Stages.strings; sourceTree = "<group>"; };
 		A98010D11D05259F00AABC90 /* StagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesViewController.swift; path = Stages/StagesViewController/StagesViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +345,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				A97B8C3B1EB29B1600B2A512 /* Coolest Projects.entitlements */,
 				A97B8C201EAD557900B2A512 /* MessageManager */,
 				A96EA6621EA6C7590021990F /* BeaconManager */,
 				E1C604111D0DD7E100931C38 /* Projects */,
@@ -1219,6 +1221,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "CoolestProjects/Coolest Projects.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				DEFINES_MODULE = NO;
@@ -1241,6 +1244,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "CoolestProjects/Coolest Projects.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				DEFINES_MODULE = NO;
