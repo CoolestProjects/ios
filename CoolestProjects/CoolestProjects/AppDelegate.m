@@ -57,12 +57,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-//- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-//    if(notificationSettings.types) {
-//        [application registerForRemoteNotifications];
-//    }
-//}
-
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeUnknown];
 }
@@ -75,9 +69,11 @@
 - (void)setupNotifications {
     UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
     center.delegate = self;
-    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert|UNAuthorizationOptionSound)
                           completionHandler:^(BOOL granted, NSError * _Nullable error) {
-
+                              if (!error) {
+                                  [[UIApplication sharedApplication] registerForRemoteNotifications];
+                              }
                           }];
 }
 
@@ -101,6 +97,15 @@
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
     // nothing to do here, just tell iOS to display the notification
     completionHandler(UNNotificationPresentationOptionAlert|UNNotificationPresentationOptionSound);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void(^)())completionHandler {
+    if ([response.actionIdentifier isEqualToString:UNNotificationDefaultActionIdentifier]) {
+        // The user launched the app.
+    }
+    completionHandler();
 }
 
 @end
