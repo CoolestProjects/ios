@@ -9,6 +9,9 @@
 import UIKit
 
 class SpeakersViewController: BaseViewController {
+    
+    private let deepLinkDataIdentifier = "identifier"
+    
     var viewModel : SpeakersViewModel? { didSet {
             self.tableView.reloadData()
         }}
@@ -27,15 +30,13 @@ class SpeakersViewController: BaseViewController {
         let firbaseService = CPAFirebaseDefaultService()
         
         firbaseService.getSpeakersWithCompletionBlock { (speakers, error) in
-            
-            let speakersViewModel = SpeakersViewModel(speakers:speakers! as NSArray)
-            self.viewModel = speakersViewModel
-            
-        
+            if let speakers = speakers {
+                self.viewModel = SpeakersViewModel(speakers: speakers)
+                self.handleDeepLink()
+            }        
         };
     }
-    
-    
+        
     func setupTableView() {
         tableView.estimatedRowHeight = 400.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
@@ -48,7 +49,26 @@ class SpeakersViewController: BaseViewController {
      
         super.setupNavigationBar()
     }
+    
+    func handleDeepLink() {
+        guard let deepLinkId = deeplinkData[deepLinkDataIdentifier],
+            let index = findIndexOfFirstModelForIdentifier(deepLinkId) else {
+            return
+        }
 
+        let indexPath = IndexPath(item: index, section: 0)
+        tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+    }
+    
+    func findIndexOfFirstModelForIdentifier(_ deepLinkId: String) -> Int? {
+        return viewModel?.tableViewData?.index(where: { (vm) -> Bool in
+            if let name = vm.name {
+                return name.contains(deepLinkId.uppercased())
+            } else {
+                return false
+            }
+        })
+    }
 }
 
 

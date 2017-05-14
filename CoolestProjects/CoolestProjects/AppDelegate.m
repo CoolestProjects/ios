@@ -32,7 +32,12 @@
 
     [self setupNotifications];
 
+//    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(fireTestStageNotification) userInfo:nil repeats:NO];
     return YES;
+}
+
+- (void)fireTestStageNotification {
+    [self processNotificationDeeplinkUserInfo:@{@"deeplink_page":@"speakers", @"deeplink_identifier": @"Amy Neale"}];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -104,8 +109,15 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
          withCompletionHandler:(void(^)())completionHandler {
     if ([response.actionIdentifier isEqualToString:UNNotificationDefaultActionIdentifier]) {
         // The user launched the app.
+        if(response.notification.request.content.userInfo[@"deeplink_page"]) {
+            [self processNotificationDeeplinkUserInfo:response.notification.request.content.userInfo];
+        }
     }
     completionHandler();
+}
+
+- (void)processNotificationDeeplinkUserInfo:(NSDictionary *)userInfo {
+    [CPADeeplinkManager handleDeeplinkWithUserInfo:userInfo rootViewController:self.window.rootViewController];
 }
 
 @end

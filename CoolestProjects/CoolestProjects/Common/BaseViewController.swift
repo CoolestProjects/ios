@@ -11,6 +11,9 @@ import UIKit
 import SWRevealViewController
 
 class BaseViewController: UIViewController {
+    
+    var deeplinkData: [String: String] = ["":""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addLeftButtonItem()
