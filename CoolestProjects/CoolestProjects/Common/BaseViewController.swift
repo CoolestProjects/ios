@@ -12,6 +12,8 @@ import SWRevealViewController
 
 class BaseViewController: UIViewController {
     
+    let deepLinkDataIdentifier = "identifier"
+    
     var deeplinkData: [String: String] = ["":""]
     
     override func viewDidLoad() {

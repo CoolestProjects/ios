@@ -38,7 +38,7 @@
 }
 
 - (void)fireTestStageNotification {
-    [self processNotificationDeeplinkUserInfo:@{@"deeplink_page":@"speakers", @"deeplink_identifier": @"Amy Neale"}];
+    [self processNotificationDeeplinkUserInfo:@{@"deeplink_page":@"stages", @"deeplink_identifier": @"Paul Downey", @"deeplink_stage":@"Mastercard Code"}];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
