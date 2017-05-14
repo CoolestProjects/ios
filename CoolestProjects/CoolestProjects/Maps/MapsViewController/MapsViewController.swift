@@ -23,7 +23,7 @@ class MapsViewController: BaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        BeaconNotificationsManager.sharedInstance.requestAuthorization()
+        BeaconNotificationsManager.sharedInstance.setupBeaconsIfNeeded()
     }
 }
 

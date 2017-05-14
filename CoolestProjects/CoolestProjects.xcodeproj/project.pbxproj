@@ -67,6 +67,9 @@
 		A97B8C2E1EAD724E00B2A512 /* RegionInteractionsInvalidData.json in Resources */ = {isa = PBXBuildFile; fileRef = A97B8C2D1EAD724E00B2A512 /* RegionInteractionsInvalidData.json */; };
 		A97B8C351EAEB02800B2A512 /* MessagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C341EAEB02800B2A512 /* MessagesService.swift */; };
 		A97B8C371EAEB7EF00B2A512 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C361EAEB7EF00B2A512 /* Message.swift */; };
+		A97B8C3D1EC7A18900B2A512 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97B8C3C1EC7A18900B2A512 /* CoreBluetooth.framework */; };
+		A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C3E1EC7B80A00B2A512 /* BluetoothAlertManager.swift */; };
+		A97B8C411EC7BFF600B2A512 /* Alerts.strings in Resources */ = {isa = PBXBuildFile; fileRef = A97B8C401EC7BFF600B2A512 /* Alerts.strings */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
 		A98010CA1D0524A300AABC90 /* Stages.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98010C91D0524A300AABC90 /* Stages.strings */; };
 		A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010D11D05259F00AABC90 /* StagesViewController.swift */; };
@@ -197,6 +200,9 @@
 		A97B8C341EAEB02800B2A512 /* MessagesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesService.swift; sourceTree = "<group>"; };
 		A97B8C361EAEB7EF00B2A512 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A97B8C3B1EB29B1600B2A512 /* Coolest Projects.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Coolest Projects.entitlements"; sourceTree = "<group>"; };
+		A97B8C3C1EC7A18900B2A512 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A97B8C3E1EC7B80A00B2A512 /* BluetoothAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothAlertManager.swift; sourceTree = "<group>"; };
+		A97B8C401EC7BFF600B2A512 /* Alerts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Alerts.strings; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
 		A98010C91D0524A300AABC90 /* Stages.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Stages.strings; path = strings/Stages.strings; sourceTree = "<group>"; };
 		A98010D11D05259F00AABC90 /* StagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesViewController.swift; path = Stages/StagesViewController/StagesViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97B8C3D1EC7A18900B2A512 /* CoreBluetooth.framework in Frameworks */,
 				3A02C858EBAB3C0EB32DEEC3 /* Pods_CoolestProjects.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +503,7 @@
 		A8B1DA2B3A2CA95451BA172C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A97B8C3C1EC7A18900B2A512 /* CoreBluetooth.framework */,
 				194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */,
 				1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */,
 			);
@@ -532,6 +540,7 @@
 				440C94751D05A6B200846321 /* Speakers.strings */,
 				E10F18F81D06F8C500AE44AC /* Menu.strings */,
 				E1C604301D0DDD0E00931C38 /* Maps.strings */,
+				A97B8C401EC7BFF600B2A512 /* Alerts.strings */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -552,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */,
+				A97B8C3E1EC7B80A00B2A512 /* BluetoothAlertManager.swift */,
 			);
 			path = BeaconManager;
 			sourceTree = "<group>";
@@ -917,6 +927,7 @@
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
 				A93BCD2B1D0DFA8000005DB2 /* Coderdojo2015-107.jpg in Resources */,
 				E1C6042F1D0DDC9D00931C38 /* about.html in Resources */,
+				A97B8C411EC7BFF600B2A512 /* Alerts.strings in Resources */,
 				A93BCD361D0E232400005DB2 /* Projects.storyboard in Resources */,
 				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
@@ -1056,6 +1067,7 @@
 				A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */,
 				A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */,
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
+				A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */,
 				E1C604191D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift in Sources */,
 				E1C6041C1D0DD7E100931C38 /* ProjectsViewController.swift in Sources */,
 				25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */,
