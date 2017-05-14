@@ -26,20 +26,16 @@ class CPADeeplinkManager: NSObject {
             
             if let deeplinkNavigationController = storyboard?.instantiateViewController(withIdentifier: deeplinkScreenIdentifier) as! UINavigationController? {
                 
-                
                 if let topViewController = deeplinkNavigationController.topViewController as! BaseViewController? {
                     
                     topViewController.deeplinkData = getAllDeeplinkKeysAsMap(userInfo: userInfo)
                     revealViewController.setFront(deeplinkNavigationController, animated: true)
                 }
             }
-            
-            
         }
     }
     
     static func getAllDeeplinkKeysAsMap(userInfo: [String: String]) -> [String: String] {
-        
         
         let allDeeplinks = userInfo.filter { (key, value) -> Bool in
             key.contains(DeeplinkKeyPrefix) && key != DeeplinkPageKey
