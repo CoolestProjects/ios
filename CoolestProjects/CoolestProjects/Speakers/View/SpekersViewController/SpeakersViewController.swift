@@ -9,6 +9,9 @@
 import UIKit
 
 class SpeakersViewController: BaseViewController {
+    
+    let deepLinkDataIdentifier = "identifier"
+    
     var viewModel : SpeakersViewModel? { didSet {
             self.tableView.reloadData()
         }}
@@ -31,7 +34,7 @@ class SpeakersViewController: BaseViewController {
             let speakersViewModel = SpeakersViewModel(speakers:speakers! as NSArray)
             self.viewModel = speakersViewModel
             
-        
+            self.handleDeepLink()
         };
     }
     
@@ -47,6 +50,32 @@ class SpeakersViewController: BaseViewController {
         navigationItem.title = NSLocalizedString("navbar.title",tableName: "Speakers", comment: "")
      
         super.setupNavigationBar()
+    }
+    
+    func handleDeepLink() {
+        if let deepLinkId = deeplinkData[deepLinkDataIdentifier] {
+            
+            if let deeplinkViewModel = findFirstModelForIdentifier(deepLinkId: deepLinkId) {
+                
+                if let index = findIndexForViewModel(viewModel: deeplinkViewModel) {
+                    
+                    let indexPath = IndexPath(item: index, section: 0)
+                    self.tableView.scrollToRow(at: indexPath , at: UITableViewScrollPosition.middle, animated: true)
+                }
+            }
+        }
+    }
+    
+    func findFirstModelForIdentifier(deepLinkId: String) -> SpeakerViewModel? {
+        return self.viewModel?.tableViewData?.filter({ (speaker) -> Bool in
+            (speaker.name?.contains(deepLinkId.uppercased()))!
+        }).first
+    }
+    
+    func findIndexForViewModel(viewModel: SpeakerViewModel) -> Int? {
+        return self.viewModel?.tableViewData?.index(where: { (model) -> Bool in
+            model.name == viewModel.name
+        })
     }
 
 }

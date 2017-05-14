@@ -33,6 +33,7 @@
 		9B59078F1D05F51A00FCE40D /* MapViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B59078E1D05F51A00FCE40D /* MapViewCollectionViewCell.xib */; };
 		9B74262B1EA3A46800945794 /* CPARegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262A1EA3A46800945794 /* CPARegion.m */; };
 		9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262D1EA3A4FA00945794 /* CPABeacon.m */; };
+		9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */; };
 		A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90364931CFF9CD60089B351 /* HomeViewModel.swift */; };
 		A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C078D1D00E3DC005271FE /* Boxes.swift */; };
 		A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79C051731B8A634DF461065 /* OpenSans-Light.ttf */; };
@@ -162,6 +163,7 @@
 		9B74262A1EA3A46800945794 /* CPARegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPARegion.m; sourceTree = "<group>"; };
 		9B74262C1EA3A4FA00945794 /* CPABeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPABeacon.h; sourceTree = "<group>"; };
 		9B74262D1EA3A4FA00945794 /* CPABeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPABeacon.m; sourceTree = "<group>"; };
+		9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPADeeplinkManager.swift; sourceTree = "<group>"; };
 		A90364931CFF9CD60089B351 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A91C078D1D00E3DC005271FE /* Boxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boxes.swift; sourceTree = "<group>"; };
 		A91C079A1D00EC3F005271FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeViewController/HomeViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				9B842DA01EC88FC900EF9540 /* Deeplink */,
 				A97B8C3B1EB29B1600B2A512 /* Coolest Projects.entitlements */,
 				A97B8C201EAD557900B2A512 /* MessageManager */,
 				A96EA6621EA6C7590021990F /* BeaconManager */,
@@ -480,6 +483,14 @@
 				9B59078E1D05F51A00FCE40D /* MapViewCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9B842DA01EC88FC900EF9540 /* Deeplink */ = {
+			isa = PBXGroup;
+			children = (
+				9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */,
+			);
+			path = Deeplink;
 			sourceTree = "<group>";
 		};
 		A8B1DA2B3A2CA95451BA172C /* Frameworks */ = {
@@ -1054,6 +1065,7 @@
 				A97B8C2C1EAD64A900B2A512 /* DataStore.swift in Sources */,
 				A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */,
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
+				9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */,
 				E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
 				A97B8C241EAD584200B2A512 /* RegionInteractionStore.swift in Sources */,
