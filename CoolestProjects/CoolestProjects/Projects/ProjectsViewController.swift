@@ -97,7 +97,7 @@ class ProjectsViewController : BaseViewController {
                     }
                     
                 case .failure:
-                    print("project fetch failed: \(result.error())")
+                    print("project fetch failed: \(String(describing: result.error()))")
                 }
                 
             }
