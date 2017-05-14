@@ -10,8 +10,6 @@ import UIKit
 
 class SpeakersViewController: BaseViewController {
     
-    private let deepLinkDataIdentifier = "identifier"
-    
     var viewModel : SpeakersViewModel? { didSet {
             self.tableView.reloadData()
         }}

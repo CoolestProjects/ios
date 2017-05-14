@@ -33,12 +33,12 @@
 
     [self setupNotifications];
 
-//    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(fireTestStageNotification) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(fireTestStageNotification) userInfo:nil repeats:NO];
     return YES;
 }
 
 - (void)fireTestStageNotification {
-    [self processNotificationDeeplinkUserInfo:@{@"deeplink_page":@"speakers", @"deeplink_identifier": @"Amy Neale"}];
+    [self processNotificationDeeplinkUserInfo:@{@"deeplink_page":@"stages", @"deeplink_identifier": @"Paul Downey", @"deeplink_stage":@"Mastercard Code"}];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

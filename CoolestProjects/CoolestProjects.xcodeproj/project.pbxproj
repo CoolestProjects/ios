@@ -34,6 +34,7 @@
 		9B74262B1EA3A46800945794 /* CPARegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262A1EA3A46800945794 /* CPARegion.m */; };
 		9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262D1EA3A4FA00945794 /* CPABeacon.m */; };
 		9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */; };
+		9B842DA41EC8E52800EF9540 /* sampleDeeplinks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B842DA31EC8E52800EF9540 /* sampleDeeplinks.txt */; };
 		A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90364931CFF9CD60089B351 /* HomeViewModel.swift */; };
 		A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C078D1D00E3DC005271FE /* Boxes.swift */; };
 		A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79C051731B8A634DF461065 /* OpenSans-Light.ttf */; };
@@ -167,6 +168,7 @@
 		9B74262C1EA3A4FA00945794 /* CPABeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPABeacon.h; sourceTree = "<group>"; };
 		9B74262D1EA3A4FA00945794 /* CPABeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPABeacon.m; sourceTree = "<group>"; };
 		9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPADeeplinkManager.swift; sourceTree = "<group>"; };
+		9B842DA31EC8E52800EF9540 /* sampleDeeplinks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleDeeplinks.txt; sourceTree = "<group>"; };
 		A90364931CFF9CD60089B351 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A91C078D1D00E3DC005271FE /* Boxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boxes.swift; sourceTree = "<group>"; };
 		A91C079A1D00EC3F005271FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeViewController/HomeViewController.swift; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 				A91C07A41D01016C005271FE /* strings */,
 				B79C002122720CC5142255F4 /* fonts */,
 				B79C04472D5989530374B57A /* GoogleService-Info.plist */,
+				9B842DA31EC8E52800EF9540 /* sampleDeeplinks.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -931,6 +934,7 @@
 				A93BCD361D0E232400005DB2 /* Projects.storyboard in Resources */,
 				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
+				9B842DA41EC8E52800EF9540 /* sampleDeeplinks.txt in Resources */,
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
 				9B59078F1D05F51A00FCE40D /* MapViewCollectionViewCell.xib in Resources */,
 				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
