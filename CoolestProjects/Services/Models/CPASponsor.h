@@ -5,10 +5,6 @@
 
 #import "CPAObject.h"
 
-@protocol CPASponsor <NSObject>
-
-@end
-
 @interface CPASponsor : CPAObject
 
 @property (nonatomic, copy) NSString *name;

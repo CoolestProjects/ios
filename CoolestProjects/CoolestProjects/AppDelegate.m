@@ -16,6 +16,7 @@
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) BeaconNotificationsManager *beaconNotificationManager;
+@property (nonatomic, strong) id<CPAFirebaseService> firebaseService;
 
 @end
 
@@ -26,9 +27,9 @@
     // Override point for customization after application launch.
     [self setupFirebase];
 
-    [self createBeaconManager];
-
     [self preloadContent];
+
+    [self createBeaconManager];
 
     [self setupNotifications];
 
@@ -69,6 +70,7 @@
 - (void)setupFirebase {
     [FIRApp configure];
     [[FIRDatabase database] setPersistenceEnabled:YES];
+    self.firebaseService = [CPAFirebaseDefaultService new];
 }
 
 - (void)setupNotifications {
@@ -87,12 +89,10 @@
 }
 
 - (void)preloadContent {
-    id<CPAFirebaseService> firebaseService = [CPAFirebaseDefaultService new];
-    
-    [firebaseService getSpeakersWithCompletionBlock:nil];
-    [firebaseService getSummitsWithCompletionBlock:nil];
-    [firebaseService getSponsorsWithCompletionBlock:nil];
-    [firebaseService getAboutInfoWithCompletionBlock:nil];        
+    [self.firebaseService getSpeakersWithCompletionBlock:nil];
+    [self.firebaseService getSummitsWithCompletionBlock:nil];
+    [self.firebaseService getSponsorsWithCompletionBlock:nil];
+    [self.firebaseService getAboutInfoWithCompletionBlock:nil];
 }
 
 #pragma mark - UNUserNotificationCenterDelegate

@@ -11,19 +11,7 @@
 @implementation CPASpeaker
 
 + (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"description": @"speakerDescription"}];
-}
-
-// TODO: remove when the format of the summitTimes properties is
-// defined and fixed for /speakes and /summits
-- (void)setSummitTimesWithNSString:(NSString *)string {
-    self.summitTimes = nil;
-    self.summitTimesAsString = string;
-}
-
-//TODO: remove when model is more stable. 
-+ (BOOL)propertyIsOptional:(NSString*)propertyName {
-    return YES;
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"speakerDescription": @"description"}];
 }
 
 @end

@@ -55,7 +55,7 @@ class StagesTableViewCell : UITableViewCell, Configurable {
         
         finalString.append(talkTime(speaker))
         
-        if (!speaker.summitTimesAsString.isEmpty) {
+        if (!speaker.summitTimes.isEmpty) {
             finalString.append(NSAttributedString(string: "\n"))
         }
         
@@ -77,7 +77,7 @@ class StagesTableViewCell : UITableViewCell, Configurable {
     }
     
     func talkTime(_ speaker: CPASpeaker) -> NSAttributedString {
-        return attributedText(speaker.summitTimesAsString, font:AppFonts.speakerDescriptionFont, color: AppColors.redColor)
+        return attributedText(speaker.summitTimes, font:AppFonts.speakerDescriptionFont, color: AppColors.redColor)
     }
     
     func attributedText(_ text: String, font: UIFont, color: UIColor) -> NSAttributedString {
