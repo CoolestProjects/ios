@@ -11,24 +11,19 @@ import UIKit
 class SpeakersViewModel {
     
     var tableViewData : [SpeakerViewModel]?
-    
-    
-    init (speakers : NSArray ) {
+
+    init(speakers: [CPASpeaker]) {
         tableViewData = buildSpeakerViewModels(speakers)
-        
     }
 
-    
-    func buildSpeakerViewModels(_ speakers  : NSArray) -> [SpeakerViewModel] {
-        
-        
-        var speakerViewModels : [SpeakerViewModel] = []
+    func buildSpeakerViewModels(_ speakers: [CPASpeaker]) -> [SpeakerViewModel] {
+
+        var speakerViewModels: [SpeakerViewModel] = []
         for speaker in speakers {
-            let speakerViewModel = SpeakerViewModel(speaker: speaker as! CPASpeaker)
+            let speakerViewModel = SpeakerViewModel(speaker: speaker)
             speakerViewModels.append(speakerViewModel)
         }
-        
-        
+
         return speakerViewModels
     }
 
@@ -56,4 +51,3 @@ class SpeakerViewModel : Component  {
     }
     
  }
- 

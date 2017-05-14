@@ -117,7 +117,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 }
 
 - (void)processNotificationDeeplinkUserInfo:(NSDictionary *)userInfo {
-    [CPADeeplinkManager handleDeeplinkUserInfoForRootViewControllerWithUserInfo:userInfo viewController:self.window.rootViewController];
+    [CPADeeplinkManager handleDeeplinkWithUserInfo:userInfo rootViewController:self.window.rootViewController];
 }
 
 @end

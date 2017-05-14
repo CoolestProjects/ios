@@ -11,45 +11,39 @@ import SWRevealViewController
 
 class CPADeeplinkManager: NSObject {
 
-    static let DeeplinkMappings = ["speakers":"speakersNavViewController", "stages":"stagesNavViewController"]
-    static let DeeplinkPageKey = "deeplink_page"
-    static let DeeplinkKeyPrefix = "deeplink_"
+    private static let deeplinkMappings = ["speakers":"speakersNavViewController", "stages":"stagesNavViewController"]
+    private static let deeplinkPageKey = "deeplink_page"
+    private static let deeplinkKeyPrefix = "deeplink_"
     
-    static func handleDeeplinkUserInfoForRootViewController(userInfo :[String: String], viewController :UIViewController ) {
-        
-        let deeplinkKey = userInfo[DeeplinkPageKey]
-        
-        if let deeplinkScreenIdentifier = DeeplinkMappings[deeplinkKey!] {
-            
-            let revealViewController = viewController as! SWRevealViewController
-            let storyboard = revealViewController.storyboard
-            
-            if let deeplinkNavigationController = storyboard?.instantiateViewController(withIdentifier: deeplinkScreenIdentifier) as! UINavigationController? {
-                
-                if let topViewController = deeplinkNavigationController.topViewController as! BaseViewController? {
-                    
-                    topViewController.deeplinkData = getAllDeeplinkKeysAsMap(userInfo: userInfo)
-                    revealViewController.setFront(deeplinkNavigationController, animated: true)
-                }
-            }
+    static func handleDeeplink(userInfo: [AnyHashable:Any], rootViewController: UIViewController) {
+
+        guard let userInfo = userInfo as? [String:String],
+            let deeplinkPage = userInfo[deeplinkPageKey],
+            let deeplinkScreenIdentifier = deeplinkMappings[deeplinkPage],
+            let deeplinkNavigationController = rootViewController.storyboard?.instantiateViewController(withIdentifier: deeplinkScreenIdentifier) as? UINavigationController,
+            let topViewController = deeplinkNavigationController.topViewController as? BaseViewController,
+            let revealViewController = rootViewController as? SWRevealViewController else {
+            return
         }
+
+        topViewController.deeplinkData = getAllDeeplinkKeys(userInfo)
+        revealViewController.setFront(deeplinkNavigationController, animated: true)
     }
     
-    static func getAllDeeplinkKeysAsMap(userInfo: [String: String]) -> [String: String] {
+    private static func getAllDeeplinkKeys(_ userInfo: [String:String]) -> [String:String] {
         
         let allDeeplinks = userInfo.filter { (key, value) -> Bool in
-            key.contains(DeeplinkKeyPrefix) && key != DeeplinkPageKey
+            key.contains(deeplinkKeyPrefix) && key != deeplinkPageKey
         }.dictionary()
         
         let sanitisedDeeplinks = allDeeplinks.map{ (key, value) in
-            (key.replacingOccurrences(of: DeeplinkKeyPrefix, with: ""), value)
+            (key.replacingOccurrences(of: deeplinkKeyPrefix, with: ""), value)
         }.dictionary()
 
         return sanitisedDeeplinks
     }
 }
 
-//possibly I completely misunderstood how swift works but I wanted to filter and map a [String: String] and the result was a [(String: String)], this code fixes that and returns a [String: String] again, is there an easier way?
 extension Array {
     func dictionary<K: Hashable, V>() -> [K: V] where Element == Dictionary<K, V>.Element {
         var dictionary = [K: V]()
