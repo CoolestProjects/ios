@@ -14,6 +14,8 @@ class StagesViewController : BaseViewController {
     @IBOutlet weak var speakersTableView: UITableView!
     @IBOutlet weak var summitCategoriesContainerView: UIView!
     
+    let deepLinkStageIdentifier = "stage"
+    
     var summitCategoriesSegmentedControl: UISegmentedControl!
     
     var firebaseService: CPAFirebaseDefaultService?
@@ -43,8 +45,49 @@ class StagesViewController : BaseViewController {
                 self?.setupTabBarButtons()
                 self?.selectSummit(atIndex: 0)
                 self?.updateUI()
+                self?.handleDeepLink()
             }
         }
+    }
+    
+    func handleDeepLink() {
+        guard let deepLinkStageId = deeplinkData[deepLinkStageIdentifier],
+            let deepLinkId = deeplinkData[deepLinkDataIdentifier],
+            let stageIndex = findIndexOfFirstStageForIdentifier(deepLinkStageId),
+            let modelIndex = findIndexOfFirstModel(deepLinkId: deepLinkId, stageIndex: stageIndex)
+            else {
+                return
+        }
+        
+        self.selectSummit(atIndex: stageIndex)
+        self.updateUI()
+        let indexPath = IndexPath(item: modelIndex, section: 0)
+        speakersTableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+    }
+    
+    func findIndexOfFirstModel(deepLinkId: String, stageIndex: Int) -> Int? {
+        guard let speakers = allSummits[stageIndex].speakers as? [CPASpeaker]
+            else {
+                return nil
+        }
+        
+        return speakers.index(where: { (speakerVm) -> Bool in
+            if let name = speakerVm.name {
+                return name.uppercased().contains(deepLinkId.uppercased())
+            } else {
+                return false
+            }
+        })
+    }
+    
+    func findIndexOfFirstStageForIdentifier(_ deepLinkId: String) -> Int? {
+        return allSummits.index(where: { (vm) -> Bool in
+            if let name = vm.name {
+                return name.uppercased().contains(deepLinkId.uppercased())
+            } else {
+                return false
+            }
+        })
     }
     
     func selectSummit(atIndex index: Int) {
