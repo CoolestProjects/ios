@@ -33,7 +33,7 @@
 
     [self setupNotifications];
 
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(fireTestStageNotification) userInfo:nil repeats:NO];
+//    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(fireTestStageNotification) userInfo:nil repeats:NO];
     return YES;
 }
 
