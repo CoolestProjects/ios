@@ -9,24 +9,70 @@
 import Foundation
 import UIKit
 import CoreLocation
-
+import UserNotifications
+  class HomeViewController : BaseViewController, CLLocationManagerDelegate {
 let SponsorBoxHeight: CGFloat = 300.0
-
-class HomeViewController : BaseViewController {
-
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var tableView: UITableView!
+
+    
+    var locationManager : CLLocationManager = CLLocationManager()
+    
+    let locMgr = CLLocationManager()
+    
     
     // TODO: better nib loading
     let tableHeaderView = HomeTableHeaderView.headerView()!
     let tableFooterView = HomeTableFooterView.footerView()!
     let viewModel = HomeViewModel()
     
+    func setUpGeofenceForAirports() {
+        
+        if #available(iOS 10.0, *) {
+            let center  = CLLocationCoordinate2DMake(53.327890, -6.228936)
+            let region = CLCircularRegion(center: center, radius: 1000.0, identifier: "The RDS")
+            region.notifyOnEntry = true
+            region.notifyOnExit = false
+            self.locationManager.startMonitoring(for: region)
+            
+            let trigger = UNLocationNotificationTrigger(region: region , repeats: false)
+            let Content = UNMutableNotificationContent()
+            Content.title = "Welcome To The RDS"
+            Content.body = "We Hope You Have A Great Day At CoolestProjects Today!!!"
+            Content.sound = UNNotificationSound.default()
+            let request = UNNotificationRequest(identifier: "You're Near The RDS", content: Content, trigger: trigger)
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
+            UNUserNotificationCenter.current().add(request) {(error) in
+                if let error = error {
+                    print("Error: \(error)")
+                }
+            }
+            
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (status == CLAuthorizationStatus.authorizedAlways) {
+            self.setUpGeofenceForAirports()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        locMgr.desiredAccuracy = kCLLocationAccuracyBest
+        
+        locMgr.requestAlwaysAuthorization()
+        
+        locMgr.startUpdatingLocation()
+        
+        locMgr.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -132,4 +178,3 @@ extension HomeViewController : UITableViewDataSource {
     }
     
 }
-
