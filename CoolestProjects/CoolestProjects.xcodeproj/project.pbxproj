@@ -24,6 +24,8 @@
 		4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498BFE21D04BCD60085A15C /* SpeakersViewModel.swift */; };
 		44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E46FED1D04CA91003F779A /* SpeakerTableViewCell.swift */; };
 		44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E46FEE1D04CA91003F779A /* SpeakerTableViewCell.xib */; };
+		7E426E711ED09946006BA833 /* CoolestProjectsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E426E6F1ED09946006BA833 /* CoolestProjectsBannerView.swift */; };
+		7E426E721ED09946006BA833 /* CoolestProjectsBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E426E701ED09946006BA833 /* CoolestProjectsBannerView.xib */; };
 		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
 		9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */; };
 		9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907811D05ECE300FCE40D /* MapsViewController.swift */; };
@@ -155,6 +157,8 @@
 		4597A15428DCEA5BAE8EAE8B /* Pods-CoolestProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.release.xcconfig"; sourceTree = "<group>"; };
 		49BF7892A648D3451D22C052 /* Pods-CoolestProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.debug.xcconfig"; sourceTree = "<group>"; };
 		7A77BE0BE8745848AD692EC7 /* Pods-CoolestProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E426E6F1ED09946006BA833 /* CoolestProjectsBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolestProjectsBannerView.swift; sourceTree = "<group>"; };
+		7E426E701ED09946006BA833 /* CoolestProjectsBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoolestProjectsBannerView.xib; sourceTree = "<group>"; };
 		9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		9B5907811D05ECE300FCE40D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +442,8 @@
 			isa = PBXGroup;
 			children = (
 				A93BCD391D0E24A500005DB2 /* Configurable.swift */,
+				7E426E6F1ED09946006BA833 /* CoolestProjectsBannerView.swift */,
+				7E426E701ED09946006BA833 /* CoolestProjectsBannerView.xib */,
 				A93BCD3A1D0E24A500005DB2 /* Constants.swift */,
 				A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */,
 				A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */,
@@ -931,6 +937,7 @@
 				A93BCD361D0E232400005DB2 /* Projects.storyboard in Resources */,
 				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
+				7E426E721ED09946006BA833 /* CoolestProjectsBannerView.xib in Resources */,
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
 				9B59078F1D05F51A00FCE40D /* MapViewCollectionViewCell.xib in Resources */,
 				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
@@ -975,7 +982,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A0F944E1308AE0E0EBD32A00 /* [CP] Copy Pods Resources */ = {
@@ -1050,7 +1057,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1066,6 +1073,7 @@
 				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
 				A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */,
 				A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */,
+				7E426E711ED09946006BA833 /* CoolestProjectsBannerView.swift in Sources */,
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
 				A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */,
 				E1C604191D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift in Sources */,
