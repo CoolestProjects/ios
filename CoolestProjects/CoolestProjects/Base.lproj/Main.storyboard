@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -241,29 +240,22 @@
         <!--Halls-->
         <scene sceneID="KyA-9f-lSw">
             <objects>
-                <viewController id="4ie-rL-6EK" customClass="FirstViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4ie-rL-6EK" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ahx-ML-waf"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xed-qP-twc"/>
+                        <viewControllerLayoutGuide type="top" id="lI5-r5-Z4W"/>
+                        <viewControllerLayoutGuide type="bottom" id="qhf-Ef-MG6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bIS-BX-b7U">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="TGA-VZ-pJu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Halls" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-np-ZZJ">
-                                <rect key="frame" x="147.5" y="313" width="80.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wa6-xe-4R4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Afd-np-ZZJ" secondAttribute="centerY" id="HPr-3o-3Xl"/>
-                            <constraint firstAttribute="centerX" secondItem="Afd-np-ZZJ" secondAttribute="centerX" id="TpB-w8-mwh"/>
-                        </constraints>
-                    </view>
+                    </scrollView>
                     <tabBarItem key="tabBarItem" title="Halls" image="hallimage" id="jtF-TE-1Of"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmR-on-b4e" sceneMemberID="firstResponder"/>
@@ -286,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HpV-Gu-aYP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3052" y="987"/>
+            <point key="canvasLocation" x="-3052" y="1039"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TUa-ip-rm9">
@@ -299,10 +291,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WXp-hO-NHQ" kind="relationship" relationship="viewControllers" id="Run-H8-fV8"/>
-                        <segue destination="S7h-5S-R1P" kind="relationship" relationship="viewControllers" id="0d2-kH-kAC"/>
-                        <segue destination="4ie-rL-6EK" kind="relationship" relationship="viewControllers" id="1ff-Er-FUd"/>
-                        <segue destination="fNc-NS-uEW" kind="relationship" relationship="viewControllers" id="5rX-CJ-2JF"/>
+                        <segue destination="rHA-p7-7qA" kind="relationship" relationship="viewControllers" id="en2-xc-aj9"/>
+                        <segue destination="S7h-5S-R1P" kind="relationship" relationship="viewControllers" id="v60-La-SYx"/>
+                        <segue destination="4ie-rL-6EK" kind="relationship" relationship="viewControllers" id="eQ8-OG-MaB"/>
+                        <segue destination="fNc-NS-uEW" kind="relationship" relationship="viewControllers" id="its-1n-8rC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfa-WX-ZKr" sceneMemberID="firstResponder"/>
@@ -320,70 +312,19 @@
             <point key="canvasLocation" x="-3052" y="-411"/>
         </scene>
         <!--Home-->
-        <scene sceneID="DWt-6I-X2x">
+        <scene sceneID="tiN-JL-rXO">
             <objects>
-                <viewController id="WXp-hO-NHQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="w14-Nk-QOw"/>
-                        <viewControllerLayoutGuide type="bottom" id="6bA-FV-cf0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cg4-rQ-vz0" userLabel="Container">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-Wz-WcR" userLabel="Banner">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVG-T7-kqB">
-                                <rect key="frame" x="0.0" y="254.5" width="375" height="365"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coolest-project-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Kbs-tZ-nBE" userLabel="Logo">
-                                        <rect key="frame" x="150" y="287" width="75" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wP8-BA-dmx" userLabel="Sponcer View">
-                                        <rect key="frame" x="25" y="79" width="325" height="163"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-2k-4Hx" userLabel="Detail Label">
-                                        <rect key="frame" x="62" y="8" width="244" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">SATURDAY 17TH JUNE 2017
-RDS, DUBLIN, IRELAND</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="7ht-Wz-WcR" firstAttribute="top" secondItem="w14-Nk-QOw" secondAttribute="bottom" constant="-20" id="6Pu-f8-DPs"/>
-                            <constraint firstItem="7ht-Wz-WcR" firstAttribute="leading" secondItem="cg4-rQ-vz0" secondAttribute="leadingMargin" constant="-16" id="D4c-w1-kSR"/>
-                            <constraint firstItem="7ht-Wz-WcR" firstAttribute="leading" secondItem="cg4-rQ-vz0" secondAttribute="leadingMargin" constant="-16" id="Gzt-gm-NzF"/>
-                            <constraint firstItem="kVG-T7-kqB" firstAttribute="top" secondItem="7ht-Wz-WcR" secondAttribute="bottom" id="Rb2-B7-TVA"/>
-                            <constraint firstItem="kVG-T7-kqB" firstAttribute="leading" secondItem="cg4-rQ-vz0" secondAttribute="leadingMargin" constant="-16" id="Tax-U8-fNX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kVG-T7-kqB" secondAttribute="trailing" constant="-16" id="wUb-HX-MhI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7ht-Wz-WcR" secondAttribute="trailing" constant="-16" id="wyw-68-V51"/>
-                            <constraint firstItem="6bA-FV-cf0" firstAttribute="top" secondItem="kVG-T7-kqB" secondAttribute="bottom" constant="-1.5" id="zsH-j6-edX"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="aboutImage" id="zJa-e8-6Fy"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
+                <viewController id="rHA-p7-7qA" customClass="HomeViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="aboutImage" id="iQB-YJ-xRh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GNn-pd-P04" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4J9-uf-86M" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3052" y="-1110.4947526236883"/>
+            <point key="canvasLocation" x="-3052" y="-1108"/>
         </scene>
     </scenes>
     <resources>
         <image name="aboutImage" width="16" height="16"/>
-        <image name="coolest-project-logo" width="165" height="25"/>
         <image name="hallimage" width="16" height="16"/>
     </resources>
 </document>
