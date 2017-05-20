@@ -19,18 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coderdojo2015-547.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DMB-zV-GHE" userLabel="Background Image">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coderdojo2015-547.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DMB-zV-GHE" userLabel="Background Image">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coolest-project-logo" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-tA-W86" userLabel="Logo">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoCoolestProjects" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-tA-W86" userLabel="Logo">
                     <rect key="frame" x="86" y="32" width="200" height="133"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A world leading showcase that inspires the next generation of digital creators, innovators, changemakers and entrepreneurs!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eZ-Uh-SFF" userLabel="Info Label">
                     <rect key="frame" x="63.5" y="175" width="245" height="74"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13.5"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -48,6 +48,6 @@
     </objects>
     <resources>
         <image name="Coderdojo2015-547.jpg" width="640" height="431"/>
-        <image name="coolest-project-logo" width="165" height="25"/>
+        <image name="logoCoolestProjects" width="200" height="133"/>
     </resources>
 </document>
