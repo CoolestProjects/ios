@@ -13,25 +13,6 @@ protocol Component {
     var componentIdentifier: String { get }
 }
 
-class InfoBox: Component {
-    var componentIdentifier: String
-    let title: String
-    let body: String
-    let textColor: UIColor
-    let overlayColor: UIColor
-    let backgroundImage: UIImage?    
-    
-    init(title: String, body: String, textColor: UIColor, overlayColor: UIColor, backgroundImage: UIImage? = nil) {
-        self.componentIdentifier = "infoBox"
-        self.title = title
-        self.body = body
-        self.textColor = textColor
-        self.overlayColor = overlayColor
-        self.backgroundImage = backgroundImage
-    }
-    
-}
-
 class SponsorBox: Component {
     var componentIdentifier: String
     let title: String

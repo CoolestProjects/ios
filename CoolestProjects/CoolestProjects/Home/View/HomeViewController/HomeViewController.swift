@@ -65,9 +65,10 @@ class HomeViewController : BaseViewController {
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
-        tableView.register(UINib.init(nibName: "InfoBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "infoBox")
         tableView.register(UINib.init(nibName: "SponsorBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "sponsorBox")
         tableView.register(PageHeaderTableViewCell.self, forCellReuseIdentifier: "pageHeader")
+        tableView.register(UINib.init(nibName: "ContentTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "contentCell")
+
 
     }
     
@@ -119,16 +120,17 @@ extension HomeViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
         
         // TODO: try to improve using better generics or protocol oriented data sources
-        if (component is InfoBox) {
-            let infoBox = component as! InfoBox
-            let infoBoxCell = cell as! InfoBoxTableViewCell
-            infoBoxCell.configure(with: infoBox)
-        }
         
         if (component is SponsorBox) {
             let sponsorBox = component as! SponsorBox
             let sponsorBoxCell = cell as! SponsorBoxTableViewCell
             sponsorBoxCell.configure(with: sponsorBox)
+        }
+        
+        if (component is ContentViewModel) {
+            let content = component as! ContentViewModel
+            let contentCell = cell as! ContentTableViewCell
+            contentCell.configure(with: content);
         }
         
         return cell

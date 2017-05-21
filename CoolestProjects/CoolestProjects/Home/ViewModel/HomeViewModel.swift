@@ -11,44 +11,39 @@ import UIKit
 
 class HomeViewModel {
     
-    let headerTitle: String
     let headerBody: String
     
     var tableViewData = [Component]()
     
     init() {
-        headerTitle = NSLocalizedString("header.title", tableName: "Home", comment: "")
         headerBody = NSLocalizedString("header.body", tableName: "Home", comment: "")
         
         tableViewData = [
-            PagerHeaderComponent(),
+            ContentViewModel(
+                title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
+                body: NSLocalizedString("event-times.body", tableName: "Home", comment: ""),
+                icon: UIImage(named: "section_icon_event_times")
+            ),
+            ContentViewModel(
+                title: NSLocalizedString("parking.title", tableName: "Home", comment: ""),
+                body: NSLocalizedString("parking.body", tableName: "Home", comment: ""),
+                icon: UIImage(named: "section_icon_parking")
+            ),
+            ContentViewModel(
+                title: NSLocalizedString("food.title", tableName: "Home", comment: ""),
+                body: NSLocalizedString("food.body", tableName: "Home", comment: ""),
+                icon: UIImage(named: "section_icon_food")
+            ),
             SponsorBox(
                 title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                 textColor: AppColors.darkTextColor,
                 images: []
             ),
-            InfoBox(
-                title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
-                body: NSLocalizedString("event-times.body", tableName: "Home", comment: ""),
-                textColor: AppColors.lightTextColor,
-                overlayColor: AppColors.redColor),
-            InfoBox(
-                title: NSLocalizedString("parking.title", tableName: "Home", comment: ""),
-                body: NSLocalizedString("parking.body", tableName: "Home", comment: ""),
-                textColor: AppColors.lightTextColor,
-                overlayColor: AppColors.darkOverlayColor,
-                backgroundImage: UIImage(named: "coderdojo-image01")
-            ),
-            InfoBox(
-                title: NSLocalizedString("food.title", tableName: "Home", comment: ""),
-                body: NSLocalizedString("food.body", tableName: "Home", comment: ""),
-                textColor: AppColors.darkTextColor,
-                overlayColor: AppColors.yellowColor),
-            InfoBox(
+            ContentViewModel(
                 title: NSLocalizedString("opennet.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("opennet.body", tableName: "Home", comment: ""),
-                textColor: AppColors.darkTextColor,
-                overlayColor: AppColors.blueColor),
+                icon: nil
+            )
         ]
     }    
 }

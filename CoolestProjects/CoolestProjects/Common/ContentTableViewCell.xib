@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="268" id="KGk-i7-Jjw" customClass="ContentTableViewCell" customModule="Coolest_Projects" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="268"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="267.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fr7-EG-xoi">
+                        <rect key="frame" x="4" y="4" width="312" height="259.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="content-cell-bg" translatesAutoresizingMaskIntoConstraints="NO" id="KdW-am-uZ7">
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="259.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="OZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro4-fR-90e">
+                                <rect key="frame" x="22" y="20" width="235" height="16.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
+                                <color key="textColor" red="0.41600805521011353" green="0.43908500671386719" blue="0.53318119049072266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="section_icon_event_times" translatesAutoresizingMaskIntoConstraints="NO" id="vcy-1R-VZF">
+                                <rect key="frame" x="265" y="16" width="25" height="25"/>
+                                <color key="tintColor" red="0.41600805521011353" green="0.43908500671386719" blue="0.53318119049072266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y23-Bn-4hQ">
+                                <rect key="frame" x="22" y="48.5" width="268" height="189"/>
+                                <string key="text">The Witch of the North seemed to think for a time, with her head bowed and her eyes upon the ground.
+
+Then she looked up and said, "I do not know where Kansas is, for I have never heard that country mentioned before. 
+
+But tell me, is it a civilized country?"
+
+"Oh, yes," replied Dorothy.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y23-Bn-4hQ" firstAttribute="leading" secondItem="Ro4-fR-90e" secondAttribute="leading" id="39M-ZN-AVv"/>
+                            <constraint firstAttribute="trailing" secondItem="KdW-am-uZ7" secondAttribute="trailing" id="4bN-t3-Idg"/>
+                            <constraint firstItem="vcy-1R-VZF" firstAttribute="centerY" secondItem="Ro4-fR-90e" secondAttribute="centerY" id="4x1-Wk-ntl"/>
+                            <constraint firstItem="y23-Bn-4hQ" firstAttribute="top" secondItem="Ro4-fR-90e" secondAttribute="bottom" constant="12" id="HHN-Qq-Zd3"/>
+                            <constraint firstItem="Ro4-fR-90e" firstAttribute="top" secondItem="Fr7-EG-xoi" secondAttribute="top" constant="20" id="V4I-2t-6DR"/>
+                            <constraint firstItem="vcy-1R-VZF" firstAttribute="leading" secondItem="Ro4-fR-90e" secondAttribute="trailing" constant="8" id="V5x-1N-k6f"/>
+                            <constraint firstAttribute="bottom" secondItem="y23-Bn-4hQ" secondAttribute="bottom" constant="22" id="Xgs-19-8Rr"/>
+                            <constraint firstAttribute="trailing" secondItem="vcy-1R-VZF" secondAttribute="trailing" constant="22" id="Xiq-UL-bed"/>
+                            <constraint firstItem="Ro4-fR-90e" firstAttribute="leading" secondItem="Fr7-EG-xoi" secondAttribute="leading" constant="22" id="Xto-HM-acU"/>
+                            <constraint firstItem="KdW-am-uZ7" firstAttribute="top" secondItem="Fr7-EG-xoi" secondAttribute="top" id="YMU-Ku-xUG"/>
+                            <constraint firstItem="KdW-am-uZ7" firstAttribute="leading" secondItem="Fr7-EG-xoi" secondAttribute="leading" id="mXt-g2-bCu"/>
+                            <constraint firstItem="vcy-1R-VZF" firstAttribute="trailing" secondItem="y23-Bn-4hQ" secondAttribute="trailing" id="ruN-Ht-NNW"/>
+                            <constraint firstAttribute="bottom" secondItem="KdW-am-uZ7" secondAttribute="bottom" id="wmz-PP-XmL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.9607430100440979" green="0.96474212408065796" blue="0.97634249925613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Fr7-EG-xoi" secondAttribute="trailing" constant="4" id="2z1-k9-mPm"/>
+                    <constraint firstItem="Fr7-EG-xoi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="4Nl-xP-bcz"/>
+                    <constraint firstAttribute="bottom" secondItem="Fr7-EG-xoi" secondAttribute="bottom" constant="4" id="nUe-jx-Tmd"/>
+                    <constraint firstItem="Fr7-EG-xoi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="nwV-5a-ntj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="body" destination="y23-Bn-4hQ" id="Aqa-qf-g2F"/>
+                <outlet property="iconImage" destination="vcy-1R-VZF" id="Vw9-qf-CpS"/>
+                <outlet property="title" destination="Ro4-fR-90e" id="m2S-6V-rHW"/>
+                <outlet property="view" destination="Fr7-EG-xoi" id="cj1-zS-TQz"/>
+            </connections>
+            <point key="canvasLocation" x="-113" y="120"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="content-cell-bg" width="25" height="25"/>
+        <image name="section_icon_event_times" width="25" height="25"/>
+    </resources>
+</document>
