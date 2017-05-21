@@ -24,11 +24,11 @@
                     <color key="tintColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoCoolestProjects" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-tA-W86" userLabel="Logo">
-                    <rect key="frame" x="87.5" y="81.5" width="200" height="133"/>
+                    <rect key="frame" x="87.5" y="91.5" width="200" height="133"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eZ-Uh-SFF" userLabel="Info Label">
-                    <rect key="frame" x="20" y="234.5" width="335" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13.5"/>
+                    <rect key="frame" x="40" y="234.5" width="295" height="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -40,14 +40,14 @@
                 <constraint firstAttribute="bottom" secondItem="2eZ-Uh-SFF" secondAttribute="bottom" constant="20" id="77G-gQ-zaO"/>
                 <constraint firstItem="DMB-zV-GHE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BJp-I0-i9f"/>
                 <constraint firstItem="DMB-zV-GHE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BTY-nk-7EM"/>
-                <constraint firstItem="2eZ-Uh-SFF" firstAttribute="top" secondItem="2hL-tA-W86" secondAttribute="bottom" constant="20" id="O5Y-VY-OBY"/>
+                <constraint firstItem="2eZ-Uh-SFF" firstAttribute="top" secondItem="2hL-tA-W86" secondAttribute="bottom" constant="10" id="O5Y-VY-OBY"/>
                 <constraint firstItem="zaA-iS-2Sq" firstAttribute="leading" secondItem="DMB-zV-GHE" secondAttribute="leading" id="O6r-wj-v9q"/>
                 <constraint firstAttribute="trailing" secondItem="DMB-zV-GHE" secondAttribute="trailing" id="Ou0-d5-Uw2"/>
-                <constraint firstItem="2eZ-Uh-SFF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="RBx-ha-xj0"/>
+                <constraint firstItem="2eZ-Uh-SFF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="RBx-ha-xj0"/>
                 <constraint firstAttribute="trailing" secondItem="DMB-zV-GHE" secondAttribute="trailing" id="XjR-bj-COv"/>
                 <constraint firstAttribute="bottom" secondItem="DMB-zV-GHE" secondAttribute="bottom" id="bH6-it-nIQ"/>
                 <constraint firstItem="zaA-iS-2Sq" firstAttribute="bottom" secondItem="DMB-zV-GHE" secondAttribute="bottom" id="bkh-8f-vdp"/>
-                <constraint firstAttribute="trailing" secondItem="2eZ-Uh-SFF" secondAttribute="trailing" constant="20" id="c3Z-EE-iMo"/>
+                <constraint firstAttribute="trailing" secondItem="2eZ-Uh-SFF" secondAttribute="trailing" constant="40" id="c3Z-EE-iMo"/>
                 <constraint firstAttribute="bottom" secondItem="DMB-zV-GHE" secondAttribute="bottom" id="hWD-Do-NbQ"/>
                 <constraint firstItem="zaA-iS-2Sq" firstAttribute="trailing" secondItem="DMB-zV-GHE" secondAttribute="trailing" id="jU7-o5-vs1"/>
                 <constraint firstItem="2hL-tA-W86" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lSf-zl-itd"/>
