@@ -21,6 +21,7 @@ class HomeViewModel {
         headerBody = NSLocalizedString("header.body", tableName: "Home", comment: "")
         
         tableViewData = [
+            PagerHeaderComponent(),
             SponsorBox(
                 title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                 textColor: AppColors.darkTextColor,

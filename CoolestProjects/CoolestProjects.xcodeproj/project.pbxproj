@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		134565DF1F7980FF191C5DD6 /* Pods_CoolestProjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */; };
+		252811921ED1B2F300DFEE6A /* PagerHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252811911ED1B2F300DFEE6A /* PagerHeaderComponent.swift */; };
+		252811941ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252811931ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift */; };
 		25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */; };
 		25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1B1CFD7EA700691791 /* CPAObject.m */; };
 		25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1E1CFD7EBC00691791 /* CPASpeaker.m */; };
 		25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B211CFD93D800691791 /* CPASponsorTier.m */; };
+		25F4BF011ED1C57300F45E13 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F4BF001ED1C57300F45E13 /* Common.strings */; };
 		3A02C858EBAB3C0EB32DEEC3 /* Pods_CoolestProjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */; };
 		440C94761D05A6B200846321 /* Speakers.strings in Resources */ = {isa = PBXBuildFile; fileRef = 440C94751D05A6B200846321 /* Speakers.strings */; };
 		4453ED181CF9EA2C0028C8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED171CF9EA2C0028C8E0 /* main.m */; };
@@ -24,8 +27,8 @@
 		4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498BFE21D04BCD60085A15C /* SpeakersViewModel.swift */; };
 		44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E46FED1D04CA91003F779A /* SpeakerTableViewCell.swift */; };
 		44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E46FEE1D04CA91003F779A /* SpeakerTableViewCell.xib */; };
-		7E426E711ED09946006BA833 /* CoolestProjectsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E426E6F1ED09946006BA833 /* CoolestProjectsBannerView.swift */; };
-		7E426E721ED09946006BA833 /* CoolestProjectsBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E426E701ED09946006BA833 /* CoolestProjectsBannerView.xib */; };
+		7E426E711ED09946006BA833 /* PageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E426E6F1ED09946006BA833 /* PageHeaderView.swift */; };
+		7E426E721ED09946006BA833 /* PageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E426E701ED09946006BA833 /* PageHeaderView.xib */; };
 		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
 		9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */; };
 		9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907811D05ECE300FCE40D /* MapsViewController.swift */; };
@@ -128,6 +131,8 @@
 /* Begin PBXFileReference section */
 		194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		252811911ED1B2F300DFEE6A /* PagerHeaderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerHeaderComponent.swift; sourceTree = "<group>"; };
+		252811931ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		25318B151CFD792300691791 /* CPAFirebaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseService.h; sourceTree = "<group>"; };
 		25318B161CFD794000691791 /* CPAFirebaseDefaultService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseDefaultService.h; sourceTree = "<group>"; };
 		25318B171CFD794000691791 /* CPAFirebaseDefaultService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAFirebaseDefaultService.m; sourceTree = "<group>"; };
@@ -138,6 +143,7 @@
 		25318B201CFD93D800691791 /* CPASponsorTier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPASponsorTier.h; sourceTree = "<group>"; };
 		25318B211CFD93D800691791 /* CPASponsorTier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPASponsorTier.m; sourceTree = "<group>"; };
 		25318B241CFDE51800691791 /* CPAFirebaseStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseStorage.h; sourceTree = "<group>"; };
+		25F4BF001ED1C57300F45E13 /* Common.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Common.strings; path = strings/Common.strings; sourceTree = "<group>"; };
 		440C94751D05A6B200846321 /* Speakers.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Speakers.strings; sourceTree = "<group>"; };
 		4453ED131CF9EA2C0028C8E0 /* Coolest Projects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coolest Projects.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4453ED171CF9EA2C0028C8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,8 +163,8 @@
 		4597A15428DCEA5BAE8EAE8B /* Pods-CoolestProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.release.xcconfig"; sourceTree = "<group>"; };
 		49BF7892A648D3451D22C052 /* Pods-CoolestProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjects/Pods-CoolestProjects.debug.xcconfig"; sourceTree = "<group>"; };
 		7A77BE0BE8745848AD692EC7 /* Pods-CoolestProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolestProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolestProjectsTests/Pods-CoolestProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7E426E6F1ED09946006BA833 /* CoolestProjectsBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolestProjectsBannerView.swift; sourceTree = "<group>"; };
-		7E426E701ED09946006BA833 /* CoolestProjectsBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoolestProjectsBannerView.xib; sourceTree = "<group>"; };
+		7E426E6F1ED09946006BA833 /* PageHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageHeaderView.swift; path = ../PageHeaderView.swift; sourceTree = "<group>"; };
+		7E426E701ED09946006BA833 /* PageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PageHeaderView.xib; path = ../PageHeaderView.xib; sourceTree = "<group>"; };
 		9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9B0DB3E41D05BADB00F41956 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		9B5907811D05ECE300FCE40D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +284,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		252811901ED1AE7900DFEE6A /* PageHeader */ = {
+			isa = PBXGroup;
+			children = (
+				7E426E6F1ED09946006BA833 /* PageHeaderView.swift */,
+				7E426E701ED09946006BA833 /* PageHeaderView.xib */,
+				252811911ED1B2F300DFEE6A /* PagerHeaderComponent.swift */,
+				252811931ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift */,
+			);
+			path = PageHeader;
+			sourceTree = "<group>";
+		};
 		25318B141CFD761600691791 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,9 +458,8 @@
 		9B0DB3E01D05B70D00F41956 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				252811901ED1AE7900DFEE6A /* PageHeader */,
 				A93BCD391D0E24A500005DB2 /* Configurable.swift */,
-				7E426E6F1ED09946006BA833 /* CoolestProjectsBannerView.swift */,
-				7E426E701ED09946006BA833 /* CoolestProjectsBannerView.xib */,
 				A93BCD3A1D0E24A500005DB2 /* Constants.swift */,
 				A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */,
 				A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */,
@@ -547,6 +563,7 @@
 				E10F18F81D06F8C500AE44AC /* Menu.strings */,
 				E1C604301D0DDD0E00931C38 /* Maps.strings */,
 				A97B8C401EC7BFF600B2A512 /* Alerts.strings */,
+				25F4BF001ED1C57300F45E13 /* Common.strings */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -931,13 +948,14 @@
 				E1C6041F1D0DD7EF00931C38 /* Sponsors.strings in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
+				25F4BF011ED1C57300F45E13 /* Common.strings in Resources */,
 				A93BCD2B1D0DFA8000005DB2 /* Coderdojo2015-107.jpg in Resources */,
 				E1C6042F1D0DDC9D00931C38 /* about.html in Resources */,
 				A97B8C411EC7BFF600B2A512 /* Alerts.strings in Resources */,
 				A93BCD361D0E232400005DB2 /* Projects.storyboard in Resources */,
 				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
-				7E426E721ED09946006BA833 /* CoolestProjectsBannerView.xib in Resources */,
+				7E426E721ED09946006BA833 /* PageHeaderView.xib in Resources */,
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
 				9B59078F1D05F51A00FCE40D /* MapViewCollectionViewCell.xib in Resources */,
 				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
@@ -1073,7 +1091,7 @@
 				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
 				A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */,
 				A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */,
-				7E426E711ED09946006BA833 /* CoolestProjectsBannerView.swift in Sources */,
+				7E426E711ED09946006BA833 /* PageHeaderView.swift in Sources */,
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
 				A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */,
 				E1C604191D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift in Sources */,
@@ -1094,7 +1112,9 @@
 				A97B8C371EAEB7EF00B2A512 /* Message.swift in Sources */,
 				A93BCD321D0DFE4800005DB2 /* CPAAbout.m in Sources */,
 				A97B8C351EAEB02800B2A512 /* MessagesService.swift in Sources */,
+				252811921ED1B2F300DFEE6A /* PagerHeaderComponent.swift in Sources */,
 				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
+				252811941ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift in Sources */,
 				9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */,
 				E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */,
 				E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */,

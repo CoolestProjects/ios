@@ -20,7 +20,7 @@ class HomeViewController : BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // TODO: better nib loading
-    let tableHeaderView = HomeTableHeaderView.headerView()!
+    let tableHeaderView = PageHeaderView.pageHeaderView()!
     let tableFooterView = HomeTableFooterView.footerView()!
     let viewModel = HomeViewModel()
     
@@ -35,6 +35,7 @@ class HomeViewController : BaseViewController {
         forceTableViewLayoutPhase()
         updateTableHeaderFrame()
         updateTableFooterFrame()
+    
     }
     
     func setupUI() {
@@ -59,13 +60,15 @@ class HomeViewController : BaseViewController {
     }
     
     func setupTable() {
-        tableHeaderView.configure(with: (viewModel.headerTitle, viewModel.headerBody))
+      //  tableHeaderView.configure(with: (viewModel.headerTitle, viewModel.headerBody))
         tableView.tableHeaderView = tableHeaderView
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
         tableView.register(UINib.init(nibName: "InfoBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "infoBox")
         tableView.register(UINib.init(nibName: "SponsorBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "sponsorBox")
+        tableView.register(PageHeaderTableViewCell.self, forCellReuseIdentifier: "pageHeader")
+
     }
     
     func createViewMask(_ size: CGSize, startGradientAt start: Float, endGradientAt end: Float) -> CALayer {
