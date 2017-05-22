@@ -9,7 +9,7 @@
 import Foundation
 import Gloss
 
-struct RegionInteraction {
+struct RegionMessageInteraction {
 
     let regionId: String
     let messageVersionId: String
@@ -26,15 +26,15 @@ struct RegionInteraction {
     }
 }
 
-extension RegionInteraction: Equatable {}
-func ==(lhs: RegionInteraction, rhs: RegionInteraction) -> Bool {
+extension RegionMessageInteraction: Equatable {}
+func ==(lhs: RegionMessageInteraction, rhs: RegionMessageInteraction) -> Bool {
     return
         lhs.regionId == rhs.regionId &&
         lhs.messageVersionId == rhs.messageVersionId &&
         lhs.timestamp == rhs.timestamp
 }
 
-extension RegionInteraction: Decodable {
+extension RegionMessageInteraction: Decodable {
 
     init?(json: JSON) {
         guard
@@ -49,7 +49,7 @@ extension RegionInteraction: Decodable {
     }
 }
 
-extension RegionInteraction: Glossy {
+extension RegionMessageInteraction: Glossy {
 
     func toJSON() -> JSON? {
         return jsonify([
