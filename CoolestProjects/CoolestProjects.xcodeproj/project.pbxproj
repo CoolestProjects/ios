@@ -82,6 +82,8 @@
 		A98010D41D05259F00AABC90 /* StagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98010D21D05259F00AABC90 /* StagesViewController.xib */; };
 		A98010D71D0525A800AABC90 /* StagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010D51D0525A800AABC90 /* StagesTableViewCell.swift */; };
 		A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98010D61D0525A800AABC90 /* StagesTableViewCell.xib */; };
+		A9D9D37F1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9D37D1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift */; };
+		A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9D37E1ED38C3B001CE6F1 /* BeaconRegionInteraction.swift */; };
 		A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB4D1D0331C100ECE1F3 /* Home.strings */; };
 		A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB501D03332700ECE1F3 /* Home.xcassets */; };
 		A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8DB611D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift */; };
@@ -219,6 +221,8 @@
 		A98010D21D05259F00AABC90 /* StagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StagesViewController.xib; path = Stages/StagesViewController/StagesViewController.xib; sourceTree = "<group>"; };
 		A98010D51D0525A800AABC90 /* StagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StagesTableViewCell.swift; path = Stages/StagesTableViewCell/StagesTableViewCell.swift; sourceTree = "<group>"; };
 		A98010D61D0525A800AABC90 /* StagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StagesTableViewCell.xib; path = Stages/StagesTableViewCell/StagesTableViewCell.xib; sourceTree = "<group>"; };
+		A9D9D37D1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconRegionInteractionStore.swift; sourceTree = "<group>"; };
+		A9D9D37E1ED38C3B001CE6F1 /* BeaconRegionInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconRegionInteraction.swift; sourceTree = "<group>"; };
 		A9F8DB4D1D0331C100ECE1F3 /* Home.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Home.strings; path = strings/Home.strings; sourceTree = "<group>"; };
 		A9F8DB501D03332700ECE1F3 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Home.xcassets; path = images/Home.xcassets; sourceTree = "<group>"; };
 		A9F8DB611D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorBoxTableViewCell.swift; path = SponsorBoxTableViewCell/SponsorBoxTableViewCell.swift; sourceTree = "<group>"; };
@@ -583,6 +587,8 @@
 		A96EA6621EA6C7590021990F /* BeaconManager */ = {
 			isa = PBXGroup;
 			children = (
+				A9D9D37D1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift */,
+				A9D9D37E1ED38C3B001CE6F1 /* BeaconRegionInteraction.swift */,
 				A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */,
 				A97B8C3E1EC7B80A00B2A512 /* BluetoothAlertManager.swift */,
 			);
@@ -1083,6 +1089,7 @@
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
 				A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */,
 				E1C604191D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift in Sources */,
+				A9D9D37F1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift in Sources */,
 				E1C6041C1D0DD7E100931C38 /* ProjectsViewController.swift in Sources */,
 				25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */,
 				A98010D71D0525A800AABC90 /* StagesTableViewCell.swift in Sources */,
@@ -1090,6 +1097,7 @@
 				A93BCD3E1D0E24A500005DB2 /* Constants.swift in Sources */,
 				A97B8C2C1EAD64A900B2A512 /* DataStore.swift in Sources */,
 				A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */,
+				A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */,
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
 				9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */,
 				E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */,

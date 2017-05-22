@@ -114,6 +114,7 @@ class BeaconNotificationsManager: NSObject {
     fileprivate let messagesService: MessagesService = MessagesServiceImpl()
 
     fileprivate let regionMessageInteractionsStore = RegionMessageInteractionStoreImpl()
+    fileprivate let beaconRegionInteractionsStore = BeaconRegionInteractionStoreImpl()
 
 }
 
@@ -129,6 +130,8 @@ extension BeaconNotificationsManager: ESTBeaconManagerDelegate {
 
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
         print("Did enter region \(region).")
+        beaconRegionInteractionsStore.enterBeaconRegion(region)
+
         if let regionId = region.regionId {
             showMessageForRegion(regionId)
         }
@@ -136,6 +139,7 @@ extension BeaconNotificationsManager: ESTBeaconManagerDelegate {
 
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
         print("Did exit region \(region).")
+        beaconRegionInteractionsStore.exitBeaconRegion(region)
     }
 
     func beaconManager(_ manager: Any, didChange status: CLAuthorizationStatus) {

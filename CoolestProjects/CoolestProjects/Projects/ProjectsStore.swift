@@ -27,19 +27,7 @@ class ProjectsStore {
     }
     
     func readProjects() -> [Project] {
-        guard let storeUrl = projectsStoreUrl(), let data = try? Data(contentsOf: storeUrl)
-            else { return [] }
-        
-        do {
-            let json = try JSONSerialization.jsonObject(with: data) as! [JSON]
-            let projects = [Project].from(jsonArray: json)!
-            return projects
-            
-        } catch let error {
-            print(error)
-        }
-        
-        return []
+        return loadFromDisk()
     }
     
     init() {
@@ -47,29 +35,17 @@ class ProjectsStore {
     }
     
     func saveProjects(_ projects: [Project]) {
-        guard let jsonArray = projects.toJSONArray(), let storeUrl = projectsStoreUrl()
-            else { return }
-        
-        do {
-            let data = try JSONSerialization.data(withJSONObject: jsonArray, options: .prettyPrinted)
-            try data.write(to: storeUrl, options: NSData.WritingOptions.atomic)
-            UserDefaults.standard.set(Date(), forKey: projectsLastUpdateDateKey)
-            
-        } catch let error {
-            print(error)
-        }
-    }
-
-    func projectsStoreUrl() -> URL? {
-        if let dataDirectoryUrl = dataDirectoryUrl() {
-            return dataDirectoryUrl.appendingPathComponent("projectsStore.json")
-        }
-        
-        return nil
+        saveToDisk(items: projects)
+        UserDefaults.standard.set(Date(), forKey: projectsLastUpdateDateKey)
     }
 
 }
 
 extension ProjectsStore: DataStore {
+    typealias DataItem = Project
+
+    var storeFileName: String {
+        get { return "projectsStore.json" }
+    }
 
 }
