@@ -65,8 +65,8 @@
 		A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */; };
 		A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */; };
 		A96EA6641EA6C7750021990F /* BeaconNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */; };
-		A97B8C221EAD55A500B2A512 /* RegionInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C211EAD55A500B2A512 /* RegionInteraction.swift */; };
-		A97B8C241EAD584200B2A512 /* RegionInteractionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C231EAD584200B2A512 /* RegionInteractionStore.swift */; };
+		A97B8C221EAD55A500B2A512 /* RegionMessageInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C211EAD55A500B2A512 /* RegionMessageInteraction.swift */; };
+		A97B8C241EAD584200B2A512 /* RegionMessageInteractionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C231EAD584200B2A512 /* RegionMessageInteractionStore.swift */; };
 		A97B8C271EAD5A0300B2A512 /* RegionInteractionStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C261EAD5A0300B2A512 /* RegionInteractionStoreTest.swift */; };
 		A97B8C2A1EAD60F100B2A512 /* RegionInteractions.json in Resources */ = {isa = PBXBuildFile; fileRef = A97B8C291EAD60F100B2A512 /* RegionInteractions.json */; };
 		A97B8C2C1EAD64A900B2A512 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C2B1EAD64A900B2A512 /* DataStore.swift */; };
@@ -200,8 +200,8 @@
 		A93BCD3B1D0E24A500005DB2 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		A93BCD3C1D0E24A500005DB2 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconNotificationsManager.swift; sourceTree = "<group>"; };
-		A97B8C211EAD55A500B2A512 /* RegionInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionInteraction.swift; sourceTree = "<group>"; };
-		A97B8C231EAD584200B2A512 /* RegionInteractionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionInteractionStore.swift; sourceTree = "<group>"; };
+		A97B8C211EAD55A500B2A512 /* RegionMessageInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMessageInteraction.swift; sourceTree = "<group>"; };
+		A97B8C231EAD584200B2A512 /* RegionMessageInteractionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMessageInteractionStore.swift; sourceTree = "<group>"; };
 		A97B8C251EAD5A0300B2A512 /* CoolestProjectsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoolestProjectsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A97B8C261EAD5A0300B2A512 /* RegionInteractionStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionInteractionStoreTest.swift; sourceTree = "<group>"; };
 		A97B8C291EAD60F100B2A512 /* RegionInteractions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RegionInteractions.json; sourceTree = "<group>"; };
@@ -592,8 +592,8 @@
 		A97B8C201EAD557900B2A512 /* MessageManager */ = {
 			isa = PBXGroup;
 			children = (
-				A97B8C211EAD55A500B2A512 /* RegionInteraction.swift */,
-				A97B8C231EAD584200B2A512 /* RegionInteractionStore.swift */,
+				A97B8C211EAD55A500B2A512 /* RegionMessageInteraction.swift */,
+				A97B8C231EAD584200B2A512 /* RegionMessageInteractionStore.swift */,
 			);
 			path = MessageManager;
 			sourceTree = "<group>";
@@ -1075,7 +1075,7 @@
 			files = (
 				E1C6040D1D0DD78800931C38 /* SponsorTrierViewModel.swift in Sources */,
 				E1C6041B1D0DD7E100931C38 /* ProjectsStore.swift in Sources */,
-				A97B8C221EAD55A500B2A512 /* RegionInteraction.swift in Sources */,
+				A97B8C221EAD55A500B2A512 /* RegionMessageInteraction.swift in Sources */,
 				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
 				A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */,
 				A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */,
@@ -1094,7 +1094,7 @@
 				9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */,
 				E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
-				A97B8C241EAD584200B2A512 /* RegionInteractionStore.swift in Sources */,
+				A97B8C241EAD584200B2A512 /* RegionMessageInteractionStore.swift in Sources */,
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
 				9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */,
 				A97B8C371EAEB7EF00B2A512 /* Message.swift in Sources */,

@@ -72,7 +72,7 @@ class BeaconNotificationsManager: NSObject {
     }
 
     fileprivate func showMessageForRegion(_ regionId: String) {        
-        let lastMessageVersionId = regionInteractionsStore.lastMessageVersionIdWithRegion(regionId)
+        let lastMessageVersionId = regionMessageInteractionsStore.lastMessageVersionIdWithRegion(regionId)
 
         messagesService.messageForRegion(regionId) { (message) in
             guard let message = message else {
@@ -91,7 +91,7 @@ class BeaconNotificationsManager: NSObject {
 
             // store interaction
             print("Storing interaction for message")
-            self.regionInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId)
+            self.regionMessageInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId)
 
             // show user notification
             print("Show local notification")
@@ -113,7 +113,7 @@ class BeaconNotificationsManager: NSObject {
     fileprivate let coolestProjectsService = CPAFirebaseDefaultService()
     fileprivate let messagesService: MessagesService = MessagesServiceImpl()
 
-    fileprivate let regionInteractionsStore = RegionInteractionStoreImpl()
+    fileprivate let regionMessageInteractionsStore = RegionMessageInteractionStoreImpl()
 
 }
 

@@ -9,11 +9,11 @@
 import Foundation
 import Gloss
 
-protocol RegionInteractionStore {
+protocol RegionMessageInteractionStore {
 
-    func allInteractions() -> [RegionInteraction]
+    func allInteractions() -> [RegionMessageInteraction]
 
-    func lastInteractionWithRegion(_ regionId: String) -> RegionInteraction?
+    func lastInteractionWithRegion(_ regionId: String) -> RegionMessageInteraction?
 
     func lastMessageVersionIdWithRegion(_ regionId: String) -> String?
 
@@ -21,7 +21,7 @@ protocol RegionInteractionStore {
 
 }
 
-class RegionInteractionStoreImpl {
+class RegionMessageInteractionStoreImpl {
 
     init() {
         createDataDirectoryIfNeeded()
@@ -30,7 +30,7 @@ class RegionInteractionStoreImpl {
 
     fileprivate func regionInteractionsStoreUrl() -> URL? {
         if let dataDirectoryUrl = dataDirectoryUrl() {
-            return dataDirectoryUrl.appendingPathComponent(RegionInteractionStoreImpl.storeFileName)
+            return dataDirectoryUrl.appendingPathComponent(RegionMessageInteractionStoreImpl.storeFileName)
         } else {
             return nil
         }
@@ -44,14 +44,14 @@ class RegionInteractionStoreImpl {
 
         do {
             let json = try JSONSerialization.jsonObject(with: data) as! [JSON]
-            let storedInteractions = [RegionInteraction].from(jsonArray: json)!
+            let storedInteractions = [RegionMessageInteraction].from(jsonArray: json)!
             inMemoryRegionInteractions = storedInteractions
         } catch let error {
             print(error)
         }
     }
 
-    fileprivate func saveRegionInteractionsToDisk(_ interactions: [RegionInteraction]) {
+    fileprivate func saveRegionInteractionsToDisk(_ interactions: [RegionMessageInteraction]) {
         guard let storeUrl = regionInteractionsStoreUrl(),
             let jsonArray = interactions.toJSONArray()
             else { return }
@@ -64,19 +64,19 @@ class RegionInteractionStoreImpl {
         }
     }
 
-    fileprivate var inMemoryRegionInteractions: [RegionInteraction] = []
+    fileprivate var inMemoryRegionInteractions: [RegionMessageInteraction] = []
 
-    fileprivate static let storeFileName = "regionInteractions.json"
+    fileprivate static let storeFileName = "regionMessageInteractions.json"
 
 }
 
-extension RegionInteractionStoreImpl: RegionInteractionStore {
+extension RegionMessageInteractionStoreImpl: RegionMessageInteractionStore {
 
-    func allInteractions() -> [RegionInteraction] {
+    func allInteractions() -> [RegionMessageInteraction] {
         return inMemoryRegionInteractions
     }
 
-    func lastInteractionWithRegion(_ regionId: String) -> RegionInteraction? {
+    func lastInteractionWithRegion(_ regionId: String) -> RegionMessageInteraction? {
         return inMemoryRegionInteractions.filter { $0.regionId == regionId }.first
     }
 
@@ -85,7 +85,7 @@ extension RegionInteractionStoreImpl: RegionInteractionStore {
     }
 
     func setInteractionWithRegion(_ regionId: String, messageVersionId: String) {
-        let ri = RegionInteraction(regionId: regionId, messageVersionId: messageVersionId)
+        let ri = RegionMessageInteraction(regionId: regionId, messageVersionId: messageVersionId)
         inMemoryRegionInteractions = inMemoryRegionInteractions.filter { $0.regionId != regionId }
         inMemoryRegionInteractions.append(ri)
         saveRegionInteractionsToDisk(inMemoryRegionInteractions)
@@ -93,6 +93,6 @@ extension RegionInteractionStoreImpl: RegionInteractionStore {
 
 }
 
-extension RegionInteractionStoreImpl: DataStore {
+extension RegionMessageInteractionStoreImpl: DataStore {
 
 }
