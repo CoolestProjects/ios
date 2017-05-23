@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Coolest_Projects" customModuleProvider="target">
             <connections>
-                <outlet property="backgroundImage" destination="URw-ai-nuI" id="U7d-84-7jM"/>
                 <outlet property="overlayView" destination="vtJ-HL-h1n" id="7nJ-Z5-f8g"/>
                 <outlet property="tableView" destination="1GC-1F-lZq" id="CgS-gI-lsp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Pru-w7-Z9D"/>
@@ -22,9 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URw-ai-nuI">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtJ-HL-h1n">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,15 +48,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="URw-ai-nuI" secondAttribute="bottom" id="74I-qh-P73"/>
-                <constraint firstItem="URw-ai-nuI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J3a-m1-PCA"/>
                 <constraint firstAttribute="trailing" secondItem="vtJ-HL-h1n" secondAttribute="trailing" id="NGX-NJ-FZt"/>
                 <constraint firstItem="oLb-di-orl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PFC-rE-qRL"/>
                 <constraint firstAttribute="bottom" secondItem="oLb-di-orl" secondAttribute="bottom" id="SmR-yl-1bp"/>
                 <constraint firstItem="vtJ-HL-h1n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T32-wl-zN2"/>
                 <constraint firstItem="oLb-di-orl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UXX-Cb-qFT"/>
-                <constraint firstItem="URw-ai-nuI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bj5-Fk-b5T"/>
-                <constraint firstAttribute="trailing" secondItem="URw-ai-nuI" secondAttribute="trailing" id="iDN-Bz-W1f"/>
                 <constraint firstItem="vtJ-HL-h1n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rqv-9f-8BD"/>
                 <constraint firstAttribute="bottom" secondItem="vtJ-HL-h1n" secondAttribute="bottom" id="sL3-Dv-xOS"/>
                 <constraint firstAttribute="trailing" secondItem="oLb-di-orl" secondAttribute="trailing" id="yEI-w2-gh3"/>

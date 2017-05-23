@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BlurbTableViewCell" customModule="Coolest_Projects" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCE-Zk-JWe">
+                        <rect key="frame" x="22" y="8" width="276" height="18"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                        <color key="textColor" red="0.49070405960083008" green="0.5169948935508728" blue="0.60371297597885132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-zd-8dO">
+                        <rect key="frame" x="40" y="34" width="240" height="1"/>
+                        <color key="backgroundColor" red="0.82419127225875854" green="0.82783657312393188" blue="0.83746415376663208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="zp8-Y0-DUB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96053844690322876" green="0.96456140279769897" blue="0.97688001394271851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wfw-zd-8dO" secondAttribute="trailing" constant="40" id="Jqt-4K-a3I"/>
+                    <constraint firstAttribute="bottom" secondItem="wfw-zd-8dO" secondAttribute="bottom" constant="8" id="Y3z-gE-8jB"/>
+                    <constraint firstItem="wfw-zd-8dO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="ZPl-Ip-e5j"/>
+                    <constraint firstItem="vCE-Zk-JWe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="jGP-2x-CB8"/>
+                    <constraint firstItem="wfw-zd-8dO" firstAttribute="top" secondItem="vCE-Zk-JWe" secondAttribute="bottom" constant="8" id="jKG-tn-zkH"/>
+                    <constraint firstItem="vCE-Zk-JWe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xpD-Bp-TU6"/>
+                    <constraint firstAttribute="trailing" secondItem="vCE-Zk-JWe" secondAttribute="trailing" constant="22" id="yLi-ao-2d9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="title" destination="vCE-Zk-JWe" id="Be3-9l-Yi3"/>
+            </connections>
+            <point key="canvasLocation" x="76" y="106"/>
+        </tableViewCell>
+    </objects>
+</document>

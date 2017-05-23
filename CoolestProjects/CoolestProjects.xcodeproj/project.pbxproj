@@ -14,6 +14,8 @@
 		25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1B1CFD7EA700691791 /* CPAObject.m */; };
 		25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B1E1CFD7EBC00691791 /* CPASpeaker.m */; };
 		25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */ = {isa = PBXBuildFile; fileRef = 25318B211CFD93D800691791 /* CPASponsorTier.m */; };
+		25CB9A271ED423BA00845C51 /* BlurbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CB9A251ED423BA00845C51 /* BlurbTableViewCell.swift */; };
+		25CB9A281ED423BA00845C51 /* BlurbTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25CB9A261ED423BA00845C51 /* BlurbTableViewCell.xib */; };
 		25F4BF011ED1C57300F45E13 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25F4BF001ED1C57300F45E13 /* Common.strings */; };
 		25F4BF041ED1DACB00F45E13 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F4BF021ED1DACB00F45E13 /* ContentTableViewCell.swift */; };
 		25F4BF051ED1DACB00F45E13 /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F4BF031ED1DACB00F45E13 /* ContentTableViewCell.xib */; };
@@ -144,6 +146,8 @@
 		25318B201CFD93D800691791 /* CPASponsorTier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPASponsorTier.h; sourceTree = "<group>"; };
 		25318B211CFD93D800691791 /* CPASponsorTier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPASponsorTier.m; sourceTree = "<group>"; };
 		25318B241CFDE51800691791 /* CPAFirebaseStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAFirebaseStorage.h; sourceTree = "<group>"; };
+		25CB9A251ED423BA00845C51 /* BlurbTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurbTableViewCell.swift; sourceTree = "<group>"; };
+		25CB9A261ED423BA00845C51 /* BlurbTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurbTableViewCell.xib; sourceTree = "<group>"; };
 		25F4BF001ED1C57300F45E13 /* Common.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Common.strings; path = strings/Common.strings; sourceTree = "<group>"; };
 		25F4BF021ED1DACB00F45E13 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentTableViewCell.swift; path = ../ContentTableViewCell.swift; sourceTree = "<group>"; };
 		25F4BF031ED1DACB00F45E13 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContentTableViewCell.xib; path = ../ContentTableViewCell.xib; sourceTree = "<group>"; };
@@ -332,6 +336,15 @@
 				A97B8C361EAEB7EF00B2A512 /* Message.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		25CB9A241ED4235700845C51 /* BlurbTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				25CB9A251ED423BA00845C51 /* BlurbTableViewCell.swift */,
+				25CB9A261ED423BA00845C51 /* BlurbTableViewCell.xib */,
+			);
+			path = BlurbTableViewCell;
 			sourceTree = "<group>";
 		};
 		25F4BF061ED1DCBC00F45E13 /* ContentCell */ = {
@@ -722,6 +735,7 @@
 		B79C0E7ADCAC346D03AE0A36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				25CB9A241ED4235700845C51 /* BlurbTableViewCell */,
 				A9F8DB651D03713800ECE1F3 /* HomeTableFooterView */,
 				A9F8DB521D03364600ECE1F3 /* SponsorBoxTableViewCell */,
 				A91C07991D00EBD9005271FE /* HomeViewController */,
@@ -881,8 +895,8 @@
 				TargetAttributes = {
 					4453ED121CF9EA2C0028C8E0 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 78XSL3W3V9;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -943,6 +957,7 @@
 				E1C6040E1D0DD78800931C38 /* About.storyboard in Resources */,
 				E1C6041F1D0DD7EF00931C38 /* Sponsors.strings in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
+				25CB9A281ED423BA00845C51 /* BlurbTableViewCell.xib in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
 				25F4BF011ED1C57300F45E13 /* Common.strings in Resources */,
 				A93BCD2B1D0DFA8000005DB2 /* Coderdojo2015-107.jpg in Resources */,
@@ -1096,6 +1111,7 @@
 				E1C6040F1D0DD78800931C38 /* AboutContainerViewController.swift in Sources */,
 				A93BCD3E1D0E24A500005DB2 /* Constants.swift in Sources */,
 				A97B8C2C1EAD64A900B2A512 /* DataStore.swift in Sources */,
+				25CB9A271ED423BA00845C51 /* BlurbTableViewCell.swift in Sources */,
 				A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */,
 				A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */,
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
@@ -1271,13 +1287,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "CoolestProjects/Coolest Projects.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
 				PRODUCT_NAME = "Coolest Projects";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoolestProjects/CoolestProjects-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1294,13 +1312,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "CoolestProjects/Coolest Projects.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Noel King (78XSL3W3V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
 				PRODUCT_NAME = "Coolest Projects";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoolestProjects/CoolestProjects-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

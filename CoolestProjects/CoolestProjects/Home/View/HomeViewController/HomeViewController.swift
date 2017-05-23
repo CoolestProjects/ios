@@ -14,7 +14,6 @@ let SponsorBoxHeight: CGFloat = 300.0
 
 class HomeViewController : BaseViewController {
 
-    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -31,7 +30,6 @@ class HomeViewController : BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setupMask()
         forceTableViewLayoutPhase()
         updateTableHeaderFrame()
         updateTableFooterFrame()
@@ -39,20 +37,17 @@ class HomeViewController : BaseViewController {
     }
     
     func setupUI() {
-        setupBackgroundImage()
+        setupBackground()
         setupNavigationBar()
         setupTable()
     }
     
-    func setupBackgroundImage() {
-        backgroundImage.image = UIImage(named: "home-bg")
-        overlayView.backgroundColor = AppColors.lightOverlayColor
+    func setupBackground() {
+        overlayView.backgroundColor = UIColor.red
+        wrapperView.backgroundColor = UIColor.black
+
     }
-    
-    func setupMask() {
-        wrapperView.layer.mask = createViewMask(wrapperView.frame.size, startGradientAt:68.0, endGradientAt:72.0)
-    }
-    
+
     override func setupNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -60,7 +55,6 @@ class HomeViewController : BaseViewController {
     }
     
     func setupTable() {
-      //  tableHeaderView.configure(with: (viewModel.headerTitle, viewModel.headerBody))
         tableView.tableHeaderView = tableHeaderView
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;
@@ -68,19 +62,8 @@ class HomeViewController : BaseViewController {
         tableView.register(UINib.init(nibName: "SponsorBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "sponsorBox")
         tableView.register(PageHeaderTableViewCell.self, forCellReuseIdentifier: "pageHeader")
         tableView.register(UINib.init(nibName: "ContentTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "contentCell")
+        tableView.register(UINib.init(nibName: "BlurbTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "blurbBox")
 
-
-    }
-    
-    func createViewMask(_ size: CGSize, startGradientAt start: Float, endGradientAt end: Float) -> CALayer {
-        let mask = CAGradientLayer()
-        mask.anchorPoint = CGPoint.zero
-        mask.startPoint = CGPoint(x: 0.5, y: 0.0)
-        mask.endPoint = CGPoint(x: 0.5, y: 1.0)
-        mask.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.white.cgColor]
-        mask.locations = [NSNumber(value: 0.0 as Float), NSNumber(value: start/Float(size.height) as Float), NSNumber(value: end/Float(size.height) as Float), NSNumber(value: 1.0 as Float)]
-        mask.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height);
-        return mask
     }
     
     func forceTableViewLayoutPhase() {
@@ -101,7 +84,7 @@ class HomeViewController : BaseViewController {
     }
     
     func calculateMinTableHeaderViewHeight() -> CGFloat {
-        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 2000.0)
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 1600.0)
         tableHeaderView.setNeedsLayout()
         tableHeaderView.layoutIfNeeded()
         return tableHeaderView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
@@ -133,6 +116,12 @@ extension HomeViewController : UITableViewDataSource {
             contentCell.configure(with: content);
         }
         
+        if (component is BlurbBox) {
+            let blurbBox = component as! BlurbBox
+            let contentCell = cell as! BlurbTableViewCell
+            contentCell.configure(with: blurbBox);
+        }
+
         return cell
     }
     

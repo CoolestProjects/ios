@@ -15,14 +15,29 @@ protocol Component {
 
 class SponsorBox: Component {
     var componentIdentifier: String
-    let title: String
-    let textColor: UIColor
-    let images: [UIImage]
-    
-    init(title: String, textColor: UIColor, images: [UIImage]) {
+    let title: String    
+    let diamondImages: [UIImage]
+    let platinumHigherImages: [UIImage]
+    let platinumLowerImages: [UIImage]
+    let goldImages: [UIImage]
+
+    init(title: String, diamondImages: [UIImage], platinumHigherImages: [UIImage], platinumLowerImages: [UIImage], goldImages: [UIImage]) {
         self.componentIdentifier = "sponsorBox"
         self.title = title
-        self.textColor = textColor
-        self.images = images
+        self.diamondImages = diamondImages
+        self.platinumHigherImages = platinumHigherImages
+        self.platinumLowerImages = platinumLowerImages
+        self.goldImages = goldImages
+
+    }
+}
+
+class BlurbBox: Component {
+    var componentIdentifier: String
+    let title: String
+    
+    init(title: String) {
+        self.componentIdentifier = "blurbBox"
+        self.title = title
     }
 }

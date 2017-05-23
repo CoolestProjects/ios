@@ -116,7 +116,7 @@ class StagesViewController : BaseViewController {
         
         let selectedStateAttributes = [
             NSFontAttributeName: AppFonts.tabBarFontSelected,
-            NSForegroundColorAttributeName: AppColors.blueColor,
+            NSForegroundColorAttributeName: AppColors.darkTextColor,
             NSParagraphStyleAttributeName: style
         ]
         
