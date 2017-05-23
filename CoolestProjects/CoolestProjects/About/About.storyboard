@@ -8,10 +8,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--About View Controller-->
         <scene sceneID="cRH-uk-Bvv">
             <objects>
-                <viewController id="uD0-Ri-Gem" customClass="HomeViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uD0-Ri-Gem" customClass="AboutViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hjd-dO-DOJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWw-1c-k9Q" sceneMemberID="firstResponder"/>

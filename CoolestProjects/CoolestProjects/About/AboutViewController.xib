@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="Coolest_Projects" customModuleProvider="target">
+            <connections>
+                <outlet property="overlayView" destination="vtJ-HL-h1n" id="7nJ-Z5-f8g"/>
+                <outlet property="tableView" destination="1GC-1F-lZq" id="CgS-gI-lsp"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Pru-w7-Z9D"/>
+                <outlet property="wrapperView" destination="oLb-di-orl" id="jif-78-lfa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtJ-HL-h1n">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLb-di-orl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-1F-lZq">
+                            <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Aiu-MT-h6f"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="1GC-1F-lZq" firstAttribute="leading" secondItem="oLb-di-orl" secondAttribute="leading" id="RQL-bF-94x"/>
+                        <constraint firstItem="1GC-1F-lZq" firstAttribute="top" secondItem="oLb-di-orl" secondAttribute="top" constant="68" id="Sah-SR-G4o"/>
+                        <constraint firstAttribute="bottom" secondItem="1GC-1F-lZq" secondAttribute="bottom" id="f7r-FM-qko"/>
+                        <constraint firstAttribute="trailing" secondItem="1GC-1F-lZq" secondAttribute="trailing" id="vda-Xu-HcV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vtJ-HL-h1n" secondAttribute="trailing" id="NGX-NJ-FZt"/>
+                <constraint firstItem="oLb-di-orl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PFC-rE-qRL"/>
+                <constraint firstAttribute="bottom" secondItem="oLb-di-orl" secondAttribute="bottom" id="SmR-yl-1bp"/>
+                <constraint firstItem="vtJ-HL-h1n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T32-wl-zN2"/>
+                <constraint firstItem="oLb-di-orl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UXX-Cb-qFT"/>
+                <constraint firstItem="vtJ-HL-h1n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rqv-9f-8BD"/>
+                <constraint firstAttribute="bottom" secondItem="vtJ-HL-h1n" secondAttribute="bottom" id="sL3-Dv-xOS"/>
+                <constraint firstAttribute="trailing" secondItem="oLb-di-orl" secondAttribute="trailing" id="yEI-w2-gh3"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
