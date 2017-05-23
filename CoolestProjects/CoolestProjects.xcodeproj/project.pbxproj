@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB8E7091ED4BA04001861D8 /* Array+Gloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8E7081ED4BA04001861D8 /* Array+Gloss.swift */; };
 		134565DF1F7980FF191C5DD6 /* Pods_CoolestProjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */; };
 		252811921ED1B2F300DFEE6A /* PagerHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252811911ED1B2F300DFEE6A /* PagerHeaderComponent.swift */; };
 		252811941ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252811931ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift */; };
@@ -132,6 +133,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DB8E7081ED4BA04001861D8 /* Array+Gloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Gloss.swift"; sourceTree = "<group>"; };
 		194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		252811911ED1B2F300DFEE6A /* PagerHeaderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerHeaderComponent.swift; sourceTree = "<group>"; };
@@ -290,6 +292,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DB8E7071ED4B9BD001861D8 /* GlossExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DB8E7081ED4BA04001861D8 /* Array+Gloss.swift */,
+			);
+			path = GlossExtensions;
+			sourceTree = "<group>";
+		};
 		252811901ED1AE7900DFEE6A /* PageHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +410,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				0DB8E7071ED4B9BD001861D8 /* GlossExtensions */,
 				9B842DA01EC88FC900EF9540 /* Deeplink */,
 				A97B8C3B1EB29B1600B2A512 /* Coolest Projects.entitlements */,
 				A97B8C201EAD557900B2A512 /* MessageManager */,
@@ -1128,6 +1139,7 @@
 				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
 				252811941ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift in Sources */,
 				9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */,
+				0DB8E7091ED4BA04001861D8 /* Array+Gloss.swift in Sources */,
 				E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */,
 				E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,

@@ -27,7 +27,7 @@ extension ProjectTableViewCell: Configurable {
         projectDescription.text = item.projectDescription
         category.text = sanitizeCategory(item.category)
         coderdojo.text = item.coderdojo
-        desk.text = formattedDeskText(item.deskNumber ?? "")
+        desk.text = formattedDeskText(item.deskNumber)
     }
 
     func sanitizeCategory(_ category: String) -> String {
@@ -38,9 +38,14 @@ extension ProjectTableViewCell: Configurable {
         return category
     }
 
-    func formattedDeskText(_ deskNumber: String) -> String {
-        let desk = deskNumber.isEmpty ? "-" : deskNumber
-        return "Desk: \(desk)"
+    func formattedDeskText(_ deskNumber: String?) -> String {
+        guard let deskNumber = deskNumber,
+            deskNumber != "null",
+            !deskNumber.isEmpty else {
+            return "Desk: -"
+        }
+
+        return "Desk: \(deskNumber)"
     }
 
 }
