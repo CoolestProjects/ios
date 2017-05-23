@@ -31,3 +31,13 @@ class SponsorBox: Component {
 
     }
 }
+
+class BlurbBox: Component {
+    var componentIdentifier: String
+    let title: String
+    
+    init(title: String) {
+        self.componentIdentifier = "blurbBox"
+        self.title = title
+    }
+}

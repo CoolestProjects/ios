@@ -11,14 +11,11 @@ import UIKit
 
 class HomeViewModel {
     
-    let headerBody: String
-    
     var tableViewData = [Component]()
     
     init() {
-        headerBody = NSLocalizedString("header.body", tableName: "Home", comment: "")
-        
         tableViewData = [
+            BlurbBox(title: NSLocalizedString("date.tilte", tableName: "Home", comment: "")),
             ContentViewModel(
                 title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("event-times.body", tableName: "Home", comment: ""),
