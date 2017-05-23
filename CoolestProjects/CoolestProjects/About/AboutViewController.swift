@@ -11,10 +11,12 @@ import UIKit
 
 class AboutViewController : UIViewController {
     
+    @IBOutlet weak var pageHeaderView: PageHeaderView!
     @IBOutlet weak var webView: UIWebView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadHeaderView()
         loadAboutContent()
     }
     
@@ -24,5 +26,9 @@ class AboutViewController : UIViewController {
             webView.loadRequest(request)
         }
     }
-    
+  
+    func loadHeaderView() {
+      pageHeaderView = Bundle.main.loadNibNamed("PageHeaderView", owner: nil, options: nil)?.first as? PageHeaderView
+    }
+  
 }

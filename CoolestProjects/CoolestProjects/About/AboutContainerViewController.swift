@@ -16,7 +16,6 @@ let disclaimerIndex = 1
 class AboutContainerViewController : BaseViewController {
   
     @IBOutlet weak var aboutContainerView: UIView!
-    @IBOutlet weak var disclaimerContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +42,12 @@ class AboutContainerViewController : BaseViewController {
     func showAboutContainer() {
         UIView.animate(withDuration: showContainerAnimationDuration, animations: {
             self.aboutContainerView.alpha = 1
-            self.disclaimerContainerView.alpha = 0
         })
     }
     
     func showDisclaimerContainer() {
         UIView.animate(withDuration: showContainerAnimationDuration, animations: {
             self.aboutContainerView.alpha = 0
-            self.disclaimerContainerView.alpha = 1
         })
     }
     
