@@ -38,19 +38,17 @@ class HomeViewController : BaseViewController {
     }
     
     func setupUI() {
-        setupBackgroundImage()
+        setupBackground()
         setupNavigationBar()
         setupTable()
     }
     
-    func setupBackgroundImage() {
+    func setupBackground() {
         overlayView.backgroundColor = UIColor.red
+        wrapperView.backgroundColor = UIColor.black
+
     }
-    
-    func setupMask() {
-        wrapperView.backgroundColor = UIColor.blue
-    }
-    
+
     override func setupNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

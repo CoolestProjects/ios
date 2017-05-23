@@ -65,7 +65,7 @@ class ProjectsViewController : BaseViewController {
         
         let buttonAttributes = [
             NSFontAttributeName: AppFonts.navigationBarButton,
-            NSForegroundColorAttributeName: AppColors.yellowColor
+            NSForegroundColorAttributeName: AppColors.darkTextColor
         ]
         
         categoriesButton.setTitleTextAttributes(buttonAttributes, for: .normal)

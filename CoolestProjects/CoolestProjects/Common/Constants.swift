@@ -10,13 +10,10 @@ import Foundation
 import UIKit
 
 struct AppColors {
-    static let redColor = UIColor(red:245.0/255.0, green:42.0/255.0, blue:0.0/255.0, alpha:1.0)
-    static let yellowColor = UIColor(red:248.0/255.0, green:231.0/255.0, blue:28.0/255.0, alpha:1.0)
-    static let blueColor = UIColor(red:74.0/255.0, green:144.0/255.0, blue:226.0/255.0, alpha:1.0)
-    static let lightGreyColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.00)
-    static let darkOverlayColor = UIColor(red:0.96, green:0.96, blue:0.98, alpha:1.00) // UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.70)
+    static let lightGreyColor = UIColor(red:0.96, green:0.96, blue:0.98, alpha:1.00)
+    static let darkOverlayColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.70)
     static let lightOverlayColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.40)
-    static let darkTextColor = UIColor(red:51.0/255.0, green:51.0/255.0, blue:51.0/255.0, alpha:1.0)
+    static let darkTextColor = UIColor(red:0.42, green:0.44, blue:0.53, alpha:1.00)
     static let lightGreyTextColor = UIColor(red:155.0/255.0, green:155.0/255.0, blue:155.0/255.0, alpha:1.0)
     static let lightTextColor = UIColor.white    
 }
