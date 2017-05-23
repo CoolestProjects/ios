@@ -14,7 +14,6 @@ let SponsorBoxHeight: CGFloat = 300.0
 
 class HomeViewController : BaseViewController {
 
-    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -45,11 +44,11 @@ class HomeViewController : BaseViewController {
     }
     
     func setupBackgroundImage() {
-        overlayView.backgroundColor = AppColors.lightOverlayColor
+        overlayView.backgroundColor = UIColor.red
     }
     
     func setupMask() {
-        wrapperView.backgroundColor = AppColors.darkOverlayColor
+        wrapperView.backgroundColor = UIColor.blue
     }
     
     override func setupNavigationBar() {

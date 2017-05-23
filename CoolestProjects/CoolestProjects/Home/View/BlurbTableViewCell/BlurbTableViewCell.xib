@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCE-Zk-JWe">
@@ -25,13 +25,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-zd-8dO">
-                        <rect key="frame" x="40" y="34.5" width="240" height="1"/>
+                        <rect key="frame" x="40" y="34" width="240" height="1"/>
                         <color key="backgroundColor" red="0.82419127225875854" green="0.82783657312393188" blue="0.83746415376663208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="zp8-Y0-DUB"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.96053844690322876" green="0.96456140279769897" blue="0.97688001394271851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="wfw-zd-8dO" secondAttribute="trailing" constant="40" id="Jqt-4K-a3I"/>
                     <constraint firstAttribute="bottom" secondItem="wfw-zd-8dO" secondAttribute="bottom" constant="8" id="Y3z-gE-8jB"/>
