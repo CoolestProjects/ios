@@ -889,9 +889,8 @@
 				TargetAttributes = {
 					4453ED121CF9EA2C0028C8E0 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = H6SFH4FUU2;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1282,10 +1281,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = H6SFH4FUU2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent.colin;
+				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
 				PRODUCT_NAME = "Coolest Projects";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1307,10 +1306,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = H6SFH4FUU2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent.colin;
+				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
 				PRODUCT_NAME = "Coolest Projects";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

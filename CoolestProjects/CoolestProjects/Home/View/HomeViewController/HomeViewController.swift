@@ -30,7 +30,6 @@ class HomeViewController : BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setupMask()
         forceTableViewLayoutPhase()
         updateTableHeaderFrame()
         updateTableFooterFrame()
