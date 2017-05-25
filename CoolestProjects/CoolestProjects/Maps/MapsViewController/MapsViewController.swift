@@ -9,6 +9,12 @@
 import UIKit
 
 class MapsViewController: BaseViewController {
+    @IBOutlet weak var tableView : UITableView?
+    
+    // TODO: Better nib loading
+    let tableViewHeader : PageHeaderView = PageHeaderView.pageHeaderView()!
+
+
     @IBOutlet weak var collectionView : UICollectionView?
     var selectImage : UIImage?
     var mapModel = MapsModel(data: [(title: NSLocalizedString("map.rds", tableName: "Maps", comment: ""), mapUrl: "https://firebasestorage.googleapis.com/v0/b/coolestprojectsapp.appspot.com/o/Maps%2Fcoolestprojectsmap.png?alt=media&token=cf6515dd-9947-4595-a203-422c6427a2ca")])
@@ -75,3 +81,32 @@ extension MapsViewController : UICollectionViewDelegateFlowLayout {
     }
     
 }
+
+extension MapsViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.tableViewData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let component = viewModel.tableViewData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
+        
+        // TODO: try to improve using better generics or protocol oriented data sources
+        if (component is ContentViewModel) {
+            let content = component as! ContentViewModel
+            let contentCell = cell as! ContentTableViewCell
+            contentCell.configure(with: content);
+        }
+        
+        if (component is BlurbBox) {
+            let blurbBox = component as! BlurbBox
+            let contentCell = cell as! BlurbTableViewCell
+            contentCell.configure(with: blurbBox);
+        }
+        
+        return cell
+    }
+    
+}
+
