@@ -14,7 +14,7 @@ class BlurbBox: Component {
     let title: String
     
     init(title: String) {
-        self.componentIdentifier = "blurbBox"
+        self.componentIdentifier = "blurbCell"
         self.title = title
     }
 }

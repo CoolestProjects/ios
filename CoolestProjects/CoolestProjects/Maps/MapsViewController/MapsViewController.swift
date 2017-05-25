@@ -9,78 +9,75 @@
 import UIKit
 
 class MapsViewController: BaseViewController {
-    @IBOutlet weak var tableView : UITableView?
+    @IBOutlet weak var tableView : UITableView!
     
     // TODO: Better nib loading
-    let tableViewHeader : PageHeaderView = PageHeaderView.pageHeaderView()!
+    let tableHeaderView : PageHeaderView = PageHeaderView.pageHeaderView()!
+    let viewModel = MapViewModel()
 
-
-    @IBOutlet weak var collectionView : UICollectionView?
     var selectImage : UIImage?
-    var mapModel = MapsModel(data: [(title: NSLocalizedString("map.rds", tableName: "Maps", comment: ""), mapUrl: "https://firebasestorage.googleapis.com/v0/b/coolestprojectsapp.appspot.com/o/Maps%2Fcoolestprojectsmap.png?alt=media&token=cf6515dd-9947-4595-a203-422c6427a2ca")])
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("title", tableName: "Maps", comment: "")
-        let nibName = UINib(nibName: "MapViewCollectionViewCell", bundle:nil)
+        title = viewModel.title
         
-        self.collectionView?.register(nibName, forCellWithReuseIdentifier: "cell")
+        tableView.register(UINib.init(nibName: "MapViewTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "MapViewCell")
+
+        tableView.register(UINib.init(nibName: "BlurbTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "blurbCell")
+        
+        
+        tableView.tableHeaderView = tableHeaderView
+        tableView.estimatedRowHeight = 300.0;
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         BeaconNotificationsManager.sharedInstance.setupBeaconsIfNeeded()
     }
-}
-
-extension MapsViewController : UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mapModel.numberOfItems;
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        forceTableViewLayoutPhase()
+        updateTableHeaderFrame()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = mapModel.item(atIndex: indexPath.row)! as (String, String)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MapViewCollectionViewCell
-        cell.displayModel(item, collectionView: self.collectionView!)
-        
-        return cell
-    }
-}
-
-extension MapsViewController : UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! MapViewCollectionViewCell
-        self.selectImage = cell.mapImageView.image
-        
-        
-        let viewController = MapZoomViewController()
-        viewController.image = self.selectImage
-        viewController.navigationTitle = self.mapModel.data[indexPath.row].title
-        
-        let navigationController = UINavigationController(rootViewController: viewController)
-        
-        self.present(navigationController, animated: true, completion: nil)
-        
-    }
-}
-
-extension MapsViewController : UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if let collectionView = self.collectionView {
-            if let cell = collectionView.cellForItem(at: indexPath) as? MapViewCollectionViewCell {
-
-                if let cellImage = cell.mapImageView?.image {
-                    let widthRatio = collectionView.frame.size.width / cellImage.size.width
-                    return CGSize(width: (collectionView.frame.size.width), height: 38 + cellImage.size.height * widthRatio)
-                }
-            }
-            return CGSize(width: collectionView.frame.size.width, height: 150)
-        }
-        
-        return CGSize.zero 
+    func forceTableViewLayoutPhase() {
+        tableView.setNeedsLayout()
+        tableView.layoutIfNeeded()
     }
     
+    func updateTableHeaderFrame() {
+        let minTableHeaderViewHeight = calculateMinTableHeaderViewHeight()
+        let availableSpace = tableView.bounds.height - tableView.estimatedRowHeight
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: max(minTableHeaderViewHeight, availableSpace))
+        tableView.tableHeaderView = tableHeaderView
+    }
+    
+    func calculateMinTableHeaderViewHeight() -> CGFloat {
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
+        tableHeaderView.setNeedsLayout()
+        tableHeaderView.layoutIfNeeded()
+        return tableHeaderView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+    }
 }
+
+//extension MapsViewController : UICollectionViewDelegate {
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath) as! MapViewCollectionViewCell
+//        self.selectImage = cell.mapImageView.image
+//        
+//        
+//        let viewController = MapZoomViewController()
+//        viewController.image = self.selectImage
+//        viewController.navigationTitle = self.mapModel.data[indexPath.row].title
+//        
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//        
+//        self.present(navigationController, animated: true, completion: nil)
+//        
+//    }
+//}
 
 extension MapsViewController : UITableViewDataSource {
     
@@ -93,9 +90,9 @@ extension MapsViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
         
         // TODO: try to improve using better generics or protocol oriented data sources
-        if (component is ContentViewModel) {
-            let content = component as! ContentViewModel
-            let contentCell = cell as! ContentTableViewCell
+        if (component is MapsModel) {
+            let content = component as! MapsModel
+            let contentCell = cell as! MapViewTableViewCell
             contentCell.configure(with: content);
         }
         
