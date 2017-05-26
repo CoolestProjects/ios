@@ -73,23 +73,6 @@ class MapsViewController: BaseViewController {
     }
 }
 
-//extension MapsViewController : UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.cellForItem(at: indexPath) as! MapViewCollectionViewCell
-//        self.selectImage = cell.mapImageView.image
-//        
-//        
-//        let viewController = MapZoomViewController()
-//        viewController.image = self.selectImage
-//        viewController.navigationTitle = self.mapModel.data[indexPath.row].title
-//        
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//        
-//        self.present(navigationController, animated: true, completion: nil)
-//        
-//    }
-//}
-
 extension MapsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
