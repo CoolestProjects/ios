@@ -22,6 +22,7 @@ class MapViewTableViewCell: UITableViewCell, Configurable {
         
         self.mapImageView.sd_setImage(with: URL(string: item.mapUrl)) { [weak self] (image, error, cache, url) in
             self?.activityIndicatorView.stopAnimating()
+            self?.setNeedsLayout()
             self?.layoutIfNeeded()
         }
         

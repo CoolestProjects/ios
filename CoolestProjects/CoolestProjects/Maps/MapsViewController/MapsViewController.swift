@@ -13,6 +13,8 @@ class MapsViewController: BaseViewController {
     
     // TODO: Better nib loading
     let tableHeaderView : PageHeaderView = PageHeaderView.pageHeaderView()!
+    let tableFooterView = HomeTableFooterView.footerView()!
+
     let viewModel = MapViewModel()
 
     var selectImage : UIImage?
@@ -26,6 +28,7 @@ class MapsViewController: BaseViewController {
         tableView.register(UINib.init(nibName: "BlurbTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "blurbCell")
         
         
+        tableView.tableFooterView = tableFooterView
         tableView.tableHeaderView = tableHeaderView
         tableView.estimatedRowHeight = 300.0;
 
@@ -36,15 +39,23 @@ class MapsViewController: BaseViewController {
         BeaconNotificationsManager.sharedInstance.setupBeaconsIfNeeded()
     }
     
+    
+    // TODO: better reuse with homeView
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         forceTableViewLayoutPhase()
         updateTableHeaderFrame()
+        updateTableFooterFrame()
     }
     
     func forceTableViewLayoutPhase() {
         tableView.setNeedsLayout()
         tableView.layoutIfNeeded()
+    }
+    
+    func updateTableFooterFrame() {
+        tableFooterView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
+        tableView.tableFooterView = tableFooterView
     }
     
     func updateTableHeaderFrame() {
@@ -78,6 +89,29 @@ class MapsViewController: BaseViewController {
 //        
 //    }
 //}
+
+extension MapsViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let component = viewModel.tableViewData[indexPath.row]
+
+        if (component is MapsModel) {
+            let mapModel = component as! MapsModel
+
+            let cell = tableView.cellForRow(at: indexPath) as! MapViewTableViewCell
+            self.selectImage = cell.mapImageView.image
+            
+            let viewController = MapZoomViewController()
+            viewController.image = self.selectImage
+            viewController.navigationTitle = mapModel.title
+            
+            let navigationController = UINavigationController(rootViewController: viewController)
+            self.present(navigationController, animated: true, completion: nil)
+        }
+    
+    }
+}
 
 extension MapsViewController : UITableViewDataSource {
     
