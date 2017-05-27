@@ -31,3 +31,11 @@ class SponsorBox: Component {
 
     }
 }
+
+class BluetoothBox: Component {
+    var componentIdentifier: String
+    
+    init() {
+        self.componentIdentifier = "bluetoothBox"
+    }
+}
