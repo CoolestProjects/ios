@@ -17,33 +17,19 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        addLeftButtonItem()
-//        addGestureRecognizers()
-        setupNavigationBar()
+//        setupNavigationBar()
     }
-    
-//    func addLeftButtonItem() {
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target:self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-//    }
-//    
-//    func addGestureRecognizers() {
-//        self.revealViewController().panGestureRecognizer()
-//        self.revealViewController().tapGestureRecognizer()
-//    }
 
     func setupNavigationBar() {
-        //TODO: Viewmodel
-        navigationController?.navigationBar.barTintColor = UIColor.black
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: AppColors.darkTextColor,
-            NSFontAttributeName : AppFonts.navbarTitleFont
-        ]
-        
-        
+//        //TODO: Viewmodel
+//        navigationController?.navigationBar.barTintColor = UIColor.black
+//        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.navigationBar.titleTextAttributes = [
+//            NSForegroundColorAttributeName: AppColors.darkTextColor,
+//            NSFontAttributeName : AppFonts.navbarTitleFont
+//        ]
     }
-    
+
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
