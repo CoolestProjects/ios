@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SWRevealViewController
 
 class BaseViewController: UIViewController {
     
@@ -18,21 +17,21 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addLeftButtonItem()
-        addGestureRecognizers()
+//        addLeftButtonItem()
+//        addGestureRecognizers()
         setupNavigationBar()
     }
     
-    func addLeftButtonItem() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target:self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-    }
-    
-    func addGestureRecognizers() {
-        self.revealViewController().panGestureRecognizer()
-        self.revealViewController().tapGestureRecognizer()
-    }
-    
+//    func addLeftButtonItem() {
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target:self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
+//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+//    }
+//    
+//    func addGestureRecognizers() {
+//        self.revealViewController().panGestureRecognizer()
+//        self.revealViewController().tapGestureRecognizer()
+//    }
+
     func setupNavigationBar() {
         //TODO: Viewmodel
         navigationController?.navigationBar.barTintColor = UIColor.black
