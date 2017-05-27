@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6D56BD1ED783D00036B51A /* Halls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BC1ED783D00036B51A /* Halls.swift */; };
+		0D6D56BF1ED785E30036B51A /* Halls+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */; };
+		0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56C31ED796770036B51A /* ScheduleService.swift */; };
+		0DA43D011ED9B74D00ADDBED /* PanelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */; };
+		0DA43D031ED9BA8900ADDBED /* PanelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */; };
+		0DA43D071ED9BA9300ADDBED /* PanelSpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D051ED9BA9300ADDBED /* PanelSpeakerView.swift */; };
+		0DA43D081ED9BA9300ADDBED /* PanelSpeakerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA43D061ED9BA9300ADDBED /* PanelSpeakerView.xib */; };
+		0DA43D0C1ED9C4E700ADDBED /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D0B1ED9C4E700ADDBED /* UIColor+Additions.swift */; };
+		0DA43D101ED9D06800ADDBED /* WorkshopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D0E1ED9D06800ADDBED /* WorkshopTableViewCell.swift */; };
+		0DA43D111ED9D06800ADDBED /* WorkshopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA43D0F1ED9D06800ADDBED /* WorkshopTableViewCell.xib */; };
+		0DA43D171ED9D1C700ADDBED /* HallsDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D161ED9D1C700ADDBED /* HallsDataSources.swift */; };
+		0DA43D1A1ED9D99D00ADDBED /* HallActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA43D191ED9D99D00ADDBED /* HallActivitiesViewController.xib */; };
+		0DA43D1C1ED9D9AA00ADDBED /* HallActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D1B1ED9D9AA00ADDBED /* HallActivitiesViewController.swift */; };
 		0DB8E7091ED4BA04001861D8 /* Array+Gloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB8E7081ED4BA04001861D8 /* Array+Gloss.swift */; };
 		134565DF1F7980FF191C5DD6 /* Pods_CoolestProjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */; };
 		2501C52E1ED6C6DD00969F0B /* BlurbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501C52C1ED6C6DD00969F0B /* BlurbTableViewCell.swift */; };
@@ -135,6 +148,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6D56BC1ED783D00036B51A /* Halls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Halls.swift; path = ../Models/Halls.swift; sourceTree = "<group>"; };
+		0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Halls+Decodable.swift"; path = "../Models/Halls+Decodable.swift"; sourceTree = "<group>"; };
+		0D6D56C31ED796770036B51A /* ScheduleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelTableViewCell.swift; sourceTree = "<group>"; };
+		0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanelTableViewCell.xib; sourceTree = "<group>"; };
+		0DA43D051ED9BA9300ADDBED /* PanelSpeakerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelSpeakerView.swift; sourceTree = "<group>"; };
+		0DA43D061ED9BA9300ADDBED /* PanelSpeakerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanelSpeakerView.xib; sourceTree = "<group>"; };
+		0DA43D0B1ED9C4E700ADDBED /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		0DA43D0E1ED9D06800ADDBED /* WorkshopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopTableViewCell.swift; sourceTree = "<group>"; };
+		0DA43D0F1ED9D06800ADDBED /* WorkshopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkshopTableViewCell.xib; sourceTree = "<group>"; };
+		0DA43D161ED9D1C700ADDBED /* HallsDataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HallsDataSources.swift; sourceTree = "<group>"; };
+		0DA43D191ED9D99D00ADDBED /* HallActivitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HallActivitiesViewController.xib; sourceTree = "<group>"; };
+		0DA43D1B1ED9D9AA00ADDBED /* HallActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HallActivitiesViewController.swift; sourceTree = "<group>"; };
 		0DB8E7081ED4BA04001861D8 /* Array+Gloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Gloss.swift"; sourceTree = "<group>"; };
 		194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB508B9D65AD4A13FA74B39 /* Pods_CoolestProjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolestProjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +322,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D6D56C21ED7966A0036B51A /* ScheduleService */ = {
+			isa = PBXGroup;
+			children = (
+				0D6D56BC1ED783D00036B51A /* Halls.swift */,
+				0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */,
+				0D6D56C31ED796770036B51A /* ScheduleService.swift */,
+			);
+			path = ScheduleService;
+			sourceTree = "<group>";
+		};
+		0D6D56C51ED7A5C10036B51A /* Halls */ = {
+			isa = PBXGroup;
+			children = (
+				0DA43D181ED9D97B00ADDBED /* HallActivitiesViewController */,
+				0DA43D151ED9D1BC00ADDBED /* HallsDataSources */,
+				0DA43D0D1ED9D03700ADDBED /* WorkshopTableViewCell */,
+				0DA43CFF1ED9B73700ADDBED /* PanelTableViewCell */,
+				0DA43D041ED9BA9300ADDBED /* PanelSpeakerView */,
+			);
+			path = Halls;
+			sourceTree = "<group>";
+		};
+		0DA43CFF1ED9B73700ADDBED /* PanelTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */,
+				0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */,
+			);
+			path = PanelTableViewCell;
+			sourceTree = "<group>";
+		};
+		0DA43D041ED9BA9300ADDBED /* PanelSpeakerView */ = {
+			isa = PBXGroup;
+			children = (
+				0DA43D051ED9BA9300ADDBED /* PanelSpeakerView.swift */,
+				0DA43D061ED9BA9300ADDBED /* PanelSpeakerView.xib */,
+			);
+			path = PanelSpeakerView;
+			sourceTree = "<group>";
+		};
+		0DA43D0D1ED9D03700ADDBED /* WorkshopTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0DA43D0E1ED9D06800ADDBED /* WorkshopTableViewCell.swift */,
+				0DA43D0F1ED9D06800ADDBED /* WorkshopTableViewCell.xib */,
+			);
+			path = WorkshopTableViewCell;
+			sourceTree = "<group>";
+		};
+		0DA43D151ED9D1BC00ADDBED /* HallsDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				0DA43D161ED9D1C700ADDBED /* HallsDataSources.swift */,
+			);
+			path = HallsDataSources;
+			sourceTree = "<group>";
+		};
+		0DA43D181ED9D97B00ADDBED /* HallActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0DA43D191ED9D99D00ADDBED /* HallActivitiesViewController.xib */,
+				0DA43D1B1ED9D9AA00ADDBED /* HallActivitiesViewController.swift */,
+			);
+			path = HallActivitiesViewController;
+			sourceTree = "<group>";
+		};
 		0DB8E7071ED4B9BD001861D8 /* GlossExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +420,7 @@
 		25318B141CFD761600691791 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0D6D56C21ED7966A0036B51A /* ScheduleService */,
 				A97B8C2F1EAEAFD900B2A512 /* MessagesService */,
 				25318B191CFD7E8700691791 /* Models */,
 				25318B151CFD792300691791 /* CPAFirebaseService.h */,
@@ -415,6 +508,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				0D6D56C51ED7A5C10036B51A /* Halls */,
 				0DB8E7071ED4B9BD001861D8 /* GlossExtensions */,
 				9B842DA01EC88FC900EF9540 /* Deeplink */,
 				A97B8C3B1EB29B1600B2A512 /* Coolest Projects.entitlements */,
@@ -499,6 +593,7 @@
 		9B0DB3E01D05B70D00F41956 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0DA43D0B1ED9C4E700ADDBED /* UIColor+Additions.swift */,
 				2501C52B1ED6C6DD00969F0B /* BlurbTableViewCell */,
 				25F4BF061ED1DCBC00F45E13 /* ContentCell */,
 				252811901ED1AE7900DFEE6A /* PageHeader */,
@@ -960,11 +1055,13 @@
 				A98010CA1D0524A300AABC90 /* Stages.strings in Resources */,
 				A93BCD2E1D0DFA8000005DB2 /* Coderdojo2015-813.jpg in Resources */,
 				E1C604241D0DD8C800931C38 /* About.strings in Resources */,
+				0DA43D1A1ED9D99D00ADDBED /* HallActivitiesViewController.xib in Resources */,
 				A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */,
 				4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */,
 				A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */,
 				4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */,
 				9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */,
+				0DA43D081ED9BA9300ADDBED /* PanelSpeakerView.xib in Resources */,
 				A98010D41D05259F00AABC90 /* StagesViewController.xib in Resources */,
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
 				25F4BF051ED1DACB00F45E13 /* ContentTableViewCell.xib in Resources */,
@@ -981,6 +1078,7 @@
 				A97B8C411EC7BFF600B2A512 /* Alerts.strings in Resources */,
 				A93BCD361D0E232400005DB2 /* Projects.storyboard in Resources */,
 				4498BFE11D04BCB80085A15C /* SpeakersViewController.xib in Resources */,
+				0DA43D111ED9D06800ADDBED /* WorkshopTableViewCell.xib in Resources */,
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
 				7E426E721ED09946006BA833 /* PageHeaderView.xib in Resources */,
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
@@ -995,6 +1093,7 @@
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
 				A93BCD241D0DF8F800005DB2 /* mail ray stuff.ttf in Resources */,
 				25273B841ED7019800B63BF7 /* Maps.xcassets in Resources */,
+				0DA43D031ED9BA8900ADDBED /* PanelTableViewCell.xib in Resources */,
 				44E46FF01D04CA91003F779A /* SpeakerTableViewCell.xib in Resources */,
 				A93BCD2D1D0DFA8000005DB2 /* Coderdojo2015-569.jpg in Resources */,
 				25273B821ED6FEAE00B63BF7 /* MapViewTableViewCell.xib in Resources */,
@@ -1119,6 +1218,7 @@
 				2501C5311ED6C70E00969F0B /* BlurbViewModel.swift in Sources */,
 				A93BCD3F1D0E24A500005DB2 /* GenericDataSource.swift in Sources */,
 				A93BCD401D0E24A500005DB2 /* NibLoadable.swift in Sources */,
+				0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */,
 				7E426E711ED09946006BA833 /* PageHeaderView.swift in Sources */,
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
 				A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */,
@@ -1131,17 +1231,21 @@
 				A93BCD3E1D0E24A500005DB2 /* Constants.swift in Sources */,
 				A97B8C2C1EAD64A900B2A512 /* DataStore.swift in Sources */,
 				A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */,
+				0D6D56BF1ED785E30036B51A /* Halls+Decodable.swift in Sources */,
 				A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */,
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
 				9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */,
 				E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
+				0DA43D1C1ED9D9AA00ADDBED /* HallActivitiesViewController.swift in Sources */,
 				A97B8C241EAD584200B2A512 /* RegionMessageInteractionStore.swift in Sources */,
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
+				0D6D56BD1ED783D00036B51A /* Halls.swift in Sources */,
 				9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */,
 				A97B8C371EAEB7EF00B2A512 /* Message.swift in Sources */,
 				A93BCD321D0DFE4800005DB2 /* CPAAbout.m in Sources */,
 				A97B8C351EAEB02800B2A512 /* MessagesService.swift in Sources */,
+				0DA43D011ED9B74D00ADDBED /* PanelTableViewCell.swift in Sources */,
 				252811921ED1B2F300DFEE6A /* PagerHeaderComponent.swift in Sources */,
 				44E46FEF1D04CA91003F779A /* SpeakerTableViewCell.swift in Sources */,
 				2501C52E1ED6C6DD00969F0B /* BlurbTableViewCell.swift in Sources */,
@@ -1149,13 +1253,16 @@
 				9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */,
 				0DB8E7091ED4BA04001861D8 /* Array+Gloss.swift in Sources */,
 				E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */,
+				0DA43D0C1ED9C4E700ADDBED /* UIColor+Additions.swift in Sources */,
 				E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,
 				4498BFE31D04BCD60085A15C /* SpeakersViewModel.swift in Sources */,
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				E1C6041D1D0DD7E100931C38 /* ProjectTableViewCell.swift in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
+				0DA43D071ED9BA9300ADDBED /* PanelSpeakerView.swift in Sources */,
 				A93BCD3D1D0E24A500005DB2 /* Configurable.swift in Sources */,
+				0DA43D101ED9D06800ADDBED /* WorkshopTableViewCell.swift in Sources */,
 				4498BFE01D04BCB80085A15C /* SpeakersViewController.swift in Sources */,
 				A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */,
 				A96EA6641EA6C7750021990F /* BeaconNotificationsManager.swift in Sources */,
@@ -1163,6 +1270,7 @@
 				25273B811ED6FEAE00B63BF7 /* MapViewTableViewCell.swift in Sources */,
 				E1C604181D0DD7E100931C38 /* Project.swift in Sources */,
 				E1C6040B1D0DD78800931C38 /* SponsorsViewController.swift in Sources */,
+				0DA43D171ED9D1C700ADDBED /* HallsDataSources.swift in Sources */,
 				4453ED181CF9EA2C0028C8E0 /* main.m in Sources */,
 				AF3EAF4DEB8B5762CBBAAE06 /* CPASummit.m in Sources */,
 				AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */,
