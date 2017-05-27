@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SWRevealViewController
 
 class MenuTableViewController: UITableViewController {
     var itemTitles = [String]()
@@ -59,19 +58,19 @@ class MenuTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if self.previousIndexPath.row != indexPath.row {
-            let identifier = self.itemIdentifiers[indexPath.row]
-            
-            self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: UIColor.purple, indexPath: indexPath, tableView: tableView)
-            self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.white, indexPath: self.previousIndexPath, tableView: tableView)
-            
-            self.previousIndexPath = indexPath
-            
-            self.revealViewController().setFront( self.storyboard?.instantiateViewController(withIdentifier: identifier), animated: true)
-        }
-        
-        self.revealViewController().revealToggle(nil)
-        
+//        if self.previousIndexPath.row != indexPath.row {
+//            let identifier = self.itemIdentifiers[indexPath.row]
+//            
+//            self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: UIColor.purple, indexPath: indexPath, tableView: tableView)
+//            self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.white, indexPath: self.previousIndexPath, tableView: tableView)
+//            
+//            self.previousIndexPath = indexPath
+//            
+//            self.revealViewController().setFront( self.storyboard?.instantiateViewController(withIdentifier: identifier), animated: true)
+//        }
+//        
+//        self.revealViewController().revealToggle(nil)
+
     }
     
     func setTextColorOnCell(_ font: UIFont, color: UIColor, indexPath: IndexPath, tableView: UITableView) {

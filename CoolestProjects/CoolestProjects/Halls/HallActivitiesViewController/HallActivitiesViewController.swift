@@ -16,7 +16,7 @@ class HallActivitiesViewController: UIViewController {
     @IBOutlet weak var activitiesTableView: UITableView!
 
 
-    let scheduleService = ScheduleServiceImpl()
+    var scheduleService: ScheduleService?
     let panelsDataSource = PanelsTableViewDataSource()
     let workshop1DataSource = WorkshopTableViewDataSource()
     let workshop2DataSource = WorkshopTableViewDataSource()
@@ -65,7 +65,8 @@ class HallActivitiesViewController: UIViewController {
     func loadContent() {
         guard let hallId = hallId else { return }
 
-        scheduleService.hall(with: hallId) { [weak self] (hall) in
+        scheduleService = ScheduleServiceImpl()
+        scheduleService?.hall(with: hallId) { [weak self] (hall) in
             if let hall = hall {
                 self?.panelsDataSource.panels = hall.panels
                 self?.workshop1DataSource.workshops = hall.workshops1
