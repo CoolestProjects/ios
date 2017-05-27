@@ -62,7 +62,7 @@ class MenuTableViewController: UITableViewController {
         if self.previousIndexPath.row != indexPath.row {
             let identifier = self.itemIdentifiers[indexPath.row]
             
-            self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: AppColors.yellowColor, indexPath: indexPath, tableView: tableView)
+            self.setTextColorOnCell(AppFonts.menuItemSelectedFont, color: UIColor.purple, indexPath: indexPath, tableView: tableView)
             self.setTextColorOnCell(AppFonts.menuItemFont, color: UIColor.white, indexPath: self.previousIndexPath, tableView: tableView)
             
             self.previousIndexPath = indexPath

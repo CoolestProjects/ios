@@ -46,7 +46,7 @@ class AboutContainerViewController : BaseViewController {
         
         let selectedStateAttributes = [
             NSFontAttributeName: AppFonts.tabBarFontSelected,
-            NSForegroundColorAttributeName: AppColors.blueColor
+            NSForegroundColorAttributeName: AppColors.darkTextColor
         ]
                             
         aboutSectionsSegmentedControl.setTitleTextAttributes(normalStateAttributes, for: .normal)

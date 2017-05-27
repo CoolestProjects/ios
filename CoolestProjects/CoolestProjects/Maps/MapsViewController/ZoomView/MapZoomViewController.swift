@@ -21,7 +21,7 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: AppColors.yellowColor,
+            NSForegroundColorAttributeName: AppColors.darkTextColor,
             NSFontAttributeName : AppFonts.navbarTitleFont
         ]
         
@@ -38,7 +38,7 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate {
         
         let buttonAttributes = [
             NSFontAttributeName: AppFonts.navigationBarButton,
-            NSForegroundColorAttributeName: AppColors.yellowColor
+            NSForegroundColorAttributeName: AppColors.darkTextColor
         ]
         
         navigationItem.rightBarButtonItem?.setTitleTextAttributes(buttonAttributes, for: .normal)

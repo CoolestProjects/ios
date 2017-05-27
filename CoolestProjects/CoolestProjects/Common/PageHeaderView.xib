@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="PageHeaderView" customModule="Coolest_Projects" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pageHeader-bg" translatesAutoresizingMaskIntoConstraints="NO" id="DMB-zV-GHE" userLabel="Background Image">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
+                    <color key="tintColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pageHeader-overlay" translatesAutoresizingMaskIntoConstraints="NO" id="zaA-iS-2Sq" userLabel="Background Overlay">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
+                    <color key="tintColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoCoolestProjects" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-tA-W86" userLabel="Logo">
+                    <rect key="frame" x="87.5" y="91.5" width="200" height="133"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eZ-Uh-SFF" userLabel="Info Label">
+                    <rect key="frame" x="40" y="234.5" width="295" height="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DMB-zV-GHE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5i2-PR-oD9"/>
+                <constraint firstItem="2eZ-Uh-SFF" firstAttribute="centerX" secondItem="2hL-tA-W86" secondAttribute="centerX" id="6Cg-gy-1UY"/>
+                <constraint firstAttribute="bottom" secondItem="2eZ-Uh-SFF" secondAttribute="bottom" constant="20" id="77G-gQ-zaO"/>
+                <constraint firstItem="DMB-zV-GHE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BJp-I0-i9f"/>
+                <constraint firstItem="DMB-zV-GHE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BTY-nk-7EM"/>
+                <constraint firstItem="2eZ-Uh-SFF" firstAttribute="top" secondItem="2hL-tA-W86" secondAttribute="bottom" constant="10" id="O5Y-VY-OBY"/>
+                <constraint firstItem="zaA-iS-2Sq" firstAttribute="leading" secondItem="DMB-zV-GHE" secondAttribute="leading" id="O6r-wj-v9q"/>
+                <constraint firstAttribute="trailing" secondItem="DMB-zV-GHE" secondAttribute="trailing" id="Ou0-d5-Uw2"/>
+                <constraint firstItem="2eZ-Uh-SFF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="RBx-ha-xj0"/>
+                <constraint firstAttribute="trailing" secondItem="DMB-zV-GHE" secondAttribute="trailing" id="XjR-bj-COv"/>
+                <constraint firstAttribute="bottom" secondItem="DMB-zV-GHE" secondAttribute="bottom" id="bH6-it-nIQ"/>
+                <constraint firstItem="zaA-iS-2Sq" firstAttribute="bottom" secondItem="DMB-zV-GHE" secondAttribute="bottom" id="bkh-8f-vdp"/>
+                <constraint firstAttribute="trailing" secondItem="2eZ-Uh-SFF" secondAttribute="trailing" constant="40" id="c3Z-EE-iMo"/>
+                <constraint firstAttribute="bottom" secondItem="DMB-zV-GHE" secondAttribute="bottom" id="hWD-Do-NbQ"/>
+                <constraint firstItem="zaA-iS-2Sq" firstAttribute="trailing" secondItem="DMB-zV-GHE" secondAttribute="trailing" id="jU7-o5-vs1"/>
+                <constraint firstItem="2hL-tA-W86" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lSf-zl-itd"/>
+                <constraint firstItem="zaA-iS-2Sq" firstAttribute="top" secondItem="DMB-zV-GHE" secondAttribute="top" id="owU-xZ-hpW"/>
+                <constraint firstItem="DMB-zV-GHE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tnS-9c-2Y6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="infoLabel" destination="2eZ-Uh-SFF" id="Ny6-Mm-hXO"/>
+                <outlet property="logo" destination="2hL-tA-W86" id="IZn-iS-79n"/>
+            </connections>
+            <point key="canvasLocation" x="61.5" y="72.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logoCoolestProjects" width="200" height="133"/>
+        <image name="pageHeader-bg" width="375" height="255"/>
+        <image name="pageHeader-overlay" width="375" height="255"/>
+    </resources>
+</document>

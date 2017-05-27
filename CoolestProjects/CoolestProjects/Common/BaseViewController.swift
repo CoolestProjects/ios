@@ -38,7 +38,7 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.black
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: AppColors.yellowColor,
+            NSForegroundColorAttributeName: AppColors.darkTextColor,
             NSFontAttributeName : AppFonts.navbarTitleFont
         ]
         

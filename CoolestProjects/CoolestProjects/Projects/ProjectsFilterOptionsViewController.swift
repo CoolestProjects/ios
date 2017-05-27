@@ -20,7 +20,7 @@ class ProjectsFilterOptionsViewController : UITableViewController {
         
         let buttonAttributes = [
             NSFontAttributeName: AppFonts.navigationBarButton,
-            NSForegroundColorAttributeName: AppColors.yellowColor
+            NSForegroundColorAttributeName: AppColors.darkTextColor
         ]
         
         applyButton.setTitleTextAttributes(buttonAttributes, for: .normal)
@@ -29,7 +29,7 @@ class ProjectsFilterOptionsViewController : UITableViewController {
         
         navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName: AppFonts.navbarTitleFont,
-            NSForegroundColorAttributeName: AppColors.yellowColor
+            NSForegroundColorAttributeName: AppColors.darkTextColor
         ]
                 
         tableView.tableFooterView = UIView()

@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import Gloss
 
-let projectsEndpoint: String = "https://register.coolestprojects.org/api/project/summary"
+let projectsEndpoint: String = "https://dublin.coolestprojects.org/api/project/summary/2"
 
 enum ProjectsServiceResult {
     case success([Project])
@@ -43,10 +43,9 @@ class ProjectsService {
                 switch response.result {
                 case .success:
                     
-                    do {
-                        // TODO: duplicated code with store
+                    do {                        
                         let json = try JSONSerialization.jsonObject(with: response.data!) as! [JSON]
-                        let projects = [Project].from(jsonArray: json)!
+                        let projects = [Project].partialFrom(jsonArray: json)
                         completion?(.success(projects))
                     } catch let error {
                         completion?(.failure(error))

@@ -11,43 +11,36 @@ import UIKit
 
 class HomeViewModel {
     
-    let headerTitle: String
-    let headerBody: String
-    
     var tableViewData = [Component]()
     
     init() {
-        headerTitle = NSLocalizedString("header.title", tableName: "Home", comment: "")
-        headerBody = NSLocalizedString("header.body", tableName: "Home", comment: "")
-        
         tableViewData = [
-            SponsorBox(
-                title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
-                textColor: AppColors.darkTextColor,
-                images: [UIImage(named: "sponsor-intel")!, UIImage(named: "sponsor-microsoft")!, UIImage(named: "sponsor-aol")!]
-            ),
-            InfoBox(
+            BlurbBox(title: NSLocalizedString("date.tilte", tableName: "Home", comment: "")),
+            ContentViewModel(
                 title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("event-times.body", tableName: "Home", comment: ""),
-                textColor: AppColors.lightTextColor,
-                overlayColor: AppColors.redColor),
-            InfoBox(
+                icon: UIImage(named: "section_icon_event_times")
+            ),
+            ContentViewModel(
                 title: NSLocalizedString("parking.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("parking.body", tableName: "Home", comment: ""),
-                textColor: AppColors.lightTextColor,
-                overlayColor: AppColors.darkOverlayColor,
-                backgroundImage: UIImage(named: "coderdojo-image01")
+                icon: UIImage(named: "section_icon_parking")
             ),
-            InfoBox(
+            ContentViewModel(
                 title: NSLocalizedString("food.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("food.body", tableName: "Home", comment: ""),
-                textColor: AppColors.darkTextColor,
-                overlayColor: AppColors.yellowColor),
-            InfoBox(
+                icon: UIImage(named: "section_icon_food")
+            ),
+            SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""), diamondImages: [UIImage(named: "sponsor_diamond_intel")!, UIImage(named: "sponsor_diamond_microsoft")!],
+                platinumHigherImages: [UIImage(named: "sponsor_platinum_openet")!,UIImage(named: "sponsor_platinum_rte")!,UIImage(named: "sponsor_platinum_mastercard")!,UIImage(named: "sponsor_platinum_boi")!],
+                platinumLowerImages: [UIImage(named: "sponsor_platinum_symantec")!,UIImage(named: "sponsor_platinum_riot")!,UIImage(named: "sponsor_platinum_tdl")!,UIImage(named: "sponsor_platinum_folens")!],
+                goldImages: [UIImage(named: "sponsor_gold_1_virgin_media")!]
+            ),
+            ContentViewModel(
                 title: NSLocalizedString("opennet.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("opennet.body", tableName: "Home", comment: ""),
-                textColor: AppColors.darkTextColor,
-                overlayColor: AppColors.blueColor),
+                icon: nil
+            )
         ]
     }    
 }

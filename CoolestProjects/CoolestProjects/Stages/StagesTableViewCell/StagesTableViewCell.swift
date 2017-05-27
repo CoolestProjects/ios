@@ -77,7 +77,7 @@ class StagesTableViewCell : UITableViewCell, Configurable {
     }
     
     func talkTime(_ speaker: CPASpeaker) -> NSAttributedString {
-        return attributedText(speaker.summitTimes, font:AppFonts.speakerDescriptionFont, color: AppColors.redColor)
+        return attributedText(speaker.summitTimes, font:AppFonts.speakerDescriptionFont, color: AppColors.darkTextColor)
     }
     
     func attributedText(_ text: String, font: UIFont, color: UIColor) -> NSAttributedString {
