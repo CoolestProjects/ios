@@ -44,6 +44,8 @@
 		9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907811D05ECE300FCE40D /* MapsViewController.swift */; };
 		9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5907831D05ED0200FCE40D /* MapsViewController.xib */; };
 		9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907891D05F07600FCE40D /* MapsModel.swift */; };
+		9B69D8BC1ED95B470027795E /* BluetoothBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69D8BA1ED95B470027795E /* BluetoothBoxTableViewCell.swift */; };
+		9B69D8BD1ED95B470027795E /* BluetoothBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B69D8BB1ED95B470027795E /* BluetoothBoxTableViewCell.xib */; };
 		9B74262B1EA3A46800945794 /* CPARegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262A1EA3A46800945794 /* CPARegion.m */; };
 		9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262D1EA3A4FA00945794 /* CPABeacon.m */; };
 		9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */; };
@@ -186,6 +188,8 @@
 		9B5907811D05ECE300FCE40D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		9B5907831D05ED0200FCE40D /* MapsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsViewController.xib; sourceTree = "<group>"; };
 		9B5907891D05F07600FCE40D /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
+		9B69D8BA1ED95B470027795E /* BluetoothBoxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothBoxTableViewCell.swift; sourceTree = "<group>"; };
+		9B69D8BB1ED95B470027795E /* BluetoothBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothBoxTableViewCell.xib; sourceTree = "<group>"; };
 		9B7426291EA3A46800945794 /* CPARegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPARegion.h; sourceTree = "<group>"; };
 		9B74262A1EA3A46800945794 /* CPARegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPARegion.m; sourceTree = "<group>"; };
 		9B74262C1EA3A4FA00945794 /* CPABeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPABeacon.h; sourceTree = "<group>"; };
@@ -557,6 +561,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		9B69D8B51ED95AC10027795E /* BluetoothBoxTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9B69D8BA1ED95B470027795E /* BluetoothBoxTableViewCell.swift */,
+				9B69D8BB1ED95B470027795E /* BluetoothBoxTableViewCell.xib */,
+			);
+			path = BluetoothBoxTableViewCell;
+			sourceTree = "<group>";
+		};
 		9B842DA01EC88FC900EF9540 /* Deeplink */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +766,7 @@
 		B79C0E7ADCAC346D03AE0A36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B69D8B51ED95AC10027795E /* BluetoothBoxTableViewCell */,
 				A9F8DB651D03713800ECE1F3 /* HomeTableFooterView */,
 				A9F8DB521D03364600ECE1F3 /* SponsorBoxTableViewCell */,
 				A91C07991D00EBD9005271FE /* HomeViewController */,
@@ -967,6 +981,7 @@
 				9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */,
 				A98010D41D05259F00AABC90 /* StagesViewController.xib in Resources */,
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
+				9B69D8BD1ED95B470027795E /* BluetoothBoxTableViewCell.xib in Resources */,
 				25F4BF051ED1DACB00F45E13 /* ContentTableViewCell.xib in Resources */,
 				440C94761D05A6B200846321 /* Speakers.strings in Resources */,
 				A93BCD2C1D0DFA8000005DB2 /* Coderdojo2015-547.jpg in Resources */,
@@ -1027,7 +1042,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A0F944E1308AE0E0EBD32A00 /* [CP] Copy Pods Resources */ = {
@@ -1102,7 +1117,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1140,6 +1155,7 @@
 				25318B221CFD93D800691791 /* CPASponsorTier.m in Sources */,
 				9B0DB3E51D05BADB00F41956 /* MenuTableViewController.swift in Sources */,
 				A97B8C371EAEB7EF00B2A512 /* Message.swift in Sources */,
+				9B69D8BC1ED95B470027795E /* BluetoothBoxTableViewCell.swift in Sources */,
 				A93BCD321D0DFE4800005DB2 /* CPAAbout.m in Sources */,
 				A97B8C351EAEB02800B2A512 /* MessagesService.swift in Sources */,
 				252811921ED1B2F300DFEE6A /* PagerHeaderComponent.swift in Sources */,

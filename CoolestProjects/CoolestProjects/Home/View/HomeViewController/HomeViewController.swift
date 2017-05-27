@@ -22,9 +22,11 @@ class HomeViewController : BaseViewController {
     let tableHeaderView = PageHeaderView.pageHeaderView()!
     let tableFooterView = HomeTableFooterView.footerView()!
     let viewModel = HomeViewModel()
+    let beaconNotificationsManager = BeaconNotificationsManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.setBluetoothEnabled(bluetoothEnabled: isBleEnabledAndMonitoring())
         setupUI()
     }
     
@@ -54,16 +56,24 @@ class HomeViewController : BaseViewController {
         navigationItem.titleView = UIImageView(image: UIImage(named: "coolest-project-logo"))
     }
     
+    func isBleEnabledAndMonitoring() -> Bool {
+        return !beaconNotificationsManager.isBLEPoweredOff && beaconNotificationsManager.isAuthorizedForMonitoring
+    }
+    
     func setupTable() {
         tableView.tableHeaderView = tableHeaderView
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
-        tableView.register(UINib.init(nibName: "SponsorBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "sponsorBox")
         tableView.register(PageHeaderTableViewCell.self, forCellReuseIdentifier: "pageHeader")
-        tableView.register(UINib.init(nibName: "ContentTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "contentCell")
-        tableView.register(UINib.init(nibName: "BlurbTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "blurbCell")
-
+        registerTableViewCellNamed(nibName: "SponsorBoxTableViewCell", reuseIdentifier: "sponsorBox")
+        registerTableViewCellNamed(nibName: "ContentTableViewCell", reuseIdentifier: "contentCell")
+        registerTableViewCellNamed(nibName: "BlurbTableViewCell", reuseIdentifier: "blurbCell")
+        registerTableViewCellNamed(nibName: "BluetoothBoxTableViewCell", reuseIdentifier: "bluetoothBox")
+    }
+    
+    func registerTableViewCellNamed(nibName: String, reuseIdentifier: String) {
+        tableView.register(UINib.init(nibName: nibName, bundle: Bundle.main), forCellReuseIdentifier: reuseIdentifier)
     }
     
     func forceTableViewLayoutPhase() {
@@ -103,6 +113,12 @@ extension HomeViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
         
         // TODO: try to improve using better generics or protocol oriented data sources
+        
+        if (component is BluetoothBox) {
+            let bluetoothBoxCell = cell as! BluetoothBoxTableViewCell
+            let content = component as! BluetoothBox
+            bluetoothBoxCell.configure(with: content)
+        }
         
         if (component is SponsorBox) {
             let sponsorBox = component as! SponsorBox
