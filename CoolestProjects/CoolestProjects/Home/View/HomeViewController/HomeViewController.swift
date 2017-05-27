@@ -22,10 +22,11 @@ class HomeViewController : BaseViewController {
     let tableHeaderView = PageHeaderView.pageHeaderView()!
     let tableFooterView = HomeTableFooterView.footerView()!
     let viewModel = HomeViewModel()
-    let beaconNotificationsManager = BeaconNotificationsManager.sharedInstance
+    var beaconNotificationsManager: BeaconNotificationsManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        beaconNotificationsManager = BeaconNotificationsManager.sharedInstance
         viewModel.setBluetoothEnabled(bluetoothEnabled: isBleEnabledAndMonitoring())
         setupUI()
     }
