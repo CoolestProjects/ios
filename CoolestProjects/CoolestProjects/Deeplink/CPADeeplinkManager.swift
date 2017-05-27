@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SWRevealViewController
 
 class CPADeeplinkManager: NSObject {
 
@@ -16,18 +15,18 @@ class CPADeeplinkManager: NSObject {
     private static let deeplinkKeyPrefix = "deeplink_"
     
     static func handleDeeplink(userInfo: [AnyHashable:Any], rootViewController: UIViewController) {
-
-        guard let userInfo = userInfo as? [String:String],
-            let deeplinkPage = userInfo[deeplinkPageKey],
-            let deeplinkScreenIdentifier = deeplinkMappings[deeplinkPage],
-            let deeplinkNavigationController = rootViewController.storyboard?.instantiateViewController(withIdentifier: deeplinkScreenIdentifier) as? UINavigationController,
-            let topViewController = deeplinkNavigationController.topViewController as? BaseViewController,
-            let revealViewController = rootViewController as? SWRevealViewController else {
-            return
-        }
-
-        topViewController.deeplinkData = getAllDeeplinkKeys(userInfo)
-        revealViewController.setFront(deeplinkNavigationController, animated: true)
+//
+//        guard let userInfo = userInfo as? [String:String],
+//            let deeplinkPage = userInfo[deeplinkPageKey],
+//            let deeplinkScreenIdentifier = deeplinkMappings[deeplinkPage],
+//            let deeplinkNavigationController = rootViewController.storyboard?.instantiateViewController(withIdentifier: deeplinkScreenIdentifier) as? UINavigationController,
+//            let topViewController = deeplinkNavigationController.topViewController as? BaseViewController,
+//            let revealViewController = rootViewController as? SWRevealViewController else {
+//            return
+//        }
+//
+//        topViewController.deeplinkData = getAllDeeplinkKeys(userInfo)
+//        revealViewController.setFront(deeplinkNavigationController, animated: true)
     }
     
     private static func getAllDeeplinkKeys(_ userInfo: [String:String]) -> [String:String] {

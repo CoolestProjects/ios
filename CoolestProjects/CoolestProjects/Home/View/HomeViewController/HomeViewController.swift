@@ -29,38 +29,28 @@ class HomeViewController : BaseViewController {
         viewModel.setBluetoothEnabled(bluetoothEnabled: isBleEnabledAndMonitoring())
         setupUI()
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         forceTableViewLayoutPhase()
         updateTableHeaderFrame()
         updateTableFooterFrame()
-    
     }
     
     func setupUI() {
-        setupBackground()
-        setupNavigationBar()
         setupTable()
-    }
-    
-    func setupBackground() {
-        overlayView.backgroundColor = UIColor.red
-        wrapperView.backgroundColor = UIColor.black
-
-    }
-
-    override func setupNavigationBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationItem.titleView = UIImageView(image: UIImage(named: "coolest-project-logo"))
     }
     
     func isBleEnabledAndMonitoring() -> Bool {
         return !beaconNotificationsManager.isBLEPoweredOff && beaconNotificationsManager.isAuthorizedForMonitoring
     }
-    
-    func setupTable() {
+   
+    func setupTable() {        
         tableView.tableHeaderView = tableHeaderView
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;

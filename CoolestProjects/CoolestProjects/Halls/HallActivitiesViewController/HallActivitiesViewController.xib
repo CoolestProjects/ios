@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HallActivitiesViewController" customModule="Coolest_Projects" customModuleProvider="target">
+            <connections>
+                <outlet property="activitiesSegmentedControl" destination="3i4-0H-eyD" id="sh0-No-pWS"/>
+                <outlet property="activitiesTableView" destination="leY-qv-VMQ" id="zvt-1q-fu2"/>
+                <outlet property="tableMaskView" destination="KXD-jC-DhP" id="OTc-JP-dzA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="YNK-AZ-ahV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcj-oP-Wts">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3i4-0H-eyD">
+                            <rect key="frame" x="15" y="8" width="345" height="29"/>
+                            <segments>
+                                <segment title="Panels"/>
+                                <segment title="Workshop 1"/>
+                                <segment title="Workshop 2"/>
+                            </segments>
+                            <color key="tintColor" red="0.41568627450000001" green="0.43921568630000002" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="3i4-0H-eyD" firstAttribute="centerY" secondItem="Tcj-oP-Wts" secondAttribute="centerY" id="5Xs-r8-pMq"/>
+                        <constraint firstAttribute="height" constant="44" id="AQI-Lv-B8v"/>
+                        <constraint firstItem="3i4-0H-eyD" firstAttribute="leading" secondItem="Tcj-oP-Wts" secondAttribute="leading" constant="15" id="Ups-91-U93"/>
+                        <constraint firstAttribute="trailing" secondItem="3i4-0H-eyD" secondAttribute="trailing" constant="15" id="f3D-SV-5qd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXD-jC-DhP">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="leY-qv-VMQ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="leY-qv-VMQ" secondAttribute="bottom" id="AyM-Fo-ekq"/>
+                        <constraint firstItem="leY-qv-VMQ" firstAttribute="top" secondItem="KXD-jC-DhP" secondAttribute="top" id="HQ5-Mq-VN5"/>
+                        <constraint firstAttribute="trailing" secondItem="leY-qv-VMQ" secondAttribute="trailing" id="bXY-hf-oBf"/>
+                        <constraint firstItem="leY-qv-VMQ" firstAttribute="leading" secondItem="KXD-jC-DhP" secondAttribute="leading" id="ziH-RC-pPg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KXD-jC-DhP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1uC-8B-V0p"/>
+                <constraint firstAttribute="bottom" secondItem="KXD-jC-DhP" secondAttribute="bottom" id="PaF-gi-Zlk"/>
+                <constraint firstItem="KXD-jC-DhP" firstAttribute="top" secondItem="Tcj-oP-Wts" secondAttribute="bottom" id="XKJ-4P-bDB"/>
+                <constraint firstItem="Tcj-oP-Wts" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mTJ-An-f0u"/>
+                <constraint firstItem="Tcj-oP-Wts" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oo3-oC-VaV"/>
+                <constraint firstAttribute="trailing" secondItem="Tcj-oP-Wts" secondAttribute="trailing" id="rcI-cT-JrE"/>
+                <constraint firstAttribute="trailing" secondItem="KXD-jC-DhP" secondAttribute="trailing" id="tID-SJ-jGo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>

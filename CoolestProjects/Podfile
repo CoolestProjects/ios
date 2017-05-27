@@ -10,7 +10,6 @@ target 'CoolestProjects' do
   pod 'Firebase/Messaging'
   
   pod 'JSONModel'
-  pod 'SWRevealViewController' 
   pod 'SDWebImage', '~> 3.7.6'
   
   pod 'Alamofire', '~> 4.3'
