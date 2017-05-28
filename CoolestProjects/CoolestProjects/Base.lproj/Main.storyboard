@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About-->
+        <!--ABOUT-->
         <scene sceneID="hFe-uG-oI5">
             <objects>
                 <viewController id="fNc-NS-uEW" customClass="AboutViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </webView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="About" image="about-icon" id="1bg-6o-cLy"/>
+                    <tabBarItem key="tabBarItem" title="ABOUT" image="about-icon" id="1bg-6o-cLy"/>
                     <connections>
                         <outlet property="webView" destination="Lbr-YY-OKh" id="8a4-16-Krq"/>
                     </connections>
@@ -66,21 +66,21 @@
                     <connections>
                         <segue destination="GLY-xc-6Se" kind="relationship" relationship="viewControllers" id="en2-xc-aj9"/>
                         <segue destination="S7h-5S-R1P" kind="relationship" relationship="viewControllers" id="v60-La-SYx"/>
-                        <segue destination="fNc-NS-uEW" kind="relationship" relationship="viewControllers" id="its-1n-8rC"/>
                         <segue destination="ZUf-Gu-JRi" kind="relationship" relationship="viewControllers" id="MMd-6V-Tc2"/>
                         <segue destination="5bS-RG-Tlz" kind="relationship" relationship="viewControllers" id="Cbn-0U-Ws3"/>
+                        <segue destination="fNc-NS-uEW" kind="relationship" relationship="viewControllers" id="its-1n-8rC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfa-WX-ZKr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4042" y="-143"/>
         </scene>
-        <!--RDS Map-->
+        <!--RDS MAP-->
         <scene sceneID="Bjt-9b-4Vz">
             <objects>
                 <viewController id="S7h-5S-R1P" customClass="MapsViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="RDS Map" image="rds-map-icon" id="7fD-Fq-mEo"/>
+                    <tabBarItem key="tabBarItem" title="RDS MAP" image="rds-map-icon" id="7fD-Fq-mEo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UI4-S7-yOn" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,11 +97,11 @@
             </objects>
             <point key="canvasLocation" x="-2112.8000000000002" y="-1108.6956521739132"/>
         </scene>
-        <!--Home-->
+        <!--HOME-->
         <scene sceneID="2Gq-UP-r8b">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GLY-xc-6Se" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="home-icon" id="iQB-YJ-xRh"/>
+                    <tabBarItem key="tabBarItem" title="HOME" image="home-icon" id="iQB-YJ-xRh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ham-PQ-dJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -116,11 +116,11 @@
             </objects>
             <point key="canvasLocation" x="-3052" y="-1108.6956521739132"/>
         </scene>
-        <!--Halls-->
+        <!--HALLS-->
         <scene sceneID="nfY-gX-zg3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZUf-Gu-JRi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Halls" image="halls-icon" id="iP5-gP-pSL"/>
+                    <tabBarItem key="tabBarItem" title="HALLS" image="halls-icon" id="iP5-gP-pSL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="7bY-Fx-Mxk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -143,7 +143,7 @@
         <scene sceneID="BCz-IZ-WPN">
             <objects>
                 <viewControllerPlaceholder storyboardName="Projects" id="5bS-RG-Tlz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Projects" id="DLP-96-oyr"/>
+                    <tabBarItem key="tabBarItem" title="" id="DLP-96-oyr"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySS-DY-I9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

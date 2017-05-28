@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n04-iv-Mna"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="84a-JB-HdH">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNi-0o-kwH" userLabel="SearchBarContainer">
@@ -42,7 +42,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="279" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p2B-y6-KJo">
-                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="510"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="psi-OE-QJl">
                                     <rect key="frame" x="0.0" y="307" width="375" height="1"/>
@@ -216,12 +216,14 @@
             </objects>
             <point key="canvasLocation" x="4830" y="372"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--PROJECTS-->
         <scene sceneID="wFc-rY-1fM">
             <objects>
                 <navigationController id="2kh-1E-dKK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="PROJECTS" image="projects-icon" id="XTB-5O-BIg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WEA-CM-JNb">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WEA-CM-JNb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -239,7 +241,7 @@
             <objects>
                 <navigationController id="G0H-Ay-IsV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eTw-BV-Z7K">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eTw-BV-Z7K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -253,4 +255,7 @@
             <point key="canvasLocation" x="3910" y="372"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="projects-icon" width="20" height="23"/>
+    </resources>
 </document>

@@ -129,6 +129,11 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 }
 
 - (void)setupAppearance {
+    [self setupNavigationBarAppearance];
+    [self setupTabBarAppearance];
+}
+
+- (void)setupNavigationBarAppearance {
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 
     NSDictionary *navBarTitleTextAttributes = @{
@@ -150,6 +155,11 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
         NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Regular" size:14.0]
     };
     [navBarButtonAppearance setTitleTextAttributes:navBarButtonAttributes forState:UIControlStateNormal];
+}
+
+- (void)setupTabBarAppearance {
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont fontWithName:@"AvenirNext-Regular" size:8.0f]};
+    [[UITabBarItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
 }
 
 @end
