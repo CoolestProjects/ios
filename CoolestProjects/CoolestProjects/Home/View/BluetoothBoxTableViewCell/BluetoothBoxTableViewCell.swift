@@ -15,6 +15,6 @@ class BluetoothBoxTableViewCell: UITableViewCell, Configurable {
     typealias ItemType = BluetoothBox
     
     func configure(with item: ItemType) {
-        self.radarImageView?.image = UIImage.animatedImageNamed("radar-", duration: 0.9)
+        self.radarImageView?.image = UIImage.animatedImageNamed("beaconAnimation-", duration: 1)
     }
 }
