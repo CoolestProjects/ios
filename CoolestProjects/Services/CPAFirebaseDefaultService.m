@@ -7,16 +7,12 @@
 //
 
 #import "CPAFirebaseDefaultService.h"
-#import "CPASpeaker.h"
-#import "CPASummit.h"
 #import "CPASponsorTier.h"
 #import "CPAAbout.h"
 #import "CPARegion.h"
 
 @import Firebase;
 
-NSString *const CPADatabaseChildSpeakers = @"speakers";
-NSString *const CPADatabaseChildSummits = @"summits";
 NSString *const CPADatabaseChildSponsors = @"sponsors";
 NSString *const CPADatabaseChildAbout = @"about";
 NSString *const CPADatabaseChildRegions = @"regions";
@@ -24,8 +20,6 @@ NSString *const CPADatabaseChildRegions = @"regions";
 @interface CPAFirebaseDefaultService ()
 
 @property (nonatomic, strong) FIRDatabaseReference *firebaseDatabase;
-@property (nonatomic, strong) FIRDatabaseReference *speakersRef;
-@property (nonatomic, strong) FIRDatabaseReference *summitsRef;
 @property (nonatomic, strong) FIRDatabaseReference *sponsorsRef;
 @property (nonatomic, strong) FIRDatabaseReference *aboutRef;
 @property (nonatomic, strong) FIRDatabaseReference *regionsRef;
@@ -45,12 +39,6 @@ NSString *const CPADatabaseChildRegions = @"regions";
 - (void)setup {
     self.firebaseDatabase = [[FIRDatabase database] reference];
 
-    self.speakersRef = [self.firebaseDatabase child:CPADatabaseChildSpeakers];
-    [self.speakersRef keepSynced:YES];
-
-    self.summitsRef = [self.firebaseDatabase child:CPADatabaseChildSummits];
-    [self.summitsRef keepSynced:YES];
-
     self.sponsorsRef = [self.firebaseDatabase child:CPADatabaseChildSponsors];
     [self.sponsorsRef keepSynced:YES];
 
@@ -59,46 +47,6 @@ NSString *const CPADatabaseChildRegions = @"regions";
 
     self.regionsRef = [self.firebaseDatabase child:CPADatabaseChildRegions];
     [self.regionsRef keepSynced:YES];
-}
-
-- (void)getSpeakersWithCompletionBlock:(void(^)(NSArray<CPASpeaker *> *speakers, NSError *error))completionBlock {
-    [self getSnapshotFromDataRef:self.speakersRef withTransform:^id(FIRDataSnapshot * _Nonnull snapshot) {
-        NSMutableArray *speakers = [NSMutableArray array];
-        for (NSDictionary *dict in snapshot.value) {
-            NSError *jsonError;
-            CPASpeaker *speaker = [[CPASpeaker alloc] initWithDictionary:dict error:&jsonError];
-            if (speaker) {
-                [speakers addObject:speaker];
-            } else if (jsonError) {
-                NSLog(@"Cannot initialise CPASpeaker object with data: %@. Error: %@", dict, jsonError);
-            }
-        }
-        return speakers;
-    } completionBlock:^(id _Nullable data, NSError * _Nullable error) {
-        if (completionBlock) {
-            completionBlock(data, error);
-        }
-    }];
-}
-
-- (void)getSummitsWithCompletionBlock:(void(^)(NSArray<CPASummit *> *summits, NSError *error))completionBlock {
-    [self getSnapshotFromDataRef:self.summitsRef withTransform:^id(FIRDataSnapshot * _Nonnull snapshot) {
-        NSMutableArray *summits = [NSMutableArray array];
-        for (NSDictionary *dict in snapshot.value) {
-            NSError *jsonError;
-            CPASummit *summit = [[CPASummit alloc] initWithDictionary:dict error:&jsonError];
-            if (summit) {
-                [summits addObject:summit];
-            } else if (jsonError) {
-                NSLog(@"Cannot initialise CPASummit object with data: %@. Error: %@", dict, jsonError);
-            }
-        }
-        return summits;
-    } completionBlock:^(id _Nullable data, NSError * _Nullable error) {
-        if (completionBlock) {
-            completionBlock(data, error);
-        }
-    }];
 }
 
 - (void)getSponsorsWithCompletionBlock:(void(^)(NSArray<CPASponsorTier *> *sponsorTiers, NSError *error))completionBlock {

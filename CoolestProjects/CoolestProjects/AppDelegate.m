@@ -97,8 +97,6 @@
 }
 
 - (void)preloadContent {
-    [self.firebaseService getSpeakersWithCompletionBlock:nil];
-    [self.firebaseService getSummitsWithCompletionBlock:nil];
     [self.firebaseService getSponsorsWithCompletionBlock:nil];
     [self.firebaseService getAboutInfoWithCompletionBlock:nil];
 }

@@ -8,16 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class CPASpeaker;
-@class CPASummit;
 @class CPASponsorTier;
 @class CPAAbout;
 @class CPARegion;
-
-
-typedef void(^CPAServiceGetSpeakersCompletion)(NSArray<CPASpeaker *> * _Nullable speakers, NSError * _Nullable error);
-
-typedef void(^CPAServiceGetSummitsCompletion)(NSArray<CPASummit *> * _Nullable summits, NSError * _Nullable error);
 
 typedef void(^CPAServiceGetSponsorsCompletion)(NSArray<CPASponsorTier *> * _Nullable sponsorTiers, NSError * _Nullable error);
 
@@ -27,16 +20,6 @@ typedef void(^CPAServiceGetBeaconRegionsCompletion)(NSArray<CPARegion *> * _Null
 
 
 @protocol CPAFirebaseService <NSObject>
-
-/**
- *  Gets a list of the speakers.
- */
-- (void)getSpeakersWithCompletionBlock:(nullable CPAServiceGetSpeakersCompletion)completionBlock;
-
-/**
- *  Gets the stages with the list of speakers
- */
-- (void)getSummitsWithCompletionBlock:(nullable CPAServiceGetSummitsCompletion)completionBlock;
 
 /**
  *  Get a list of the tier and sponsors for that tier
