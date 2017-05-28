@@ -41,7 +41,6 @@
 		25F4BF051ED1DACB00F45E13 /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F4BF031ED1DACB00F45E13 /* ContentTableViewCell.xib */; };
 		25F4BF081ED1DE6D00F45E13 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F4BF071ED1DE6D00F45E13 /* ContentViewModel.swift */; };
 		3A02C858EBAB3C0EB32DEEC3 /* Pods_CoolestProjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194788837311B5F45B6240AD /* Pods_CoolestProjects.framework */; };
-		440C94761D05A6B200846321 /* Speakers.strings in Resources */ = {isa = PBXBuildFile; fileRef = 440C94751D05A6B200846321 /* Speakers.strings */; };
 		4453ED181CF9EA2C0028C8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED171CF9EA2C0028C8E0 /* main.m */; };
 		4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4453ED1A1CF9EA2C0028C8E0 /* AppDelegate.m */; };
 		4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4453ED1F1CF9EA2C0028C8E0 /* Main.storyboard */; };
@@ -72,7 +71,6 @@
 		A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C079A1D00EC3F005271FE /* HomeViewController.swift */; };
 		A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91C079B1D00EC3F005271FE /* HomeViewController.xib */; };
 		A91C07A61D0101C5005271FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A91C07A51D0101C5005271FE /* Localizable.strings */; };
-		A93BCD241D0DF8F800005DB2 /* mail ray stuff.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD231D0DF8F800005DB2 /* mail ray stuff.ttf */; };
 		A93BCD2B1D0DFA8000005DB2 /* Coderdojo2015-107.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD261D0DFA8000005DB2 /* Coderdojo2015-107.jpg */; };
 		A93BCD2C1D0DFA8000005DB2 /* Coderdojo2015-547.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD271D0DFA8000005DB2 /* Coderdojo2015-547.jpg */; };
 		A93BCD2D1D0DFA8000005DB2 /* Coderdojo2015-569.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD281D0DFA8000005DB2 /* Coderdojo2015-569.jpg */; };
@@ -96,7 +94,6 @@
 		A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B8C3E1EC7B80A00B2A512 /* BluetoothAlertManager.swift */; };
 		A97B8C411EC7BFF600B2A512 /* Alerts.strings in Resources */ = {isa = PBXBuildFile; fileRef = A97B8C401EC7BFF600B2A512 /* Alerts.strings */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
-		A98010CA1D0524A300AABC90 /* Stages.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98010C91D0524A300AABC90 /* Stages.strings */; };
 		A9D9D37F1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9D37D1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift */; };
 		A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9D37E1ED38C3B001CE6F1 /* BeaconRegionInteraction.swift */; };
 		A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9F8DB4D1D0331C100ECE1F3 /* Home.strings */; };
@@ -180,7 +177,6 @@
 		25F4BF021ED1DACB00F45E13 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentTableViewCell.swift; path = ../ContentTableViewCell.swift; sourceTree = "<group>"; };
 		25F4BF031ED1DACB00F45E13 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContentTableViewCell.xib; path = ../ContentTableViewCell.xib; sourceTree = "<group>"; };
 		25F4BF071ED1DE6D00F45E13 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		440C94751D05A6B200846321 /* Speakers.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Speakers.strings; sourceTree = "<group>"; };
 		4453ED131CF9EA2C0028C8E0 /* Coolest Projects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coolest Projects.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4453ED171CF9EA2C0028C8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4453ED191CF9EA2C0028C8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -218,7 +214,6 @@
 		A91C079A1D00EC3F005271FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeViewController/HomeViewController.swift; sourceTree = "<group>"; };
 		A91C079B1D00EC3F005271FE /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = HomeViewController/HomeViewController.xib; sourceTree = "<group>"; };
 		A91C07A51D0101C5005271FE /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = strings/Localizable.strings; sourceTree = "<group>"; };
-		A93BCD231D0DF8F800005DB2 /* mail ray stuff.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mail ray stuff.ttf"; sourceTree = "<group>"; };
 		A93BCD261D0DFA8000005DB2 /* Coderdojo2015-107.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-107.jpg"; path = "images/about/Coderdojo2015-107.jpg"; sourceTree = "<group>"; };
 		A93BCD271D0DFA8000005DB2 /* Coderdojo2015-547.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-547.jpg"; path = "images/about/Coderdojo2015-547.jpg"; sourceTree = "<group>"; };
 		A93BCD281D0DFA8000005DB2 /* Coderdojo2015-569.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-569.jpg"; path = "images/about/Coderdojo2015-569.jpg"; sourceTree = "<group>"; };
@@ -245,7 +240,6 @@
 		A97B8C3E1EC7B80A00B2A512 /* BluetoothAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothAlertManager.swift; sourceTree = "<group>"; };
 		A97B8C401EC7BFF600B2A512 /* Alerts.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Alerts.strings; sourceTree = "<group>"; };
 		A98010C71D0522E800AABC90 /* Stages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stages.xcassets; path = images/Stages.xcassets; sourceTree = "<group>"; };
-		A98010C91D0524A300AABC90 /* Stages.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Stages.strings; path = strings/Stages.strings; sourceTree = "<group>"; };
 		A9D9D37D1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconRegionInteractionStore.swift; sourceTree = "<group>"; };
 		A9D9D37E1ED38C3B001CE6F1 /* BeaconRegionInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconRegionInteraction.swift; sourceTree = "<group>"; };
 		A9F8DB4D1D0331C100ECE1F3 /* Home.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Home.strings; path = strings/Home.strings; sourceTree = "<group>"; };
@@ -648,8 +642,6 @@
 				E1C604221D0DD8C800931C38 /* About.strings */,
 				A91C07A51D0101C5005271FE /* Localizable.strings */,
 				A9F8DB4D1D0331C100ECE1F3 /* Home.strings */,
-				A98010C91D0524A300AABC90 /* Stages.strings */,
-				440C94751D05A6B200846321 /* Speakers.strings */,
 				E10F18F81D06F8C500AE44AC /* Menu.strings */,
 				E1C604301D0DDD0E00931C38 /* Maps.strings */,
 				A97B8C401EC7BFF600B2A512 /* Alerts.strings */,
@@ -741,7 +733,6 @@
 		B79C002122720CC5142255F4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A93BCD231D0DF8F800005DB2 /* mail ray stuff.ttf */,
 				B79C051731B8A634DF461065 /* OpenSans-Light.ttf */,
 				B79C045F341C1FEA00B4A605 /* OpenSans-Regular.ttf */,
 				B79C05458A577A69B366BA10 /* OpenSans-Semibold.ttf */,
@@ -988,7 +979,6 @@
 				E1C603F71D0C751400931C38 /* MapZoomViewController.xib in Resources */,
 				A93BCD2F1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg in Resources */,
 				44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */,
-				A98010CA1D0524A300AABC90 /* Stages.strings in Resources */,
 				A93BCD2E1D0DFA8000005DB2 /* Coderdojo2015-813.jpg in Resources */,
 				E1C604241D0DD8C800931C38 /* About.strings in Resources */,
 				7E7AAC151EDB27A700B4A36C /* AboutViewController.xib in Resources */,
@@ -1001,7 +991,6 @@
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
 				9B69D8BD1ED95B470027795E /* BluetoothBoxTableViewCell.xib in Resources */,
 				25F4BF051ED1DACB00F45E13 /* ContentTableViewCell.xib in Resources */,
-				440C94761D05A6B200846321 /* Speakers.strings in Resources */,
 				A93BCD2C1D0DFA8000005DB2 /* Coderdojo2015-547.jpg in Resources */,
 				A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */,
 				E1C6041F1D0DD7EF00931C38 /* Sponsors.strings in Resources */,
@@ -1028,7 +1017,6 @@
 				A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */,
 				A9F8DB671D03716D00ECE1F3 /* HomeTableFooterView.xib in Resources */,
 				7E7AAC1A1EDB301600B4A36C /* AboutViewTableViewCell.xib in Resources */,
-				A93BCD241D0DF8F800005DB2 /* mail ray stuff.ttf in Resources */,
 				25273B841ED7019800B63BF7 /* Maps.xcassets in Resources */,
 				0DA43D031ED9BA8900ADDBED /* PanelTableViewCell.xib in Resources */,
 				A93BCD2D1D0DFA8000005DB2 /* Coderdojo2015-569.jpg in Resources */,
