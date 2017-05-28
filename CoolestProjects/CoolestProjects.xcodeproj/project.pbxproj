@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2E55201EDAC82F00262A49 /* HallsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */; };
+		0D2E55221EDAC84200262A49 /* HallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E55211EDAC84200262A49 /* HallsViewController.swift */; };
 		0D6D56BD1ED783D00036B51A /* Halls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BC1ED783D00036B51A /* Halls.swift */; };
 		0D6D56BF1ED785E30036B51A /* Halls+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */; };
 		0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56C31ED796770036B51A /* ScheduleService.swift */; };
@@ -147,6 +149,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HallsViewController.xib; sourceTree = "<group>"; };
+		0D2E55211EDAC84200262A49 /* HallsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HallsViewController.swift; sourceTree = "<group>"; };
 		0D6D56BC1ED783D00036B51A /* Halls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Halls.swift; path = ../Models/Halls.swift; sourceTree = "<group>"; };
 		0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Halls+Decodable.swift"; path = "../Models/Halls+Decodable.swift"; sourceTree = "<group>"; };
 		0D6D56C31ED796770036B51A /* ScheduleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
@@ -320,6 +324,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2E551E1EDAC82000262A49 /* HallsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */,
+				0D2E55211EDAC84200262A49 /* HallsViewController.swift */,
+			);
+			path = HallsViewController;
+			sourceTree = "<group>";
+		};
 		0D6D56C21ED7966A0036B51A /* ScheduleService */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,7 @@
 		0D6D56C51ED7A5C10036B51A /* Halls */ = {
 			isa = PBXGroup;
 			children = (
+				0D2E551E1EDAC82000262A49 /* HallsViewController */,
 				0DA43D181ED9D97B00ADDBED /* HallActivitiesViewController */,
 				0DA43D151ED9D1BC00ADDBED /* HallsDataSources */,
 				0DA43D0D1ED9D03700ADDBED /* WorkshopTableViewCell */,
@@ -1085,6 +1099,7 @@
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
 				E1C604291D0DD94A00931C38 /* Settings.bundle in Resources */,
 				B79C042D35B744F825F85941 /* GoogleService-Info.plist in Resources */,
+				0D2E55201EDAC82F00262A49 /* HallsViewController.xib in Resources */,
 				A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */,
 				E1C604311D0DDD0E00931C38 /* Maps.strings in Resources */,
 				A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */,
@@ -1219,6 +1234,7 @@
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
 				A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */,
 				E1C604191D0DD7E100931C38 /* ProjectsFilterOptionsViewController.swift in Sources */,
+				0D2E55221EDAC84200262A49 /* HallsViewController.swift in Sources */,
 				A9D9D37F1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift in Sources */,
 				E1C6041C1D0DD7E100931C38 /* ProjectsViewController.swift in Sources */,
 				25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */,

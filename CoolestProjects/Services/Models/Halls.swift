@@ -11,6 +11,7 @@ import Foundation
 struct Hall {
     let id: String
     let name: String
+    let description: String
     let panels: [Panel]
     let workshops1: [Workshop]
     let workshops2: [Workshop]

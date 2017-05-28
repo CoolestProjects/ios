@@ -28,16 +28,29 @@
             </objects>
             <point key="canvasLocation" x="-3052" y="885"/>
         </scene>
-        <!--Hall Activities View Controller-->
+        <!--Halls View Controller-->
         <scene sceneID="hb2-yb-t8G">
             <objects>
-                <viewController id="Tww-Iz-n1P" customClass="HallActivitiesViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tww-Iz-n1P" customClass="HallsViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="jau-hS-xZW"/>
+                    <connections>
+                        <segue destination="rs6-Kn-uQy" kind="show" identifier="hallActivities" id="Y2w-CQ-bBG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwZ-Zc-0fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-500" y="284.70764617691157"/>
+        </scene>
+        <!--Hall Activities View Controller-->
+        <scene sceneID="u5q-Pi-d78">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="rs6-Kn-uQy" customClass="HallActivitiesViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOm-IP-85x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TUa-ip-rm9">
@@ -86,10 +99,10 @@
         <!--Home-->
         <scene sceneID="2Gq-UP-r8b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GLY-xc-6Se" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GLY-xc-6Se" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home-icon" id="iQB-YJ-xRh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ham-PQ-dJz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ham-PQ-dJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -105,12 +118,16 @@
         <!--Halls-->
         <scene sceneID="nfY-gX-zg3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZUf-Gu-JRi" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZUf-Gu-JRi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Halls" image="halls-icon" id="iP5-gP-pSL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7bY-Fx-Mxk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="7bY-Fx-Mxk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

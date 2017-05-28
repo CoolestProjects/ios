@@ -9,19 +9,16 @@
 import Foundation
 import FirebaseDatabase
 
+typealias HallsCallback = ([Hall]?) -> Void
+
 typealias HallCallback = (Hall?) -> Void
 
-typealias PanelsCallback = ([Panel]?) -> Void
-
-typealias WorkshopsCallback = ([Workshop]?) -> Void
 
 protocol ScheduleService {
 
+    func halls(callback: @escaping HallsCallback)
+
     func hall(with hallId: String, callback: @escaping HallCallback)
-
-    func allPanels(hallId: String, callback: @escaping PanelsCallback)
-
-    //func allWorkshops(hallId: String, callback: @escaping WorkshopsCallback)
 
 }
 
@@ -74,26 +71,33 @@ class ScheduleServiceImpl {
         })
     }
 
+    fileprivate func findAllHalls(callback: @escaping ([Hall]?) -> Void) {
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            var halls: [Hall]? = nil
+            if let json = snapshot.value as? [[String:Any]] {
+                halls = [Hall].from(jsonArray: json)
+            }
+            callback(halls)
+        }, withCancel: { (error) in
+            print("Error: \(error)")
+            callback(nil)
+        })
+    }
+
 }
 
 extension ScheduleServiceImpl: ScheduleService {
+
+    func halls(callback: @escaping HallsCallback) {
+        findAllHalls() { (halls) in
+            callback(halls)
+        }
+    }
 
     func hall(with hallId: String, callback: @escaping HallCallback) {
         findHall(with: hallId) { (hall) in
             callback(hall)
         }
     }
-
-    func allPanels(hallId: String, callback: @escaping PanelsCallback) {
-        findHall(with: hallId) { (hall) in
-            callback(hall?.panels)
-        }
-    }
-
-//    func allWorkshops(hallId: String, callback: @escaping WorkshopsCallback) {
-//        findHall(hallId: hallId) { (hall) in
-//            callback(hall?.workshops)
-//        }
-//    }
 
 }

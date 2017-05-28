@@ -21,3 +21,11 @@ class ContentViewModel: Component {
     }
     
 }
+
+extension ContentViewModel {
+
+    convenience init(hall: Hall) {
+        self.init(title: hall.name, body: hall.description, icon: UIImage(named: ""))
+    }
+
+}

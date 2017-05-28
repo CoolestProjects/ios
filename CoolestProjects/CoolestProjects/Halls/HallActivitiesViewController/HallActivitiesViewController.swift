@@ -15,13 +15,11 @@ class HallActivitiesViewController: UIViewController {
     @IBOutlet weak var tableMaskView: UIView!
     @IBOutlet weak var activitiesTableView: UITableView!
 
-
-    var scheduleService: ScheduleService?
     let panelsDataSource = PanelsTableViewDataSource()
     let workshop1DataSource = WorkshopTableViewDataSource()
     let workshop2DataSource = WorkshopTableViewDataSource()
 
-    var hallId: String? = "iot"
+    var hall: Hall?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +27,20 @@ class HallActivitiesViewController: UIViewController {
         loadContent()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
     func setupUI() {
         setupEdges()
         setupMask()
+        setupTitle()
         setupTableView()
         setupActivitiesSegmentedControl()
     }
@@ -46,6 +55,10 @@ class HallActivitiesViewController: UIViewController {
         gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.white.cgColor]
         gradient.locations = [0 as NSNumber, 2.5/100.0 as NSNumber, 1 as NSNumber]
         tableMaskView.layer.mask = gradient
+    }
+
+    func setupTitle() {
+        title = hall?.name
     }
 
     func setupTableView() {
@@ -63,17 +76,12 @@ class HallActivitiesViewController: UIViewController {
     }
 
     func loadContent() {
-        guard let hallId = hallId else { return }
+        guard let hall = hall else { return }
 
-        scheduleService = ScheduleServiceImpl()
-        scheduleService?.hall(with: hallId) { [weak self] (hall) in
-            if let hall = hall {
-                self?.panelsDataSource.panels = hall.panels
-                self?.workshop1DataSource.workshops = hall.workshops1
-                self?.workshop2DataSource.workshops = hall.workshops2
-                self?.activitiesTableView.reloadData()
-            }
-        }
+        panelsDataSource.panels = hall.panels
+        workshop1DataSource.workshops = hall.workshops1
+        workshop2DataSource.workshops = hall.workshops2
+        activitiesTableView.reloadData()        
     }
 
     func segmentedControlValueChanged(segment: UISegmentedControl) {

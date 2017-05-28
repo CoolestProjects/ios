@@ -14,6 +14,7 @@ extension Hall: Decodable {
     init?(json: JSON) {
         guard let id: String = "hallId" <~~ json,
             let name: String = "hall" <~~ json,
+            let description: String = "description" <~~ json,
             let panels: [Panel] = "hallPanels" <~~ json,
             let workshops1: [Workshop] = "hallWorkshops1" <~~ json,
             let workshops2: [Workshop] = "hallWorkshops2" <~~ json
@@ -21,6 +22,7 @@ extension Hall: Decodable {
 
         self.id = id
         self.name = name
+        self.description = description
         self.panels = panels
         self.workshops1 = workshops1
         self.workshops2 = workshops2

@@ -33,6 +33,8 @@
 
     [self setupNotifications];
 
+    [self setupAppearance];
+
 //    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(fireTestStageNotification) userInfo:nil repeats:NO];
     return YES;
 }
@@ -124,6 +126,13 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 
 - (void)processNotificationDeeplinkUserInfo:(NSDictionary *)userInfo {
     [CPADeeplinkManager handleDeeplinkWithUserInfo:userInfo rootViewController:self.window.rootViewController];
+}
+
+- (void)setupAppearance {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar-background-color"]
+                                       forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back-indicator-image"]];
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back-indicator-image"]];
 }
 
 @end
