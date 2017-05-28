@@ -16,9 +16,12 @@ class WorkshopTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLabel.textColor = UIColor.battleshipGrey
-        timeLabel.textColor = UIColor.battleshipGrey
-        descriptionLabel.textColor = UIColor.battleshipGrey
+        titleLabel.textColor = UIColor.contentItemTitle
+        titleLabel.font = UIFont.contentItemTitleFont()
+        timeLabel.textColor = UIColor.contentItemTime
+        timeLabel.font = UIFont.contentItemDescriptionFont()
+        descriptionLabel.textColor = UIColor.contentItemDescription
+        descriptionLabel.font = UIFont.contentItemDescriptionFont()
     }
 
 }

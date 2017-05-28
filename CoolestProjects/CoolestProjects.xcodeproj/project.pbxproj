@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D2E55201EDAC82F00262A49 /* HallsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */; };
 		0D2E55221EDAC84200262A49 /* HallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E55211EDAC84200262A49 /* HallsViewController.swift */; };
+		0D2E55261EDB2E2F00262A49 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */; };
 		0D6D56BD1ED783D00036B51A /* Halls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BC1ED783D00036B51A /* Halls.swift */; };
 		0D6D56BF1ED785E30036B51A /* Halls+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */; };
 		0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56C31ED796770036B51A /* ScheduleService.swift */; };
@@ -149,6 +150,7 @@
 /* Begin PBXFileReference section */
 		0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HallsViewController.xib; sourceTree = "<group>"; };
 		0D2E55211EDAC84200262A49 /* HallsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HallsViewController.swift; sourceTree = "<group>"; };
+		0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
 		0D6D56BC1ED783D00036B51A /* Halls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Halls.swift; path = ../Models/Halls.swift; sourceTree = "<group>"; };
 		0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Halls+Decodable.swift"; path = "../Models/Halls+Decodable.swift"; sourceTree = "<group>"; };
 		0D6D56C31ED796770036B51A /* ScheduleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
@@ -610,6 +612,7 @@
 				A93BCD3A1D0E24A500005DB2 /* Constants.swift */,
 				9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */,
 				A97B8C2B1EAD64A900B2A512 /* DataStore.swift */,
+				0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1228,6 +1231,7 @@
 				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
 				2501C5311ED6C70E00969F0B /* BlurbViewModel.swift in Sources */,
 				0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */,
+				0D2E55261EDB2E2F00262A49 /* UIFont+Additions.swift in Sources */,
 				7E426E711ED09946006BA833 /* PageHeaderView.swift in Sources */,
 				A9F8DB631D03623B00ECE1F3 /* SponsorBoxTableViewCell.swift in Sources */,
 				A97B8C3F1EC7B80A00B2A512 /* BluetoothAlertManager.swift in Sources */,

@@ -35,8 +35,10 @@ final class PanelSpeakerView: UIView {
         contentView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         contentView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
 
-        nameLabel.textColor = UIColor.battleshipGrey
-        titleLabel.textColor = UIColor.battleshipGrey
+        nameLabel.textColor = UIColor.contentItemTitle
+        nameLabel.font = UIFont.contentItemTitleFont()
+        titleLabel.textColor = UIColor.contentItemDescription
+        titleLabel.font = UIFont.contentItemDescriptionFont()
 
         photoImageView.layer.cornerRadius = 40
         photoImageView.layer.masksToBounds = true
