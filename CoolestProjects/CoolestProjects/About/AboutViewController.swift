@@ -2,127 +2,114 @@
 //  AboutViewController.swift
 //  CoolestProjects
 //
-//  Created by Valentino Gattuso on 11/06/2016.
+//  Created by Natasha Cole on 06/06/2016.
 //  Copyright © 2016 coderdojo. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import CoreLocation
 
-class AboutViewController : BaseViewController {
+class AboutViewController: BaseViewController {
+    @IBOutlet weak var tableView : UITableView!
     
-    @IBOutlet weak var overlayView: UIView!
-    @IBOutlet weak var wrapperView: UIView!
-    @IBOutlet weak var tableView: UITableView!
-  
-    let tableHeaderView = PageHeaderView.pageHeaderView()!
+    // TODO: Better nib loading
+    let tableHeaderView : PageHeaderView = PageHeaderView.pageHeaderView()!
     let tableFooterView = HomeTableFooterView.footerView()!
-    let viewModel = HomeViewModel()
-  
+
+    let viewModel = AboutViewModel()
+
+    var selectImage : UIImage?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        title = viewModel.title
+        
+        tableView.register(UINib.init(nibName: "AboutViewTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "AboutViewCell")
+
+        tableView.register(UINib.init(nibName: "BlurbTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "blurbCell")
+        
+        
+        tableView.tableFooterView = tableFooterView
+        tableView.tableHeaderView = tableHeaderView
+        tableView.estimatedRowHeight = 300.0;
+
     }
-  
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        BeaconNotificationsManager.sharedInstance.setupBeaconsIfNeeded()
+    }
+    
+    
+    // TODO: better reuse with homeView
     override func viewDidLayoutSubviews() {
-      super.viewDidLayoutSubviews()
-      forceTableViewLayoutPhase()
-      updateTableHeaderFrame()
-      updateTableFooterFrame()
+        super.viewDidLayoutSubviews()
+        forceTableViewLayoutPhase()
+        updateTableHeaderFrame()
+        updateTableFooterFrame()
     }
-  
-    func setupUI() {
-      setupBackground()
-      setupNavigationBar()
-      setupTable()
-    }
-  
-    func setupBackground() {
-      overlayView.backgroundColor = UIColor.red
-      wrapperView.backgroundColor = UIColor.black
-    }
-  
-    override func setupNavigationBar() {
-      navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-      navigationController?.navigationBar.shadowImage = UIImage()
-      navigationItem.titleView = UIImageView(image: UIImage(named: "coolest-project-logo"))
-    }
-  
-    func setupTable() {
-      tableView.tableHeaderView = tableHeaderView
-      tableView.tableFooterView = tableFooterView
-      tableView.estimatedRowHeight = 300.0;
-      tableView.rowHeight = UITableViewAutomaticDimension;
-      tableView.register(UINib.init(nibName: "SponsorBoxTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "sponsorBox")
-      tableView.register(PageHeaderTableViewCell.self, forCellReuseIdentifier: "pageHeader")
-      tableView.register(UINib.init(nibName: "ContentTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "contentCell")
-      tableView.register(UINib.init(nibName: "BlurbTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "blurbBox")
-    }
-  
+    
     func forceTableViewLayoutPhase() {
-      tableView.setNeedsLayout()
-      tableView.layoutIfNeeded()
+        tableView.setNeedsLayout()
+        tableView.layoutIfNeeded()
     }
-  
-    func updateTableHeaderFrame() {
-      let minTableHeaderViewHeight = calculateMinTableHeaderViewHeight()
-      let availableSpace = tableView.bounds.height - SponsorBoxHeight
-      tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: max(minTableHeaderViewHeight, availableSpace))
-      tableView.tableHeaderView = tableHeaderView
-    }
-  
+    
     func updateTableFooterFrame() {
-      tableFooterView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
-      tableView.tableFooterView = tableFooterView
+        tableFooterView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
+        tableView.tableFooterView = tableFooterView
     }
-  
+    
+    func updateTableHeaderFrame() {
+        let minTableHeaderViewHeight = calculateMinTableHeaderViewHeight()
+        let availableSpace = tableView.bounds.height - tableView.estimatedRowHeight
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: max(minTableHeaderViewHeight, availableSpace))
+        tableView.tableHeaderView = tableHeaderView
+    }
+    
     func calculateMinTableHeaderViewHeight() -> CGFloat {
-      tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 1600.0)
-      tableHeaderView.setNeedsLayout()
-      tableHeaderView.layoutIfNeeded()
-      return tableHeaderView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
+        tableHeaderView.setNeedsLayout()
+        tableHeaderView.layoutIfNeeded()
+        return tableHeaderView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
     }
-  
-    func loadAboutContent() {
-        if let aboutURL = Bundle.main.url(forResource: "about", withExtension: "html") {
-            let request = URLRequest(url: aboutURL)
-           // webView.loadRequest(request)
-        }
-    }
-  }
-extension AboutViewController : UITableViewDataSource {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel.tableViewData.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let component = viewModel.tableViewData[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
-    
-    // TODO: try to improve using better generics or protocol oriented data sources
-    
-    if (component is SponsorBox) {
-      let sponsorBox = component as! SponsorBox
-      let sponsorBoxCell = cell as! SponsorBoxTableViewCell
-      sponsorBoxCell.configure(with: sponsorBox)
-    }
-    
-    if (component is ContentViewModel) {
-      let content = component as! ContentViewModel
-      let contentCell = cell as! ContentTableViewCell
-      contentCell.configure(with: content);
-    }
-    
-    if (component is BlurbBox) {
-      let blurbBox = component as! BlurbBox
-      let contentCell = cell as! BlurbTableViewCell
-      contentCell.configure(with: blurbBox);
-    }
-    
-    return cell
-  }
-  
 }
 
+extension AboutViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let component = viewModel.tableViewData[indexPath.row]
+
+        if (component is AboutModel) {
+            let cell = tableView.cellForRow(at: indexPath) as! AboutViewTableViewCell
+           // self.selectImage = cell.imageView.image
+        }
+    
+    }
+}
+
+extension AboutViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.tableViewData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let component = viewModel.tableViewData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
+      
+        if (component is AboutModel) {
+            let content = component as! AboutModel
+            let contentCell = cell as! AboutViewTableViewCell
+            contentCell.configure(with: content);
+        }
+        
+        if (component is BlurbBox) {
+            let blurbBox = component as! BlurbBox
+            let contentCell = cell as! BlurbTableViewCell
+            contentCell.configure(with: blurbBox);
+        }
+        
+        return cell
+    }
+    
+}
