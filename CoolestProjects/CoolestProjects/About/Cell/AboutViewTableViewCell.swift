@@ -20,6 +20,7 @@ class AboutViewTableViewCell: UITableViewCell, Configurable {
       self.activityIndicatorView.startAnimating()
       let request = URLRequest(url: item.aboutContentURL)
       webView.loadRequest(request)
+      self.activityIndicatorView.stopAnimating()
       self.titleLabel?.text = item.title
     }
   

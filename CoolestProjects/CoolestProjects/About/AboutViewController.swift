@@ -73,20 +73,6 @@ class AboutViewController: BaseViewController {
     }
 }
 
-extension AboutViewController : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let component = viewModel.tableViewData[indexPath.row]
-
-        if (component is AboutModel) {
-            let cell = tableView.cellForRow(at: indexPath) as! AboutViewTableViewCell
-           // self.selectImage = cell.imageView.image
-        }
-    
-    }
-}
-
 extension AboutViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
