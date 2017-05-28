@@ -17,6 +17,7 @@ class AboutViewTableViewCell: UITableViewCell, Configurable {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     func configure(with item: AboutModel) {
+      //TO DO: create a return block
       self.activityIndicatorView.startAnimating()
       let request = URLRequest(url: item.aboutContentURL)
       webView.loadRequest(request)

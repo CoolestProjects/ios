@@ -15,10 +15,6 @@
                 <viewController id="fNc-NS-uEW" customClass="AboutViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="ABOUT" image="about-icon" id="1bg-6o-cLy"/>
-                    <connections>
-                        <outlet property="webView" destination="Lbr-YY-OKh" id="8a4-16-Krq"/>
-                    </connections>
-                    <tabBarItem key="tabBarItem" title="About" image="about-icon" id="1bg-6o-cLy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HpV-Gu-aYP" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +95,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GLY-xc-6Se" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HOME" image="home-icon" id="iQB-YJ-xRh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ham-PQ-dJz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ham-PQ-dJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -118,7 +114,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZUf-Gu-JRi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HALLS" image="halls-icon" id="iP5-gP-pSL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="7bY-Fx-Mxk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7bY-Fx-Mxk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
