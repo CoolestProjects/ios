@@ -17,17 +17,10 @@ class AboutViewTableViewCell: UITableViewCell, Configurable {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     func configure(with item: AboutModel) {
-        
-        self.activityIndicatorView.startAnimating()
-        
-//        self.mapImageView.sd_setImage(with: URL(string: item.mapUrl)) { [weak self] (image, error, cache, url) in
-//            self?.activityIndicatorView.stopAnimating()
-//            self?.setNeedsLayout()
-//            self?.layoutIfNeeded()
-//        }
-      
-        self.titleLabel?.text = item.title
-        
+      self.activityIndicatorView.startAnimating()
+      let request = URLRequest(url: item.aboutContentURL)
+      webView.loadRequest(request)
+      self.titleLabel?.text = item.title
     }
-    
+  
 }

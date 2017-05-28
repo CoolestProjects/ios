@@ -12,9 +12,9 @@ struct AboutModel: Component {
   
     var componentIdentifier: String = "AboutViewCell"
     var title: String
-    var aboutContentURL: String
+    var aboutContentURL: URL
   
-    init(title: String, aboutContentURL: String) {
+    init(title: String, aboutContentURL: URL) {
       self.title = title
       self.aboutContentURL = aboutContentURL
     }
@@ -33,12 +33,9 @@ class AboutViewModel {
         ]
     }
 
-    func loadAboutContent() -> String {
-      if let aboutURL = Bundle.main.url(forResource: "about", withExtension: "html") {
-      let path:String = aboutURL.path
-        return path
-      }
-      //TO DO: Add default.
-      return ""
+    func loadAboutContent() -> URL {
+      let aboutURL = Bundle.main.url(forResource: "about", withExtension: "html")
+      return aboutURL!
     }
+  
 }
