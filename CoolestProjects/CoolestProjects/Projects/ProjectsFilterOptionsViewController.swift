@@ -17,21 +17,7 @@ class ProjectsFilterOptionsViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let buttonAttributes = [
-            NSFontAttributeName: AppFonts.navigationBarButton,
-            NSForegroundColorAttributeName: AppColors.darkTextColor
-        ]
-        
-        applyButton.setTitleTextAttributes(buttonAttributes, for: .normal)
-        
         title = NSLocalizedString("title", tableName: "Projects", comment: "")
-        
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: AppFonts.navbarTitleFont,
-            NSForegroundColorAttributeName: AppColors.darkTextColor
-        ]
-                
         tableView.tableFooterView = UIView()
     }
     

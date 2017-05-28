@@ -97,9 +97,7 @@
 		A97B8C411EC7BFF600B2A512 /* Alerts.strings in Resources */ = {isa = PBXBuildFile; fileRef = A97B8C401EC7BFF600B2A512 /* Alerts.strings */; };
 		A98010C81D0522E800AABC90 /* Stages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98010C71D0522E800AABC90 /* Stages.xcassets */; };
 		A98010CA1D0524A300AABC90 /* Stages.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98010C91D0524A300AABC90 /* Stages.strings */; };
-		A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010D11D05259F00AABC90 /* StagesViewController.swift */; };
 		A98010D41D05259F00AABC90 /* StagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98010D21D05259F00AABC90 /* StagesViewController.xib */; };
-		A98010D71D0525A800AABC90 /* StagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98010D51D0525A800AABC90 /* StagesTableViewCell.swift */; };
 		A98010D81D0525A800AABC90 /* StagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A98010D61D0525A800AABC90 /* StagesTableViewCell.xib */; };
 		A9D9D37F1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9D37D1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift */; };
 		A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9D37E1ED38C3B001CE6F1 /* BeaconRegionInteraction.swift */; };
@@ -1238,7 +1236,6 @@
 				A9D9D37F1ED38C3B001CE6F1 /* BeaconRegionInteractionStore.swift in Sources */,
 				E1C6041C1D0DD7E100931C38 /* ProjectsViewController.swift in Sources */,
 				25318B1F1CFD7EBC00691791 /* CPASpeaker.m in Sources */,
-				A98010D71D0525A800AABC90 /* StagesTableViewCell.swift in Sources */,
 				E1C6040F1D0DD78800931C38 /* AboutContainerViewController.swift in Sources */,
 				A93BCD3E1D0E24A500005DB2 /* Constants.swift in Sources */,
 				A97B8C2C1EAD64A900B2A512 /* DataStore.swift in Sources */,
@@ -1290,7 +1287,6 @@
 				25F4BF041ED1DACB00F45E13 /* ContentTableViewCell.swift in Sources */,
 				9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */,
 				A93BCD341D0E0E9200005DB2 /* DisclaimerViewController.swift in Sources */,
-				A98010D31D05259F00AABC90 /* StagesViewController.swift in Sources */,
 				A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */,
 				E1C604101D0DD78800931C38 /* AboutViewController.swift in Sources */,
 				E1C603F51D0C74F600931C38 /* MapZoomViewController.swift in Sources */,

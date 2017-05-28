@@ -16,17 +16,6 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.barTintColor = UIColor.black
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: AppColors.darkTextColor,
-            NSFontAttributeName : AppFonts.navbarTitleFont
-        ]
-        
-
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,13 +24,6 @@ class MapZoomViewController: UIViewController, UIScrollViewDelegate {
         self.title = self.navigationTitle
         
         self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(MapZoomViewController.donePressed)), animated: false)
-        
-        let buttonAttributes = [
-            NSFontAttributeName: AppFonts.navigationBarButton,
-            NSForegroundColorAttributeName: AppColors.darkTextColor
-        ]
-        
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes(buttonAttributes, for: .normal)
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

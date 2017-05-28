@@ -129,10 +129,27 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 }
 
 - (void)setupAppearance {
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
+    NSDictionary *navBarTitleTextAttributes = @{
+        NSForegroundColorAttributeName: [UIColor whiteColor],
+        NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Regular" size:18.0]
+    };
+    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
+
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar-background-color"]
                                        forBarMetrics:UIBarMetricsDefault];
+
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back-indicator-image"]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back-indicator-image"]];
+
+    UIBarButtonItem *navBarButtonAppearance = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]];
+
+    NSDictionary *navBarButtonAttributes = @{
+        NSForegroundColorAttributeName: [UIColor whiteColor],
+        NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Regular" size:14.0]
+    };
+    [navBarButtonAppearance setTitleTextAttributes:navBarButtonAttributes forState:UIControlStateNormal];
 }
 
 @end
