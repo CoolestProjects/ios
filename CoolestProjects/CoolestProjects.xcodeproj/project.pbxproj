@@ -55,6 +55,9 @@
 		7E7AAC1D1EDB315F00B4A36C /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AAC1C1EDB315F00B4A36C /* AboutModel.swift */; };
 		7E7AAC1F1EDB370500B4A36C /* About.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7AAC1E1EDB370500B4A36C /* About.xcassets */; };
 		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
+		9B1064241EDCA6F500395CAA /* MyGemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1064221EDCA6F500395CAA /* MyGemsViewController.swift */; };
+		9B1064271EDCA71600395CAA /* MyGemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1064261EDCA71600395CAA /* MyGemsViewModel.swift */; };
+		9B1064291EDCBE7B00395CAA /* MyGemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064281EDCBE7B00395CAA /* MyGemsViewController.xib */; };
 		9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907811D05ECE300FCE40D /* MapsViewController.swift */; };
 		9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5907831D05ED0200FCE40D /* MapsViewController.xib */; };
 		9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907891D05F07600FCE40D /* MapsModel.swift */; };
@@ -199,6 +202,9 @@
 		7E7AAC1C1EDB315F00B4A36C /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
 		7E7AAC1E1EDB370500B4A36C /* About.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = About.xcassets; sourceTree = "<group>"; };
 		9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9B1064221EDCA6F500395CAA /* MyGemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGemsViewController.swift; sourceTree = "<group>"; };
+		9B1064261EDCA71600395CAA /* MyGemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGemsViewModel.swift; sourceTree = "<group>"; };
+		9B1064281EDCBE7B00395CAA /* MyGemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyGemsViewController.xib; sourceTree = "<group>"; };
 		9B5907811D05ECE300FCE40D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		9B5907831D05ED0200FCE40D /* MapsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsViewController.xib; sourceTree = "<group>"; };
 		9B5907891D05F07600FCE40D /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
@@ -483,6 +489,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				9B10641B1EDCA21B00395CAA /* Gems */,
 				0D6D56C51ED7A5C10036B51A /* Halls */,
 				0DB8E7071ED4B9BD001861D8 /* GlossExtensions */,
 				9B842DA01EC88FC900EF9540 /* Deeplink */,
@@ -559,6 +566,32 @@
 				0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9B10641B1EDCA21B00395CAA /* Gems */ = {
+			isa = PBXGroup;
+			children = (
+				9B1064201EDCA6F500395CAA /* ViewModel */,
+				9B1064211EDCA6F500395CAA /* View */,
+			);
+			path = Gems;
+			sourceTree = "<group>";
+		};
+		9B1064201EDCA6F500395CAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9B1064261EDCA71600395CAA /* MyGemsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B1064211EDCA6F500395CAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B1064221EDCA6F500395CAA /* MyGemsViewController.swift */,
+				9B1064281EDCBE7B00395CAA /* MyGemsViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9B59077F1D05ECB000FCE40D /* Maps */ = {
@@ -986,6 +1019,7 @@
 				4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */,
 				A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */,
 				4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */,
+				9B1064291EDCBE7B00395CAA /* MyGemsViewController.xib in Resources */,
 				9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */,
 				0DA43D081ED9BA9300ADDBED /* PanelSpeakerView.xib in Resources */,
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
@@ -1157,6 +1191,7 @@
 				A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */,
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
 				9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */,
+				9B1064241EDCA6F500395CAA /* MyGemsViewController.swift in Sources */,
 				E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
 				0DA43D1C1ED9D9AA00ADDBED /* HallActivitiesViewController.swift in Sources */,
@@ -1170,6 +1205,7 @@
 				A97B8C351EAEB02800B2A512 /* MessagesService.swift in Sources */,
 				0DA43D011ED9B74D00ADDBED /* PanelTableViewCell.swift in Sources */,
 				252811921ED1B2F300DFEE6A /* PagerHeaderComponent.swift in Sources */,
+				9B1064271EDCA71600395CAA /* MyGemsViewModel.swift in Sources */,
 				2501C52E1ED6C6DD00969F0B /* BlurbTableViewCell.swift in Sources */,
 				252811941ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift in Sources */,
 				9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */,

@@ -25,13 +25,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="314" height="99.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="MY GEMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0n-Fc-VFZ">
-                                <rect key="frame" x="22" y="41" width="244" height="16.5"/>
+                                <rect key="frame" x="22" y="41" width="235" height="16.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
                                 <color key="textColor" red="0.41465061902999878" green="0.43743568658828735" blue="0.53286433219909668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radar-0" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-sh-Fgc">
-                                <rect key="frame" x="276" y="20" width="16" height="57.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beaconAnimation-0" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-sh-Fgc">
+                                <rect key="frame" x="267" y="20" width="25" height="57.5"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -63,7 +63,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="beaconAnimation-0" width="25" height="15"/>
         <image name="content-cell-bg" width="25" height="25"/>
-        <image name="radar-0" width="16" height="16"/>
     </resources>
 </document>

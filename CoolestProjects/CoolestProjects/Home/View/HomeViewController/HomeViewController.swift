@@ -55,7 +55,7 @@ class HomeViewController : BaseViewController {
         tableView.tableHeaderView = tableHeaderView
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 300.0;
-        tableView.rowHeight = UITableViewAutomaticDimension;
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(PageHeaderTableViewCell.self, forCellReuseIdentifier: "pageHeader")
         registerTableViewCellNamed(nibName: "SponsorBoxTableViewCell", reuseIdentifier: "sponsorBox")
         registerTableViewCellNamed(nibName: "ContentTableViewCell", reuseIdentifier: "contentCell")
@@ -102,6 +102,7 @@ extension HomeViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let component = viewModel.tableViewData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
+        cell.selectionStyle = .none
         
         // TODO: try to improve using better generics or protocol oriented data sources
         
@@ -132,5 +133,19 @@ extension HomeViewController : UITableViewDataSource {
         return cell
     }
     
+}
+
+extension HomeViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let component = viewModel.tableViewData[indexPath.row]
+        
+        if (component is BluetoothBox) {
+            self.performSegue(withIdentifier: "showMyGems", sender: nil)
+        }
+        
+        if (component is SponsorBox) {
+            self.performSegue(withIdentifier: "showSponsors", sender: nil)
+        }
+    }
 }
 
