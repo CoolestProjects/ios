@@ -13,6 +13,7 @@
 		0D6D56BD1ED783D00036B51A /* Halls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BC1ED783D00036B51A /* Halls.swift */; };
 		0D6D56BF1ED785E30036B51A /* Halls+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */; };
 		0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56C31ED796770036B51A /* ScheduleService.swift */; };
+		0DA2D0141EDCC438007F7E51 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */; };
 		0DA43D011ED9B74D00ADDBED /* PanelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */; };
 		0DA43D031ED9BA8900ADDBED /* PanelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */; };
 		0DA43D071ED9BA9300ADDBED /* PanelSpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D051ED9BA9300ADDBED /* PanelSpeakerView.swift */; };
@@ -144,6 +145,7 @@
 		0D6D56BC1ED783D00036B51A /* Halls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Halls.swift; path = ../Models/Halls.swift; sourceTree = "<group>"; };
 		0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Halls+Decodable.swift"; path = "../Models/Halls+Decodable.swift"; sourceTree = "<group>"; };
 		0D6D56C31ED796770036B51A /* ScheduleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelTableViewCell.swift; sourceTree = "<group>"; };
 		0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanelTableViewCell.xib; sourceTree = "<group>"; };
 		0DA43D051ED9BA9300ADDBED /* PanelSpeakerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelSpeakerView.swift; sourceTree = "<group>"; };
@@ -332,6 +334,14 @@
 			path = Halls;
 			sourceTree = "<group>";
 		};
+		0DA2D0121EDCC40C007F7E51 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		0DA43CFF1ED9B73700ADDBED /* PanelTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +493,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				0DA2D0121EDCC40C007F7E51 /* TabBarController */,
 				0D6D56C51ED7A5C10036B51A /* Halls */,
 				0DB8E7071ED4B9BD001861D8 /* GlossExtensions */,
 				9B842DA01EC88FC900EF9540 /* Deeplink */,
@@ -1137,6 +1148,7 @@
 			files = (
 				E1C6040D1D0DD78800931C38 /* SponsorTrierViewModel.swift in Sources */,
 				E1C6041B1D0DD7E100931C38 /* ProjectsStore.swift in Sources */,
+				0DA2D0141EDCC438007F7E51 /* MainTabBarController.swift in Sources */,
 				A97B8C221EAD55A500B2A512 /* RegionMessageInteraction.swift in Sources */,
 				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
 				7E7AAC191EDB301600B4A36C /* AboutViewTableViewCell.swift in Sources */,
