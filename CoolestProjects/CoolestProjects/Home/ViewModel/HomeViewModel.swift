@@ -48,24 +48,30 @@ class HomeViewModel {
             ),
             SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                        diamondImages: [
+                        UIImage(),
                         UIImage(named: "sponsor_diamond_intel")!,
-                        UIImage(named: "sponsor_diamond_microsoft")!],
+                        UIImage(named: "sponsor_diamond_microsoft")!,
+                        UIImage()],
                        platinumHigherImages: [
                         UIImage(named: "sponsor_platinum_openet")!,
-                        UIImage(named: "sponsor_platinum_riot-games")!,
+                        UIImage(named: "sponsor_platinum_rte")!,
                         UIImage(named: "sponsor_platinum_mastercard")!,
                         UIImage(named: "sponsor_platinum_boi")!],
                        platinumLowerImages: [
-                        UIImage(named: "sponsor_platinum_rte")!,
-                        UIImage(named: "sponsor_platinum_folens")!,
                         UIImage(named: "sponsor_platinum_symantec")!,
-                        UIImage(named: "sponsor_platinum_tdl")!],
+                        UIImage(named: "sponsor_platinum_riot-games")!,
+                        UIImage(named: "sponsor_platinum_tdl")!,
+                        UIImage(named: "sponsor_platinum_folens")!],
                        goldImages: [
                         UIImage(named: "sponsor_gold_1_virgin_media")!,
-                        UIImage(named: "sponsor_gold_workday")!,
-                        UIImage(named: "sponsor_gold_accenture")!,
+                        //TODO: add dublin city council logo when available
+                        UIImage(named: "sponsor_gold_failte-ireland")!,
+                        UIImage(named: "sponsor_gold_accenture")!],
+                       goldLowerImages: [
                         UIImage(named: "sponsor_gold_lit-reverse")!,
-                        UIImage(named: "sponsor_gold_zalando")!]
+                        UIImage(named: "sponsor_gold_workday")!,
+                        UIImage(named: "sponsor_gold_zalando")!,
+                        UIImage(named: "sponsor_gold_cf")!,]
             ),
             ContentViewModel(
                 title: NSLocalizedString("opennet.title", tableName: "Home", comment: ""),

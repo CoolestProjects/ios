@@ -17,6 +17,7 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
     @IBOutlet weak var platinumStackView: UIStackView!
     @IBOutlet weak var platinumLowerStackView: UIStackView!
     @IBOutlet weak var goldStackView: UIStackView!
+    @IBOutlet weak var goldLowerStackView: UIStackView!
 
     func configure(with item: ItemType) {
         title.text = item.title
@@ -33,6 +34,9 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
         for image in item.goldImages {
             goldStackView.addArrangedSubview(UIImageView(image: image))
         }
+        for image in item.goldLowerImages {
+            goldLowerStackView.addArrangedSubview(UIImageView(image: image))
+        }
     }
     
     override func prepareForReuse() {
@@ -41,11 +45,12 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
         self.removeViewsFrom(stackView: platinumStackView)
         self.removeViewsFrom(stackView: platinumLowerStackView)
         self.removeViewsFrom(stackView: goldStackView)
-
+        self.removeViewsFrom(stackView: goldLowerStackView)
     }
     
     func removeViewsFrom( stackView: UIStackView) {
         for view in stackView.arrangedSubviews {
+            stackView.removeArrangedSubview(view)
             view.removeFromSuperview()
         }
     }
