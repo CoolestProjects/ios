@@ -15,7 +15,7 @@ class MyGemsViewController: UIViewController {
     
     let colorChoice = [UIColor.red, UIColor.blue, UIColor.green, UIColor.brown, UIColor.yellow]
     
-    var viewModel : MyGemsViewModel = MyGemsViewModel(beaconItems : [])
+    var viewModel = MyGemsViewModel(beaconItems : [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
