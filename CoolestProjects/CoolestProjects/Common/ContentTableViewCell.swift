@@ -19,7 +19,17 @@ class ContentTableViewCell: UITableViewCell, Configurable {
     func configure(with item: ContentViewModel) {
         self.iconImage.image = item.icon
         self.title.text = item.title
-        self.body.text = item.body
+
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 2.4
+
+        let attrString = NSMutableAttributedString(string: item.body)
+        attrString.addAttributes(
+            [NSParagraphStyleAttributeName: paragraphStyle,
+             NSForegroundColorAttributeName: UIColor.contentItemTitle],
+            range: NSMakeRange(0, attrString.length))
+
+        self.body.attributedText = attrString
     }
     
     override func prepareForReuse() {
