@@ -1,5 +1,5 @@
 //
-//  MyGemsViewModel.swift
+//  GemsViewModel.swift
 //  CoolestProjects
 //
 //  Created by Rich on 29/05/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyGemsViewModel {
+class GemsViewModel {
     
     var items:[GemItem] = [GemItem]()
     

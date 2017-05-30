@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="-2112.8000000000002" y="-1108.6956521739132"/>
         </scene>
-        <!--My Gems View Controller-->
+        <!--Gems View Controller-->
         <scene sceneID="fvg-Hd-UwY">
             <objects>
-                <viewController id="bon-C7-6Kr" customClass="MyGemsViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bon-C7-6Kr" customClass="GemsViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MeX-cw-TqJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xR5-PL-XaP" userLabel="First Responder" sceneMemberID="firstResponder"/>

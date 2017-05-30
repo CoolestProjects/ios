@@ -1,5 +1,5 @@
 //
-//  MyGemsViewController.swift
+//  GemsViewController.swift
 //  CoolestProjects
 //
 //  Created by Rich on 29/05/2017.
@@ -8,26 +8,22 @@
 
 import UIKit
 
-class MyGemsViewController: UIViewController {
+class GemsViewController: UIViewController {
     
     @IBOutlet weak var tableView : UITableView?
     @IBOutlet weak var noGemsLabel : UILabel?
     
     let colorChoice = [UIColor.red, UIColor.blue, UIColor.green, UIColor.brown, UIColor.yellow]
     
-    var viewModel = MyGemsViewModel(beaconItems : [])
+    var viewModel = GemsViewModel(beaconItems : [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setUpViewModel()
         self.setUpNavigationBar()
         self.edgesForExtendedLayout = []
         
-        let regionMessageInteractionStore = RegionMessageInteractionStoreImpl.init()
-        
-        viewModel = MyGemsViewModel(beaconItems: regionMessageInteractionStore.allInteractions())
-        
-        registerTableViewCellNamed(nibName: "GemTableViewCell", reuseIdentifier: "gemTableViewCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +42,16 @@ class MyGemsViewController: UIViewController {
         setUpNoGemsLabel()
     }
     
+    func setUpTableView() {
+        registerTableViewCellNamed(nibName: "GemTableViewCell", reuseIdentifier: "gemTableViewCell")
+    }
+    
+    func setUpViewModel() {
+        let regionMessageInteractionStore = RegionMessageInteractionStoreImpl.init()
+        
+        viewModel = GemsViewModel(beaconItems: regionMessageInteractionStore.allInteractions())
+    }
+    
     func setUpNavigationBar() {
         self.title = "MY GEMS"
         self.navigationController?.isNavigationBarHidden = false
@@ -61,7 +67,7 @@ class MyGemsViewController: UIViewController {
     }
 }
 
-extension MyGemsViewController : UITableViewDataSource {
+extension GemsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -89,7 +95,7 @@ extension MyGemsViewController : UITableViewDataSource {
     }
 }
 
-extension MyGemsViewController : UITableViewDelegate {
+extension GemsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
