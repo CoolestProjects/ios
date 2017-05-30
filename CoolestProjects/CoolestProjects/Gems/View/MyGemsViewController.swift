@@ -13,18 +13,21 @@ class MyGemsViewController: UIViewController {
     @IBOutlet weak var tableView : UITableView?
     @IBOutlet weak var noGemsLabel : UILabel?
     
-    let viewModel = MyGemsViewModel(beaconItems: [RegionMessageInteraction(json: ["regionId":"123", "messageVersionId":"1", "timestamp":TimeInterval(), "title":"test", "message":"Testing" ])!])
+    let colorChoice = [UIColor.red, UIColor.blue, UIColor.green, UIColor.brown, UIColor.yellow]
+    
+    var viewModel : MyGemsViewModel = MyGemsViewModel(beaconItems : [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "MY GEMS"
-        
+        self.setUpNavigationBar()
         self.edgesForExtendedLayout = []
         
-        self.navigationController?.isNavigationBarHidden = false
+        let regionMessageInteractionStore = RegionMessageInteractionStoreImpl.init()
         
-        self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(MapZoomViewController.donePressed)), animated: false)
+        viewModel = MyGemsViewModel(beaconItems: regionMessageInteractionStore.allInteractions())
+        
+        registerTableViewCellNamed(nibName: "GemTableViewCell", reuseIdentifier: "gemTableViewCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,40 +37,45 @@ class MyGemsViewController: UIViewController {
             self.tableView?.isHidden = true
         } else {
             self.tableView?.isHidden = false
+            self.noGemsLabel?.removeFromSuperview()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.noGemsLabel?.setTypedText("NO GEMS YET \n TIME TO FIND SOME \n 🤔")
+        setUpNoGemsLabel()
+    }
+    
+    func setUpNavigationBar() {
+        self.title = "MY GEMS"
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(MapZoomViewController.donePressed)), animated: false)
     }
     
     func donePressed() {
         self.dismiss(animated: true, completion: nil)
     }
     
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setUpNoGemsLabel() {
+        self.noGemsLabel?.setTypedText("NO GEMS YET \n TIME TO FIND SOME \n 🤔")
     }
-    
 }
 
 extension MyGemsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        return cellForIndex(indexPath)
+    }
+    
+    func cellForIndex(_ indexPath: IndexPath) -> UITableViewCell {
         let model = viewModel.items[indexPath.row]
         
-        let cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: "cell")
-        cell.backgroundColor = UIColor.clear
-        cell.textLabel?.textColor = UIColor.white
-        cell.detailTextLabel?.textColor = UIColor.white
-        cell.textLabel?.text = model.title
-        cell.detailTextLabel?.text = model.message
+        let cell = tableView?.dequeueReusableCell(withIdentifier: "gemTableViewCell") as! GemTableViewCell
+        cell.titleLabel?.text = model.title
+        cell.messageLabel?.text = model.message
+        
+        cell.setLabelTextColor(colorChoice[Int(arc4random())%colorChoice.endIndex])
         
         return cell
     }
@@ -75,12 +83,27 @@ extension MyGemsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.items.count
     }
+    
+    func registerTableViewCellNamed(nibName: String, reuseIdentifier: String) {
+        self.tableView?.register(UINib.init(nibName: nibName, bundle: Bundle.main), forCellReuseIdentifier: reuseIdentifier)
+    }
+}
+
+extension MyGemsViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 }
 
 extension UILabel {
     
     func setTypedText(_ text: String) {
-    
+        
         self.setTypedText(text, index: 1)
     }
     

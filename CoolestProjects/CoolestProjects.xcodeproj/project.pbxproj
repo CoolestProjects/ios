@@ -58,6 +58,8 @@
 		9B1064241EDCA6F500395CAA /* MyGemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1064221EDCA6F500395CAA /* MyGemsViewController.swift */; };
 		9B1064271EDCA71600395CAA /* MyGemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1064261EDCA71600395CAA /* MyGemsViewModel.swift */; };
 		9B1064291EDCBE7B00395CAA /* MyGemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064281EDCBE7B00395CAA /* MyGemsViewController.xib */; };
+		9B1064311EDDF60A00395CAA /* GemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */; };
+		9B1064321EDDF60A00395CAA /* GemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */; };
 		9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907811D05ECE300FCE40D /* MapsViewController.swift */; };
 		9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5907831D05ED0200FCE40D /* MapsViewController.xib */; };
 		9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907891D05F07600FCE40D /* MapsModel.swift */; };
@@ -205,6 +207,8 @@
 		9B1064221EDCA6F500395CAA /* MyGemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGemsViewController.swift; sourceTree = "<group>"; };
 		9B1064261EDCA71600395CAA /* MyGemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGemsViewModel.swift; sourceTree = "<group>"; };
 		9B1064281EDCBE7B00395CAA /* MyGemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyGemsViewController.xib; sourceTree = "<group>"; };
+		9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemTableViewCell.swift; sourceTree = "<group>"; };
+		9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GemTableViewCell.xib; sourceTree = "<group>"; };
 		9B5907811D05ECE300FCE40D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		9B5907831D05ED0200FCE40D /* MapsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsViewController.xib; sourceTree = "<group>"; };
 		9B5907891D05F07600FCE40D /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
@@ -588,10 +592,20 @@
 		9B1064211EDCA6F500395CAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B10642E1EDDF5F600395CAA /* Gems */,
 				9B1064221EDCA6F500395CAA /* MyGemsViewController.swift */,
 				9B1064281EDCBE7B00395CAA /* MyGemsViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9B10642E1EDDF5F600395CAA /* Gems */ = {
+			isa = PBXGroup;
+			children = (
+				9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */,
+				9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */,
+			);
+			path = Gems;
 			sourceTree = "<group>";
 		};
 		9B59077F1D05ECB000FCE40D /* Maps */ = {
@@ -1057,6 +1071,7 @@
 				25273B821ED6FEAE00B63BF7 /* MapViewTableViewCell.xib in Resources */,
 				E1C6040C1D0DD78800931C38 /* SponsorsViewController.xib in Resources */,
 				2501C52F1ED6C6DD00969F0B /* BlurbTableViewCell.xib in Resources */,
+				9B1064321EDDF60A00395CAA /* GemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,6 +1233,7 @@
 				7E7AAC141EDB27A700B4A36C /* AboutViewController.swift in Sources */,
 				E1C6041D1D0DD7E100931C38 /* ProjectTableViewCell.swift in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
+				9B1064311EDDF60A00395CAA /* GemTableViewCell.swift in Sources */,
 				0DA43D071ED9BA9300ADDBED /* PanelSpeakerView.swift in Sources */,
 				A93BCD3D1D0E24A500005DB2 /* Configurable.swift in Sources */,
 				0DA43D101ED9D06800ADDBED /* WorkshopTableViewCell.swift in Sources */,
