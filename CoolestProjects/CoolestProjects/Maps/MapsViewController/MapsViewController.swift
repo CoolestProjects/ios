@@ -10,7 +10,7 @@ import UIKit
 
 class MapsViewController: BaseViewController {
     @IBOutlet weak var tableView : UITableView!
-    
+    @IBOutlet weak var statusBarBackgroundView: UIView!
     // TODO: Better nib loading
     let tableHeaderView : PageHeaderView = PageHeaderView.pageHeaderView()!
     let tableFooterView = HomeTableFooterView.footerView()!
@@ -120,6 +120,14 @@ extension MapsViewController : UITableViewDataSource {
         
         return cell
     }
-    
+  
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var adjustedOffset = scrollView.contentOffset.y
+        adjustedOffset = max(0, adjustedOffset)
+        adjustedOffset = min(adjustedOffset, 140)
+        let alpha = adjustedOffset / 140
+        statusBarBackgroundView.alpha = alpha
+    }
+  
 }
 
