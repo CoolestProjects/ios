@@ -41,9 +41,15 @@
                                     <constraint firstAttribute="height" constant="25" id="tHp-zv-l1G"/>
                                 </constraints>
                             </imageView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iF-il-171">
+                            <webView contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="6iF-il-171">
                                 <rect key="frame" x="23" y="81" width="322" height="223"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="223" id="wF6-O7-TT0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="sfg-js-LXB"/>
+                                </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4cO-OL-2Vf">
                                 <rect key="frame" x="174" y="183" width="20" height="20"/>
@@ -55,15 +61,13 @@
                             <constraint firstAttribute="bottom" secondItem="vYV-Qh-tx0" secondAttribute="bottom" id="26y-Xt-kGz"/>
                             <constraint firstItem="vYV-Qh-tx0" firstAttribute="top" secondItem="mfI-CD-aK3" secondAttribute="top" id="33y-Vd-vUh"/>
                             <constraint firstItem="6iF-il-171" firstAttribute="leading" secondItem="mfI-CD-aK3" secondAttribute="leading" constant="23" id="9zq-de-7mp"/>
-                            <constraint firstItem="4cO-OL-2Vf" firstAttribute="leading" secondItem="mfI-CD-aK3" secondAttribute="leading" constant="174" id="BY0-sG-1R1"/>
+                            <constraint firstItem="4cO-OL-2Vf" firstAttribute="centerY" secondItem="6iF-il-171" secondAttribute="centerY" id="J41-eH-z2I"/>
+                            <constraint firstItem="4cO-OL-2Vf" firstAttribute="centerX" secondItem="6iF-il-171" secondAttribute="centerX" id="K5K-a2-b81"/>
                             <constraint firstAttribute="trailing" secondItem="vYV-Qh-tx0" secondAttribute="trailing" id="Qb1-Bb-CwZ"/>
                             <constraint firstItem="tGg-h8-g8u" firstAttribute="leading" secondItem="bhu-5d-Ffh" secondAttribute="trailing" constant="8" id="TzO-Mf-e1x"/>
-                            <constraint firstAttribute="trailing" secondItem="4cO-OL-2Vf" secondAttribute="trailing" constant="173" id="UdE-KR-BHr"/>
                             <constraint firstAttribute="bottom" secondItem="6iF-il-171" secondAttribute="bottom" constant="22" id="Vwz-ti-vQl"/>
                             <constraint firstItem="bhu-5d-Ffh" firstAttribute="top" secondItem="mfI-CD-aK3" secondAttribute="top" constant="20" id="aSX-MY-IKU"/>
                             <constraint firstItem="tGg-h8-g8u" firstAttribute="centerY" secondItem="bhu-5d-Ffh" secondAttribute="centerY" id="b4h-vg-boN"/>
-                            <constraint firstAttribute="bottom" secondItem="4cO-OL-2Vf" secondAttribute="bottom" constant="123" id="fQE-QL-dth"/>
-                            <constraint firstItem="4cO-OL-2Vf" firstAttribute="top" secondItem="mfI-CD-aK3" secondAttribute="top" constant="183" id="p0z-If-6z8"/>
                             <constraint firstItem="6iF-il-171" firstAttribute="top" secondItem="bhu-5d-Ffh" secondAttribute="bottom" constant="36" id="s4N-vZ-ujR"/>
                             <constraint firstItem="vYV-Qh-tx0" firstAttribute="leading" secondItem="mfI-CD-aK3" secondAttribute="leading" id="u3W-Wa-1de"/>
                             <constraint firstAttribute="trailing" secondItem="6iF-il-171" secondAttribute="trailing" constant="22" id="uUS-oo-BTh"/>
@@ -84,6 +88,7 @@
                 <outlet property="activityIndicatorView" destination="4cO-OL-2Vf" id="CHX-Ok-rky"/>
                 <outlet property="titleLabel" destination="bhu-5d-Ffh" id="DDA-Eo-lpK"/>
                 <outlet property="webView" destination="6iF-il-171" id="3dA-OM-biO"/>
+                <outlet property="webViewHeight" destination="wF6-O7-TT0" id="k0o-Xx-FSk"/>
             </connections>
             <point key="canvasLocation" x="2.5" y="332.5"/>
         </tableViewCell>
