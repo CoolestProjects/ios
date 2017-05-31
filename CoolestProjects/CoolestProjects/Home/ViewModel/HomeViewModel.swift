@@ -72,11 +72,6 @@ class HomeViewModel {
                         UIImage(named: "sponsor_gold_workday")!,
                         UIImage(named: "sponsor_gold_zalando")!,
                         UIImage(named: "sponsor_gold_cf")!,]
-            ),
-            ContentViewModel(
-                title: NSLocalizedString("opennet.title", tableName: "Home", comment: ""),
-                body: NSLocalizedString("opennet.body", tableName: "Home", comment: ""),
-                icon: nil
             )] as [Component]
     }
 }
