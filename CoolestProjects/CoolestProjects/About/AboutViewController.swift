@@ -31,6 +31,7 @@ class AboutViewController: BaseViewController {
         tableView.tableFooterView = tableFooterView
         tableView.tableHeaderView = tableHeaderView
         tableView.estimatedRowHeight = 300.0;
+        tableView.rowHeight = UITableViewAutomaticDimension;
 
     }
 
