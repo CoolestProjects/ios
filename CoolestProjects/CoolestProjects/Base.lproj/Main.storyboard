@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ABOUT-->
+        <!--About View Controller-->
         <scene sceneID="hFe-uG-oI5">
             <objects>
                 <viewController id="fNc-NS-uEW" customClass="AboutViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="ABOUT" image="about-icon" id="1bg-6o-cLy"/>
+                    <navigationItem key="navigationItem" id="PpQ-pt-ZAI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HpV-Gu-aYP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3052" y="885"/>
+            <point key="canvasLocation" x="-2112.8000000000002" y="884.70764617691157"/>
         </scene>
         <!--Halls View Controller-->
         <scene sceneID="hb2-yb-t8G">
@@ -32,7 +32,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwZ-Zc-0fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="284.70764617691157"/>
+            <point key="canvasLocation" x="439.19999999999999" y="284.70764617691157"/>
         </scene>
         <!--Hall Activities View Controller-->
         <scene sceneID="u5q-Pi-d78">
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOm-IP-85x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="285"/>
+            <point key="canvasLocation" x="1376.8" y="284.70764617691157"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="TUa-ip-rm9">
@@ -57,26 +57,26 @@
                     </tabBar>
                     <connections>
                         <segue destination="GLY-xc-6Se" kind="relationship" relationship="viewControllers" id="en2-xc-aj9"/>
-                        <segue destination="S7h-5S-R1P" kind="relationship" relationship="viewControllers" id="v60-La-SYx"/>
+                        <segue destination="ujY-Sp-N5P" kind="relationship" relationship="viewControllers" id="v60-La-SYx"/>
                         <segue destination="ZUf-Gu-JRi" kind="relationship" relationship="viewControllers" id="MMd-6V-Tc2"/>
                         <segue destination="5bS-RG-Tlz" kind="relationship" relationship="viewControllers" id="Cbn-0U-Ws3"/>
-                        <segue destination="fNc-NS-uEW" kind="relationship" relationship="viewControllers" id="its-1n-8rC"/>
+                        <segue destination="TSY-db-Vfm" kind="relationship" relationship="viewControllers" id="its-1n-8rC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfa-WX-ZKr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4042" y="-143"/>
         </scene>
-        <!--RDS MAP-->
+        <!--Maps View Controller-->
         <scene sceneID="Bjt-9b-4Vz">
             <objects>
                 <viewController id="S7h-5S-R1P" customClass="MapsViewController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="RDS MAP" image="rds-map-icon" id="7fD-Fq-mEo"/>
+                    <navigationItem key="navigationItem" id="2nl-Yh-k1E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UI4-S7-yOn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3052" y="-411"/>
+            <point key="canvasLocation" x="-2112.8000000000002" y="-411.544227886057"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tiN-JL-rXO">
@@ -95,7 +95,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GLY-xc-6Se" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HOME" image="home-icon" id="iQB-YJ-xRh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ham-PQ-dJz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ham-PQ-dJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -114,7 +114,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZUf-Gu-JRi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HALLS" image="halls-icon" id="iP5-gP-pSL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7bY-Fx-Mxk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="7bY-Fx-Mxk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,7 +129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA5-o7-ZBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1439.2" y="284.70764617691157"/>
+            <point key="canvasLocation" x="-500" y="284.70764617691157"/>
         </scene>
         <!--Projects-->
         <scene sceneID="BCz-IZ-WPN">
@@ -139,7 +139,45 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySS-DY-I9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1229" y="1188"/>
+            <point key="canvasLocation" x="-290.39999999999998" y="1187.4062968515743"/>
+        </scene>
+        <!--ABOUT-->
+        <scene sceneID="f6i-Yd-p5X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSY-db-Vfm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ABOUT" image="about-icon" id="1bg-6o-cLy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FL9-6V-wFD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fNc-NS-uEW" kind="relationship" relationship="rootViewController" id="Z7f-Fu-NXk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blR-bZ-0OY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3052" y="884.70764617691157"/>
+        </scene>
+        <!--RDS MAP-->
+        <scene sceneID="tVk-9m-Yzt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ujY-Sp-N5P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="RDS MAP" image="rds-map-icon" id="7fD-Fq-mEo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="T9d-xN-uEp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S7h-5S-R1P" kind="relationship" relationship="rootViewController" id="se0-c3-pbZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbS-N0-SEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3052" y="-411.544227886057"/>
         </scene>
     </scenes>
     <resources>
