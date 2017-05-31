@@ -22,6 +22,7 @@ class GemsViewController: UIViewController {
         
         self.setUpViewModel()
         self.setUpNavigationBar()
+        self.setUpTableView()
         self.edgesForExtendedLayout = []
         
     }

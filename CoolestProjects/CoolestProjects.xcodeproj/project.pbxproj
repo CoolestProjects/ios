@@ -60,6 +60,7 @@
 		9B1064291EDCBE7B00395CAA /* GemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064281EDCBE7B00395CAA /* GemsViewController.xib */; };
 		9B1064311EDDF60A00395CAA /* GemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */; };
 		9B1064321EDDF60A00395CAA /* GemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */; };
+		9B1064361EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064351EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf */; };
 		9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907811D05ECE300FCE40D /* MapsViewController.swift */; };
 		9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5907831D05ED0200FCE40D /* MapsViewController.xib */; };
 		9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907891D05F07600FCE40D /* MapsModel.swift */; };
@@ -209,6 +210,7 @@
 		9B1064281EDCBE7B00395CAA /* GemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GemsViewController.xib; sourceTree = "<group>"; };
 		9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemTableViewCell.swift; sourceTree = "<group>"; };
 		9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GemTableViewCell.xib; sourceTree = "<group>"; };
+		9B1064351EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minecraft_font_by_pwnage_block-d37t6nb.ttf"; sourceTree = "<group>"; };
 		9B5907811D05ECE300FCE40D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		9B5907831D05ED0200FCE40D /* MapsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsViewController.xib; sourceTree = "<group>"; };
 		9B5907891D05F07600FCE40D /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
@@ -780,6 +782,7 @@
 		B79C002122720CC5142255F4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				9B1064351EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf */,
 				B79C051731B8A634DF461065 /* OpenSans-Light.ttf */,
 				B79C045F341C1FEA00B4A605 /* OpenSans-Regular.ttf */,
 				B79C05458A577A69B366BA10 /* OpenSans-Semibold.ttf */,
@@ -1054,6 +1057,7 @@
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
 				7E426E721ED09946006BA833 /* PageHeaderView.xib in Resources */,
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
+				9B1064361EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf in Resources */,
 				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
 				E1C604271D0DD93400931C38 /* Projects.strings in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
