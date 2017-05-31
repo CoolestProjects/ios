@@ -71,6 +71,7 @@ class AboutViewController: BaseViewController {
         tableHeaderView.layoutIfNeeded()
         return tableHeaderView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
     }
+    
 }
 
 extension AboutViewController : UITableViewDataSource {
@@ -84,8 +85,11 @@ extension AboutViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
       
         if (component is AboutModel) {
+
             let content = component as! AboutModel
             let contentCell = cell as! AboutViewTableViewCell
+            contentCell.tableView = tableView
+
             contentCell.configure(with: content);
         }
         
