@@ -13,6 +13,10 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
     typealias ItemType = SponsorBox
     
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var diamondTitle: UILabel!
+    @IBOutlet weak var platinumTitle: UILabel!
+    @IBOutlet weak var goldTitle: UILabel!
+    
     @IBOutlet weak var diamondStackView: UIStackView!
     @IBOutlet weak var platinumStackView: UIStackView!
     @IBOutlet weak var platinumLowerStackView: UIStackView!
@@ -21,6 +25,10 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
 
     func configure(with item: ItemType) {
         title.text = item.title
+        
+        diamondTitle.text = item.diamondTitle
+        platinumTitle.text = item.platinumTitle
+        goldTitle.text = item.goldTitle
         
         for image in item.diamondImages {
             diamondStackView.addArrangedSubview(UIImageView(image: image))

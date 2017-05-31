@@ -47,6 +47,9 @@ class HomeViewModel {
                 icon: UIImage(named: "section_icon_food")
             ),
             SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
+                       diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,
+                       platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
+                       goldTitle:NSLocalizedString("sponsor.gold.title", tableName: "Home", comment: "") ,
                        diamondImages: [
                         UIImage(),
                         UIImage(named: "sponsor_diamond_intel")!,

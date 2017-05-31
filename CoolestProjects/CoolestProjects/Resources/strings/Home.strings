@@ -8,6 +8,9 @@
 
 "date.tilte" = "SATURDAY 17TH JUNE 2017\nRDS, DUBLIN, IRELAND";
 "sponsor.title" = "SPONSORED BY";
+"sponsor.platinum.title" = "PLATINUM";
+"sponsor.diamond.title" = "DIAMOND";
+"sponsor.gold.title" = "GOLD";
 "event-times.title" = "EVENT TIMES";
 "event-times.body" = "09:00 Doors open to the public.\n09:30 Opening Ceremony\n10:00 Judging Commences\n13:30 Lunch\n16:30 Awards Ceremony\n17:30 Event Closes 🙁";
 "parking.title" = "TRANSPORT";

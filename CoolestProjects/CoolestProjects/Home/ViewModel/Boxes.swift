@@ -15,7 +15,12 @@ protocol Component {
 
 struct SponsorBox: Component {
     let componentIdentifier = "sponsorBox"
-    let title: String    
+    let title: String
+    
+    let diamondTitle : String
+    let platinumTitle : String
+    let goldTitle : String
+    
     let diamondImages: [UIImage]
     let platinumHigherImages: [UIImage]
     let platinumLowerImages: [UIImage]
