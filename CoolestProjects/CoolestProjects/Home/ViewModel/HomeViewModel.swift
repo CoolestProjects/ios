@@ -30,6 +30,8 @@ class HomeViewModel {
             tableViewData += [BluetoothBox()]
         }
         
+        let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_diamond_intel")!.size)!
+        
         tableViewData += [
             ContentViewModel(
                 title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
@@ -51,10 +53,11 @@ class HomeViewModel {
                        platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
                        goldTitle:NSLocalizedString("sponsor.gold.title", tableName: "Home", comment: "") ,
                        diamondImages: [
-                        UIImage(),
+                        image,
                         UIImage(named: "sponsor_diamond_intel")!,
                         UIImage(named: "sponsor_diamond_microsoft")!,
-                        UIImage()],
+                        image
+                        ],
                        platinumHigherImages: [
                         UIImage(named: "sponsor_platinum_openet")!,
                         UIImage(named: "sponsor_platinum_rte")!,
@@ -67,7 +70,7 @@ class HomeViewModel {
                         UIImage(named: "sponsor_platinum_folens")!],
                        goldImages: [
                         UIImage(named: "sponsor_gold_1_virgin_media")!,
-                        //TODO: add dublin city council logo when available
+                        UIImage(named: "sponsor_gold_dublin_council")!,
                         UIImage(named: "sponsor_gold_failte-ireland")!,
                         UIImage(named: "sponsor_gold_accenture")!],
                        goldLowerImages: [
