@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Coolest_Projects" customModuleProvider="target">
             <connections>
+                <outlet property="statusBarBackgroundView" destination="MYE-0I-iu8" id="1au-e9-dvk"/>
                 <outlet property="tableView" destination="1GC-1F-lZq" id="CgS-gI-lsp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Pru-w7-Z9D"/>
             </connections>
@@ -28,14 +29,25 @@
                         <outlet property="delegate" destination="-1" id="GfE-sO-nDh"/>
                     </connections>
                 </tableView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYE-0I-iu8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.13725490200000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="aeB-mf-mhu"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="1GC-1F-lZq" secondAttribute="trailing" id="5Ey-ZF-E3e"/>
+                <constraint firstAttribute="trailing" secondItem="MYE-0I-iu8" secondAttribute="trailing" id="AKg-0E-24M"/>
                 <constraint firstItem="1GC-1F-lZq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K9y-b4-Ebb"/>
+                <constraint firstItem="MYE-0I-iu8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X4I-wL-zgz"/>
+                <constraint firstItem="MYE-0I-iu8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XYc-AI-z3t"/>
                 <constraint firstItem="1GC-1F-lZq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oC8-q9-0lx"/>
                 <constraint firstAttribute="bottom" secondItem="1GC-1F-lZq" secondAttribute="bottom" id="shv-gu-H77"/>
             </constraints>
+            <point key="canvasLocation" x="73.5" y="97.5"/>
         </view>
     </objects>
 </document>

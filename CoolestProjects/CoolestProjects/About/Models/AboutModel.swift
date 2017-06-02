@@ -26,10 +26,10 @@ class AboutViewModel {
     let title: String
     
     init() {
-      title = "About"
+      title = NSLocalizedString("title", tableName: "About", comment: "")
       tableViewData = [
         BlurbBox(title: NSLocalizedString("date.tilte", tableName: "Home", comment: "")),
-        AboutModel(title: NSLocalizedString("About", tableName: "About", comment: ""), aboutContentURL: loadAboutContent())
+        AboutModel(title: NSLocalizedString("title", tableName: "About", comment: ""), aboutContentURL: loadAboutContent())
         ]
     }
 

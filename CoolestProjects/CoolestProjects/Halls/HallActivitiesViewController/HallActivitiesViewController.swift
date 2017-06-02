@@ -20,11 +20,13 @@ class HallActivitiesViewController: UIViewController {
     let workshop2DataSource = WorkshopTableViewDataSource()
 
     var hall: Hall?
+    var preselectedActivity: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         loadContent()
+        preselectActivity()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,15 +83,27 @@ class HallActivitiesViewController: UIViewController {
         panelsDataSource.panels = hall.panels
         workshop1DataSource.workshops = hall.workshops1
         workshop2DataSource.workshops = hall.workshops2
-        activitiesTableView.reloadData()        
+        activitiesTableView.reloadData()
+    }
+
+    func preselectActivity() {
+        if let preselectedActivity = preselectedActivity,
+            let idx = ["panels", "workshop1", "workshop2"].index(of: preselectedActivity) {
+            activitiesSegmentedControl.selectedSegmentIndex = idx
+            updateDataSource()
+        }
     }
 
     func segmentedControlValueChanged(segment: UISegmentedControl) {
+        updateDataSource()
+    }
+
+    func updateDataSource() {
         var dataSource: UITableViewDataSource?
 
-        if segment.selectedSegmentIndex == 0 {
+        if activitiesSegmentedControl.selectedSegmentIndex == 0 {
             dataSource = panelsDataSource
-        } else if segment.selectedSegmentIndex == 1 {
+        } else if activitiesSegmentedControl.selectedSegmentIndex == 1 {
             dataSource = workshop1DataSource
         }  else {
             dataSource = workshop2DataSource

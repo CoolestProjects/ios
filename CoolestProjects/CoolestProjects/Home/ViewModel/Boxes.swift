@@ -13,29 +13,21 @@ protocol Component {
     var componentIdentifier: String { get }
 }
 
-class SponsorBox: Component {
-    var componentIdentifier: String
-    let title: String    
+struct SponsorBox: Component {
+    let componentIdentifier = "sponsorBox"
+    let title: String
+    
+    let diamondTitle : String
+    let platinumTitle : String
+    let goldTitle : String
+    
     let diamondImages: [UIImage]
     let platinumHigherImages: [UIImage]
     let platinumLowerImages: [UIImage]
     let goldImages: [UIImage]
-
-    init(title: String, diamondImages: [UIImage], platinumHigherImages: [UIImage], platinumLowerImages: [UIImage], goldImages: [UIImage]) {
-        self.componentIdentifier = "sponsorBox"
-        self.title = title
-        self.diamondImages = diamondImages
-        self.platinumHigherImages = platinumHigherImages
-        self.platinumLowerImages = platinumLowerImages
-        self.goldImages = goldImages
-
-    }
+    let goldLowerImages: [UIImage]
 }
 
 class BluetoothBox: Component {
-    var componentIdentifier: String
-    
-    init() {
-        self.componentIdentifier = "bluetoothBox"
-    }
+    let componentIdentifier = "bluetoothBox"    
 }
