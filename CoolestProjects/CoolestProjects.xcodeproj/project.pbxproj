@@ -29,6 +29,7 @@
 		2501C52E1ED6C6DD00969F0B /* BlurbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501C52C1ED6C6DD00969F0B /* BlurbTableViewCell.swift */; };
 		2501C52F1ED6C6DD00969F0B /* BlurbTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2501C52D1ED6C6DD00969F0B /* BlurbTableViewCell.xib */; };
 		2501C5311ED6C70E00969F0B /* BlurbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501C5301ED6C70E00969F0B /* BlurbViewModel.swift */; };
+		2512CD0B1EE193A200B92CE8 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512CD0A1EE193A200B92CE8 /* UIImage+Additions.swift */; };
 		25273B811ED6FEAE00B63BF7 /* MapViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25273B7F1ED6FEAE00B63BF7 /* MapViewTableViewCell.swift */; };
 		25273B821ED6FEAE00B63BF7 /* MapViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25273B801ED6FEAE00B63BF7 /* MapViewTableViewCell.xib */; };
 		25273B841ED7019800B63BF7 /* Maps.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25273B831ED7019800B63BF7 /* Maps.xcassets */; };
@@ -56,6 +57,12 @@
 		7E7AAC1D1EDB315F00B4A36C /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AAC1C1EDB315F00B4A36C /* AboutModel.swift */; };
 		7E7AAC1F1EDB370500B4A36C /* About.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7AAC1E1EDB370500B4A36C /* About.xcassets */; };
 		9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */; };
+		9B1064241EDCA6F500395CAA /* GemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1064221EDCA6F500395CAA /* GemsViewController.swift */; };
+		9B1064271EDCA71600395CAA /* GemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1064261EDCA71600395CAA /* GemsViewModel.swift */; };
+		9B1064291EDCBE7B00395CAA /* GemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064281EDCBE7B00395CAA /* GemsViewController.xib */; };
+		9B1064311EDDF60A00395CAA /* GemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */; };
+		9B1064321EDDF60A00395CAA /* GemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */; };
+		9B1064361EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B1064351EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf */; };
 		9B5907821D05ECE300FCE40D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907811D05ECE300FCE40D /* MapsViewController.swift */; };
 		9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B5907831D05ED0200FCE40D /* MapsViewController.xib */; };
 		9B59078A1D05F07600FCE40D /* MapsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5907891D05F07600FCE40D /* MapsModel.swift */; };
@@ -162,6 +169,7 @@
 		2501C52C1ED6C6DD00969F0B /* BlurbTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurbTableViewCell.swift; sourceTree = "<group>"; };
 		2501C52D1ED6C6DD00969F0B /* BlurbTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurbTableViewCell.xib; sourceTree = "<group>"; };
 		2501C5301ED6C70E00969F0B /* BlurbViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurbViewModel.swift; sourceTree = "<group>"; };
+		2512CD0A1EE193A200B92CE8 /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		25273B7F1ED6FEAE00B63BF7 /* MapViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewTableViewCell.swift; sourceTree = "<group>"; };
 		25273B801ED6FEAE00B63BF7 /* MapViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewTableViewCell.xib; sourceTree = "<group>"; };
 		25273B831ED7019800B63BF7 /* Maps.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Maps.xcassets; sourceTree = "<group>"; };
@@ -201,6 +209,12 @@
 		7E7AAC1C1EDB315F00B4A36C /* AboutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
 		7E7AAC1E1EDB370500B4A36C /* About.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = About.xcassets; sourceTree = "<group>"; };
 		9B0DB3E11D05B71C00F41956 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9B1064221EDCA6F500395CAA /* GemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemsViewController.swift; sourceTree = "<group>"; };
+		9B1064261EDCA71600395CAA /* GemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemsViewModel.swift; sourceTree = "<group>"; };
+		9B1064281EDCBE7B00395CAA /* GemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GemsViewController.xib; sourceTree = "<group>"; };
+		9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemTableViewCell.swift; sourceTree = "<group>"; };
+		9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GemTableViewCell.xib; sourceTree = "<group>"; };
+		9B1064351EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minecraft_font_by_pwnage_block-d37t6nb.ttf"; sourceTree = "<group>"; };
 		9B5907811D05ECE300FCE40D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		9B5907831D05ED0200FCE40D /* MapsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsViewController.xib; sourceTree = "<group>"; };
 		9B5907891D05F07600FCE40D /* MapsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsModel.swift; sourceTree = "<group>"; };
@@ -493,6 +507,7 @@
 		4453ED151CF9EA2C0028C8E0 /* CoolestProjects */ = {
 			isa = PBXGroup;
 			children = (
+				9B10641B1EDCA21B00395CAA /* Gems */,
 				0DA2D0121EDCC40C007F7E51 /* TabBarController */,
 				0D6D56C51ED7A5C10036B51A /* Halls */,
 				0DB8E7071ED4B9BD001861D8 /* GlossExtensions */,
@@ -559,6 +574,7 @@
 		9B0DB3E01D05B70D00F41956 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2512CD0A1EE193A200B92CE8 /* UIImage+Additions.swift */,
 				0DA43D0B1ED9C4E700ADDBED /* UIColor+Additions.swift */,
 				2501C52B1ED6C6DD00969F0B /* BlurbTableViewCell */,
 				25F4BF061ED1DCBC00F45E13 /* ContentCell */,
@@ -570,6 +586,42 @@
 				0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9B10641B1EDCA21B00395CAA /* Gems */ = {
+			isa = PBXGroup;
+			children = (
+				9B1064201EDCA6F500395CAA /* ViewModel */,
+				9B1064211EDCA6F500395CAA /* View */,
+			);
+			path = Gems;
+			sourceTree = "<group>";
+		};
+		9B1064201EDCA6F500395CAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9B1064261EDCA71600395CAA /* GemsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B1064211EDCA6F500395CAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B10642E1EDDF5F600395CAA /* Gems */,
+				9B1064221EDCA6F500395CAA /* GemsViewController.swift */,
+				9B1064281EDCBE7B00395CAA /* GemsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B10642E1EDDF5F600395CAA /* Gems */ = {
+			isa = PBXGroup;
+			children = (
+				9B10642F1EDDF60A00395CAA /* GemTableViewCell.swift */,
+				9B1064301EDDF60A00395CAA /* GemTableViewCell.xib */,
+			);
+			path = Gems;
 			sourceTree = "<group>";
 		};
 		9B59077F1D05ECB000FCE40D /* Maps */ = {
@@ -744,6 +796,7 @@
 		B79C002122720CC5142255F4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				9B1064351EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf */,
 				B79C051731B8A634DF461065 /* OpenSans-Light.ttf */,
 				B79C045F341C1FEA00B4A605 /* OpenSans-Regular.ttf */,
 				B79C05458A577A69B366BA10 /* OpenSans-Semibold.ttf */,
@@ -997,6 +1050,7 @@
 				4453ED231CF9EA2C0028C8E0 /* Assets.xcassets in Resources */,
 				A9F8DB511D03332700ECE1F3 /* Home.xcassets in Resources */,
 				4453ED211CF9EA2C0028C8E0 /* Main.storyboard in Resources */,
+				9B1064291EDCBE7B00395CAA /* GemsViewController.xib in Resources */,
 				9B5907841D05ED0200FCE40D /* MapsViewController.xib in Resources */,
 				0DA43D081ED9BA9300ADDBED /* PanelSpeakerView.xib in Resources */,
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
@@ -1017,6 +1071,7 @@
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
 				7E426E721ED09946006BA833 /* PageHeaderView.xib in Resources */,
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
+				9B1064361EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf in Resources */,
 				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
 				E1C604271D0DD93400931C38 /* Projects.strings in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
@@ -1034,6 +1089,7 @@
 				25273B821ED6FEAE00B63BF7 /* MapViewTableViewCell.xib in Resources */,
 				E1C6040C1D0DD78800931C38 /* SponsorsViewController.xib in Resources */,
 				2501C52F1ED6C6DD00969F0B /* BlurbTableViewCell.xib in Resources */,
+				9B1064321EDDF60A00395CAA /* GemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,6 +1225,7 @@
 				A9D9D3801ED38C3B001CE6F1 /* BeaconRegionInteraction.swift in Sources */,
 				9B0DB3E21D05B71C00F41956 /* BaseViewController.swift in Sources */,
 				9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */,
+				9B1064241EDCA6F500395CAA /* GemsViewController.swift in Sources */,
 				E1C6041A1D0DD7E100931C38 /* ProjectsService.swift in Sources */,
 				A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */,
 				0DA43D1C1ED9D9AA00ADDBED /* HallActivitiesViewController.swift in Sources */,
@@ -1182,6 +1239,7 @@
 				A97B8C351EAEB02800B2A512 /* MessagesService.swift in Sources */,
 				0DA43D011ED9B74D00ADDBED /* PanelTableViewCell.swift in Sources */,
 				252811921ED1B2F300DFEE6A /* PagerHeaderComponent.swift in Sources */,
+				9B1064271EDCA71600395CAA /* GemsViewModel.swift in Sources */,
 				2501C52E1ED6C6DD00969F0B /* BlurbTableViewCell.swift in Sources */,
 				252811941ED1B45B00DFEE6A /* PageHeaderTableViewCell.swift in Sources */,
 				9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */,
@@ -1193,7 +1251,9 @@
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				7E7AAC141EDB27A700B4A36C /* AboutViewController.swift in Sources */,
 				E1C6041D1D0DD7E100931C38 /* ProjectTableViewCell.swift in Sources */,
+				2512CD0B1EE193A200B92CE8 /* UIImage+Additions.swift in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
+				9B1064311EDDF60A00395CAA /* GemTableViewCell.swift in Sources */,
 				0DA43D071ED9BA9300ADDBED /* PanelSpeakerView.swift in Sources */,
 				A93BCD3D1D0E24A500005DB2 /* Configurable.swift in Sources */,
 				0DA43D101ED9D06800ADDBED /* WorkshopTableViewCell.swift in Sources */,

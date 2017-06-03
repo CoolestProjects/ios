@@ -22,6 +22,12 @@ class SponsorsViewController: BaseViewController {
         setupTableView()
         setupNavigationBar()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+        
+        super.viewWillAppear(animated)
+    }
 
     func getSponsors() {
         let firbaseService = CPAFirebaseDefaultService()
