@@ -11,18 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="232" id="KGk-i7-Jjw" customClass="BluetoothBoxTableViewCell" customModule="Coolest_Projects" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="322" height="232"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="379" id="KGk-i7-Jjw" customClass="BluetoothBoxTableViewCell" customModule="Coolest_Projects" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="379"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="322" height="231.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="322" height="378.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edv-7u-xZo">
-                        <rect key="frame" x="4" y="4" width="314" height="223.5"/>
+                        <rect key="frame" x="4" y="4" width="314" height="370.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="content-cell-bg" translatesAutoresizingMaskIntoConstraints="NO" id="cwX-O7-x7P">
-                                <rect key="frame" x="0.0" y="0.0" width="314" height="223.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="314" height="370.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="MY GEMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0n-Fc-VFZ">
                                 <rect key="frame" x="22" y="20" width="235" height="16.5"/>
@@ -33,8 +33,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beaconAnimation-0" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-sh-Fgc">
                                 <rect key="frame" x="267" y="20" width="25" height="15"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lel-gz-WmV">
-                                <rect key="frame" x="22" y="44" width="270" height="134.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lel-gz-WmV">
+                                <rect key="frame" x="22" y="44" width="270" height="98.5"/>
                                 <string key="text">Let’s play and find a Gem! Use your Mobile Phone as Gem detector. You will receive a notification every time you find the location of a Gem.
 
 Make sure you go alongside with your parents.</string>
@@ -42,8 +42,11 @@ Make sure you go alongside with your parents.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gems_hunt" translatesAutoresizingMaskIntoConstraints="NO" id="3Fd-gs-fwB">
+                                <rect key="frame" x="22" y="155" width="270" height="170.5"/>
+                            </imageView>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRF-Rw-Sik">
-                                <rect key="frame" x="232" y="186.5" width="60" height="15"/>
+                                <rect key="frame" x="232" y="333.5" width="60" height="15"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="8"/>
                                 <inset key="contentEdgeInsets" minX="4" minY="2" maxX="4" maxY="2"/>
                                 <state key="normal" title="See my gems" backgroundImage="button-bg">
@@ -53,19 +56,22 @@ Make sure you go alongside with your parents.</string>
                         </subviews>
                         <constraints>
                             <constraint firstItem="fiO-sh-Fgc" firstAttribute="top" secondItem="Edv-7u-xZo" secondAttribute="top" constant="20" id="10i-bU-khS"/>
+                            <constraint firstItem="fRF-Rw-Sik" firstAttribute="top" secondItem="3Fd-gs-fwB" secondAttribute="bottom" constant="8" id="1zP-zF-amt"/>
                             <constraint firstAttribute="trailing" secondItem="lel-gz-WmV" secondAttribute="trailing" constant="22" id="5hf-oB-aIH"/>
                             <constraint firstAttribute="bottom" secondItem="fRF-Rw-Sik" secondAttribute="bottom" constant="22" id="9Ea-cr-8GC"/>
                             <constraint firstAttribute="bottom" secondItem="cwX-O7-x7P" secondAttribute="bottom" id="Bjr-CM-51w"/>
                             <constraint firstAttribute="trailing" secondItem="fiO-sh-Fgc" secondAttribute="trailing" constant="22" id="EPB-sh-d7K"/>
                             <constraint firstItem="fiO-sh-Fgc" firstAttribute="leading" secondItem="Z0n-Fc-VFZ" secondAttribute="trailing" constant="10" id="KLi-94-sn4"/>
                             <constraint firstItem="lel-gz-WmV" firstAttribute="leading" secondItem="Edv-7u-xZo" secondAttribute="leading" constant="22" id="KMX-kP-j9Z"/>
+                            <constraint firstAttribute="trailing" secondItem="3Fd-gs-fwB" secondAttribute="trailing" constant="22" id="KhF-1x-L1q"/>
                             <constraint firstItem="fiO-sh-Fgc" firstAttribute="centerY" secondItem="Z0n-Fc-VFZ" secondAttribute="centerY" id="OpA-P8-LD0"/>
-                            <constraint firstItem="fRF-Rw-Sik" firstAttribute="top" secondItem="lel-gz-WmV" secondAttribute="bottom" constant="8" id="TQO-44-bEc"/>
                             <constraint firstAttribute="trailing" secondItem="fRF-Rw-Sik" secondAttribute="trailing" constant="22" id="Uf8-YD-ZJa"/>
                             <constraint firstItem="cwX-O7-x7P" firstAttribute="top" secondItem="Edv-7u-xZo" secondAttribute="top" id="ZhH-tH-y6g"/>
                             <constraint firstItem="lel-gz-WmV" firstAttribute="top" secondItem="Z0n-Fc-VFZ" secondAttribute="bottom" constant="7.5" id="l18-64-L44"/>
                             <constraint firstItem="Z0n-Fc-VFZ" firstAttribute="leading" secondItem="Edv-7u-xZo" secondAttribute="leading" constant="22" id="nM5-kl-ske"/>
                             <constraint firstAttribute="trailing" secondItem="cwX-O7-x7P" secondAttribute="trailing" id="oI4-3Y-gFm"/>
+                            <constraint firstItem="3Fd-gs-fwB" firstAttribute="top" secondItem="lel-gz-WmV" secondAttribute="bottom" constant="12.5" id="wFN-G0-PXd"/>
+                            <constraint firstItem="3Fd-gs-fwB" firstAttribute="leading" secondItem="Edv-7u-xZo" secondAttribute="leading" constant="22" id="zQl-Lr-Hfp"/>
                             <constraint firstItem="cwX-O7-x7P" firstAttribute="leading" secondItem="Edv-7u-xZo" secondAttribute="leading" id="zs3-bv-4Ny"/>
                         </constraints>
                     </view>
@@ -84,12 +90,13 @@ Make sure you go alongside with your parents.</string>
                 <outlet property="titleLabel" destination="Z0n-Fc-VFZ" id="Wy6-eh-Bp6"/>
                 <outlet property="viewGemsButton" destination="fRF-Rw-Sik" id="nbJ-aE-MFq"/>
             </connections>
-            <point key="canvasLocation" x="35" y="-39"/>
+            <point key="canvasLocation" x="35" y="34.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="beaconAnimation-0" width="25" height="15"/>
         <image name="button-bg" width="5" height="5"/>
         <image name="content-cell-bg" width="25" height="25"/>
+        <image name="gems_hunt" width="476" height="150"/>
     </resources>
 </document>
