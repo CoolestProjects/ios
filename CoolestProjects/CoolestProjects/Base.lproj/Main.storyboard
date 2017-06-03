@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="439" y="285"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="TUa-ip-rm9">
             <objects>
-                <tabBarController id="ueM-N8-mbE" sceneMemberID="viewController">
+                <tabBarController id="ueM-N8-mbE" customClass="MainTabBarController" customModule="Coolest_Projects" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Oc9-um-k06">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

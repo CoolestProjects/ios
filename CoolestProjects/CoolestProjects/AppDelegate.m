@@ -40,7 +40,7 @@
 }
 
 - (void)fireTestStageNotification {
-    [self processNotificationDeeplinkUserInfo:@{@"deeplink_page":@"stages", @"deeplink_identifier": @"Paul Downey", @"deeplink_stage":@"Mastercard Code"}];
+    [self processNotificationDeeplinkUserInfo:@{@"deeplink_page":@"/halls/iot/workshop2"}];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -123,7 +123,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 }
 
 - (void)processNotificationDeeplinkUserInfo:(NSDictionary *)userInfo {
-    [CPADeeplinkManager handleDeeplinkWithUserInfo:userInfo rootViewController:self.window.rootViewController];
+    [CPADeeplinkManager handleDeeplinkWithUserInfo:userInfo];
 }
 
 - (void)setupAppearance {

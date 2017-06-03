@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapsViewController" customModule="Coolest_Projects" customModuleProvider="target">
             <connections>
+                <outlet property="statusBarBackgroundView" destination="NQf-fE-SZi" id="9K3-mw-TWN"/>
                 <outlet property="tableView" destination="3Mw-9d-j6w" id="8a6-at-S8m"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Fep-PH-OmX"/>
             </connections>
@@ -28,12 +29,22 @@
                         <outlet property="delegate" destination="-1" id="N5t-D8-Zuf"/>
                     </connections>
                 </tableView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQf-fE-SZi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.13725490200000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="zAp-Rg-h8U"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="3Mw-9d-j6w" secondAttribute="trailing" id="6Ax-4c-bbu"/>
                 <constraint firstItem="3Mw-9d-j6w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="77c-AM-YuY"/>
+                <constraint firstAttribute="trailing" secondItem="NQf-fE-SZi" secondAttribute="trailing" id="7Di-JZ-YLM"/>
                 <constraint firstAttribute="bottom" secondItem="3Mw-9d-j6w" secondAttribute="bottom" id="M6G-aK-ltw"/>
+                <constraint firstItem="NQf-fE-SZi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h78-tN-jnF"/>
+                <constraint firstItem="NQf-fE-SZi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mkD-3L-XPA"/>
                 <constraint firstItem="3Mw-9d-j6w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uWG-Kq-n3N"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="82.5"/>

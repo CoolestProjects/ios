@@ -13,6 +13,7 @@
 		0D6D56BD1ED783D00036B51A /* Halls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BC1ED783D00036B51A /* Halls.swift */; };
 		0D6D56BF1ED785E30036B51A /* Halls+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */; };
 		0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56C31ED796770036B51A /* ScheduleService.swift */; };
+		0DA2D0141EDCC438007F7E51 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */; };
 		0DA43D011ED9B74D00ADDBED /* PanelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */; };
 		0DA43D031ED9BA8900ADDBED /* PanelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */; };
 		0DA43D071ED9BA9300ADDBED /* PanelSpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D051ED9BA9300ADDBED /* PanelSpeakerView.swift */; };
@@ -28,6 +29,7 @@
 		2501C52E1ED6C6DD00969F0B /* BlurbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501C52C1ED6C6DD00969F0B /* BlurbTableViewCell.swift */; };
 		2501C52F1ED6C6DD00969F0B /* BlurbTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2501C52D1ED6C6DD00969F0B /* BlurbTableViewCell.xib */; };
 		2501C5311ED6C70E00969F0B /* BlurbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2501C5301ED6C70E00969F0B /* BlurbViewModel.swift */; };
+		2512CD0B1EE193A200B92CE8 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512CD0A1EE193A200B92CE8 /* UIImage+Additions.swift */; };
 		25273B811ED6FEAE00B63BF7 /* MapViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25273B7F1ED6FEAE00B63BF7 /* MapViewTableViewCell.swift */; };
 		25273B821ED6FEAE00B63BF7 /* MapViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25273B801ED6FEAE00B63BF7 /* MapViewTableViewCell.xib */; };
 		25273B841ED7019800B63BF7 /* Maps.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25273B831ED7019800B63BF7 /* Maps.xcassets */; };
@@ -150,6 +152,7 @@
 		0D6D56BC1ED783D00036B51A /* Halls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Halls.swift; path = ../Models/Halls.swift; sourceTree = "<group>"; };
 		0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Halls+Decodable.swift"; path = "../Models/Halls+Decodable.swift"; sourceTree = "<group>"; };
 		0D6D56C31ED796770036B51A /* ScheduleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelTableViewCell.swift; sourceTree = "<group>"; };
 		0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanelTableViewCell.xib; sourceTree = "<group>"; };
 		0DA43D051ED9BA9300ADDBED /* PanelSpeakerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelSpeakerView.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 		2501C52C1ED6C6DD00969F0B /* BlurbTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurbTableViewCell.swift; sourceTree = "<group>"; };
 		2501C52D1ED6C6DD00969F0B /* BlurbTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurbTableViewCell.xib; sourceTree = "<group>"; };
 		2501C5301ED6C70E00969F0B /* BlurbViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurbViewModel.swift; sourceTree = "<group>"; };
+		2512CD0A1EE193A200B92CE8 /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		25273B7F1ED6FEAE00B63BF7 /* MapViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewTableViewCell.swift; sourceTree = "<group>"; };
 		25273B801ED6FEAE00B63BF7 /* MapViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewTableViewCell.xib; sourceTree = "<group>"; };
 		25273B831ED7019800B63BF7 /* Maps.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Maps.xcassets; sourceTree = "<group>"; };
@@ -344,6 +348,14 @@
 			path = Halls;
 			sourceTree = "<group>";
 		};
+		0DA2D0121EDCC40C007F7E51 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		0DA43CFF1ED9B73700ADDBED /* PanelTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				9B10641B1EDCA21B00395CAA /* Gems */,
+				0DA2D0121EDCC40C007F7E51 /* TabBarController */,
 				0D6D56C51ED7A5C10036B51A /* Halls */,
 				0DB8E7071ED4B9BD001861D8 /* GlossExtensions */,
 				9B842DA01EC88FC900EF9540 /* Deeplink */,
@@ -561,6 +574,7 @@
 		9B0DB3E01D05B70D00F41956 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2512CD0A1EE193A200B92CE8 /* UIImage+Additions.swift */,
 				0DA43D0B1ED9C4E700ADDBED /* UIColor+Additions.swift */,
 				2501C52B1ED6C6DD00969F0B /* BlurbTableViewCell */,
 				25F4BF061ED1DCBC00F45E13 /* ContentCell */,
@@ -1190,6 +1204,7 @@
 			files = (
 				E1C6040D1D0DD78800931C38 /* SponsorTrierViewModel.swift in Sources */,
 				E1C6041B1D0DD7E100931C38 /* ProjectsStore.swift in Sources */,
+				0DA2D0141EDCC438007F7E51 /* MainTabBarController.swift in Sources */,
 				A97B8C221EAD55A500B2A512 /* RegionMessageInteraction.swift in Sources */,
 				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
 				7E7AAC191EDB301600B4A36C /* AboutViewTableViewCell.swift in Sources */,
@@ -1236,6 +1251,7 @@
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				7E7AAC141EDB27A700B4A36C /* AboutViewController.swift in Sources */,
 				E1C6041D1D0DD7E100931C38 /* ProjectTableViewCell.swift in Sources */,
+				2512CD0B1EE193A200B92CE8 /* UIImage+Additions.swift in Sources */,
 				4453ED1B1CF9EA2C0028C8E0 /* AppDelegate.m in Sources */,
 				9B1064311EDDF60A00395CAA /* GemTableViewCell.swift in Sources */,
 				0DA43D071ED9BA9300ADDBED /* PanelSpeakerView.swift in Sources */,

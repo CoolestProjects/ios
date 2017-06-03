@@ -10,7 +10,8 @@ import UIKit
 
 class AboutViewController: BaseViewController {
     @IBOutlet weak var tableView : UITableView!
-    
+    @IBOutlet weak var statusBarBackgroundView: UIView!
+  
     // TODO: Better nib loading
     let tableHeaderView : PageHeaderView = PageHeaderView.pageHeaderView()!
     let tableFooterView = HomeTableFooterView.footerView()!
@@ -31,6 +32,7 @@ class AboutViewController: BaseViewController {
         tableView.tableFooterView = tableFooterView
         tableView.tableHeaderView = tableHeaderView
         tableView.estimatedRowHeight = 300.0;
+        tableView.rowHeight = UITableViewAutomaticDimension;
 
     }
 
@@ -53,24 +55,24 @@ class AboutViewController: BaseViewController {
         tableView.layoutIfNeeded()
     }
     
+    func updateTableHeaderFrame() {
+        let minTableHeaderViewHeight = calculateMinTableHeaderViewHeight()
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: minTableHeaderViewHeight)
+        tableView.tableHeaderView = tableHeaderView
+    }
+    
     func updateTableFooterFrame() {
         tableFooterView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
         tableView.tableFooterView = tableFooterView
     }
     
-    func updateTableHeaderFrame() {
-        let minTableHeaderViewHeight = calculateMinTableHeaderViewHeight()
-        let availableSpace = tableView.bounds.height - tableView.estimatedRowHeight
-        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: max(minTableHeaderViewHeight, availableSpace))
-        tableView.tableHeaderView = tableHeaderView
-    }
-    
     func calculateMinTableHeaderViewHeight() -> CGFloat {
-        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 100.0)
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 1600.0)
         tableHeaderView.setNeedsLayout()
         tableHeaderView.layoutIfNeeded()
         return tableHeaderView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
     }
+
 }
 
 extension AboutViewController : UITableViewDataSource {
@@ -84,8 +86,11 @@ extension AboutViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
       
         if (component is AboutModel) {
+
             let content = component as! AboutModel
             let contentCell = cell as! AboutViewTableViewCell
+            contentCell.tableView = tableView
+
             contentCell.configure(with: content);
         }
         
@@ -97,5 +102,13 @@ extension AboutViewController : UITableViewDataSource {
         
         return cell
     }
-    
+  
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var adjustedOffset = scrollView.contentOffset.y
+        adjustedOffset = max(0, adjustedOffset)
+        adjustedOffset = min(adjustedOffset, 140)
+        let alpha = adjustedOffset / 140
+        statusBarBackgroundView.alpha = alpha
+    }
+  
 }

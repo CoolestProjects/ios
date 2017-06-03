@@ -14,8 +14,7 @@ let SponsorBoxHeight: CGFloat = 300.0
 
 class HomeViewController : BaseViewController {
 
-    @IBOutlet weak var overlayView: UIView!
-    @IBOutlet weak var wrapperView: UIView!
+    @IBOutlet weak var statusBarBackgroundView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     // TODO: better nib loading
@@ -74,8 +73,7 @@ class HomeViewController : BaseViewController {
     
     func updateTableHeaderFrame() {
         let minTableHeaderViewHeight = calculateMinTableHeaderViewHeight()
-        let availableSpace = tableView.bounds.height - SponsorBoxHeight
-        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: max(minTableHeaderViewHeight, availableSpace))
+        tableHeaderView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height:minTableHeaderViewHeight)
         tableView.tableHeaderView = tableHeaderView
     }
     
@@ -146,6 +144,14 @@ extension HomeViewController : UITableViewDelegate {
         if (component is SponsorBox) {
             self.performSegue(withIdentifier: "showSponsors", sender: nil)
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var adjustedOffset = scrollView.contentOffset.y
+        adjustedOffset = max(0, adjustedOffset)
+        adjustedOffset = min(adjustedOffset, 140)
+        let alpha = adjustedOffset / 140
+        statusBarBackgroundView.alpha = alpha
     }
 }
 
