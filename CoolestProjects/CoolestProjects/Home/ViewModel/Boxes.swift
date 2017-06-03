@@ -29,5 +29,7 @@ struct SponsorBox: Component {
 }
 
 class BluetoothBox: Component {
-    let componentIdentifier = "bluetoothBox"    
+    let componentIdentifier = "bluetoothBox"
+    let bluetoothTitle = "MY GEMS"
+    let bluetoothBody = "Let’s play and find a Gem! Use your Mobile Phone as Gem detector. You will receive a notification every time youfind the location of a Gem. \n\nMake sure you go alongside with your parents."
 }
