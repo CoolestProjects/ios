@@ -58,7 +58,6 @@
                     <connections>
                         <segue destination="GLY-xc-6Se" kind="relationship" relationship="viewControllers" id="en2-xc-aj9"/>
                         <segue destination="S7h-5S-R1P" kind="relationship" relationship="viewControllers" id="v60-La-SYx"/>
-                        <segue destination="ZUf-Gu-JRi" kind="relationship" relationship="viewControllers" id="MMd-6V-Tc2"/>
                         <segue destination="5bS-RG-Tlz" kind="relationship" relationship="viewControllers" id="Cbn-0U-Ws3"/>
                         <segue destination="fNc-NS-uEW" kind="relationship" relationship="viewControllers" id="its-1n-8rC"/>
                     </connections>
@@ -117,7 +116,7 @@
         <scene sceneID="JgY-Zw-Aq0">
             <objects>
                 <navigationController id="PKD-L4-QfX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PU6-fy-M1B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PU6-fy-M1B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -135,7 +134,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GLY-xc-6Se" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HOME" image="home-icon" id="iQB-YJ-xRh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ham-PQ-dJz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ham-PQ-dJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -151,10 +150,10 @@
         <!--HALLS-->
         <scene sceneID="nfY-gX-zg3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZUf-Gu-JRi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="hallsSection" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ZUf-Gu-JRi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HALLS" image="halls-icon" id="iP5-gP-pSL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="7bY-Fx-Mxk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7bY-Fx-Mxk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
