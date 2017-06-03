@@ -54,7 +54,7 @@ class GemsViewController: UIViewController {
     }
     
     func setUpNavigationBar() {
-        self.title = "MY GEMS"
+        self.title = NSLocalizedString("gems.title", tableName: "Gems", comment: "")
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(MapZoomViewController.donePressed)), animated: false)
     }
@@ -64,7 +64,7 @@ class GemsViewController: UIViewController {
     }
     
     func setUpNoGemsLabel() {
-        self.noGemsLabel?.setTypedText("NO GEMS YET \n TIME TO FIND SOME \n 🤔")
+        self.noGemsLabel?.setTypedText(NSLocalizedString("gems.empty.message", tableName: "Gems", comment: ""))
     }
 }
 

@@ -71,6 +71,7 @@
 		9B74262B1EA3A46800945794 /* CPARegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262A1EA3A46800945794 /* CPARegion.m */; };
 		9B74262E1EA3A4FA00945794 /* CPABeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74262D1EA3A4FA00945794 /* CPABeacon.m */; };
 		9B842DA21EC88FE300EF9540 /* CPADeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */; };
+		9BD443451EE2D14100E761EB /* Gems.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BD443441EE2D14100E761EB /* Gems.strings */; };
 		A90364941CFF9CD60089B351 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90364931CFF9CD60089B351 /* HomeViewModel.swift */; };
 		A91C078E1D00E3DC005271FE /* Boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C078D1D00E3DC005271FE /* Boxes.swift */; };
 		A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79C051731B8A634DF461065 /* OpenSans-Light.ttf */; };
@@ -225,6 +226,7 @@
 		9B74262C1EA3A4FA00945794 /* CPABeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPABeacon.h; sourceTree = "<group>"; };
 		9B74262D1EA3A4FA00945794 /* CPABeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPABeacon.m; sourceTree = "<group>"; };
 		9B842DA11EC88FE300EF9540 /* CPADeeplinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPADeeplinkManager.swift; sourceTree = "<group>"; };
+		9BD443441EE2D14100E761EB /* Gems.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Gems.strings; sourceTree = "<group>"; };
 		A90364931CFF9CD60089B351 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A91C078D1D00E3DC005271FE /* Boxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boxes.swift; sourceTree = "<group>"; };
 		A91C079A1D00EC3F005271FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeViewController/HomeViewController.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 				E1C604301D0DDD0E00931C38 /* Maps.strings */,
 				A97B8C401EC7BFF600B2A512 /* Alerts.strings */,
 				25F4BF001ED1C57300F45E13 /* Common.strings */,
+				9BD443441EE2D14100E761EB /* Gems.strings */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -1059,6 +1062,7 @@
 				A93BCD2C1D0DFA8000005DB2 /* Coderdojo2015-547.jpg in Resources */,
 				A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */,
 				E1C6041F1D0DD7EF00931C38 /* Sponsors.strings in Resources */,
+				9BD443451EE2D14100E761EB /* Gems.strings in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
 				25F4BF011ED1C57300F45E13 /* Common.strings in Resources */,

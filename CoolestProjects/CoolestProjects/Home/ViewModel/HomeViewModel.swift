@@ -27,7 +27,7 @@ class HomeViewModel {
         ]
         
         if (showBluetoothView) {
-            tableViewData += [BluetoothBox()]
+            tableViewData += [BluetoothBox(title: NSLocalizedString("beacon.title", tableName: "Home", comment: ""), body: NSLocalizedString("beacon.body", tableName: "Home", comment: ""), buttonTitle: NSLocalizedString("gems.button.title", tableName: "Gems", comment: ""))]
         }
         
         let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_diamond_intel")!.size)!

@@ -1,0 +1,11 @@
+/* 
+  Gems.strings
+  CoolestProjects
+
+  Created by Rich on 03/06/2017.
+  Copyright © 2017 coderdojo. All rights reserved.
+*/
+
+"gems.empty.message" = "NO GEMS YET \n TIME TO FIND SOME! \n 🤔";
+"gems.title" = "MY GEMS";
+"gems.button.title" = "See my gems";
