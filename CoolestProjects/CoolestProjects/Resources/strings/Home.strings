@@ -14,9 +14,9 @@
 "event-times.title" = "EVENT TIMES";
 "event-times.body" = "09:00 Doors open to the public.\n09:30 Opening Ceremony\n10:00 Judging Commences\n13:30 - 14:30 Lunch\n\nOngoing The Openet Stage\n\n16:30 Coolest Projects Closing Ceremony\n17:30 Close";
 "parking.title" = "TRANSPORT";
-"parking.body" = "The RDS is well served by public transport.\nBuses directly outside: 4,7,8 and 18. Buses 5 min walk from the RDS: 46a,145\nDART: Sandymount and Lansdowne Stations are 5 minutes away.\n\nSee http://www.irishrail.ie/about-us/dart-commuter and http://www.dublinbus.ie for more information.\n\nParking is available in RDS, Simmonscourt for all visitors at a cost of €6 for the day. For directions checkout http://www.rds.ie \nNOTE: There will be no parking in main RDS so please go straight to Simmonscourt entrance.";
+"parking.body" = "The RDS is well served by public transport.\nThe direct Dublin Bus routes to RDS Ballsbridge from Nassau Street outside Trinity College: 4,7a and 18. \nDART: Sandymount and Lansdowne Stations are 5 minutes away\n\n\nParking is available in RDS, Simmonscourt for all visitors. See http://coolestprojects.org/travel-to-the-event/ for all Travel information";
 "food.title" = "FOOD";
-"food.body" = "Project Presenters: Lunch packs will be provided for all CoderDojo ninjas presenting on the day. \nThis pack consists of a sandwich, fruit and a drink. \nFeel free to bring a packed lunch if desired. Do bring a bottle of water.\n\nGeneral Public: There will also be food trucks and stalls at the event where you can purchase food and drinks. See the Map for more details on location of food at the event.";
+"food.body" = "There will  be food trucks and stalls at the event where you can purchase food and drinks. \nWe would suggest you bring a bottle of water and a packed lunch on the day.";
 "beacon.title" = "MY GEMS";
 "beacon.body" = "Let‘s play find the Gems! Use your Mobile Phone as a Gem Detector. You will receive a notification every time you find a Gem.\nMake sure you go alongside your parents on your Gem hunt. \nYou must enable Bluetooth on your mobile to find Gems. \n\nGem Hunt starts in the RDS on June 17th";
 "beacon.button.title" = "See my gems";
