@@ -46,4 +46,12 @@ extension AboutViewTableViewCell : UIWebViewDelegate  {
 
         }
     }
+
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if navigationType == UIWebViewNavigationType.linkClicked {
+            UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
+            return false
+        }
+        return true
+    }
 }

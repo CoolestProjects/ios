@@ -13,6 +13,7 @@
 		0D6D56BD1ED783D00036B51A /* Halls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BC1ED783D00036B51A /* Halls.swift */; };
 		0D6D56BF1ED785E30036B51A /* Halls+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */; };
 		0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D56C31ED796770036B51A /* ScheduleService.swift */; };
+		0D76D5251EE48FFF00ABA0E6 /* coderdojo_2017_about_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D76D5241EE48FFF00ABA0E6 /* coderdojo_2017_about_01.jpg */; };
 		0DA2D0141EDCC438007F7E51 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */; };
 		0DA43D011ED9B74D00ADDBED /* PanelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */; };
 		0DA43D031ED9BA8900ADDBED /* PanelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */; };
@@ -80,11 +81,6 @@
 		A91C079C1D00EC3F005271FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C079A1D00EC3F005271FE /* HomeViewController.swift */; };
 		A91C079D1D00EC3F005271FE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91C079B1D00EC3F005271FE /* HomeViewController.xib */; };
 		A91C07A61D0101C5005271FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A91C07A51D0101C5005271FE /* Localizable.strings */; };
-		A93BCD2B1D0DFA8000005DB2 /* Coderdojo2015-107.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD261D0DFA8000005DB2 /* Coderdojo2015-107.jpg */; };
-		A93BCD2C1D0DFA8000005DB2 /* Coderdojo2015-547.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD271D0DFA8000005DB2 /* Coderdojo2015-547.jpg */; };
-		A93BCD2D1D0DFA8000005DB2 /* Coderdojo2015-569.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD281D0DFA8000005DB2 /* Coderdojo2015-569.jpg */; };
-		A93BCD2E1D0DFA8000005DB2 /* Coderdojo2015-813.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD291D0DFA8000005DB2 /* Coderdojo2015-813.jpg */; };
-		A93BCD2F1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD2A1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg */; };
 		A93BCD321D0DFE4800005DB2 /* CPAAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD311D0DFE4800005DB2 /* CPAAbout.m */; };
 		A93BCD361D0E232400005DB2 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93BCD351D0E232400005DB2 /* Projects.storyboard */; };
 		A93BCD381D0E249B00005DB2 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93BCD371D0E249B00005DB2 /* FilterOption.swift */; };
@@ -153,6 +149,7 @@
 		0D6D56BC1ED783D00036B51A /* Halls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Halls.swift; path = ../Models/Halls.swift; sourceTree = "<group>"; };
 		0D6D56BE1ED785E30036B51A /* Halls+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Halls+Decodable.swift"; path = "../Models/Halls+Decodable.swift"; sourceTree = "<group>"; };
 		0D6D56C31ED796770036B51A /* ScheduleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		0D76D5241EE48FFF00ABA0E6 /* coderdojo_2017_about_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coderdojo_2017_about_01.jpg; sourceTree = "<group>"; };
 		0DA2D0131EDCC438007F7E51 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0DA43D001ED9B74D00ADDBED /* PanelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelTableViewCell.swift; sourceTree = "<group>"; };
 		0DA43D021ED9BA8900ADDBED /* PanelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanelTableViewCell.xib; sourceTree = "<group>"; };
@@ -232,11 +229,6 @@
 		A91C079A1D00EC3F005271FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = HomeViewController/HomeViewController.swift; sourceTree = "<group>"; };
 		A91C079B1D00EC3F005271FE /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = HomeViewController/HomeViewController.xib; sourceTree = "<group>"; };
 		A91C07A51D0101C5005271FE /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = strings/Localizable.strings; sourceTree = "<group>"; };
-		A93BCD261D0DFA8000005DB2 /* Coderdojo2015-107.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-107.jpg"; path = "images/about/Coderdojo2015-107.jpg"; sourceTree = "<group>"; };
-		A93BCD271D0DFA8000005DB2 /* Coderdojo2015-547.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-547.jpg"; path = "images/about/Coderdojo2015-547.jpg"; sourceTree = "<group>"; };
-		A93BCD281D0DFA8000005DB2 /* Coderdojo2015-569.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-569.jpg"; path = "images/about/Coderdojo2015-569.jpg"; sourceTree = "<group>"; };
-		A93BCD291D0DFA8000005DB2 /* Coderdojo2015-813.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-813.jpg"; path = "images/about/Coderdojo2015-813.jpg"; sourceTree = "<group>"; };
-		A93BCD2A1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Coderdojo2015-6071.jpg"; path = "images/about/Coderdojo2015-6071.jpg"; sourceTree = "<group>"; };
 		A93BCD301D0DFE4800005DB2 /* CPAAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAAbout.h; sourceTree = "<group>"; };
 		A93BCD311D0DFE4800005DB2 /* CPAAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAAbout.m; sourceTree = "<group>"; };
 		A93BCD351D0E232400005DB2 /* Projects.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
@@ -719,11 +711,7 @@
 		A93BCD251D0DFA6B00005DB2 /* about */ = {
 			isa = PBXGroup;
 			children = (
-				A93BCD261D0DFA8000005DB2 /* Coderdojo2015-107.jpg */,
-				A93BCD271D0DFA8000005DB2 /* Coderdojo2015-547.jpg */,
-				A93BCD281D0DFA8000005DB2 /* Coderdojo2015-569.jpg */,
-				A93BCD291D0DFA8000005DB2 /* Coderdojo2015-813.jpg */,
-				A93BCD2A1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg */,
+				0D76D5241EE48FFF00ABA0E6 /* coderdojo_2017_about_01.jpg */,
 			);
 			name = about;
 			sourceTree = "<group>";
@@ -1044,9 +1032,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1C603F71D0C751400931C38 /* MapZoomViewController.xib in Resources */,
-				A93BCD2F1D0DFA8000005DB2 /* Coderdojo2015-6071.jpg in Resources */,
 				44980DAD1D05CE7000C26765 /* Speakers.xcassets in Resources */,
-				A93BCD2E1D0DFA8000005DB2 /* Coderdojo2015-813.jpg in Resources */,
 				E1C604241D0DD8C800931C38 /* About.strings in Resources */,
 				7E7AAC151EDB27A700B4A36C /* AboutViewController.xib in Resources */,
 				0DA43D1A1ED9D99D00ADDBED /* HallActivitiesViewController.xib in Resources */,
@@ -1059,14 +1045,12 @@
 				A9F8DB641D03623B00ECE1F3 /* SponsorBoxTableViewCell.xib in Resources */,
 				9B69D8BD1ED95B470027795E /* BluetoothBoxTableViewCell.xib in Resources */,
 				25F4BF051ED1DACB00F45E13 /* ContentTableViewCell.xib in Resources */,
-				A93BCD2C1D0DFA8000005DB2 /* Coderdojo2015-547.jpg in Resources */,
 				A91C07911D00EA54005271FE /* OpenSans-Light.ttf in Resources */,
 				E1C6041F1D0DD7EF00931C38 /* Sponsors.strings in Resources */,
 				9BD443451EE2D14100E761EB /* Gems.strings in Resources */,
 				A91C07921D00EA54005271FE /* OpenSans-Regular.ttf in Resources */,
 				A91C07A61D0101C5005271FE /* Localizable.strings in Resources */,
 				25F4BF011ED1C57300F45E13 /* Common.strings in Resources */,
-				A93BCD2B1D0DFA8000005DB2 /* Coderdojo2015-107.jpg in Resources */,
 				E1C6042F1D0DDC9D00931C38 /* about.html in Resources */,
 				A97B8C411EC7BFF600B2A512 /* Alerts.strings in Resources */,
 				A93BCD361D0E232400005DB2 /* Projects.storyboard in Resources */,
@@ -1077,6 +1061,7 @@
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
 				9B1064361EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf in Resources */,
 				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
+				0D76D5251EE48FFF00ABA0E6 /* coderdojo_2017_about_01.jpg in Resources */,
 				E1C604271D0DD93400931C38 /* Projects.strings in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
 				E1C604291D0DD94A00931C38 /* Settings.bundle in Resources */,
@@ -1089,7 +1074,6 @@
 				7E7AAC1A1EDB301600B4A36C /* AboutViewTableViewCell.xib in Resources */,
 				25273B841ED7019800B63BF7 /* Maps.xcassets in Resources */,
 				0DA43D031ED9BA8900ADDBED /* PanelTableViewCell.xib in Resources */,
-				A93BCD2D1D0DFA8000005DB2 /* Coderdojo2015-569.jpg in Resources */,
 				25273B821ED6FEAE00B63BF7 /* MapViewTableViewCell.xib in Resources */,
 				E1C6040C1D0DD78800931C38 /* SponsorsViewController.xib in Resources */,
 				2501C52F1ED6C6DD00969F0B /* BlurbTableViewCell.xib in Resources */,
