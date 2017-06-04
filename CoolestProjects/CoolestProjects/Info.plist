@@ -19,9 +19,16 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>7</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>We use low-energy Bluetooth and iBeacon devices installed at the RDS Arena to find you inside the hall, and provide relevant information.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We use low-energy Bluetooth and iBeacon devices installed at the RDS Arena to find you inside the hall, and provide relevant information.</string>
 	<key>UIAppFonts</key>
@@ -49,10 +56,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
 </dict>
 </plist>
