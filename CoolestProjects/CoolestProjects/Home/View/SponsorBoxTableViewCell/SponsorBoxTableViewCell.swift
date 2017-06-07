@@ -16,12 +16,14 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
     @IBOutlet weak var diamondTitle: UILabel!
     @IBOutlet weak var platinumTitle: UILabel!
     @IBOutlet weak var goldTitle: UILabel!
+    @IBOutlet weak var supporterTitle: UILabel!
     
     @IBOutlet weak var diamondStackView: UIStackView!
     @IBOutlet weak var platinumStackView: UIStackView!
     @IBOutlet weak var platinumLowerStackView: UIStackView!
     @IBOutlet weak var goldStackView: UIStackView!
     @IBOutlet weak var goldLowerStackView: UIStackView!
+    @IBOutlet weak var supporterStackView: UIStackView!
 
     func configure(with item: ItemType) {
         title.text = item.title
@@ -29,6 +31,7 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
         diamondTitle.text = item.diamondTitle
         platinumTitle.text = item.platinumTitle
         goldTitle.text = item.goldTitle
+        supporterTitle.text = item.supporterTitle
         
         for image in item.diamondImages {
             diamondStackView.addArrangedSubview(UIImageView(image: image))
@@ -45,6 +48,9 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
         for image in item.goldLowerImages {
             goldLowerStackView.addArrangedSubview(UIImageView(image: image))
         }
+        for image in item.supporterImages {
+            supporterStackView.addArrangedSubview(UIImageView(image: image))
+        }
     }
     
     override func prepareForReuse() {
@@ -54,6 +60,7 @@ class SponsorBoxTableViewCell : UITableViewCell, Configurable {
         self.removeViewsFrom(stackView: platinumLowerStackView)
         self.removeViewsFrom(stackView: goldStackView)
         self.removeViewsFrom(stackView: goldLowerStackView)
+        self.removeViewsFrom(stackView: supporterStackView)
     }
     
     func removeViewsFrom( stackView: UIStackView) {
