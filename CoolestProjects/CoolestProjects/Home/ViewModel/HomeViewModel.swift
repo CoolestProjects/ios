@@ -47,7 +47,7 @@ class HomeViewModel {
                 title: NSLocalizedString("food.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("food.body", tableName: "Home", comment: ""),
                 icon: UIImage(named: "section_icon_food")
-            ) ,
+            ),
             SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                        diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,
                        platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
