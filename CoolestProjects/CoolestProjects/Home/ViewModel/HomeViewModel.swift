@@ -30,7 +30,7 @@ class HomeViewModel {
             tableViewData += [BluetoothBox(title: NSLocalizedString("beacon.title", tableName: "Home", comment: ""), body: NSLocalizedString("beacon.body", tableName: "Home", comment: ""), buttonTitle: NSLocalizedString("beacon.button.title", tableName: "Home", comment: ""))]
         }
         
-//        let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_diamond_intel")!.size)!
+        let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_diamond_intel")!.size)!
         
         tableViewData += [
             ContentViewModel(
@@ -47,7 +47,7 @@ class HomeViewModel {
                 title: NSLocalizedString("food.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("food.body", tableName: "Home", comment: ""),
                 icon: UIImage(named: "section_icon_food")
-            ) /*, TODO: un-comment after final approval
+            ),
             SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                        diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,
                        platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
@@ -78,7 +78,7 @@ class HomeViewModel {
                         UIImage(named: "sponsor_gold_workday")!,
                         UIImage(named: "sponsor_gold_zalando")!,
                         UIImage(named: "sponsor_gold_cf")!,]
-            ) */
+            )
             ] as [Component]
     }
 }
