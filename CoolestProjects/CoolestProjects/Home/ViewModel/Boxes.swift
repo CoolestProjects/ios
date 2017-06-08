@@ -20,12 +20,14 @@ struct SponsorBox: Component {
     let diamondTitle : String
     let platinumTitle : String
     let goldTitle : String
+    let supporterTitle : String
     
     let diamondImages: [UIImage]
     let platinumHigherImages: [UIImage]
     let platinumLowerImages: [UIImage]
     let goldImages: [UIImage]
     let goldLowerImages: [UIImage]
+    let supporterImages: [UIImage]
 }
 
 struct BluetoothBox: Component {

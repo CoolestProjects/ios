@@ -52,6 +52,7 @@ class HomeViewModel {
                        diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,
                        platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
                        goldTitle:NSLocalizedString("sponsor.gold.title", tableName: "Home", comment: "") ,
+                       supporterTitle:NSLocalizedString("sponsor.supporter.title", tableName: "Home", comment: ""),
                        diamondImages: [
                         image,
                         UIImage(named: "sponsor_diamond_intel")!,
@@ -71,14 +72,16 @@ class HomeViewModel {
                        goldImages: [
                         UIImage(named: "sponsor_gold_1_virgin_media")!,
                         UIImage(named: "sponsor_gold_dublin_council")!,
-                        UIImage(named: "sponsor_gold_failte-ireland")!,
-                        UIImage(named: "sponsor_gold_accenture")!],
+                        UIImage(named: "sponsor_gold_accenture")!,
+                        UIImage(named: "sponsor_gold_lit-reverse")!],
                        goldLowerImages: [
-                        UIImage(named: "sponsor_gold_lit-reverse")!,
                         UIImage(named: "sponsor_gold_workday")!,
                         UIImage(named: "sponsor_gold_zalando")!,
-                        UIImage(named: "sponsor_gold_cf")!,]
-            )
+                        UIImage(named: "sponsor_gold_cf")!,],
+                       supporterImages: [
+                        image,
+                        UIImage(named: "sponsor_gold_failte-ireland")!,
+                        UIImage(named: "sponsor_gold_coderdojo")!, image])
             ] as [Component]
     }
 }
