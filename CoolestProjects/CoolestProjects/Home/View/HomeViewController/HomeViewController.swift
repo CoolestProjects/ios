@@ -26,13 +26,14 @@ class HomeViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         beaconNotificationsManager = BeaconNotificationsManager.sharedInstance
-        viewModel.setBluetoothEnabled(bluetoothEnabled: isBleEnabledAndMonitoring())
         setupUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.navigationController?.isNavigationBarHidden = true
+        updateTableviewIfBleNowEnabled()
     }
 
     override func viewDidLayoutSubviews() {
@@ -40,6 +41,13 @@ class HomeViewController : BaseViewController {
         forceTableViewLayoutPhase()
         updateTableHeaderFrame()
         updateTableFooterFrame()
+    }
+    
+    func updateTableviewIfBleNowEnabled() {
+        if(isBleEnabledAndMonitoring() && !viewModel.isBluetoothEnabled()) {
+            viewModel.setBluetoothEnabled(bluetoothEnabled: isBleEnabledAndMonitoring())
+            tableView.reloadData()
+        }
     }
     
     func setupUI() {

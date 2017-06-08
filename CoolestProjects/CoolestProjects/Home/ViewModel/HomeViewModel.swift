@@ -12,13 +12,19 @@ import UIKit
 class HomeViewModel {
 
     var tableViewData = [Component]()
+    private var bleOn = false
     
     init() {
         createTableViewData(showBluetoothView: false)
     }
     
     func setBluetoothEnabled(bluetoothEnabled : Bool) {
-        createTableViewData(showBluetoothView: bluetoothEnabled)
+        bleOn = bluetoothEnabled
+        createTableViewData(showBluetoothView: bleOn)
+    }
+    
+    func isBluetoothEnabled() -> Bool {
+        return bleOn
     }
     
     private func createTableViewData(showBluetoothView: Bool) {
