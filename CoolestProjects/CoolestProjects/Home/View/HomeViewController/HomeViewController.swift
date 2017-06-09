@@ -44,7 +44,7 @@ class HomeViewController : BaseViewController {
     }
     
     func updateTableviewIfBleNowEnabled() {
-        if(isBleEnabledAndMonitoring() && !viewModel.isBluetoothEnabled()) {
+        if(isBleEnabledAndMonitoring() != viewModel.isBluetoothEnabled()) {
             viewModel.setBluetoothEnabled(bluetoothEnabled: isBleEnabledAndMonitoring())
             tableView.reloadData()
         }
