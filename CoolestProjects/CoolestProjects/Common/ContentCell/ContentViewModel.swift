@@ -13,11 +13,13 @@ class ContentViewModel: Component {
     var title: String
     var body: String
     var icon: UIImage?
+    var ctaText: String?
 
-    required init(title: String, body: String, icon: UIImage?) {
+    required init(title: String, body: String, icon: UIImage?, ctaText: String?) {
         self.title = title
         self.body = body
         self.icon = icon
+        self.ctaText = ctaText
     }
     
 }
@@ -25,7 +27,11 @@ class ContentViewModel: Component {
 extension ContentViewModel {
 
     convenience init(hall: Hall) {
-        self.init(title: hall.name, body: hall.description, icon: UIImage(named: ""))
+        self.init(
+            title: hall.name,
+            body: hall.description,
+            icon: UIImage(named: ""),
+            ctaText: NSLocalizedString("contentBox.cta", tableName: "Halls", comment: "See all activities"))
     }
 
 }

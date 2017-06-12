@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0D1BBC1EEF0851009CE938 /* Halls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D0D1BBB1EEF0851009CE938 /* Halls.strings */; };
 		0D2E55201EDAC82F00262A49 /* HallsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */; };
 		0D2E55221EDAC84200262A49 /* HallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E55211EDAC84200262A49 /* HallsViewController.swift */; };
 		0D2E55261EDB2E2F00262A49 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */; };
@@ -109,7 +110,6 @@
 		A9F8DB6B1D0376BA00ECE1F3 /* HomeTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8DB6A1D0376BA00ECE1F3 /* HomeTableFooterView.swift */; };
 		AF3EA5C27264BE6E30AEBFA1 /* CPASponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA519C673E3A958BF8F77 /* CPASponsor.m */; };
 		B79C042D35B744F825F85941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B79C04472D5989530374B57A /* GoogleService-Info.plist */; };
-		E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */ = {isa = PBXBuildFile; fileRef = E10F18F81D06F8C500AE44AC /* Menu.strings */; };
 		E1C603F51D0C74F600931C38 /* MapZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603F41D0C74F600931C38 /* MapZoomViewController.swift */; };
 		E1C603F71D0C751400931C38 /* MapZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C603F61D0C751400931C38 /* MapZoomViewController.xib */; };
 		E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603FB1D0DD78800931C38 /* SponsorTableViewCell.swift */; };
@@ -143,6 +143,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0D1BBB1EEF0851009CE938 /* Halls.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Halls.strings; sourceTree = "<group>"; };
 		0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HallsViewController.xib; sourceTree = "<group>"; };
 		0D2E55211EDAC84200262A49 /* HallsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HallsViewController.swift; sourceTree = "<group>"; };
 		0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
@@ -265,7 +266,6 @@
 		B79C045F341C1FEA00B4A605 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		B79C051731B8A634DF461065 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		B79C05458A577A69B366BA10 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		E10F18F81D06F8C500AE44AC /* Menu.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Menu.strings; path = strings/Menu.strings; sourceTree = "<group>"; };
 		E1C603F41D0C74F600931C38 /* MapZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapZoomViewController.swift; sourceTree = "<group>"; };
 		E1C603F61D0C751400931C38 /* MapZoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapZoomViewController.xib; sourceTree = "<group>"; };
 		E1C603FB1D0DD78800931C38 /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
@@ -699,11 +699,11 @@
 				E1C604221D0DD8C800931C38 /* About.strings */,
 				A91C07A51D0101C5005271FE /* Localizable.strings */,
 				A9F8DB4D1D0331C100ECE1F3 /* Home.strings */,
-				E10F18F81D06F8C500AE44AC /* Menu.strings */,
 				E1C604301D0DDD0E00931C38 /* Maps.strings */,
 				A97B8C401EC7BFF600B2A512 /* Alerts.strings */,
 				25F4BF001ED1C57300F45E13 /* Common.strings */,
 				9BD443441EE2D14100E761EB /* Gems.strings */,
+				0D0D1BBB1EEF0851009CE938 /* Halls.strings */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -1059,8 +1059,8 @@
 				A9F8DB4E1D0331C100ECE1F3 /* Home.strings in Resources */,
 				7E426E721ED09946006BA833 /* PageHeaderView.xib in Resources */,
 				E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */,
+				0D0D1BBC1EEF0851009CE938 /* Halls.strings in Resources */,
 				9B1064361EDF338900395CAA /* minecraft_font_by_pwnage_block-d37t6nb.ttf in Resources */,
-				E10F18F91D06F8C500AE44AC /* Menu.strings in Resources */,
 				0D76D5251EE48FFF00ABA0E6 /* coderdojo_2017_about_01.jpg in Resources */,
 				E1C604271D0DD93400931C38 /* Projects.strings in Resources */,
 				A91C07931D00EA54005271FE /* OpenSans-Semibold.ttf in Resources */,
