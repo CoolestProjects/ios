@@ -114,7 +114,6 @@
 		E1C603F71D0C751400931C38 /* MapZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C603F61D0C751400931C38 /* MapZoomViewController.xib */; };
 		E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603FB1D0DD78800931C38 /* SponsorTableViewCell.swift */; };
 		E1C604091D0DD78800931C38 /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C603FC1D0DD78800931C38 /* SponsorTableViewCell.xib */; };
-		E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C603FE1D0DD78800931C38 /* SponsorTableViewHeader.swift */; };
 		E1C6040B1D0DD78800931C38 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604001D0DD78800931C38 /* SponsorsViewController.swift */; };
 		E1C6040C1D0DD78800931C38 /* SponsorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C604011D0DD78800931C38 /* SponsorsViewController.xib */; };
 		E1C6040D1D0DD78800931C38 /* SponsorTrierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C604031D0DD78800931C38 /* SponsorTrierViewModel.swift */; };
@@ -270,7 +269,6 @@
 		E1C603F61D0C751400931C38 /* MapZoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapZoomViewController.xib; sourceTree = "<group>"; };
 		E1C603FB1D0DD78800931C38 /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
 		E1C603FC1D0DD78800931C38 /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
-		E1C603FE1D0DD78800931C38 /* SponsorTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewHeader.swift; sourceTree = "<group>"; };
 		E1C604001D0DD78800931C38 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		E1C604011D0DD78800931C38 /* SponsorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorsViewController.xib; sourceTree = "<group>"; };
 		E1C604031D0DD78800931C38 /* SponsorTrierViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTrierViewModel.swift; sourceTree = "<group>"; };
@@ -859,7 +857,6 @@
 			isa = PBXGroup;
 			children = (
 				E1C603FA1D0DD78800931C38 /* SponsorTableViewCell */,
-				E1C603FD1D0DD78800931C38 /* SponsorTableViewHeader */,
 				E1C603FF1D0DD78800931C38 /* SponsorViewController */,
 			);
 			path = View;
@@ -872,14 +869,6 @@
 				E1C603FC1D0DD78800931C38 /* SponsorTableViewCell.xib */,
 			);
 			path = SponsorTableViewCell;
-			sourceTree = "<group>";
-		};
-		E1C603FD1D0DD78800931C38 /* SponsorTableViewHeader */ = {
-			isa = PBXGroup;
-			children = (
-				E1C603FE1D0DD78800931C38 /* SponsorTableViewHeader.swift */,
-			);
-			path = SponsorTableViewHeader;
 			sourceTree = "<group>";
 		};
 		E1C603FF1D0DD78800931C38 /* SponsorViewController */ = {
@@ -989,8 +978,9 @@
 				TargetAttributes = {
 					4453ED121CF9EA2C0028C8E0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = H6SFH4FUU2;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1234,7 +1224,6 @@
 				0DB8E7091ED4BA04001861D8 /* Array+Gloss.swift in Sources */,
 				E1C604081D0DD78800931C38 /* SponsorTableViewCell.swift in Sources */,
 				0DA43D0C1ED9C4E700ADDBED /* UIColor+Additions.swift in Sources */,
-				E1C6040A1D0DD78800931C38 /* SponsorTableViewHeader.swift in Sources */,
 				25318B181CFD794000691791 /* CPAFirebaseDefaultService.m in Sources */,
 				25318B1C1CFD7EA700691791 /* CPAObject.m in Sources */,
 				7E7AAC141EDB27A700B4A36C /* AboutViewController.swift in Sources */,
@@ -1394,10 +1383,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H6SFH4FUU2;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
+				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent.colin;
 				PRODUCT_NAME = "Coolest Projects";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1419,10 +1408,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Noel King (78XSL3W3V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H6SFH4FUU2;
 				INFOPLIST_FILE = CoolestProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent;
+				PRODUCT_BUNDLE_IDENTIFIER = org.coolestprojects.coolestprojectsevent.colin;
 				PRODUCT_NAME = "Coolest Projects";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

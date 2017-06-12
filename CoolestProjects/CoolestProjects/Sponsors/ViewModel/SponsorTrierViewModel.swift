@@ -8,53 +8,74 @@
 
 import UIKit
 
-class SponsorsViewModel {
+class SponsorViewModel {
     
-}
-
-class SponsorTrierViewModel {
-
-    static func buildSponsorTierViewModels(_ sponsorTiers: NSArray ) -> [SponsorTrierViewModel] {
-        var sponsorTierViewModels : [SponsorTrierViewModel] = []
-        
-        for sponsorTier in sponsorTiers {
-            let sponsorViewmodel = SponsorTrierViewModel(sponsorTier: sponsorTier as! CPASponsorTier)
-            sponsorTierViewModels.append(sponsorViewmodel)
-        }
-        
-        return sponsorTierViewModels
+    var tableViewData = [Component]()
+    init() {
+        createTableViewData()
     }
     
-    var tierName : String?
-    var sponsors : Array<SponsorViewModel>?
-    let tierColor = AppColors.lightGreyColor
-    
-    init(sponsorTier: CPASponsorTier) {
-        
-        tierName = sponsorTier.tier
-        sponsors = SponsorViewModel.buildSponsorViewModels(sponsorTier.sponsors as NSArray)
-    }
-    
-}
+    private func createTableViewData() {
 
-
-class SponsorViewModel: Component {
-    
-    static func buildSponsorViewModels(_ sponsors: NSArray ) -> [SponsorViewModel] {
-        var sponsorViewModels : [SponsorViewModel] = []
+        let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_diamond_intel")!.size)!
         
-        for sponsor in sponsors {
-            let sponsorViewmodel = SponsorViewModel(sponsor: sponsor as! CPASponsor)
-            sponsorViewModels.append(sponsorViewmodel)
-        }
         
-        return sponsorViewModels
-    }
-    
-    var logoUrl : String
-    var componentIdentifier: String = "sponsorCell"
-
-    init(sponsor: CPASponsor) {
-        logoUrl = sponsor.logoUrl
+        tableViewData += [
+            SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
+                       diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,
+                       platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
+                       goldTitle:NSLocalizedString("sponsor.gold.title", tableName: "Home", comment: "") ,
+                       supporterTitle:NSLocalizedString("sponsor.supporter.title", tableName: "Home", comment: ""),
+                       diamondImages: [
+                        image,
+                        UIImage(named: "sponsor_diamond_intel")!,
+                        UIImage(named: "sponsor_diamond_microsoft")!,
+                        image
+                       ],
+                       platinumHigherImages: [
+                        UIImage(named: "sponsor_platinum_openet")!,
+                        UIImage(named: "sponsor_platinum_rte")!,
+                        UIImage(named: "sponsor_platinum_mastercard")!,
+                        UIImage(named: "sponsor_platinum_boi")!],
+                       platinumLowerImages: [
+                        UIImage(named: "sponsor_platinum_symantec")!,
+                        UIImage(named: "sponsor_platinum_riot-games")!,
+                        UIImage(named: "sponsor_platinum_tdl")!,
+                        UIImage(named: "sponsor_platinum_folens")!],
+                       goldImages: [
+                        UIImage(named: "sponsor_gold_1_virgin_media")!,
+                        UIImage(named: "sponsor_gold_dublin_council")!,
+                        UIImage(named: "sponsor_gold_accenture")!,
+                        UIImage(named: "sponsor_gold_lit-reverse")!],
+                       goldLowerImages: [
+                        UIImage(named: "sponsor_gold_workday")!,
+                        UIImage(named: "sponsor_gold_zalando")!,
+                        UIImage(named: "sponsor_gold_cf")!,
+                        UIImage(named: "sponsor_gold_hmh")!],
+                       supporterImages: [
+                        image,
+                        UIImage(named: "sponsor_gold_failte-ireland")!,
+                        UIImage(named: "sponsor_gold_coderdojo")!,
+                        image],
+                       silverTitle: NSLocalizedString("sponsor.silverTitle", tableName: "Home", comment: ""),
+                       bronzeTitle: NSLocalizedString("sponsor.bronzeTitle", tableName: "Home", comment: ""),
+                       educationTitle: NSLocalizedString("sponsor.educationTitle", tableName: "Home", comment: ""),
+                       silverImages: [
+                        UIImage(named: "sponsor_silver_cartawler")!,
+                        UIImage(named: "sponsor_silver_twitter")!,
+                        UIImage(named: "sponsor_silver_zendesk")!
+                       ],
+                       bronzeImages: [
+                        UIImage(named: "sponsor_bronze_barnados")!,
+                        UIImage(named: "sponsor_bronze_ioe")!,
+                        UIImage(named: "sponsor_bronze_mhc")!
+                       ],
+                       educationImages: [
+                        UIImage(named: "sponsor_gold_workday")!,
+                        UIImage(named: "sponsor_gold_zalando")!,
+                        UIImage(named: "sponsor_gold_hmh")!
+                       ]
+            )
+            ] as [Component]
     }
 }

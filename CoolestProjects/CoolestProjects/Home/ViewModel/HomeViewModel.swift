@@ -77,11 +77,13 @@ class HomeViewModel {
                        goldLowerImages: [
                         UIImage(named: "sponsor_gold_workday")!,
                         UIImage(named: "sponsor_gold_zalando")!,
-                        UIImage(named: "sponsor_gold_cf")!,],
+                        UIImage(named: "sponsor_gold_cf")!,
+                        UIImage(named: "sponsor_gold_hmh")!],
                        supporterImages: [
                         image,
                         UIImage(named: "sponsor_gold_failte-ireland")!,
-                        UIImage(named: "sponsor_gold_coderdojo")!, image])
+                        UIImage(named: "sponsor_gold_coderdojo")!,
+                        image])
             ] as [Component]
     }
 }

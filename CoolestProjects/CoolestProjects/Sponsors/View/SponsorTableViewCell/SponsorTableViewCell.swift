@@ -14,10 +14,10 @@ class SponsorTableViewCell: UITableViewCell {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     func displayViewModel(_ sponsorViewModel : SponsorViewModel) {
-      sponsorImageView.sd_setImage(with: URL(string: sponsorViewModel.logoUrl)) { (image, error, cacheType, url) in
-//            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            
-        }
+//      sponsorImageView.sd_setImage(with: URL(string: sponsorViewModel.logoUrl)) { (image, error, cacheType, url) in
+////            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//            
+//        }
     
     }
 }
