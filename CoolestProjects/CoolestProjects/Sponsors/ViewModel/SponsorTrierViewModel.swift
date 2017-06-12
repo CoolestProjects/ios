@@ -19,8 +19,7 @@ class SponsorViewModel {
 
         let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_diamond_intel")!.size)!
         
-        
-        tableViewData += [
+        tableViewData = [
             SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                        diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,
                        platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
@@ -53,10 +52,11 @@ class SponsorViewModel {
                         UIImage(named: "sponsor_gold_cf")!,
                         UIImage(named: "sponsor_gold_hmh")!],
                        supporterImages: [
-                        image,
-                        UIImage(named: "sponsor_gold_failte-ireland")!,
-                        UIImage(named: "sponsor_gold_coderdojo")!,
-                        image],
+                        UIImage(named: "sponsor_spon_dog")!,
+                        UIImage(named: "sponsor_spon_aa")!,
+                        UIImage(named: "sponsor_spon_1Plus")!,
+                        UIImage(named: "sponsor_gold_failte-ireland")!
+                        ],
                        silverTitle: NSLocalizedString("sponsor.silverTitle", tableName: "Home", comment: ""),
                        bronzeTitle: NSLocalizedString("sponsor.bronzeTitle", tableName: "Home", comment: ""),
                        educationTitle: NSLocalizedString("sponsor.educationTitle", tableName: "Home", comment: ""),
@@ -71,9 +71,10 @@ class SponsorViewModel {
                         UIImage(named: "sponsor_bronze_mhc")!
                        ],
                        educationImages: [
-                        UIImage(named: "sponsor_gold_workday")!,
-                        UIImage(named: "sponsor_gold_zalando")!,
-                        UIImage(named: "sponsor_gold_hmh")!
+                        image,
+                        UIImage(named: "sponsor_edu_dcu")!,
+                        UIImage(named: "sponsor_gold_coderdojo")!,
+                        image
                        ]
             )
             ] as [Component]
