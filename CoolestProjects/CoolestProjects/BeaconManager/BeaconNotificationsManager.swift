@@ -185,11 +185,22 @@ extension CPABeacon {
             return nil
         }
 
-        return CLBeaconRegion(
-            proximityUUID: proximityUUID,
-            major: CLBeaconMajorValue(major.uint16Value),
-            minor: CLBeaconMinorValue(minor.uint16Value),
-            identifier: "\(regionId)#\(name)")
+        var region: CLBeaconRegion
+
+        if let minor = minor {
+            region = CLBeaconRegion(
+                proximityUUID: proximityUUID,
+                major: CLBeaconMajorValue(major.uint16Value),
+                minor: CLBeaconMinorValue(minor.uint16Value),
+                identifier: "\(regionId)#\(name)")
+        } else {
+            region = CLBeaconRegion(
+                proximityUUID: proximityUUID,
+                major: CLBeaconMajorValue(major.uint16Value),                
+                identifier: "\(regionId)#\(name)")
+        }
+
+        return region
     }
 }
 

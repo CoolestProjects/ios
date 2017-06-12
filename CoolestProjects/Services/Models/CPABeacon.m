@@ -10,13 +10,16 @@
 
 @implementation CPABeacon
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [propertyName isEqualToString:@"minor"];
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
         self.name = @"";
         self.uuid = [[[NSUUID alloc] init] UUIDString];
         self.major = @1;
-        self.minor = @1;
     }
     return self;
 }
