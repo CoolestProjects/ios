@@ -14,7 +14,7 @@ struct DeepLinkKeys {
 
 protocol DeepLinkParser {
 
-    func parse(userInfo: [AnyHashable: Any]) -> (String, Any)?
+    func parse(userInfo: [AnyHashable: Any]) -> (String, Any?)?
 
 }
 
@@ -28,7 +28,7 @@ struct HallDeepLinkParser: DeepLinkParser {
     static let notficationName = "HallDeepLinkNotification"
 
     // /halls/iot/workshop1
-    func parse(userInfo: [AnyHashable: Any]) -> (String, Any)? {
+    func parse(userInfo: [AnyHashable: Any]) -> (String, Any?)? {
         guard let deepLinkPage = userInfo[DeepLinkKeys.deepLinkPageKey] as? String
             else { return nil }
 
@@ -45,18 +45,39 @@ struct HallDeepLinkParser: DeepLinkParser {
 
 }
 
+struct GemsDeepLinkParser: DeepLinkParser {
+
+    static let notficationName = "GemsDeepLinkNotification"
+
+    // /gems
+    func parse(userInfo: [AnyHashable: Any]) -> (String, Any?)? {
+        guard let deepLinkPage = userInfo[DeepLinkKeys.deepLinkPageKey] as? String,
+            deepLinkPage == "/gems"
+            else { return nil }
+
+        return (GemsDeepLinkParser.notficationName, nil)
+    }
+    
+}
+
 class CPADeeplinkManager: NSObject {
 
-    private static let parsers: [DeepLinkParser] = [HallDeepLinkParser()]
+    private static let parsers: [DeepLinkParser] = [HallDeepLinkParser(), GemsDeepLinkParser()]
 
     static func handleDeeplink(userInfo: [AnyHashable:Any]) {
 
         let deepLinkData = parsers.flatMap { $0.parse(userInfo: userInfo) }.first
         if let deepLinkData = deepLinkData {
+            let (notificationName, notificationPayload) = deepLinkData
+            var userInfo = [String:Any]()
+            if let notificationPayload = notificationPayload {
+                userInfo["payload"] = notificationPayload
+            }
+            
             NotificationCenter.default.post(
-                name: NSNotification.Name(rawValue: deepLinkData.0),
+                name: NSNotification.Name(rawValue: notificationName),
                 object: self,
-                userInfo: ["payload": deepLinkData.1])
+                userInfo: userInfo)
         }
 
     }

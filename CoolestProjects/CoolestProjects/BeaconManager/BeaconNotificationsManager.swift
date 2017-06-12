@@ -208,6 +208,7 @@ extension UNNotificationContent {
         n.title = message.title
         n.body = message.message
         n.sound = UNNotificationSound.default()
+        n.userInfo = ["deeplink_page": "/gems"]
         return n
     }
 
