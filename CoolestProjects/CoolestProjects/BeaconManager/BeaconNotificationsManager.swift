@@ -91,7 +91,7 @@ class BeaconNotificationsManager: NSObject {
 
             // store interaction
             print("Storing interaction for message")
-            self.regionMessageInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId)
+            self.regionMessageInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId, title: message.title, message: message.message)
 
             // show user notification
             print("Show local notification")
