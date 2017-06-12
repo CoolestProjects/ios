@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import Gloss
+import FirebaseAnalytics
 
 
 protocol BeaconRegionInteractionStore {
@@ -39,10 +40,12 @@ extension BeaconRegionInteractionStoreImpl: BeaconRegionInteractionStore {
     }
 
     func enterBeaconRegion(_ region: CLBeaconRegion) {
+        trackBeaconInteraction(event: BeaconAnalyticsEvent.enter.rawValue, regionIdentifier: region.identifier)
         addAndSaveInteraction(with: region, action: .enter)
     }
 
     func exitBeaconRegion(_ region: CLBeaconRegion) {
+        trackBeaconInteraction(event: BeaconAnalyticsEvent.exit.rawValue, regionIdentifier: region.identifier)
         addAndSaveInteraction(with: region, action: .exit)
     }
 
@@ -56,6 +59,10 @@ extension BeaconRegionInteractionStoreImpl: BeaconRegionInteractionStore {
 
         inMemoryInteractions.append(regionInteraction)
         saveToDisk(items: inMemoryInteractions)
+    }
+
+    fileprivate func trackBeaconInteraction(event: String, regionIdentifier: String) {
+        FIRAnalytics.logEvent(withName: event, parameters: [BeaconAnalyticsProperty.regionId.rawValue: regionIdentifier])
     }
 
 }

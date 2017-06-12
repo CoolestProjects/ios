@@ -5,6 +5,7 @@ target 'CoolestProjects' do
 
   # Pods for CoolestProjects
   pod 'Firebase'
+  pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'

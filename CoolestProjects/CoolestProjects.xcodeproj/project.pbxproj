@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D0D1BBC1EEF0851009CE938 /* Halls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D0D1BBB1EEF0851009CE938 /* Halls.strings */; };
+		0D1C66041EEF3E4100EBA0BE /* BeaconAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1C66031EEF3E4100EBA0BE /* BeaconAnalytics.swift */; };
 		0D2E55201EDAC82F00262A49 /* HallsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */; };
 		0D2E55221EDAC84200262A49 /* HallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E55211EDAC84200262A49 /* HallsViewController.swift */; };
 		0D2E55261EDB2E2F00262A49 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */; };
@@ -144,6 +145,7 @@
 
 /* Begin PBXFileReference section */
 		0D0D1BBB1EEF0851009CE938 /* Halls.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Halls.strings; sourceTree = "<group>"; };
+		0D1C66031EEF3E4100EBA0BE /* BeaconAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconAnalytics.swift; sourceTree = "<group>"; };
 		0D2E551F1EDAC82F00262A49 /* HallsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HallsViewController.xib; sourceTree = "<group>"; };
 		0D2E55211EDAC84200262A49 /* HallsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HallsViewController.swift; sourceTree = "<group>"; };
 		0D2E55251EDB2E2F00262A49 /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
@@ -723,6 +725,7 @@
 				A9D9D37E1ED38C3B001CE6F1 /* BeaconRegionInteraction.swift */,
 				A96EA6631EA6C7750021990F /* BeaconNotificationsManager.swift */,
 				A97B8C3E1EC7B80A00B2A512 /* BluetoothAlertManager.swift */,
+				0D1C66031EEF3E4100EBA0BE /* BeaconAnalytics.swift */,
 			);
 			path = BeaconManager;
 			sourceTree = "<group>";
@@ -1195,6 +1198,7 @@
 				0DA2D0141EDCC438007F7E51 /* MainTabBarController.swift in Sources */,
 				A97B8C221EAD55A500B2A512 /* RegionMessageInteraction.swift in Sources */,
 				9B74262B1EA3A46800945794 /* CPARegion.m in Sources */,
+				0D1C66041EEF3E4100EBA0BE /* BeaconAnalytics.swift in Sources */,
 				7E7AAC191EDB301600B4A36C /* AboutViewTableViewCell.swift in Sources */,
 				2501C5311ED6C70E00969F0B /* BlurbViewModel.swift in Sources */,
 				0D6D56C41ED796770036B51A /* ScheduleService.swift in Sources */,
