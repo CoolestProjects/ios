@@ -7,3 +7,7 @@
 */
 
 "navbar.title" = "SPONSORS";
+"sponsor.silver.title" = "SILVER";
+"sponsor.bronze.title" = "BRONZE";
+"sponsor.education.title" = "EDUCATION";
+"sponsor.supporter.title" = "SUPPORTERS";

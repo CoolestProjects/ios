@@ -9,12 +9,9 @@
 import UIKit
 
 class SponsorsViewController: BaseViewController {
-    var tableViewData : [SponsorBox] = [] { didSet {
-        self.tableView.reloadData()
-        }}
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     let tableHeaderView = PageHeaderView.pageHeaderView()!
     let tableFooterView = HomeTableFooterView.footerView()!
     
@@ -53,7 +50,7 @@ class SponsorsViewController: BaseViewController {
         tableView.tableFooterView = tableFooterView
         tableView.estimatedRowHeight = 216;
         tableView.rowHeight = UITableViewAutomaticDimension
-        registerTableViewCellNamed(nibName: "SponsorBoxTableViewCell", reuseIdentifier: "sponsorBox")
+        registerTableViewCellNamed(nibName: "SponsorTableViewCell", reuseIdentifier: "sponsorBox")
     }
     
     func registerTableViewCellNamed(nibName: String, reuseIdentifier: String) {
@@ -97,7 +94,7 @@ extension SponsorsViewController : UITableViewDataSource {
         
         if (component is SponsorBox) {
             let sponsorBox = component as! SponsorBox
-            let sponsorBoxCell = cell as! SponsorBoxTableViewCell
+            let sponsorBoxCell = cell as! SponsorTableViewCell
             sponsorBoxCell.configure(with: sponsorBox)
         }
         
@@ -105,3 +102,4 @@ extension SponsorsViewController : UITableViewDataSource {
     }
 
 }
+

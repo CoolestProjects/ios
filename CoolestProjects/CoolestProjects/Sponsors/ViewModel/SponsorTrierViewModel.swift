@@ -17,14 +17,14 @@ class SponsorViewModel {
     
     private func createTableViewData() {
 
-        let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_diamond_intel")!.size)!
-        
+        let image = UIImage(color: UIColor.clear, size:  UIImage(named: "sponsor_silver_twitter")!.size)!
+
         tableViewData = [
             SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                        diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,
                        platinumTitle:NSLocalizedString("sponsor.platinum.title", tableName: "Home", comment: "") ,
                        goldTitle:NSLocalizedString("sponsor.gold.title", tableName: "Home", comment: "") ,
-                       supporterTitle:NSLocalizedString("sponsor.supporter.title", tableName: "Home", comment: ""),
+                       supporterTitle:NSLocalizedString("sponsor.supporter.title", tableName: "Sponsors", comment: ""),
                        diamondImages: [
                         image,
                         UIImage(named: "sponsor_diamond_intel")!,
@@ -57,18 +57,22 @@ class SponsorViewModel {
                         UIImage(named: "sponsor_spon_1Plus")!,
                         UIImage(named: "sponsor_gold_failte-ireland")!
                         ],
-                       silverTitle: NSLocalizedString("sponsor.silverTitle", tableName: "Home", comment: ""),
-                       bronzeTitle: NSLocalizedString("sponsor.bronzeTitle", tableName: "Home", comment: ""),
-                       educationTitle: NSLocalizedString("sponsor.educationTitle", tableName: "Home", comment: ""),
+                       silverTitle: NSLocalizedString("sponsor.silver.title", tableName: "Sponsors", comment: ""),
+                       bronzeTitle: NSLocalizedString("sponsor.bronze.title", tableName: "Sponsors", comment: ""),
+                       educationTitle: NSLocalizedString("sponsor.education.title", tableName: "Sponsors", comment: ""),
                        silverImages: [
+                        image,
                         UIImage(named: "sponsor_silver_cartawler")!,
                         UIImage(named: "sponsor_silver_twitter")!,
-                        UIImage(named: "sponsor_silver_zendesk")!
+                        UIImage(named: "sponsor_silver_zendesk")!,
+                        image
                        ],
                        bronzeImages: [
+                        image,
                         UIImage(named: "sponsor_bronze_barnados")!,
                         UIImage(named: "sponsor_bronze_ioe")!,
-                        UIImage(named: "sponsor_bronze_mhc")!
+                        UIImage(named: "sponsor_bronze_mhc")!,
+                        image
                        ],
                        educationImages: [
                         image,
