@@ -15,10 +15,11 @@ class ContentTableViewCell: UITableViewCell, Configurable {
     @IBOutlet weak var body: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var ctaButton: UIButton!
     
     func configure(with item: ContentViewModel) {
-        self.iconImage.image = item.icon
-        self.title.text = item.title
+        iconImage.image = item.icon
+        title.text = item.title
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 2.4
@@ -29,7 +30,10 @@ class ContentTableViewCell: UITableViewCell, Configurable {
              NSForegroundColorAttributeName: UIColor.contentItemTitle],
             range: NSMakeRange(0, attrString.length))
 
-        self.body.attributedText = attrString
+        body.attributedText = attrString
+
+        ctaButton.setTitle(item.ctaText, for: .normal)
+        ctaButton.isHidden = (item.ctaText == nil)
     }
     
     override func prepareForReuse() {

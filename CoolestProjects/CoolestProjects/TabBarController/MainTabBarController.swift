@@ -10,7 +10,9 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    static let homeSectionIndex = 0
     static let hallsSectionIndex = 2
+
 
     var scheduleService: ScheduleService?
 
@@ -22,6 +24,7 @@ class MainTabBarController: UITabBarController {
 
     func registerForDeepLinkNotifications() {
         registerForHallsDeepLinkNotification()
+        registerForGemsDeepLinkNotification()
     }
 
     func registerForHallsDeepLinkNotification() {
@@ -29,6 +32,14 @@ class MainTabBarController: UITabBarController {
             self,
             selector: #selector(handleHallsDeepLinkNotification(notification:)),
             name: NSNotification.Name(rawValue: HallDeepLinkParser.notficationName),
+            object: nil)
+    }
+
+    func registerForGemsDeepLinkNotification() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleGemsDeepLinkNotification(notification:)),
+            name: NSNotification.Name(rawValue: GemsDeepLinkParser.notficationName),
             object: nil)
     }
 
@@ -43,6 +54,10 @@ class MainTabBarController: UITabBarController {
             }
         }
 
+    }
+
+    func handleGemsDeepLinkNotification(notification: Notification) {
+        navigateToGems()
     }
 
     func navigateToHall(_ hall: Hall, activty: String) {
@@ -65,6 +80,13 @@ class MainTabBarController: UITabBarController {
             nc.setViewControllers(hallsSectionControllers, animated: false)
             selectedIndex = MainTabBarController.hallsSectionIndex
         }
+    }
+
+    func navigateToGems() {
+        let vc = GemsViewController(nibName: nil, bundle: nil)
+        let nc = UINavigationController(rootViewController: vc)
+        selectedIndex = MainTabBarController.homeSectionIndex
+        present(nc, animated: true, completion: nil)
     }
 
 }

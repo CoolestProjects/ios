@@ -91,7 +91,7 @@ class BeaconNotificationsManager: NSObject {
 
             // store interaction
             print("Storing interaction for message")
-            self.regionMessageInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId)
+            self.regionMessageInteractionsStore.setInteractionWithRegion(regionId, messageVersionId: message.versionId, title: message.title, message: message.message)
 
             // show user notification
             print("Show local notification")
@@ -185,11 +185,22 @@ extension CPABeacon {
             return nil
         }
 
-        return CLBeaconRegion(
-            proximityUUID: proximityUUID,
-            major: CLBeaconMajorValue(major.uint16Value),
-            minor: CLBeaconMinorValue(minor.uint16Value),
-            identifier: "\(regionId)#\(name)")
+        var region: CLBeaconRegion
+
+        if let minor = minor {
+            region = CLBeaconRegion(
+                proximityUUID: proximityUUID,
+                major: CLBeaconMajorValue(major.uint16Value),
+                minor: CLBeaconMinorValue(minor.uint16Value),
+                identifier: "\(regionId)#\(name)")
+        } else {
+            region = CLBeaconRegion(
+                proximityUUID: proximityUUID,
+                major: CLBeaconMajorValue(major.uint16Value),                
+                identifier: "\(regionId)#\(name)")
+        }
+
+        return region
     }
 }
 
@@ -208,6 +219,7 @@ extension UNNotificationContent {
         n.title = message.title
         n.body = message.message
         n.sound = UNNotificationSound.default()
+        n.userInfo = ["deeplink_page": "/gems"]
         return n
     }
 

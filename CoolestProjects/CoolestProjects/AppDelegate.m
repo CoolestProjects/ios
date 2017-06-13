@@ -123,8 +123,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 }
 
 - (void)processNotificationDeeplinkUserInfo:(NSDictionary *)userInfo {
-    // TODO: uncomment after halls section restored
-    //[CPADeeplinkManager handleDeeplinkWithUserInfo:userInfo];
+    [CPADeeplinkManager handleDeeplinkWithUserInfo:userInfo];
 }
 
 - (void)setupAppearance {

@@ -12,13 +12,19 @@ import UIKit
 class HomeViewModel {
 
     var tableViewData = [Component]()
+    private var bleOn = false
     
     init() {
         createTableViewData(showBluetoothView: false)
     }
     
     func setBluetoothEnabled(bluetoothEnabled : Bool) {
-        createTableViewData(showBluetoothView: bluetoothEnabled)
+        bleOn = bluetoothEnabled
+        createTableViewData(showBluetoothView: bleOn)
+    }
+    
+    func isBluetoothEnabled() -> Bool {
+        return bleOn
     }
     
     private func createTableViewData(showBluetoothView: Bool) {
@@ -36,17 +42,20 @@ class HomeViewModel {
             ContentViewModel(
                 title: NSLocalizedString("event-times.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("event-times.body", tableName: "Home", comment: ""),
-                icon: UIImage(named: "section_icon_event_times")
+                icon: UIImage(named: "section_icon_event_times"),
+                ctaText: nil
             ),
             ContentViewModel(
                 title: NSLocalizedString("parking.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("parking.body", tableName: "Home", comment: ""),
-                icon: UIImage(named: "section_icon_parking")
+                icon: UIImage(named: "section_icon_parking"),
+                ctaText: nil
             ),
             ContentViewModel(
                 title: NSLocalizedString("food.title", tableName: "Home", comment: ""),
                 body: NSLocalizedString("food.body", tableName: "Home", comment: ""),
-                icon: UIImage(named: "section_icon_food")
+                icon: UIImage(named: "section_icon_food"),
+                ctaText: nil
             ),
             SponsorBox(title: NSLocalizedString("sponsor.title", tableName: "Home", comment: ""),
                        diamondTitle:NSLocalizedString("sponsor.diamond.title", tableName: "Home", comment: "") ,

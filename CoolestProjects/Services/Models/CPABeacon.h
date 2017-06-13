@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CPABeacon : CPAObject
 
 @property(nonatomic, strong) NSNumber *major;
-@property(nonatomic, strong) NSNumber *minor;
+@property(nonatomic, strong, nullable) NSNumber *minor;
 @property(nonatomic, copy) NSString *name;
 @property(nonatomic, copy) NSString *uuid;
 

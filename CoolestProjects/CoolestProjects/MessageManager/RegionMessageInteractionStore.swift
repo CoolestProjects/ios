@@ -17,7 +17,7 @@ protocol RegionMessageInteractionStore {
 
     func lastMessageVersionIdWithRegion(_ regionId: String) -> String?
 
-    func setInteractionWithRegion(_ regionId: String, messageVersionId: String)
+    func setInteractionWithRegion(_ regionId: String, messageVersionId: String, title: String, message: String)
 
 }
 
@@ -46,8 +46,8 @@ extension RegionMessageInteractionStoreImpl: RegionMessageInteractionStore {
         return lastInteractionWithRegion(regionId)?.messageVersionId
     }
 
-    func setInteractionWithRegion(_ regionId: String, messageVersionId: String) {
-        let ri = RegionMessageInteraction(regionId: regionId, messageVersionId: messageVersionId)
+    func setInteractionWithRegion(_ regionId: String, messageVersionId: String, title: String, message: String) {
+        let ri = RegionMessageInteraction(regionId: regionId, messageVersionId: messageVersionId, title: title, message: message)
         inMemoryInteractions = inMemoryInteractions.filter { $0.regionId != regionId }
         inMemoryInteractions.append(ri)
         saveToDisk(items: inMemoryInteractions)

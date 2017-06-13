@@ -28,6 +28,10 @@ struct RegionMessageInteraction {
     init(regionId: String, messageVersionId: String) {
         self.init(regionId: regionId, messageVersionId: messageVersionId, timestamp: Date().timeIntervalSince1970 * 1000, title:"", message:"")
     }
+    
+    init(regionId: String, messageVersionId: String, title: String, message: String) {
+        self.init(regionId: regionId, messageVersionId: messageVersionId, timestamp: Date().timeIntervalSince1970 * 1000, title: title, message: message)
+    }
 }
 
 extension RegionMessageInteraction: Equatable {}
