@@ -36,15 +36,14 @@ extension Panel: Decodable {
         guard let name: String = "name" <~~ json,
             let description: String = "description" <~~ json,
             let startTime: String = "startTime" <~~ json,
-            let endTime: String = "endTime" <~~ json,
-            let speakers: [Speaker] = "panelSpeakers" <~~ json
+            let endTime: String = "endTime" <~~ json            
             else { return nil }
 
         self.name = name
         self.description = description
         self.startTime = startTime
         self.endTime = endTime
-        self.speakers = speakers
+        self.speakers = ("panelSpeakers" <~~ json) ?? [Speaker]()
     }
 
 }
