@@ -26,9 +26,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self setupFirebase];
-
     [self preloadContent];
 
+    [self enableEstimoteAnalytics];
     [self createBeaconManager];
 
     [self setupNotifications];
@@ -90,6 +90,11 @@
                                   [[UIApplication sharedApplication] registerForRemoteNotifications];
                               }
                           }];
+}
+
+- (void)enableEstimoteAnalytics {
+    [ESTConfig setupAppID:@"coolest-projects-782" andAppToken:@"bc1d0eea387420e59c6480bd3c7ee1b4"];
+    [ESTAnalyticsManager enableMonitoringAnalytics:YES];
 }
 
 - (void)createBeaconManager {
