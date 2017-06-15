@@ -31,7 +31,11 @@ class HallsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scheduleService = ScheduleServiceImpl()
-        setupUI()
+        setupUI()        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadHallsData()
     }
 
@@ -114,6 +118,7 @@ extension HallsViewController: UITableViewDataSource {
 
         let component = tableViewData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: component.componentIdentifier, for: indexPath)
+        cell.selectionStyle = .none
 
         if (component is ContentViewModel) {
             let content = component as! ContentViewModel
