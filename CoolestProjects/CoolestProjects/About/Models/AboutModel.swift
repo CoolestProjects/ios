@@ -28,7 +28,7 @@ class AboutViewModel {
     init() {
       title = NSLocalizedString("title", tableName: "About", comment: "")
       tableViewData = [
-        BlurbBox(title: NSLocalizedString("date.tilte", tableName: "Home", comment: "")),
+        BlurbBox(title: NSLocalizedString("date.title", tableName: "Home", comment: "")),
         AboutModel(title: NSLocalizedString("title", tableName: "About", comment: ""), aboutContentURL: loadAboutContent())
         ]
     }

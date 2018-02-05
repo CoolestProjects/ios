@@ -29,9 +29,8 @@ class HomeViewModel {
     
     private func createTableViewData(showBluetoothView: Bool) {
         tableViewData = [
-            BlurbBox(title: NSLocalizedString("date.tilte", tableName: "Home", comment: "")),
+            BlurbBox(title: NSLocalizedString("date.title", tableName: "Home", comment: "")),
         ]
-        
         if (showBluetoothView) {
             tableViewData += [BluetoothBox(title: NSLocalizedString("beacon.title", tableName: "Home", comment: ""), body: NSLocalizedString("beacon.body", tableName: "Home", comment: ""), buttonTitle: NSLocalizedString("beacon.button.title", tableName: "Home", comment: ""))]
         }

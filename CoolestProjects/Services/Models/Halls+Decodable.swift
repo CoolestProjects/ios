@@ -9,7 +9,7 @@
 import Foundation
 import Gloss
 
-extension Hall: Decodable {
+extension Hall: Gloss.Decodable {
 
     init?(json: JSON) {
         guard let id: String = "hallId" <~~ json,
@@ -30,7 +30,7 @@ extension Hall: Decodable {
 
 }
 
-extension Panel: Decodable {
+extension Panel: Gloss.Decodable {
 
     init?(json: JSON) {
         guard let name: String = "name" <~~ json,
@@ -48,7 +48,7 @@ extension Panel: Decodable {
 
 }
 
-extension Workshop: Decodable {
+extension Workshop: Gloss.Decodable {
 
     init?(json: JSON) {
         guard let name: String = "name" <~~ json,
@@ -65,7 +65,7 @@ extension Workshop: Decodable {
 
 }
 
-extension Speaker: Decodable {
+extension Speaker: Gloss.Decodable {
 
     init?(json: JSON) {
         guard let name: String = "name" <~~ json,

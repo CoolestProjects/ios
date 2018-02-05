@@ -42,7 +42,7 @@ func ==(lhs: RegionMessageInteraction, rhs: RegionMessageInteraction) -> Bool {
         lhs.timestamp == rhs.timestamp
 }
 
-extension RegionMessageInteraction: Decodable {
+extension RegionMessageInteraction: Gloss.Decodable {
 
     init?(json: JSON) {
         guard

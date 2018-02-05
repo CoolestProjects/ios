@@ -6,7 +6,7 @@
   Copyright © 2016 coderdojo. All rights reserved.
 */
 
-"date.tilte" = "SATURDAY 17TH JUNE 2017\nRDS, DUBLIN, IRELAND";
+"date.title" = "SATURDAY 26th May 2018\nRDS, DUBLIN, IRELAND";
 "sponsor.title" = "SPONSORED BY";
 "sponsor.platinum.title" = "PLATINUM";
 "sponsor.diamond.title" = "DIAMOND";
@@ -19,5 +19,5 @@
 "food.title" = "FOOD";
 "food.body" = "There will  be food trucks and stalls at the event where you can purchase food and drinks. \nWe would suggest you bring a bottle of water and a packed lunch on the day.";
 "beacon.title" = "MY GEMS";
-"beacon.body" = "Let‘s play find the Gems! Use your Mobile Phone as a Gem Detector. You will receive a notification every time you find a Gem.\nMake sure you go alongside your parents on your Gem hunt. \nYou must enable Bluetooth on your mobile to find Gems. \n\nGem Hunt starts in the RDS on June 17th";
+"beacon.body" = "Let‘s play find the Gems! Use your Mobile Phone as a Gem Detector. You will receive a notification every time you find a Gem.\nMake sure you go alongside your parents on your Gem hunt. \nYou must enable Bluetooth on your mobile to find Gems. \n\nGem Hunt starts in the RDS on May 26th";
 "beacon.button.title" = "See my gems";

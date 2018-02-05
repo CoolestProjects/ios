@@ -22,7 +22,7 @@ protocol DataStore {
 
 }
 
-extension DataStore where DataItem: Decodable, DataItem: Glossy {
+extension DataStore where DataItem: Glossy {
 
     func createDataDirectoryIfNeeded() {
         if let dataDirectoryUrl = dataDirectoryUrl() {

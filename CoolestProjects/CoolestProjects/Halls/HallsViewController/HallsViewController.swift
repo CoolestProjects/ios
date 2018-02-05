@@ -103,7 +103,7 @@ class HallsViewController: UIViewController {
     }
 
     var blurbBox: BlurbBox {
-        get { return BlurbBox(title: NSLocalizedString("date.tilte", tableName: "Home", comment: "")) }
+        get { return BlurbBox(title: NSLocalizedString("date.title", tableName: "Home", comment: "")) }
     }
 
 }
