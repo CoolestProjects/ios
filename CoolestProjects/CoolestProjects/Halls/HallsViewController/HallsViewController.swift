@@ -31,7 +31,7 @@ class HallsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scheduleService = ScheduleServiceImpl()
-        setupUI()        
+        setupUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
