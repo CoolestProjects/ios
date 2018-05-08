@@ -31,7 +31,7 @@ class HallsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scheduleService = ScheduleServiceImpl()
-        setupUI()        
+        setupUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -103,7 +103,7 @@ class HallsViewController: UIViewController {
     }
 
     var blurbBox: BlurbBox {
-        get { return BlurbBox(title: NSLocalizedString("date.tilte", tableName: "Home", comment: "")) }
+        get { return BlurbBox(title: NSLocalizedString("date.title", tableName: "Home", comment: "")) }
     }
 
 }

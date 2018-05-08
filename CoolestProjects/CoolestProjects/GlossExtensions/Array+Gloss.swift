@@ -9,7 +9,7 @@
 import Foundation
 import Gloss
 
-extension Array where Element: Decodable {
+extension Array where Element: Gloss.Decodable {
 
     static func partialFrom(jsonArray: [JSON]) -> [Element] {
         var models: [Element] = []

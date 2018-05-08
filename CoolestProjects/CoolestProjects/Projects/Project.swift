@@ -17,7 +17,7 @@ struct Project {
     let deskNumber: String?
 }
 
-extension Project: Decodable {
+extension Project: Gloss.Decodable {
     
     init?(json: JSON) {
         guard

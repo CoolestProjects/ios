@@ -24,7 +24,7 @@ struct BeaconRegionInteraction {
 
 }
 
-extension BeaconRegionInteraction: Decodable {
+extension BeaconRegionInteraction: Gloss.Decodable {
 
     init?(json: JSON) {
         guard

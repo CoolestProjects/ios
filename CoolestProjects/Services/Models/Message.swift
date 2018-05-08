@@ -16,7 +16,7 @@ struct Message {
     let versionId: String    
 }
 
-extension Message: Decodable {
+extension Message: Gloss.Decodable {
 
     init?(json: JSON) {
         guard

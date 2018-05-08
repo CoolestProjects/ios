@@ -25,7 +25,6 @@ class MapViewTableViewCell: UITableViewCell, Configurable {
             self?.setNeedsLayout()
             self?.layoutIfNeeded()
         }
-        
         self.titleLabel?.text = item.title
         
     }
